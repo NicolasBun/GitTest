@@ -1,0 +1,35 @@
+ void light bright
+ 0
+ 0
+ 3  20  20 20
+ #  red_emission  green_emission  blue_emission  #
+
+ # this is the material for my test ball:
+
+
+ void plastic ground
+ 0
+ 0
+ 5  1 1  1  .5  .5
+ #  red  green  blue  specularity  roughness  #
+
+
+ # here is the light source:
+
+ bright sphere fixture
+ 0
+ 0
+ 4  0.0  0.0  1.5  .125
+ #  xcent  ycent  zcent  radius  #
+
+ground polygon aa
+0
+0
+12
+    -1.0 -1.0  0.000000
+     1.0 -1.0  0.000000
+     1.0  1.0  0.000000
+    -1.0  1.0  0.000000
+
+
+#hello world
