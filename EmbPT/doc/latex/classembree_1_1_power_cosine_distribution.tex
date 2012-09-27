@@ -1,0 +1,123 @@
+\hypertarget{classembree_1_1_power_cosine_distribution}{
+\section{embree::PowerCosineDistribution Class Reference}
+\label{classembree_1_1_power_cosine_distribution}\index{embree::PowerCosineDistribution@{embree::PowerCosineDistribution}}
+}
+
+
+Power cosine microfacet distribution.  
+
+
+
+
+{\ttfamily \#include $<$microfacet.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_power_cosine_distribution_a6e3029a1ec75c5bc422ef304083e9711}{PowerCosineDistribution} (float exp)
+\begin{DoxyCompactList}\small\item\em Power cosine distribution constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{classembree_1_1_power_cosine_distribution_ad69972d57636a4d46e33620c9b828ab2}{eval} (float cosThetaH) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the power cosine distribution. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{classembree_1_1_power_cosine_distribution_a9080b577ebc121301896436ace03cd6a}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the power cosine distribution. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{classembree_1_1_power_cosine_distribution_ade8a928d574cc15b2f90bfc604884684}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Power cosine microfacet distribution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_power_cosine_distribution_a6e3029a1ec75c5bc422ef304083e9711}{
+\index{embree::PowerCosineDistribution@{embree::PowerCosineDistribution}!PowerCosineDistribution@{PowerCosineDistribution}}
+\index{PowerCosineDistribution@{PowerCosineDistribution}!embree::PowerCosineDistribution@{embree::PowerCosineDistribution}}
+\subsubsection[{PowerCosineDistribution}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::PowerCosineDistribution::PowerCosineDistribution (
+\begin{DoxyParamCaption}
+\item[{float}]{exp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_power_cosine_distribution_a6e3029a1ec75c5bc422ef304083e9711}
+
+
+Power cosine distribution constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_power_cosine_distribution_ad69972d57636a4d46e33620c9b828ab2}{
+\index{embree::PowerCosineDistribution@{embree::PowerCosineDistribution}!eval@{eval}}
+\index{eval@{eval}!embree::PowerCosineDistribution@{embree::PowerCosineDistribution}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline float embree::PowerCosineDistribution::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{cosThetaH}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_power_cosine_distribution_ad69972d57636a4d46e33620c9b828ab2}
+
+
+Evaluates the power cosine distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cosThetaH} & is the cosine between half vector and the normal. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classembree_1_1_power_cosine_distribution_ade8a928d574cc15b2f90bfc604884684}{
+\index{embree::PowerCosineDistribution@{embree::PowerCosineDistribution}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::PowerCosineDistribution@{embree::PowerCosineDistribution}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline float embree::PowerCosineDistribution::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_power_cosine_distribution_ade8a928d574cc15b2f90bfc604884684}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em wo} & Direction light is reflected into. \\
+\hline
+{\em dg} & Shade location on a surface to evaluate PDF for. \\
+\hline
+{\em wi} & Direction light is coming from. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classembree_1_1_power_cosine_distribution_a9080b577ebc121301896436ace03cd6a}{
+\index{embree::PowerCosineDistribution@{embree::PowerCosineDistribution}!sample@{sample}}
+\index{sample@{sample}!embree::PowerCosineDistribution@{embree::PowerCosineDistribution}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline void embree::PowerCosineDistribution::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_power_cosine_distribution_a9080b577ebc121301896436ace03cd6a}
+
+
+Samples the power cosine distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wo} & Direction light is reflected into. \\
+\hline
+{\em dg} & Shade location on a surface to sample the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} at. \\
+\hline
+{\em wi} & Returns sampled incoming light direction and PDF. \\
+\hline
+{\em s} & \hyperlink{structembree_1_1_sample}{Sample} locations are provided by the caller. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/microfacet.h\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{classembree_1_1_distant_light}{
+\section{embree::DistantLight Class Reference}
+\label{classembree_1_1_distant_light}\index{embree::DistantLight@{embree::DistantLight}}
+}
+
+
+Implements a distant light.  
+
+
+
+
+{\ttfamily \#include $<$distantlight.h$>$}
+
+Inheritance diagram for embree::DistantLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_distant_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_distant_light_accafbb074d001ee4f3c361bb80688967}{DistantLight} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_distant_light_ad72f9357ea880cf3d080367efc07d381}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_distant_light_a1a543f0e73d2d4066026b71feec02f02}{Le} (const Vec3f \&wo) const 
+\begin{DoxyCompactList}\small\item\em Returns the emitted radiance of the environment light. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_distant_light_ad22e8ad0ef213cfd60c6d739d421bf11}{eval} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_distant_light_af38ed2d63728cdda5387095413aabc48}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_distant_light_a472994aa8ede8e9b1c3a2bb23ce15a26}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a distant light. The distant light illuminates from infinity from a cone of directions. This simulates the light field of a far away big object like the sun. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_distant_light_accafbb074d001ee4f3c361bb80688967}{
+\index{embree::DistantLight@{embree::DistantLight}!DistantLight@{DistantLight}}
+\index{DistantLight@{DistantLight}!embree::DistantLight@{embree::DistantLight}}
+\subsubsection[{DistantLight}]{\setlength{\rightskip}{0pt plus 5cm}embree::DistantLight::DistantLight (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_distant_light_accafbb074d001ee4f3c361bb80688967}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_distant_light_ad22e8ad0ef213cfd60c6d739d421bf11}{
+\index{embree::DistantLight@{embree::DistantLight}!eval@{eval}}
+\index{eval@{eval}!embree::DistantLight@{embree::DistantLight}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::DistantLight::eval (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_distant_light_ad22e8ad0ef213cfd60c6d739d421bf11}
+
+
+Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. 
+
+\begin{DoxyReturn}{Returns}
+the emitted radiance. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_light_a5cc835d46bd10b81c7253512cfd8c9e5}{embree::Light}.
+
+\hypertarget{classembree_1_1_distant_light_a1a543f0e73d2d4066026b71feec02f02}{
+\index{embree::DistantLight@{embree::DistantLight}!Le@{Le}}
+\index{Le@{Le}!embree::DistantLight@{embree::DistantLight}}
+\subsubsection[{Le}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::DistantLight::Le (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_distant_light_a1a543f0e73d2d4066026b71feec02f02}
+
+
+Returns the emitted radiance of the environment light. 
+
+
+
+Implements \hyperlink{classembree_1_1_environment_light_a4cb3a8e11f5b737c714ceca203bddb8e}{embree::EnvironmentLight}.
+
+\hypertarget{classembree_1_1_distant_light_a472994aa8ede8e9b1c3a2bb23ce15a26}{
+\index{embree::DistantLight@{embree::DistantLight}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::DistantLight@{embree::DistantLight}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::DistantLight::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_distant_light_a472994aa8ede8e9b1c3a2bb23ce15a26}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{embree::Light}.
+
+\hypertarget{classembree_1_1_distant_light_af38ed2d63728cdda5387095413aabc48}{
+\index{embree::DistantLight@{embree::DistantLight}!sample@{sample}}
+\index{sample@{sample}!embree::DistantLight@{embree::DistantLight}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::DistantLight::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_distant_light_af38ed2d63728cdda5387095413aabc48}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{embree::Light}.
+
+\hypertarget{classembree_1_1_distant_light_ad72f9357ea880cf3d080367efc07d381}{
+\index{embree::DistantLight@{embree::DistantLight}!transform@{transform}}
+\index{transform@{transform}!embree::DistantLight@{embree::DistantLight}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Light}$>$ embree::DistantLight::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_distant_light_ad72f9357ea880cf3d080367efc07d381}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implements \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{embree::Light}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/distantlight.h\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\hypertarget{classembree_1_1_b_v_h2_to_b_v_h4}{
+\section{embree::BVH2ToBVH4 Class Reference}
+\label{classembree_1_1_b_v_h2_to_b_v_h4}\index{embree::BVH2ToBVH4@{embree::BVH2ToBVH4}}
+}
+
+
+Converts a \hyperlink{classembree_1_1_b_v_h2}{BVH2} into a \hyperlink{classembree_1_1_b_v_h4}{BVH4}.  
+
+
+
+
+{\ttfamily \#include $<$bvh2\_\-to\_\-bvh4.h$>$}
+
+Inheritance diagram for embree::BVH2ToBVH4:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_b_v_h2_to_b_v_h4}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_a7531657686c33c40a285ac1bbab03699}{BVH2ToBVH4} (Ref$<$ \hyperlink{classembree_1_1_b_v_h2}{BVH2}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \&\hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_afa8903905c8d426ac4cf1fdcd4fe65c6}{bvh2}, Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \&\hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_ac0488327c2c25d97d16394f7fe81ba32}{bvh4})
+\begin{DoxyCompactList}\small\item\em Construction. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_a99975b6f0d04b744941155984cfea152}{recurse} (int parent, int depth)
+\begin{DoxyCompactList}\small\item\em recursively converts \hyperlink{classembree_1_1_b_v_h2}{BVH2} into \hyperlink{classembree_1_1_b_v_h4}{BVH4} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_b_v_h2_to_b_v_h4_aec56fef2aa254f04b8b8af4cfc36c34a}{
+static Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_aec56fef2aa254f04b8b8af4cfc36c34a}{convert} (Ref$<$ \hyperlink{classembree_1_1_b_v_h2}{BVH2}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \&\hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_afa8903905c8d426ac4cf1fdcd4fe65c6}{bvh2})}
+\label{classembree_1_1_b_v_h2_to_b_v_h4_aec56fef2aa254f04b8b8af4cfc36c34a}
+
+\begin{DoxyCompactList}\small\item\em API entry function for the converter. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_b_v_h2_to_b_v_h4_afa8903905c8d426ac4cf1fdcd4fe65c6}{
+Ref$<$ \hyperlink{classembree_1_1_b_v_h2}{BVH2}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_afa8903905c8d426ac4cf1fdcd4fe65c6}{bvh2}}
+\label{classembree_1_1_b_v_h2_to_b_v_h4_afa8903905c8d426ac4cf1fdcd4fe65c6}
+
+\begin{DoxyCompactList}\small\item\em source \hyperlink{classembree_1_1_b_v_h2}{BVH2} \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_b_v_h2_to_b_v_h4_ac0488327c2c25d97d16394f7fe81ba32}{
+Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h2_to_b_v_h4_ac0488327c2c25d97d16394f7fe81ba32}{bvh4}}
+\label{classembree_1_1_b_v_h2_to_b_v_h4_ac0488327c2c25d97d16394f7fe81ba32}
+
+\begin{DoxyCompactList}\small\item\em target \hyperlink{classembree_1_1_b_v_h4}{BVH4} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Converts a \hyperlink{classembree_1_1_b_v_h2}{BVH2} into a \hyperlink{classembree_1_1_b_v_h4}{BVH4}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_to_b_v_h4_a7531657686c33c40a285ac1bbab03699}{
+\index{embree::BVH2ToBVH4@{embree::BVH2ToBVH4}!BVH2ToBVH4@{BVH2ToBVH4}}
+\index{BVH2ToBVH4@{BVH2ToBVH4}!embree::BVH2ToBVH4@{embree::BVH2ToBVH4}}
+\subsubsection[{BVH2ToBVH4}]{\setlength{\rightskip}{0pt plus 5cm}embree::BVH2ToBVH4::BVH2ToBVH4 (
+\begin{DoxyParamCaption}
+\item[{Ref$<$ {\bf BVH2}$<$ {\bf Triangle4} $>$ $>$ \&}]{bvh2, }
+\item[{Ref$<$ {\bf BVH4}$<$ {\bf Triangle4} $>$ $>$ \&}]{bvh4}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_to_b_v_h4_a7531657686c33c40a285ac1bbab03699}
+
+
+Construction. 
+
+
+
+Allocate storage for nodes. Each thread should at least be able to get one block.
+
+recursively convert tree
+
+rotate tree
+
+resize node array and assign triangles 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_to_b_v_h4_a99975b6f0d04b744941155984cfea152}{
+\index{embree::BVH2ToBVH4@{embree::BVH2ToBVH4}!recurse@{recurse}}
+\index{recurse@{recurse}!embree::BVH2ToBVH4@{embree::BVH2ToBVH4}}
+\subsubsection[{recurse}]{\setlength{\rightskip}{0pt plus 5cm}int embree::BVH2ToBVH4::recurse (
+\begin{DoxyParamCaption}
+\item[{int}]{parent, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_to_b_v_h4_a99975b6f0d04b744941155984cfea152}
+
+
+recursively converts \hyperlink{classembree_1_1_b_v_h2}{BVH2} into \hyperlink{classembree_1_1_b_v_h4}{BVH4} 
+
+
+
+do not touch leaf nodes
+
+initialize first two nodes
+
+find the node with largest bounding box
+
+skip leaf nodes
+
+find largest bounding
+
+recurse into best candidate
+
+encode \hyperlink{classembree_1_1_b_v_h4}{BVH4} node and recurse 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2\_\-to\_\-bvh4.h\item 
+rtcore/bvh2/bvh2\_\-to\_\-bvh4.cpp\end{DoxyCompactItemize}

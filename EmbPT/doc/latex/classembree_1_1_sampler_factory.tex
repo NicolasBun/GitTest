@@ -1,0 +1,293 @@
+\hypertarget{classembree_1_1_sampler_factory}{
+\section{embree::SamplerFactory Class Reference}
+\label{classembree_1_1_sampler_factory}\index{embree::SamplerFactory@{embree::SamplerFactory}}
+}
+
+
+The sampler factory precomputes samples for usage by multiple samlper threads.  
+
+
+
+
+{\ttfamily \#include $<$sampler.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_sampler_factory_a65e53f7ee328a878d06caa10416db128}{SamplerFactory} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_sampler_factory_a92c4b61a35341ef709e909e7a4149cbe}{SamplerFactory} (const unsigned \hyperlink{classembree_1_1_sampler_factory_ae275dc3161d4a7c2a5643abf5bdcd1ef}{samplesPerPixel}=1, const unsigned \hyperlink{classembree_1_1_sampler_factory_adb750ed990fe1b5668c93d1d7ce65e73}{sampleSets}=64)
+\begin{DoxyCompactList}\small\item\em Construction from number of samples per pixel and number of precomputed sets. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_sampler_factory_a9dcf08285f0ce65355d32520a0e2048b}{
+virtual \hyperlink{classembree_1_1_sampler_factory_a9dcf08285f0ce65355d32520a0e2048b}{$\sim$SamplerFactory} ()}
+\label{classembree_1_1_sampler_factory_a9dcf08285f0ce65355d32520a0e2048b}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_a6df8c9759f177de7f30281bc0f7bf71f}{request1D} (int num=1)
+\begin{DoxyCompactList}\small\item\em Request additional 1D samples per pixel sample. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_a15ef0f4615991aa17ae5cdd040664b00}{request2D} (int num=1)
+\begin{DoxyCompactList}\small\item\em Request additional 2D samples per pixel sample. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_a948dfe9e10ff52ed99763bcfba0662a0}{requestLightSample} (int baseSample, const Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \&light)
+\begin{DoxyCompactList}\small\item\em Request a precomputed light sample. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_sampler_factory_aa2291a199a2e115a92ca459ec12781c9}{reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the sampler factory. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_sampler_factory_a6799c6652ba0986ed31d8ab284637a1c}{init} (int \hyperlink{classembree_1_1_sampler_factory_a27184a51d0d3e9a6268ed5d8cc887cb3}{iteration}=0, const Ref$<$ \hyperlink{classembree_1_1_filter}{Filter} $>$ filter=NULL)
+\begin{DoxyCompactList}\small\item\em Initialize the factory for a given iteration and precompute all samples. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_sampler}{Sampler} $\ast$ \hyperlink{classembree_1_1_sampler_factory_a474de6115bef03008c3d3047569a2c19}{create} ()
+\begin{DoxyCompactList}\small\item\em Create a sampler thread using this factory. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classembree_1_1_sampler_factory_aadbd34d68f975f6821f189e73e78833a}{numSamples1D}
+\begin{DoxyCompactList}\small\item\em Number of additional 1D samples per pixel sample. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_a2c6bbf4c15325b26b149dff750845759}{numSamples2D}
+\begin{DoxyCompactList}\small\item\em Number of additional 2D samples per pixel sample. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_adec6d83718e9bfc86f8fc7fc7b366dff}{numLightSamples}
+\begin{DoxyCompactList}\small\item\em Number of precomputed light samples per pixel sample. \item\end{DoxyCompactList}\item 
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ $>$ \hyperlink{classembree_1_1_sampler_factory_aa965aa3f8efa69f3d6f43abc1b205045}{lights}
+\begin{DoxyCompactList}\small\item\em References to all light sources. \item\end{DoxyCompactList}\item 
+std::vector$<$ int $>$ \hyperlink{classembree_1_1_sampler_factory_a188a3e7b13c69d88c0d6a9e0192d84f4}{lightBaseSamples}
+\begin{DoxyCompactList}\small\item\em Base samples for light sample precomputation. \item\end{DoxyCompactList}\item 
+Random \hyperlink{classembree_1_1_sampler_factory_ade987097a728763b39b5234f7f45799b}{randomNumberGenerator}
+\begin{DoxyCompactList}\small\item\em Random number generator used by this factory. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_ae275dc3161d4a7c2a5643abf5bdcd1ef}{samplesPerPixel}
+\begin{DoxyCompactList}\small\item\em Number of samples per pixel. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_adb750ed990fe1b5668c93d1d7ce65e73}{sampleSets}
+\begin{DoxyCompactList}\small\item\em Number of precomputed sample sets. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_precomputed_sample}{PrecomputedSample} $\ast$$\ast$ \hyperlink{classembree_1_1_sampler_factory_ab19a6e8dfcb6a246a329997f71b0e372}{samples}
+\begin{DoxyCompactList}\small\item\em All precomputed samples. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_factory_a27184a51d0d3e9a6268ed5d8cc887cb3}{iteration}
+\begin{DoxyCompactList}\small\item\em Current iteration. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_sampler_factory_a8f5378aba3dfbbf24026a47e1b005214}{
+class {\bfseries Sampler}}
+\label{classembree_1_1_sampler_factory_a8f5378aba3dfbbf24026a47e1b005214}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The sampler factory precomputes samples for usage by multiple samlper threads. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_sampler_factory_a65e53f7ee328a878d06caa10416db128}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!SamplerFactory@{SamplerFactory}}
+\index{SamplerFactory@{SamplerFactory}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{SamplerFactory}]{\setlength{\rightskip}{0pt plus 5cm}embree::SamplerFactory::SamplerFactory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a65e53f7ee328a878d06caa10416db128}
+
+
+Construction from parameters. 
+
+\hypertarget{classembree_1_1_sampler_factory_a92c4b61a35341ef709e909e7a4149cbe}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!SamplerFactory@{SamplerFactory}}
+\index{SamplerFactory@{SamplerFactory}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{SamplerFactory}]{\setlength{\rightskip}{0pt plus 5cm}embree::SamplerFactory::SamplerFactory (
+\begin{DoxyParamCaption}
+\item[{const unsigned}]{samplesPerPixel = {\ttfamily 1}, }
+\item[{const unsigned}]{sampleSets = {\ttfamily 64}}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a92c4b61a35341ef709e909e7a4149cbe}
+
+
+Construction from number of samples per pixel and number of precomputed sets. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_sampler_factory_a474de6115bef03008c3d3047569a2c19}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!create@{create}}
+\index{create@{create}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sampler} $\ast$ embree::SamplerFactory::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a474de6115bef03008c3d3047569a2c19}
+
+
+Create a sampler thread using this factory. 
+
+\hypertarget{classembree_1_1_sampler_factory_a6799c6652ba0986ed31d8ab284637a1c}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!init@{init}}
+\index{init@{init}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void embree::SamplerFactory::init (
+\begin{DoxyParamCaption}
+\item[{int}]{iteration = {\ttfamily 0}, }
+\item[{const Ref$<$ {\bf Filter} $>$}]{filter = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a6799c6652ba0986ed31d8ab284637a1c}
+
+
+Initialize the factory for a given iteration and precompute all samples. 
+
+
+
+Generate pixel and lens samples.
+
+Generate requested 1D samples.
+
+Generate 2D samples.
+
+Generate light samples. 
+
+\hypertarget{classembree_1_1_sampler_factory_a6df8c9759f177de7f30281bc0f7bf71f}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!request1D@{request1D}}
+\index{request1D@{request1D}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{request1D}]{\setlength{\rightskip}{0pt plus 5cm}int embree::SamplerFactory::request1D (
+\begin{DoxyParamCaption}
+\item[{int}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a6df8c9759f177de7f30281bc0f7bf71f}
+
+
+Request additional 1D samples per pixel sample. 
+
+\hypertarget{classembree_1_1_sampler_factory_a15ef0f4615991aa17ae5cdd040664b00}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!request2D@{request2D}}
+\index{request2D@{request2D}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{request2D}]{\setlength{\rightskip}{0pt plus 5cm}int embree::SamplerFactory::request2D (
+\begin{DoxyParamCaption}
+\item[{int}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a15ef0f4615991aa17ae5cdd040664b00}
+
+
+Request additional 2D samples per pixel sample. 
+
+\hypertarget{classembree_1_1_sampler_factory_a948dfe9e10ff52ed99763bcfba0662a0}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!requestLightSample@{requestLightSample}}
+\index{requestLightSample@{requestLightSample}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{requestLightSample}]{\setlength{\rightskip}{0pt plus 5cm}int embree::SamplerFactory::requestLightSample (
+\begin{DoxyParamCaption}
+\item[{int}]{baseSample, }
+\item[{const Ref$<$ {\bf Light} $>$ \&}]{light}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_a948dfe9e10ff52ed99763bcfba0662a0}
+
+
+Request a precomputed light sample. 
+
+\hypertarget{classembree_1_1_sampler_factory_aa2291a199a2e115a92ca459ec12781c9}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!reset@{reset}}
+\index{reset@{reset}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void embree::SamplerFactory::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_factory_aa2291a199a2e115a92ca459ec12781c9}
+
+
+Reset the sampler factory. 
+
+Delete all precomputed samples. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_sampler_factory_a27184a51d0d3e9a6268ed5d8cc887cb3}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!iteration@{iteration}}
+\index{iteration@{iteration}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{iteration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SamplerFactory::iteration}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_a27184a51d0d3e9a6268ed5d8cc887cb3}
+
+
+Current iteration. 
+
+\hypertarget{classembree_1_1_sampler_factory_a188a3e7b13c69d88c0d6a9e0192d84f4}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!lightBaseSamples@{lightBaseSamples}}
+\index{lightBaseSamples@{lightBaseSamples}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{lightBaseSamples}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$int$>$ {\bf embree::SamplerFactory::lightBaseSamples}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_a188a3e7b13c69d88c0d6a9e0192d84f4}
+
+
+Base samples for light sample precomputation. 
+
+\hypertarget{classembree_1_1_sampler_factory_aa965aa3f8efa69f3d6f43abc1b205045}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!lights@{lights}}
+\index{lights@{lights}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{lights}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$Ref$<${\bf Light}$>$ $>$ {\bf embree::SamplerFactory::lights}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_aa965aa3f8efa69f3d6f43abc1b205045}
+
+
+References to all light sources. 
+
+\hypertarget{classembree_1_1_sampler_factory_adec6d83718e9bfc86f8fc7fc7b366dff}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!numLightSamples@{numLightSamples}}
+\index{numLightSamples@{numLightSamples}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{numLightSamples}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SamplerFactory::numLightSamples}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_adec6d83718e9bfc86f8fc7fc7b366dff}
+
+
+Number of precomputed light samples per pixel sample. 
+
+\hypertarget{classembree_1_1_sampler_factory_aadbd34d68f975f6821f189e73e78833a}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!numSamples1D@{numSamples1D}}
+\index{numSamples1D@{numSamples1D}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{numSamples1D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SamplerFactory::numSamples1D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_aadbd34d68f975f6821f189e73e78833a}
+
+
+Number of additional 1D samples per pixel sample. 
+
+\hypertarget{classembree_1_1_sampler_factory_a2c6bbf4c15325b26b149dff750845759}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!numSamples2D@{numSamples2D}}
+\index{numSamples2D@{numSamples2D}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{numSamples2D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SamplerFactory::numSamples2D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_a2c6bbf4c15325b26b149dff750845759}
+
+
+Number of additional 2D samples per pixel sample. 
+
+\hypertarget{classembree_1_1_sampler_factory_ade987097a728763b39b5234f7f45799b}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!randomNumberGenerator@{randomNumberGenerator}}
+\index{randomNumberGenerator@{randomNumberGenerator}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{randomNumberGenerator}]{\setlength{\rightskip}{0pt plus 5cm}Random {\bf embree::SamplerFactory::randomNumberGenerator}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_ade987097a728763b39b5234f7f45799b}
+
+
+Random number generator used by this factory. 
+
+\hypertarget{classembree_1_1_sampler_factory_ab19a6e8dfcb6a246a329997f71b0e372}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!samples@{samples}}
+\index{samples@{samples}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{samples}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PrecomputedSample}$\ast$$\ast$ {\bf embree::SamplerFactory::samples}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_ab19a6e8dfcb6a246a329997f71b0e372}
+
+
+All precomputed samples. 
+
+\hypertarget{classembree_1_1_sampler_factory_adb750ed990fe1b5668c93d1d7ce65e73}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!sampleSets@{sampleSets}}
+\index{sampleSets@{sampleSets}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{sampleSets}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SamplerFactory::sampleSets}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_adb750ed990fe1b5668c93d1d7ce65e73}
+
+
+Number of precomputed sample sets. 
+
+\hypertarget{classembree_1_1_sampler_factory_ae275dc3161d4a7c2a5643abf5bdcd1ef}{
+\index{embree::SamplerFactory@{embree::SamplerFactory}!samplesPerPixel@{samplesPerPixel}}
+\index{samplesPerPixel@{samplesPerPixel}!embree::SamplerFactory@{embree::SamplerFactory}}
+\subsubsection[{samplesPerPixel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SamplerFactory::samplesPerPixel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_factory_ae275dc3161d4a7c2a5643abf5bdcd1ef}
+
+
+Number of samples per pixel. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/samplers/sampler.h\item 
+renderer/samplers/sampler.cpp\end{DoxyCompactItemize}

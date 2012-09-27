@@ -1,0 +1,81 @@
+\hypertarget{classembree_1_1_renderer}{
+\section{embree::Renderer Class Reference}
+\label{classembree_1_1_renderer}\index{embree::Renderer@{embree::Renderer}}
+}
+
+
+\hyperlink{classembree_1_1_renderer}{Renderer} interface definition.  
+
+
+
+
+{\ttfamily \#include $<$renderer.h$>$}
+
+Inheritance diagram for embree::Renderer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_renderer_a88d280c02b4796ad680cc56c4aa9a5d6}{$\sim$Renderer} ()
+\begin{DoxyCompactList}\small\item\em Renderers need a virtual destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classembree_1_1_renderer_acefb5f55e45bc9b846e1619977926529}{renderFrame} (const Ref$<$ \hyperlink{classembree_1_1_camera}{Camera} $>$ \&camera, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, Ref$<$ \hyperlink{classembree_1_1_film}{Film} $>$ \&film)=0
+\begin{DoxyCompactList}\small\item\em Renders a single frame. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_renderer}{Renderer} interface definition. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_renderer_a88d280c02b4796ad680cc56c4aa9a5d6}{
+\index{embree::Renderer@{embree::Renderer}!$\sim$Renderer@{$\sim$Renderer}}
+\index{$\sim$Renderer@{$\sim$Renderer}!embree::Renderer@{embree::Renderer}}
+\subsubsection[{$\sim$Renderer}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Renderer::$\sim$Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_renderer_a88d280c02b4796ad680cc56c4aa9a5d6}
+
+
+Renderers need a virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_renderer_acefb5f55e45bc9b846e1619977926529}{
+\index{embree::Renderer@{embree::Renderer}!renderFrame@{renderFrame}}
+\index{renderFrame@{renderFrame}!embree::Renderer@{embree::Renderer}}
+\subsubsection[{renderFrame}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::Renderer::renderFrame (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Camera} $>$ \&}]{camera, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{Ref$<$ {\bf Film} $>$ \&}]{film}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_renderer_acefb5f55e45bc9b846e1619977926529}
+
+
+Renders a single frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & \hyperlink{classembree_1_1_camera}{Camera} to render from. \\
+\hline
+{\em scene} & Scene to render. \\
+\hline
+{\em film} & Framebuffer to render into. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_debug_renderer_a98745dd04e9ec45e509f4f68789d9cfc}{embree::DebugRenderer}, \hyperlink{classembree_1_1_integrator_renderer_a65864dbadddc1920c3ad6269bae24c67}{embree::IntegratorRenderer}, and \hyperlink{classembree_1_1_material_renderer_a0323dad0c9e38127460ea8f4651d5fbc}{embree::MaterialRenderer}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/renderers/renderer.h\end{DoxyCompactItemize}

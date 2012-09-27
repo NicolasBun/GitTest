@@ -1,0 +1,126 @@
+\hypertarget{classembree_1_1_dielectric_transmission}{
+\section{embree::DielectricTransmission Class Reference}
+\label{classembree_1_1_dielectric_transmission}\index{embree::DielectricTransmission@{embree::DielectricTransmission}}
+}
+
+
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of the transmission of a dielectricum.  
+
+
+
+
+{\ttfamily \#include $<$dielectric.h$>$}
+
+Inheritance diagram for embree::DielectricTransmission:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_dielectric_transmission}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_dielectric_transmission_af023dc3952b29232b403de1cc78c62a1}{DielectricTransmission} (float etai, float etat)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_dielectric}{Dielectric} transmission \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_dielectric_transmission_af177756fbc0f450adc10197863a496e9}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_dielectric_transmission_ad588706fe4b14c0272db64d9eebde531}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_dielectric_transmission_a3e3eed88a0193d94f31b8c8a710507ec}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of the transmission of a dielectricum. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_dielectric_transmission_af023dc3952b29232b403de1cc78c62a1}{
+\index{embree::DielectricTransmission@{embree::DielectricTransmission}!DielectricTransmission@{DielectricTransmission}}
+\index{DielectricTransmission@{DielectricTransmission}!embree::DielectricTransmission@{embree::DielectricTransmission}}
+\subsubsection[{DielectricTransmission}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::DielectricTransmission::DielectricTransmission (
+\begin{DoxyParamCaption}
+\item[{float}]{etai, }
+\item[{float}]{etat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_dielectric_transmission_af023dc3952b29232b403de1cc78c62a1}
+
+
+\hyperlink{classembree_1_1_dielectric}{Dielectric} transmission \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em etai} & is the refraction index of the medium the incident ray travels in \\
+\hline
+{\em etat} & is the refraction index of the opposite medium \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_dielectric_transmission_af177756fbc0f450adc10197863a496e9}{
+\index{embree::DielectricTransmission@{embree::DielectricTransmission}!eval@{eval}}
+\index{eval@{eval}!embree::DielectricTransmission@{embree::DielectricTransmission}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::DielectricTransmission::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_dielectric_transmission_af177756fbc0f450adc10197863a496e9}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_dielectric_transmission_a3e3eed88a0193d94f31b8c8a710507ec}{
+\index{embree::DielectricTransmission@{embree::DielectricTransmission}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::DielectricTransmission@{embree::DielectricTransmission}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::DielectricTransmission::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_dielectric_transmission_a3e3eed88a0193d94f31b8c8a710507ec}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_dielectric_transmission_ad588706fe4b14c0272db64d9eebde531}{
+\index{embree::DielectricTransmission@{embree::DielectricTransmission}!sample@{sample}}
+\index{sample@{sample}!embree::DielectricTransmission@{embree::DielectricTransmission}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::DielectricTransmission::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_dielectric_transmission_ad588706fe4b14c0272db64d9eebde531}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/dielectric.h\end{DoxyCompactItemize}

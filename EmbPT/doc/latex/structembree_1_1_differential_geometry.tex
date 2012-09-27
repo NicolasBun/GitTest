@@ -1,0 +1,119 @@
+\hypertarget{structembree_1_1_differential_geometry}{
+\section{embree::DifferentialGeometry Struct Reference}
+\label{structembree_1_1_differential_geometry}\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+}
+
+
+Contains additional shading information for hit points.  
+
+
+
+
+{\ttfamily \#include $<$differentialgeometry.h$>$}
+
+Inheritance diagram for embree::DifferentialGeometry:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structembree_1_1_differential_geometry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_differential_geometry_af08517cad4d361acc64b468418db1a34}{DifferentialGeometry} ()
+\begin{DoxyCompactList}\small\item\em Default construction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_differential_geometry_a73b1d95459b644f89ad6994d3827b32c}{
+class \hyperlink{classembree_1_1_material}{Material} $\ast$ \hyperlink{structembree_1_1_differential_geometry_a73b1d95459b644f89ad6994d3827b32c}{material}}
+\label{structembree_1_1_differential_geometry_a73b1d95459b644f89ad6994d3827b32c}
+
+\begin{DoxyCompactList}\small\item\em pointer to material of hit shape instance \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_differential_geometry_a6635f38b6cb55fc2ba1e76178ddab43e}{
+class \hyperlink{classembree_1_1_area_light}{AreaLight} $\ast$ \hyperlink{structembree_1_1_differential_geometry_a6635f38b6cb55fc2ba1e76178ddab43e}{light}}
+\label{structembree_1_1_differential_geometry_a6635f38b6cb55fc2ba1e76178ddab43e}
+
+\begin{DoxyCompactList}\small\item\em pointer to area light of hit shape instance \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{structembree_1_1_differential_geometry_accb803ee82e59dce5a4aeb5e336101dc}{P}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_hit}{Hit} location in world coordinates. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{structembree_1_1_differential_geometry_a80563fbecb4f02b557437933bca5798b}{Ng}
+\begin{DoxyCompactList}\small\item\em Geometric normal. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{structembree_1_1_differential_geometry_a7c1fe2671801ed94e10d67b340bfd40c}{Ns}
+\begin{DoxyCompactList}\small\item\em Shading normal. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{structembree_1_1_differential_geometry_ae1663be15511c0bb07a8558ba9b169ed}{st}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_hit}{Hit} location in surface parameter space. \item\end{DoxyCompactList}\item 
+float \hyperlink{structembree_1_1_differential_geometry_aa73cefe912dbe7c16052eb0a37ff4aa5}{error}
+\begin{DoxyCompactList}\small\item\em Intersection error factor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains additional shading information for hit points. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structembree_1_1_differential_geometry_af08517cad4d361acc64b468418db1a34}{
+\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}!DifferentialGeometry@{DifferentialGeometry}}
+\index{DifferentialGeometry@{DifferentialGeometry}!embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+\subsubsection[{DifferentialGeometry}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::DifferentialGeometry::DifferentialGeometry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_differential_geometry_af08517cad4d361acc64b468418db1a34}
+
+
+Default construction. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structembree_1_1_differential_geometry_aa73cefe912dbe7c16052eb0a37ff4aa5}{
+\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}!error@{error}}
+\index{error@{error}!embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf embree::DifferentialGeometry::error}}}
+\label{structembree_1_1_differential_geometry_aa73cefe912dbe7c16052eb0a37ff4aa5}
+
+
+Intersection error factor. 
+
+\hypertarget{structembree_1_1_differential_geometry_a80563fbecb4f02b557437933bca5798b}{
+\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}!Ng@{Ng}}
+\index{Ng@{Ng}!embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+\subsubsection[{Ng}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::DifferentialGeometry::Ng}}}
+\label{structembree_1_1_differential_geometry_a80563fbecb4f02b557437933bca5798b}
+
+
+Geometric normal. 
+
+\hypertarget{structembree_1_1_differential_geometry_a7c1fe2671801ed94e10d67b340bfd40c}{
+\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}!Ns@{Ns}}
+\index{Ns@{Ns}!embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+\subsubsection[{Ns}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::DifferentialGeometry::Ns}}}
+\label{structembree_1_1_differential_geometry_a7c1fe2671801ed94e10d67b340bfd40c}
+
+
+Shading normal. 
+
+\hypertarget{structembree_1_1_differential_geometry_accb803ee82e59dce5a4aeb5e336101dc}{
+\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}!P@{P}}
+\index{P@{P}!embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+\subsubsection[{P}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::DifferentialGeometry::P}}}
+\label{structembree_1_1_differential_geometry_accb803ee82e59dce5a4aeb5e336101dc}
+
+
+\hyperlink{structembree_1_1_hit}{Hit} location in world coordinates. 
+
+\hypertarget{structembree_1_1_differential_geometry_ae1663be15511c0bb07a8558ba9b169ed}{
+\index{embree::DifferentialGeometry@{embree::DifferentialGeometry}!st@{st}}
+\index{st@{st}!embree::DifferentialGeometry@{embree::DifferentialGeometry}}
+\subsubsection[{st}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f {\bf embree::DifferentialGeometry::st}}}
+\label{structembree_1_1_differential_geometry_ae1663be15511c0bb07a8558ba9b169ed}
+
+
+\hyperlink{structembree_1_1_hit}{Hit} location in surface parameter space. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/differentialgeometry.h\end{DoxyCompactItemize}

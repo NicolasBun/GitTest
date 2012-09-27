@@ -1,0 +1,104 @@
+\hypertarget{structembree_1_1_precomputed_sample}{
+\section{embree::PrecomputedSample Struct Reference}
+\label{structembree_1_1_precomputed_sample}\index{embree::PrecomputedSample@{embree::PrecomputedSample}}
+}
+
+
+A complete high-\/dimensional sample, attached to one sample in the image plane.  
+
+
+
+
+{\ttfamily \#include $<$sampler.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vec2f \hyperlink{structembree_1_1_precomputed_sample_a03538d74672d4cb9562d676aa1e6bb86}{pixel}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_sample}{Sample} location inside the pixel. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{structembree_1_1_precomputed_sample_a8f8f6b2cb738ab9627878360f898ec3e}{raster}
+\begin{DoxyCompactList}\small\item\em Floating point coordinates of the sample in \mbox{[}0;width\mbox{]}x\mbox{[}0;height\mbox{]}. \item\end{DoxyCompactList}\item 
+Vec2i \hyperlink{structembree_1_1_precomputed_sample_adec22f991b28ee05f8f7297964918ab1}{integerRaster}
+\begin{DoxyCompactList}\small\item\em Integer coordinates of the associated pixel in \mbox{[}0;width\mbox{]}x\mbox{[}0;height\mbox{]}. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{structembree_1_1_precomputed_sample_a3aebb258d27d6c2555d2f8ee0f5bc6b1}{lens}
+\begin{DoxyCompactList}\small\item\em 2D lens sample for depth of field. \item\end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{structembree_1_1_precomputed_sample_a2043d5a1909742b1601a5e235cbb74b1}{samples1D}
+\begin{DoxyCompactList}\small\item\em Additional 1D samples requested by the integrator. \item\end{DoxyCompactList}\item 
+Vec2f $\ast$ \hyperlink{structembree_1_1_precomputed_sample_abbe8fc7c30fc8505f82606996032dd3b}{samples2D}
+\begin{DoxyCompactList}\small\item\em Additional 2D samples requested by the integrator. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_light_sample}{LightSample} $\ast$ \hyperlink{structembree_1_1_precomputed_sample_acfe1e485e8834d42e38cc076b7b40bc5}{lightSamples}
+\begin{DoxyCompactList}\small\item\em Precomputed light samples. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A complete high-\/dimensional sample, attached to one sample in the image plane. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structembree_1_1_precomputed_sample_adec22f991b28ee05f8f7297964918ab1}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!integerRaster@{integerRaster}}
+\index{integerRaster@{integerRaster}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{integerRaster}]{\setlength{\rightskip}{0pt plus 5cm}Vec2i {\bf embree::PrecomputedSample::integerRaster}}}
+\label{structembree_1_1_precomputed_sample_adec22f991b28ee05f8f7297964918ab1}
+
+
+Integer coordinates of the associated pixel in \mbox{[}0;width\mbox{]}x\mbox{[}0;height\mbox{]}. 
+
+\hypertarget{structembree_1_1_precomputed_sample_a3aebb258d27d6c2555d2f8ee0f5bc6b1}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!lens@{lens}}
+\index{lens@{lens}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{lens}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f {\bf embree::PrecomputedSample::lens}}}
+\label{structembree_1_1_precomputed_sample_a3aebb258d27d6c2555d2f8ee0f5bc6b1}
+
+
+2D lens sample for depth of field. 
+
+\hypertarget{structembree_1_1_precomputed_sample_acfe1e485e8834d42e38cc076b7b40bc5}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!lightSamples@{lightSamples}}
+\index{lightSamples@{lightSamples}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{lightSamples}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LightSample}$\ast$ {\bf embree::PrecomputedSample::lightSamples}}}
+\label{structembree_1_1_precomputed_sample_acfe1e485e8834d42e38cc076b7b40bc5}
+
+
+Precomputed light samples. 
+
+\hypertarget{structembree_1_1_precomputed_sample_a03538d74672d4cb9562d676aa1e6bb86}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!pixel@{pixel}}
+\index{pixel@{pixel}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{pixel}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f {\bf embree::PrecomputedSample::pixel}}}
+\label{structembree_1_1_precomputed_sample_a03538d74672d4cb9562d676aa1e6bb86}
+
+
+\hyperlink{structembree_1_1_sample}{Sample} location inside the pixel. 
+
+\mbox{[}0.5;0.5\mbox{]} is the pixel center. \hypertarget{structembree_1_1_precomputed_sample_a8f8f6b2cb738ab9627878360f898ec3e}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!raster@{raster}}
+\index{raster@{raster}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{raster}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f {\bf embree::PrecomputedSample::raster}}}
+\label{structembree_1_1_precomputed_sample_a8f8f6b2cb738ab9627878360f898ec3e}
+
+
+Floating point coordinates of the sample in \mbox{[}0;width\mbox{]}x\mbox{[}0;height\mbox{]}. 
+
+\hypertarget{structembree_1_1_precomputed_sample_a2043d5a1909742b1601a5e235cbb74b1}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!samples1D@{samples1D}}
+\index{samples1D@{samples1D}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{samples1D}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf embree::PrecomputedSample::samples1D}}}
+\label{structembree_1_1_precomputed_sample_a2043d5a1909742b1601a5e235cbb74b1}
+
+
+Additional 1D samples requested by the integrator. 
+
+\hypertarget{structembree_1_1_precomputed_sample_abbe8fc7c30fc8505f82606996032dd3b}{
+\index{embree::PrecomputedSample@{embree::PrecomputedSample}!samples2D@{samples2D}}
+\index{samples2D@{samples2D}!embree::PrecomputedSample@{embree::PrecomputedSample}}
+\subsubsection[{samples2D}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f$\ast$ {\bf embree::PrecomputedSample::samples2D}}}
+\label{structembree_1_1_precomputed_sample_abbe8fc7c30fc8505f82606996032dd3b}
+
+
+Additional 2D samples requested by the integrator. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/samplers/sampler.h\end{DoxyCompactItemize}

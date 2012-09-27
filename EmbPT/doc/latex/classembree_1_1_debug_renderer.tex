@@ -1,0 +1,83 @@
+\hypertarget{classembree_1_1_debug_renderer}{
+\section{embree::DebugRenderer Class Reference}
+\label{classembree_1_1_debug_renderer}\index{embree::DebugRenderer@{embree::DebugRenderer}}
+}
+
+
+Simple renderer for testing the ray shooting performance.  
+
+
+
+
+{\ttfamily \#include $<$debugrenderer.h$>$}
+
+Inheritance diagram for embree::DebugRenderer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_debug_renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_debug_renderer_a56d2b9b04323a2069bc59e2703078f5c}{DebugRenderer} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_debug_renderer_a98745dd04e9ec45e509f4f68789d9cfc}{renderFrame} (const Ref$<$ \hyperlink{classembree_1_1_camera}{Camera} $>$ \&camera, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, Ref$<$ \hyperlink{classembree_1_1_film}{Film} $>$ \&film)
+\begin{DoxyCompactList}\small\item\em Renders a single frame. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple renderer for testing the ray shooting performance. The renderer performs a series of diffuse bounces when given a recursion depth greater than 1. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_debug_renderer_a56d2b9b04323a2069bc59e2703078f5c}{
+\index{embree::DebugRenderer@{embree::DebugRenderer}!DebugRenderer@{DebugRenderer}}
+\index{DebugRenderer@{DebugRenderer}!embree::DebugRenderer@{embree::DebugRenderer}}
+\subsubsection[{DebugRenderer}]{\setlength{\rightskip}{0pt plus 5cm}home venceslas Recherche Project GlobIll EmbPT renderer renderers debugrenderer cpp embree::DebugRenderer::DebugRenderer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_debug_renderer_a56d2b9b04323a2069bc59e2703078f5c}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_debug_renderer_a98745dd04e9ec45e509f4f68789d9cfc}{
+\index{embree::DebugRenderer@{embree::DebugRenderer}!renderFrame@{renderFrame}}
+\index{renderFrame@{renderFrame}!embree::DebugRenderer@{embree::DebugRenderer}}
+\subsubsection[{renderFrame}]{\setlength{\rightskip}{0pt plus 5cm}void embree::DebugRenderer::renderFrame (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Camera} $>$ \&}]{camera, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{Ref$<$ {\bf Film} $>$ \&}]{film}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_debug_renderer_a98745dd04e9ec45e509f4f68789d9cfc}
+
+
+Renders a single frame. 
+
+
+
+flush to zero and no denormals
+
+precompute some values
+
+render frame
+
+print framerate 
+
+
+
+Implements \hyperlink{classembree_1_1_renderer_acefb5f55e45bc9b846e1619977926529}{embree::Renderer}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/renderers/debugrenderer.h\item 
+renderer/renderers/debugrenderer.cpp\end{DoxyCompactItemize}

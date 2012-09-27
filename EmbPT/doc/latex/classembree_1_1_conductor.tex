@@ -1,0 +1,129 @@
+\hypertarget{classembree_1_1_conductor}{
+\section{embree::Conductor Class Reference}
+\label{classembree_1_1_conductor}\index{embree::Conductor@{embree::Conductor}}
+}
+
+
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of a perfectly polished metal.  
+
+
+
+
+{\ttfamily \#include $<$conductor.h$>$}
+
+Inheritance diagram for embree::Conductor:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_conductor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_conductor_a59717273c6cedbbfe30ac2967d54c21d}{Conductor} (const Col3f \&R, const Col3f \&eta, const Col3f \&k)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_conductor}{Conductor} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_conductor_afb1df0df04fa63b239869a895530831f}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_conductor_ac5b0f13023ecafedbe97816939c937f8}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_conductor_a357d9b89ca7450aa6c7972ba42c96e02}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of a perfectly polished metal. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_conductor_a59717273c6cedbbfe30ac2967d54c21d}{
+\index{embree::Conductor@{embree::Conductor}!Conductor@{Conductor}}
+\index{Conductor@{Conductor}!embree::Conductor@{embree::Conductor}}
+\subsubsection[{Conductor}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Conductor::Conductor (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{R, }
+\item[{const Col3f \&}]{eta, }
+\item[{const Col3f \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_conductor_a59717273c6cedbbfe30ac2967d54c21d}
+
+
+\hyperlink{classembree_1_1_conductor}{Conductor} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & is the reflectivity coefficient \\
+\hline
+{\em eta} & the real part of the refraction index and \\
+\hline
+{\em k} & the imaginary part of the refraction index \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_conductor_afb1df0df04fa63b239869a895530831f}{
+\index{embree::Conductor@{embree::Conductor}!eval@{eval}}
+\index{eval@{eval}!embree::Conductor@{embree::Conductor}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::Conductor::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_conductor_afb1df0df04fa63b239869a895530831f}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_conductor_a357d9b89ca7450aa6c7972ba42c96e02}{
+\index{embree::Conductor@{embree::Conductor}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Conductor@{embree::Conductor}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Conductor::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_conductor_a357d9b89ca7450aa6c7972ba42c96e02}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_conductor_ac5b0f13023ecafedbe97816939c937f8}{
+\index{embree::Conductor@{embree::Conductor}!sample@{sample}}
+\index{sample@{sample}!embree::Conductor@{embree::Conductor}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Conductor::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_conductor_ac5b0f13023ecafedbe97816939c937f8}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/conductor.h\end{DoxyCompactItemize}

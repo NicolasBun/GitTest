@@ -1,0 +1,120 @@
+\hypertarget{classembree_1_1_direct_lighting_integrator}{
+\section{embree::DirectLightingIntegrator Class Reference}
+\label{classembree_1_1_direct_lighting_integrator}\index{embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}}
+}
+
+
+Path tracer integrator.  
+
+
+
+
+{\ttfamily \#include $<$directlightingintegrator.h$>$}
+
+Inheritance diagram for embree::DirectLightingIntegrator:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_direct_lighting_integrator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_direct_lighting_integrator_a114a052d706bd3d7bc1620795a1848f4}{DirectLightingIntegrator} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Tracks the state of the path. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_direct_lighting_integrator_a6043ec2711ed0aa764c3ff386223cbca}{requestSamples} (Ref$<$ \hyperlink{classembree_1_1_sampler_factory}{SamplerFactory} $>$ \&samplerFactory, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene)
+\begin{DoxyCompactList}\small\item\em Registers samples we need to the sampler. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_direct_lighting_integrator_a4dbebb16520d11bcd37cc271971a6d24}{Li} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, \hyperlink{classembree_1_1_sampler}{Sampler} $\ast$sampler, size\_\-t \&numRays)
+\begin{DoxyCompactList}\small\item\em Function that is recursively called to compute the path. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Path tracer integrator. The implementation follows a single path from the camera into the scene and connect the path at each diffuse or glossy surface to all light sources. Except for this the path is never split, also not at glass surfaces. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_direct_lighting_integrator_a114a052d706bd3d7bc1620795a1848f4}{
+\index{embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}!DirectLightingIntegrator@{DirectLightingIntegrator}}
+\index{DirectLightingIntegrator@{DirectLightingIntegrator}!embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}}
+\subsubsection[{DirectLightingIntegrator}]{\setlength{\rightskip}{0pt plus 5cm}embree::DirectLightingIntegrator::DirectLightingIntegrator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_direct_lighting_integrator_a114a052d706bd3d7bc1620795a1848f4}
+
+
+Tracks the state of the path. 
+
+Construction of integrator from parameters. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_direct_lighting_integrator_a4dbebb16520d11bcd37cc271971a6d24}{
+\index{embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}!Li@{Li}}
+\index{Li@{Li}!embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}}
+\subsubsection[{Li}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::DirectLightingIntegrator::Li (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{{\bf Sampler} $\ast$}]{sampler, }
+\item[{size\_\-t \&}]{numRays}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_direct_lighting_integrator_a4dbebb16520d11bcd37cc271971a6d24}
+
+
+Function that is recursively called to compute the path. 
+
+Computes the radiance arriving at the origin of the ray from the ray direction. 
+
+Traverse ray.
+
+Environment shading when nothing hit.
+
+Shade surface.
+
+face forward normals
+
+Add light emitted by hit area light source.
+
+lightPath.ignoreVisibleLights \&\&
+
+Global illumination. Pick one \hyperlink{classembree_1_1_b_r_d_f}{BRDF} component and sample it.
+
+Check if any \hyperlink{classembree_1_1_b_r_d_f}{BRDF} component uses direct lighting.
+
+Either use precomputed samples for the light or sample light now.
+
+Ignore zero radiance or illumination from the back.
+
+Test for shadows.
+
+Evaluate \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+
+
+Implements \hyperlink{classembree_1_1_integrator_a39cfbf2d078f8e072e17d8cdf2a1b604}{embree::Integrator}.
+
+\hypertarget{classembree_1_1_direct_lighting_integrator_a6043ec2711ed0aa764c3ff386223cbca}{
+\index{embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}!requestSamples@{requestSamples}}
+\index{requestSamples@{requestSamples}!embree::DirectLightingIntegrator@{embree::DirectLightingIntegrator}}
+\subsubsection[{requestSamples}]{\setlength{\rightskip}{0pt plus 5cm}void embree::DirectLightingIntegrator::requestSamples (
+\begin{DoxyParamCaption}
+\item[{Ref$<$ {\bf SamplerFactory} $>$ \&}]{samplerFactory, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_direct_lighting_integrator_a6043ec2711ed0aa764c3ff386223cbca}
+
+
+Registers samples we need to the sampler. 
+
+
+
+Reimplemented from \hyperlink{classembree_1_1_integrator_a7dbd4474e5bbda044ef8b44ffa3dcf95}{embree::Integrator}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/integrators/directlightingintegrator.h\item 
+renderer/integrators/directlightingintegrator.cpp\end{DoxyCompactItemize}

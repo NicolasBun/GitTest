@@ -1,0 +1,155 @@
+\hypertarget{classembree_1_1_b_r_d_f}{
+\section{embree::BRDF Class Reference}
+\label{classembree_1_1_b_r_d_f}\index{embree::BRDF@{embree::BRDF}}
+}
+
+
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} interface definition.  
+
+
+
+
+{\ttfamily \#include $<$brdf.h$>$}
+
+Inheritance diagram for embree::BRDF:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classembree_1_1_b_r_d_f}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_b_r_d_f_a00b5f8cc7475f588a63f20dd94272e7f}{BRDF} (const BRDFType \hyperlink{classembree_1_1_b_r_d_f_a4951cd2b8b2d2ab69e1e1f5819c7dcf5}{type})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+virtual Col3f \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+virtual Col3f \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+virtual float \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_b_r_d_f_a4951cd2b8b2d2ab69e1e1f5819c7dcf5}{
+BRDFType \hyperlink{classembree_1_1_b_r_d_f_a4951cd2b8b2d2ab69e1e1f5819c7dcf5}{type}}
+\label{classembree_1_1_b_r_d_f_a4951cd2b8b2d2ab69e1e1f5819c7dcf5}
+
+\begin{DoxyCompactList}\small\item\em the type hints of the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} interface definition. A \hyperlink{classembree_1_1_b_r_d_f}{BRDF} can be evaluated, sampled, and the sampling PDF be evaluated. Note that in difference to the definition in the literature, our BRDFs contain the cosine term. E.g. the diffuse \hyperlink{classembree_1_1_b_r_d_f}{BRDF} in our system is a/pi$\ast$cos(wi,N) instead of a/pi. This makes the formula of reflection and refraction BRDFs more natural. It further creates consistency as the sampling functionality of the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} class would have to include sampling of the cosine term anyway. As an optimization, the evaluation of the cosine term can even be skipped in case it is handled through sampling. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_r_d_f_a00b5f8cc7475f588a63f20dd94272e7f}{
+\index{embree::BRDF@{embree::BRDF}!BRDF@{BRDF}}
+\index{BRDF@{BRDF}!embree::BRDF@{embree::BRDF}}
+\subsubsection[{BRDF}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BRDF::BRDF (
+\begin{DoxyParamCaption}
+\item[{const BRDFType}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_r_d_f_a00b5f8cc7475f588a63f20dd94272e7f}
+
+
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+The \hyperlink{classembree_1_1_b_r_d_f}{BRDF} interface remembers the type hints. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{
+\index{embree::BRDF@{embree::BRDF}!eval@{eval}}
+\index{eval@{eval}!embree::BRDF@{embree::BRDF}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::BRDF::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+\begin{DoxyParams}{Parameters}
+{\em wo} & Direction light is reflected into. \\
+\hline
+{\em dg} & Shade location on a surface to evaluate the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} at. \\
+\hline
+{\em wi} & Direction light is falling onto the surface. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classembree_1_1_black_matter_aeb4ef4667f766af07ca4ec4e630a9d46}{embree::BlackMatter}, \hyperlink{classembree_1_1_conductor_afb1df0df04fa63b239869a895530831f}{embree::Conductor}, \hyperlink{classembree_1_1_dielectric_reflection_a7c45f2d6768e160f5602e62ec18a71f1}{embree::DielectricReflection}, \hyperlink{classembree_1_1_dielectric_transmission_af177756fbc0f450adc10197863a496e9}{embree::DielectricTransmission}, \hyperlink{classembree_1_1_thin_dielectric_transmission_aa3dd6150a5adb7e55861585b5388c90b}{embree::ThinDielectricTransmission}, \hyperlink{classembree_1_1_dielectric_layer_ac96b3520055e55d2bc51e49cbd3c1d57}{embree::DielectricLayer$<$ Ground $>$}, \hyperlink{classembree_1_1_lambertian_a623a323d9862e008c9cc54e19ba28aba}{embree::Lambertian}, \hyperlink{classembree_1_1_microfacet_a7de0e49c1425eff3003c40f875e43466}{embree::Microfacet$<$ Fresnel, Distribution $>$}, \hyperlink{classembree_1_1_minnaert_a9c297817db021bff59b90fd44a22ae0f}{embree::Minnaert}, \hyperlink{classembree_1_1_reflection_a6c444d0ee7455fed9a56a54aefc08d50}{embree::Reflection}, \hyperlink{classembree_1_1_specular_a557981e01db890cc5e873b8b3734fce9}{embree::Specular}, \hyperlink{classembree_1_1_transmission_a2b7f2db78edbb393103bc1f2605c2aa4}{embree::Transmission}, \hyperlink{classembree_1_1_velvety_a3dc2e52179a4cf49b9d6afc2c5fbcaab}{embree::Velvety}, \hyperlink{classembree_1_1_dielectric_layer_ac96b3520055e55d2bc51e49cbd3c1d57}{embree::DielectricLayer$<$ Lambertian $>$}, and \hyperlink{classembree_1_1_dielectric_layer_ac96b3520055e55d2bc51e49cbd3c1d57}{embree::DielectricLayer$<$ MicrofacetGlitter $>$}.
+
+\hypertarget{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{
+\index{embree::BRDF@{embree::BRDF}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::BRDF@{embree::BRDF}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}virtual float embree::BRDF::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em wo} & Direction light is reflected into. \\
+\hline
+{\em dg} & Shade location on a surface to evaluate PDF for. \\
+\hline
+{\em wi} & Direction light is coming from. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classembree_1_1_black_matter_a0751d955ba33a4fc23ebbe63fde6ad27}{embree::BlackMatter}, \hyperlink{classembree_1_1_conductor_a357d9b89ca7450aa6c7972ba42c96e02}{embree::Conductor}, \hyperlink{classembree_1_1_dielectric_reflection_a0ea69a412cdd7eb4f4582c57b85b72d7}{embree::DielectricReflection}, \hyperlink{classembree_1_1_dielectric_transmission_a3e3eed88a0193d94f31b8c8a710507ec}{embree::DielectricTransmission}, \hyperlink{classembree_1_1_thin_dielectric_transmission_a9b3ee34fefe0d9207a9daf0120054b73}{embree::ThinDielectricTransmission}, \hyperlink{classembree_1_1_dielectric_layer_abd4cc5987cccc0c505d30f306c2e145b}{embree::DielectricLayer$<$ Ground $>$}, \hyperlink{classembree_1_1_lambertian_a972b1098b59118ae1ed2e9f42bbbc747}{embree::Lambertian}, \hyperlink{classembree_1_1_microfacet_a72fac81dfc79a57c4f719a1b62942ea3}{embree::Microfacet$<$ Fresnel, Distribution $>$}, \hyperlink{classembree_1_1_minnaert_a52cdcd2bc7700f4aeb61de5e1c980823}{embree::Minnaert}, \hyperlink{classembree_1_1_reflection_a8b574ee9c903dd83c5cfcb9fe9e80746}{embree::Reflection}, \hyperlink{classembree_1_1_specular_a0ae69bd36689b06e6800e5db06dac7ca}{embree::Specular}, \hyperlink{classembree_1_1_transmission_a5d6c2a769d14d6d598f6d7315e1bcb52}{embree::Transmission}, \hyperlink{classembree_1_1_velvety_a93d6d2cf69e8866244c64079e05c965a}{embree::Velvety}, \hyperlink{classembree_1_1_dielectric_layer_abd4cc5987cccc0c505d30f306c2e145b}{embree::DielectricLayer$<$ Lambertian $>$}, and \hyperlink{classembree_1_1_dielectric_layer_abd4cc5987cccc0c505d30f306c2e145b}{embree::DielectricLayer$<$ MicrofacetGlitter $>$}.
+
+\hypertarget{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{
+\index{embree::BRDF@{embree::BRDF}!sample@{sample}}
+\index{sample@{sample}!embree::BRDF@{embree::BRDF}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::BRDF::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+\begin{DoxyParams}{Parameters}
+{\em wo} & Direction light is reflected into. \\
+\hline
+{\em dg} & Shade location on a surface to sample the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} at. \\
+\hline
+{\em wi} & Returns sampled incoming light direction and PDF. \\
+\hline
+{\em s} & \hyperlink{structembree_1_1_sample}{Sample} locations are provided by the caller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classembree_1_1_black_matter_a0955e03be1befc21396eee1c1bf66d8b}{embree::BlackMatter}, \hyperlink{classembree_1_1_conductor_ac5b0f13023ecafedbe97816939c937f8}{embree::Conductor}, \hyperlink{classembree_1_1_dielectric_reflection_a292d787b936ce461323aaa9857b4390b}{embree::DielectricReflection}, \hyperlink{classembree_1_1_dielectric_transmission_ad588706fe4b14c0272db64d9eebde531}{embree::DielectricTransmission}, \hyperlink{classembree_1_1_thin_dielectric_transmission_a16c3d81fce553abe112741189f138e36}{embree::ThinDielectricTransmission}, \hyperlink{classembree_1_1_dielectric_layer_a33f32f84f98c85a68a212b8b6362e7e1}{embree::DielectricLayer$<$ Ground $>$}, \hyperlink{classembree_1_1_lambertian_a99125affac6254680b17fd210f007259}{embree::Lambertian}, \hyperlink{classembree_1_1_microfacet_a9e9f979b2aaaecb899110bd9e9c2f7ef}{embree::Microfacet$<$ Fresnel, Distribution $>$}, \hyperlink{classembree_1_1_minnaert_af68ead9a773b6f55b21dad888870a10d}{embree::Minnaert}, \hyperlink{classembree_1_1_reflection_ac8763a319aba0109e6283b17b64d719c}{embree::Reflection}, \hyperlink{classembree_1_1_specular_a1386f2ba135c410b176d07dd4e3c6a42}{embree::Specular}, \hyperlink{classembree_1_1_transmission_aa22d7761c728167e6aa009dde0bd6f53}{embree::Transmission}, \hyperlink{classembree_1_1_velvety_a3307cabb2d5faae142034856813b5c73}{embree::Velvety}, \hyperlink{classembree_1_1_dielectric_layer_a33f32f84f98c85a68a212b8b6362e7e1}{embree::DielectricLayer$<$ Lambertian $>$}, and \hyperlink{classembree_1_1_dielectric_layer_a33f32f84f98c85a68a212b8b6362e7e1}{embree::DielectricLayer$<$ MicrofacetGlitter $>$}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/brdf.h\end{DoxyCompactItemize}

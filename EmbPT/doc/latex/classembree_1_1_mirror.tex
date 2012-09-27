@@ -1,0 +1,53 @@
+\hypertarget{classembree_1_1_mirror}{
+\section{embree::Mirror Class Reference}
+\label{classembree_1_1_mirror}\index{embree::Mirror@{embree::Mirror}}
+}
+
+
+Implements a mirror material.  
+
+
+
+
+{\ttfamily \#include $<$mirror.h$>$}
+
+Inheritance diagram for embree::Mirror:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_mirror}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_mirror_a7edcfe18d0f089e2cbdd9ae60404e497}{Mirror} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_mirror_ae46c2ccf317c491ca7ecaca5d1f3f557}{
+void \hyperlink{classembree_1_1_mirror_ae46c2ccf317c491ca7ecaca5d1f3f557}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const }
+\label{classembree_1_1_mirror_ae46c2ccf317c491ca7ecaca5d1f3f557}
+
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a mirror material. The reflected light can be modulated with a mirror reflectivity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_mirror_a7edcfe18d0f089e2cbdd9ae60404e497}{
+\index{embree::Mirror@{embree::Mirror}!Mirror@{Mirror}}
+\index{Mirror@{Mirror}!embree::Mirror@{embree::Mirror}}
+\subsubsection[{Mirror}]{\setlength{\rightskip}{0pt plus 5cm}embree::Mirror::Mirror (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_mirror_a7edcfe18d0f089e2cbdd9ae60404e497}
+
+
+Construction from parameters. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/mirror.h\end{DoxyCompactItemize}

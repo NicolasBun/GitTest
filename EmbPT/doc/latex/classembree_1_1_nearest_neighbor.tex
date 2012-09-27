@@ -1,0 +1,75 @@
+\hypertarget{classembree_1_1_nearest_neighbor}{
+\section{embree::NearestNeighbor Class Reference}
+\label{classembree_1_1_nearest_neighbor}\index{embree::NearestNeighbor@{embree::NearestNeighbor}}
+}
+
+
+Implements an image mapped texture with nearest neighbor lookup.  
+
+
+
+
+{\ttfamily \#include $<$nearestneighbor.h$>$}
+
+Inheritance diagram for embree::NearestNeighbor:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_nearest_neighbor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_nearest_neighbor_a787fdafdd3c8bd259b7b965a36dae633}{NearestNeighbor} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_nearest_neighbor_a8cb7bc5733196269006ba7a1116017f4}{get} (const Vec2f \&p) const 
+\begin{DoxyCompactList}\small\item\em Returns the color for a surface point p. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements an image mapped texture with nearest neighbor lookup. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_nearest_neighbor_a787fdafdd3c8bd259b7b965a36dae633}{
+\index{embree::NearestNeighbor@{embree::NearestNeighbor}!NearestNeighbor@{NearestNeighbor}}
+\index{NearestNeighbor@{NearestNeighbor}!embree::NearestNeighbor@{embree::NearestNeighbor}}
+\subsubsection[{NearestNeighbor}]{\setlength{\rightskip}{0pt plus 5cm}embree::NearestNeighbor::NearestNeighbor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_nearest_neighbor_a787fdafdd3c8bd259b7b965a36dae633}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_nearest_neighbor_a8cb7bc5733196269006ba7a1116017f4}{
+\index{embree::NearestNeighbor@{embree::NearestNeighbor}!get@{get}}
+\index{get@{get}!embree::NearestNeighbor@{embree::NearestNeighbor}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::NearestNeighbor::get (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_nearest_neighbor_a8cb7bc5733196269006ba7a1116017f4}
+
+
+Returns the color for a surface point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is the location to query the color for. The range is 0 to 1. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classembree_1_1_texture_aa467dc197aaa52aad1312d45d499bb87}{embree::Texture}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/textures/nearestneighbor.h\end{DoxyCompactItemize}

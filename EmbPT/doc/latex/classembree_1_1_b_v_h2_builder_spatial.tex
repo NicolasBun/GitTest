@@ -1,0 +1,119 @@
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial}{
+\section{embree::BVH2BuilderSpatial Class Reference}
+\label{classembree_1_1_b_v_h2_builder_spatial}\index{embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}}
+}
+
+
+\hyperlink{classembree_1_1_b_v_h2}{BVH2} spatial split builder.  
+
+
+
+
+{\ttfamily \#include $<$bvh2\_\-builder\_\-spatial.h$>$}
+
+Inheritance diagram for embree::BVH2BuilderSpatial:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_b_v_h2_builder_spatial}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_high}{BuildTaskHigh}
+\begin{DoxyCompactList}\small\item\em Single-\/threaded breadth-\/first build task. \item\end{DoxyCompactList}\item 
+class \hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low}{BuildTaskLow}
+\begin{DoxyCompactList}\small\item\em Single-\/threaded breadth-\/first build task. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_builder_spatial_a81b3321a25c2bf179e17e64b1e0f4879}{BVH2BuilderSpatial} (const BuildTriangle $\ast$triangles, size\_\-t numTriangles, Ref$<$ \hyperlink{classembree_1_1_b_v_h2}{BVH2}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ bvh)
+\begin{DoxyCompactList}\small\item\em Constructs the builder. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_a560f6c1a5e52add82d7887aada313eb4}{
+static Ref$<$ \hyperlink{classembree_1_1_b_v_h2}{BVH2}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h2_builder_spatial_a560f6c1a5e52add82d7887aada313eb4}{build} (const BuildTriangle $\ast$triangles, size\_\-t numTriangles)}
+\label{classembree_1_1_b_v_h2_builder_spatial_a560f6c1a5e52add82d7887aada313eb4}
+
+\begin{DoxyCompactList}\small\item\em API entry function for the builder. \item\end{DoxyCompactList}\item 
+static \_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_b_v_h2_builder_spatial_a4a626cb46cdadb3cec1c339a913d8104}{blocks} (size\_\-t x)
+\begin{DoxyCompactList}\small\item\em Computes the number of blocks of a number of triangles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const float \hyperlink{classembree_1_1_b_v_h2_builder_spatial_a5772bb5554d960c1ac26cad6274598ac}{duplicationFactor} = 1.5f
+\begin{DoxyCompactList}\small\item\em Maximal duplication of triangles through spatial splits. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_v_h2}{BVH2} spatial split builder. The builder uses a combined object split and spatial splitting strategy. Object splits are evaluated through binning like in the \hyperlink{classembree_1_1_b_v_h2_builder}{BVH2Builder}, however, a central spatial split in each dimension is considered too. The best of all these splitting possibilities is choosen. Spatial splits cause the number of triangle references to increase through split triangles. The builder bounds this tiangle duplication through the duplicationFactor constant. Through breadth-\/first construction, the builder is able to distribute the spatial splits evenly over the scene until the maximal triangle duplication is reached. Passes of this breadth-\/first construction sort primitives from left-\/to-\/right and right-\/to-\/left in the primitive array. This makes memory management trivial and allows to compactly fill the primitive array. The builder is multi-\/threaded by first performing a number of single threaded build iterations for the high nodes of the tree (\hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_high}{BuildTaskHigh}) and then distributing work to multiple threads to build the lower nodes of the tree (\hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low}{BuildTaskLow}). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_a81b3321a25c2bf179e17e64b1e0f4879}{
+\index{embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}!BVH2BuilderSpatial@{BVH2BuilderSpatial}}
+\index{BVH2BuilderSpatial@{BVH2BuilderSpatial}!embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}}
+\subsubsection[{BVH2BuilderSpatial}]{\setlength{\rightskip}{0pt plus 5cm}embree::BVH2BuilderSpatial::BVH2BuilderSpatial (
+\begin{DoxyParamCaption}
+\item[{const BuildTriangle $\ast$}]{triangles, }
+\item[{size\_\-t}]{numTriangles, }
+\item[{Ref$<$ {\bf BVH2}$<$ {\bf Triangle4} $>$ $>$}]{bvh}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_spatial_a81b3321a25c2bf179e17e64b1e0f4879}
+
+
+Constructs the builder. 
+
+
+
+Allocate array for splitting primitive lists.
+
+Allocate space for job list
+
+Allocate storage for nodes. Each thread should at least be able to get one block.
+
+Allocate storage for triangles. Each thread should at least be able to get one block.
+
+initiate parallel computation of bounds
+
+start build
+
+rotate top part of tree
+
+free temporary memory again 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_a4a626cb46cdadb3cec1c339a913d8104}{
+\index{embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}!blocks@{blocks}}
+\index{blocks@{blocks}!embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}}
+\subsubsection[{blocks}]{\setlength{\rightskip}{0pt plus 5cm}static \_\-\_\-forceinline size\_\-t embree::BVH2BuilderSpatial::blocks (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_spatial_a4a626cb46cdadb3cec1c339a913d8104}
+
+
+Computes the number of blocks of a number of triangles. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_a5772bb5554d960c1ac26cad6274598ac}{
+\index{embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}!duplicationFactor@{duplicationFactor}}
+\index{duplicationFactor@{duplicationFactor}!embree::BVH2BuilderSpatial@{embree::BVH2BuilderSpatial}}
+\subsubsection[{duplicationFactor}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf embree::BVH2BuilderSpatial::duplicationFactor} = 1.5f\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_spatial_a5772bb5554d960c1ac26cad6274598ac}
+
+
+Maximal duplication of triangles through spatial splits. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2\_\-builder\_\-spatial.h\item 
+rtcore/bvh2/bvh2\_\-builder\_\-spatial.cpp\end{DoxyCompactItemize}

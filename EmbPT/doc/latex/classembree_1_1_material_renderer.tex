@@ -1,0 +1,83 @@
+\hypertarget{classembree_1_1_material_renderer}{
+\section{embree::MaterialRenderer Class Reference}
+\label{classembree_1_1_material_renderer}\index{embree::MaterialRenderer@{embree::MaterialRenderer}}
+}
+
+
+\hyperlink{classembree_1_1_renderer}{Renderer} very simple that do not use any integrator, sampler or filter.  
+
+
+
+
+{\ttfamily \#include $<$materialrenderer.h$>$}
+
+Inheritance diagram for embree::MaterialRenderer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_material_renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_material_renderer_a84296d4fd6ae8edfddbc73a5fc5af8af}{MaterialRenderer} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_material_renderer_a0323dad0c9e38127460ea8f4651d5fbc}{renderFrame} (const Ref$<$ \hyperlink{classembree_1_1_camera}{Camera} $>$ \&camera, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, Ref$<$ \hyperlink{classembree_1_1_film}{Film} $>$ \&film)
+\begin{DoxyCompactList}\small\item\em Renders a single frame. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_renderer}{Renderer} very simple that do not use any integrator, sampler or filter. Similar to the debug rendered but used as a testbed. Render the diffuse material (if any) of hit objet. No recursion. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_material_renderer_a84296d4fd6ae8edfddbc73a5fc5af8af}{
+\index{embree::MaterialRenderer@{embree::MaterialRenderer}!MaterialRenderer@{MaterialRenderer}}
+\index{MaterialRenderer@{MaterialRenderer}!embree::MaterialRenderer@{embree::MaterialRenderer}}
+\subsubsection[{MaterialRenderer}]{\setlength{\rightskip}{0pt plus 5cm}home venceslas Recherche Project GlobIll EmbPT renderer renderers materialrenderer cpp embree::MaterialRenderer::MaterialRenderer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_material_renderer_a84296d4fd6ae8edfddbc73a5fc5af8af}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_material_renderer_a0323dad0c9e38127460ea8f4651d5fbc}{
+\index{embree::MaterialRenderer@{embree::MaterialRenderer}!renderFrame@{renderFrame}}
+\index{renderFrame@{renderFrame}!embree::MaterialRenderer@{embree::MaterialRenderer}}
+\subsubsection[{renderFrame}]{\setlength{\rightskip}{0pt plus 5cm}void embree::MaterialRenderer::renderFrame (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Camera} $>$ \&}]{camera, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{Ref$<$ {\bf Film} $>$ \&}]{film}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_material_renderer_a0323dad0c9e38127460ea8f4651d5fbc}
+
+
+Renders a single frame. 
+
+
+
+flush to zero and no denormals
+
+precompute some values
+
+render frame
+
+print framerate 
+
+
+
+Implements \hyperlink{classembree_1_1_renderer_acefb5f55e45bc9b846e1619977926529}{embree::Renderer}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/renderers/materialrenderer.h\item 
+renderer/renderers/materialrenderer.cpp\end{DoxyCompactItemize}

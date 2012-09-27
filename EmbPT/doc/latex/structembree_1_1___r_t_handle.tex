@@ -1,0 +1,90 @@
+\hypertarget{structembree_1_1___r_t_handle}{
+\section{embree::\_\-RTHandle Struct Reference}
+\label{structembree_1_1___r_t_handle}\index{embree::\_\-RTHandle@{embree::\_\-RTHandle}}
+}
+
+
+Generic handle.  
+
+
+
+
+{\ttfamily \#include $<$api.h$>$}
+
+Inheritance diagram for embree::\_\-RTHandle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{structembree_1_1___r_t_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{structembree_1_1___r_t_handle_a61972ebe374b34d8314d5137f13928f3}{$\sim$\_\-RTHandle} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for handles. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}{create} ()=0
+\begin{DoxyCompactList}\small\item\em Recreated the object the handle refers to. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}{set} (const std::string \&property, const \hyperlink{structembree_1_1_variant}{embree::Variant} \&data)=0
+\begin{DoxyCompactList}\small\item\em Sets a parameter of the handle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic handle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structembree_1_1___r_t_handle_a61972ebe374b34d8314d5137f13928f3}{
+\index{embree::\_\-RTHandle@{embree::\_\-RTHandle}!$\sim$\_\-RTHandle@{$\sim$\_\-RTHandle}}
+\index{$\sim$\_\-RTHandle@{$\sim$\_\-RTHandle}!embree::_RTHandle@{embree::\_\-RTHandle}}
+\subsubsection[{$\sim$\_\-RTHandle}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::\_\-RTHandle::$\sim$\_\-RTHandle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{structembree_1_1___r_t_handle_a61972ebe374b34d8314d5137f13928f3}
+
+
+Virtual destructor for handles. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}{
+\index{embree::\_\-RTHandle@{embree::\_\-RTHandle}!create@{create}}
+\index{create@{create}!embree::_RTHandle@{embree::\_\-RTHandle}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::\_\-RTHandle::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}
+
+
+Recreated the object the handle refers to. 
+
+
+
+Implemented in \hyperlink{classembree_1_1_normal_handle_a1fb9da16f5c22098ee817fcdf2ce99e8}{embree::NormalHandle$<$ T, B $>$}, \hyperlink{classembree_1_1_const_handle_ac5daae8b49056b4ba1a775760868cd52}{embree::ConstHandle$<$ T $>$}, \hyperlink{classembree_1_1_triangle_handle_ad61c7bac38e943b35fd996f900c4cd6c}{embree::TriangleHandle}, \hyperlink{classembree_1_1_sphere_handle_a4e520008f643d76d0292f5272a2c42e4}{embree::SphereHandle}, \hyperlink{classembree_1_1_triangle_mesh_handle_a53385a149e3205c6044898b4adfc4bbf}{embree::TriangleMeshHandle}, and \hyperlink{classembree_1_1_primitive_handle_ae730fb9b00684388aab1542bd95f71e6}{embree::PrimitiveHandle}.
+
+\hypertarget{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}{
+\index{embree::\_\-RTHandle@{embree::\_\-RTHandle}!set@{set}}
+\index{set@{set}!embree::_RTHandle@{embree::\_\-RTHandle}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::\_\-RTHandle::set (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{property, }
+\item[{const {\bf embree::Variant} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}
+
+
+Sets a parameter of the handle. 
+
+
+
+Implemented in \hyperlink{classembree_1_1_normal_handle_a7ff8ed45dbe48d6c86b673665475d6d5}{embree::NormalHandle$<$ T, B $>$}, \hyperlink{classembree_1_1_const_handle_a9815e3ec188766ce256495d0c7831a21}{embree::ConstHandle$<$ T $>$}, \hyperlink{classembree_1_1_triangle_handle_a90619ddedb2908b02b334bf844767693}{embree::TriangleHandle}, \hyperlink{classembree_1_1_sphere_handle_af5087e2534473b8fe63094a78fbe7f41}{embree::SphereHandle}, \hyperlink{classembree_1_1_triangle_mesh_handle_a0a6d78c9b8f82b2a9f87349e5cd92560}{embree::TriangleMeshHandle}, and \hyperlink{classembree_1_1_primitive_handle_ac7fac33f0838f97732fa61cab03f75bd}{embree::PrimitiveHandle}.
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/api.cpp\end{DoxyCompactItemize}

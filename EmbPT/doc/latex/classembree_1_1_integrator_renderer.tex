@@ -1,0 +1,93 @@
+\hypertarget{classembree_1_1_integrator_renderer}{
+\section{embree::IntegratorRenderer Class Reference}
+\label{classembree_1_1_integrator_renderer}\index{embree::IntegratorRenderer@{embree::IntegratorRenderer}}
+}
+
+
+\hyperlink{classembree_1_1_renderer}{Renderer} that uses a given integrator, sampler, and pixel filter.  
+
+
+
+
+{\ttfamily \#include $<$integratorrenderer.h$>$}
+
+Inheritance diagram for embree::IntegratorRenderer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_integrator_renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_integrator_renderer_a2faa4a51722b5103241d8e1f376a128b}{IntegratorRenderer} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_integrator_renderer_a65864dbadddc1920c3ad6269bae24c67}{renderFrame} (const Ref$<$ \hyperlink{classembree_1_1_camera}{Camera} $>$ \&camera, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, Ref$<$ \hyperlink{classembree_1_1_film}{Film} $>$ \&film)
+\begin{DoxyCompactList}\small\item\em Renders a single frame. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_renderer}{Renderer} that uses a given integrator, sampler, and pixel filter. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_integrator_renderer_a2faa4a51722b5103241d8e1f376a128b}{
+\index{embree::IntegratorRenderer@{embree::IntegratorRenderer}!IntegratorRenderer@{IntegratorRenderer}}
+\index{IntegratorRenderer@{IntegratorRenderer}!embree::IntegratorRenderer@{embree::IntegratorRenderer}}
+\subsubsection[{IntegratorRenderer}]{\setlength{\rightskip}{0pt plus 5cm}embree::IntegratorRenderer::IntegratorRenderer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_integrator_renderer_a2faa4a51722b5103241d8e1f376a128b}
+
+
+Construction from parameters. 
+
+
+
+create integrator to use
+
+create sampler to use
+
+create pixel filter to use
+
+get framebuffer configuration 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_integrator_renderer_a65864dbadddc1920c3ad6269bae24c67}{
+\index{embree::IntegratorRenderer@{embree::IntegratorRenderer}!renderFrame@{renderFrame}}
+\index{renderFrame@{renderFrame}!embree::IntegratorRenderer@{embree::IntegratorRenderer}}
+\subsubsection[{renderFrame}]{\setlength{\rightskip}{0pt plus 5cm}void embree::IntegratorRenderer::renderFrame (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Camera} $>$ \&}]{camera, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{Ref$<$ {\bf Film} $>$ \&}]{film}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_integrator_renderer_a65864dbadddc1920c3ad6269bae24c67}
+
+
+Renders a single frame. 
+
+
+
+flush to zero and no denormals
+
+precompute some values
+
+render frame
+
+print framerate 
+
+
+
+Implements \hyperlink{classembree_1_1_renderer_acefb5f55e45bc9b846e1619977926529}{embree::Renderer}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/renderers/integratorrenderer.h\item 
+renderer/renderers/integratorrenderer.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\hypertarget{classembree_1_1_backend_scene}{
+\section{embree::BackendScene Class Reference}
+\label{classembree_1_1_backend_scene}\index{embree::BackendScene@{embree::BackendScene}}
+}
+
+
+Scene holding all geometry and lights.  
+
+
+
+
+{\ttfamily \#include $<$scene.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_backend_scene_aa66132b980de544731db5d8a443d0c8d}{BackendScene} ()
+\begin{DoxyCompactList}\small\item\em Construction of empty scene. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_backend_scene_a8da0f644c7762164d987f0ce3fe50314}{add} (const Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \&light)
+\begin{DoxyCompactList}\small\item\em Adds a light to the scene. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_backend_scene_a9b0e672d90b8b78226227f7f4ae33d52}{add} (const Ref$<$ \hyperlink{classembree_1_1_instance}{Instance} $>$ \&instance)
+\begin{DoxyCompactList}\small\item\em Adds a shape instance to the scene. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{classembree_1_1_backend_scene_a2544ba0397e495d75da9bb285d775db8}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const 
+\begin{DoxyCompactList}\small\item\em Helper to call the post intersector of the shape instance, which will call the post intersector of the shape. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_backend_scene_a126120d3421e2a1be1564d24193c5bdc}{
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ $>$ \hyperlink{classembree_1_1_backend_scene_a126120d3421e2a1be1564d24193c5bdc}{allLights}}
+\label{classembree_1_1_backend_scene_a126120d3421e2a1be1564d24193c5bdc}
+
+\begin{DoxyCompactList}\small\item\em All lights of the scene. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_backend_scene_a6511399187567011ef8a6080b53f72ce}{
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_environment_light}{EnvironmentLight} $>$ $>$ \hyperlink{classembree_1_1_backend_scene_a6511399187567011ef8a6080b53f72ce}{envLights}}
+\label{classembree_1_1_backend_scene_a6511399187567011ef8a6080b53f72ce}
+
+\begin{DoxyCompactList}\small\item\em Environemnt lights of the scene. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_backend_scene_a1430daa53d6ffabea0bdd489cc2af95f}{
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_instance}{Instance} $>$ $>$ \hyperlink{classembree_1_1_backend_scene_a1430daa53d6ffabea0bdd489cc2af95f}{geometry}}
+\label{classembree_1_1_backend_scene_a1430daa53d6ffabea0bdd489cc2af95f}
+
+\begin{DoxyCompactList}\small\item\em Geometries of the scene. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_backend_scene_ad37065ad50a71732c91b6f8670d96c06}{
+Ref$<$ \hyperlink{classembree_1_1_intersector}{Intersector} $>$ \hyperlink{classembree_1_1_backend_scene_ad37065ad50a71732c91b6f8670d96c06}{accel}}
+\label{classembree_1_1_backend_scene_ad37065ad50a71732c91b6f8670d96c06}
+
+\begin{DoxyCompactList}\small\item\em Acceleration structure over geometry. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Scene holding all geometry and lights. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_backend_scene_aa66132b980de544731db5d8a443d0c8d}{
+\index{embree::BackendScene@{embree::BackendScene}!BackendScene@{BackendScene}}
+\index{BackendScene@{BackendScene}!embree::BackendScene@{embree::BackendScene}}
+\subsubsection[{BackendScene}]{\setlength{\rightskip}{0pt plus 5cm}embree::BackendScene::BackendScene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_backend_scene_aa66132b980de544731db5d8a443d0c8d}
+
+
+Construction of empty scene. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_backend_scene_a8da0f644c7762164d987f0ce3fe50314}{
+\index{embree::BackendScene@{embree::BackendScene}!add@{add}}
+\index{add@{add}!embree::BackendScene@{embree::BackendScene}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BackendScene::add (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Light} $>$ \&}]{light}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_backend_scene_a8da0f644c7762164d987f0ce3fe50314}
+
+
+Adds a light to the scene. 
+
+\hypertarget{classembree_1_1_backend_scene_a9b0e672d90b8b78226227f7f4ae33d52}{
+\index{embree::BackendScene@{embree::BackendScene}!add@{add}}
+\index{add@{add}!embree::BackendScene@{embree::BackendScene}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t embree::BackendScene::add (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Instance} $>$ \&}]{instance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_backend_scene_a9b0e672d90b8b78226227f7f4ae33d52}
+
+
+Adds a shape instance to the scene. 
+
+\hypertarget{classembree_1_1_backend_scene_a2544ba0397e495d75da9bb285d775db8}{
+\index{embree::BackendScene@{embree::BackendScene}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::BackendScene@{embree::BackendScene}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline void embree::BackendScene::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_backend_scene_a2544ba0397e495d75da9bb285d775db8}
+
+
+Helper to call the post intersector of the shape instance, which will call the post intersector of the shape. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/scene.h\end{DoxyCompactItemize}

@@ -1,0 +1,100 @@
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_split_task}{
+\section{embree::BVH4Builder::SplitTask Class Reference}
+\label{classembree_1_1_b_v_h4_builder_1_1_split_task}\index{embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}}
+}
+
+
+Single-\/threaded task that builds a single node and creates subtasks for the children.  
+
+
+
+
+{\ttfamily \#include $<$bvh4\_\-builder.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h4_builder_1_1_split_task_a4b0948fdc8b1fd3efe7887ac78477e02}{SplitTask} (\hyperlink{classembree_1_1_b_v_h4_builder}{BVH4Builder} $\ast$parent, int \&nodeID, size\_\-t depth, const \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_split_task_a9a8ea8c801f1962efeff713b350fdba7}{split} ()
+\begin{DoxyCompactList}\small\item\em Task entry function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_split_task_a0c93d4f38713f876fa5592ff8631c829}{\_\-split} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h4_builder_1_1_split_task}{SplitTask} $\ast$This, size\_\-t elts)
+\begin{DoxyCompactList}\small\item\em Task entry static function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single-\/threaded task that builds a single node and creates subtasks for the children. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_split_task_a4b0948fdc8b1fd3efe7887ac78477e02}{
+\index{embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}!SplitTask@{SplitTask}}
+\index{SplitTask@{SplitTask}!embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}}
+\subsubsection[{SplitTask}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH4Builder::SplitTask::SplitTask (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH4Builder} $\ast$}]{parent, }
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_split_task_a4b0948fdc8b1fd3efe7887ac78477e02}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_split_task_a0c93d4f38713f876fa5592ff8631c829}{
+\index{embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}!\_\-split@{\_\-split}}
+\index{\_\-split@{\_\-split}!embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}}
+\subsubsection[{\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH4Builder::SplitTask::\_\-split (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf SplitTask} $\ast$}]{This, }
+\item[{size\_\-t}]{elts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_split_task_a0c93d4f38713f876fa5592ff8631c829}
+
+
+Task entry static function. 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_split_task_a9a8ea8c801f1962efeff713b350fdba7}{
+\index{embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}!split@{split}}
+\index{split@{split}!embree::BVH4Builder::SplitTask@{embree::BVH4Builder::SplitTask}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::SplitTask::split (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_split_task_a9a8ea8c801f1962efeff713b350fdba7}
+
+
+Task entry function. 
+
+
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+perform initial split
+
+split until node is full or SAH tells us to stop
+
+find best child to split
+
+perform split of best possible child
+
+create an inner node 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh4/bvh4\_\-builder.h\item 
+rtcore/bvh4/bvh4\_\-builder.cpp\end{DoxyCompactItemize}

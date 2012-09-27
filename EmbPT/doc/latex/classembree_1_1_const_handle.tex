@@ -1,0 +1,105 @@
+\hypertarget{classembree_1_1_const_handle}{
+\section{embree::ConstHandle$<$ T $>$ Class Template Reference}
+\label{classembree_1_1_const_handle}\index{embree::ConstHandle@{embree::ConstHandle}}
+}
+
+
+Constant handle.  
+
+
+Inheritance diagram for embree::ConstHandle$<$ T $>$:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_const_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_const_handle_a2584fca8a51990d8307767fff6acec4d}{ConstHandle} (const Ref$<$ T $>$ \&ptr)
+\begin{DoxyCompactList}\small\item\em Creates a constant handle from the object to reference. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_const_handle_ac5daae8b49056b4ba1a775760868cd52}{create} ()
+\begin{DoxyCompactList}\small\item\em Recreating the underlying object is not allowed. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_const_handle_a9815e3ec188766ce256495d0c7831a21}{set} (const std::string \&property, const \hyperlink{structembree_1_1_variant}{Variant} \&data)
+\begin{DoxyCompactList}\small\item\em Setting parameters is not allowed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ref$<$ T $>$ \hyperlink{classembree_1_1_const_handle_ab3edd1f8238479acc7b2ecb408937b59}{instance}
+\begin{DoxyCompactList}\small\item\em Referenced object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class embree::ConstHandle$<$ T $>$}
+
+Constant handle. A special handle type that does not allow setting parameters. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_const_handle_a2584fca8a51990d8307767fff6acec4d}{
+\index{embree::ConstHandle@{embree::ConstHandle}!ConstHandle@{ConstHandle}}
+\index{ConstHandle@{ConstHandle}!embree::ConstHandle@{embree::ConstHandle}}
+\subsubsection[{ConstHandle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf embree::ConstHandle}$<$ T $>$::{\bf ConstHandle} (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ T $>$ \&}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_const_handle_a2584fca8a51990d8307767fff6acec4d}
+
+
+Creates a constant handle from the object to reference. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_const_handle_ac5daae8b49056b4ba1a775760868cd52}{
+\index{embree::ConstHandle@{embree::ConstHandle}!create@{create}}
+\index{create@{create}!embree::ConstHandle@{embree::ConstHandle}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf embree::ConstHandle}$<$ T $>$::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_const_handle_ac5daae8b49056b4ba1a775760868cd52}
+
+
+Recreating the underlying object is not allowed. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}{embree::\_\-RTHandle}.
+
+\hypertarget{classembree_1_1_const_handle_a9815e3ec188766ce256495d0c7831a21}{
+\index{embree::ConstHandle@{embree::ConstHandle}!set@{set}}
+\index{set@{set}!embree::ConstHandle@{embree::ConstHandle}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf embree::ConstHandle}$<$ T $>$::set (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{property, }
+\item[{const {\bf Variant} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_const_handle_a9815e3ec188766ce256495d0c7831a21}
+
+
+Setting parameters is not allowed. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}{embree::\_\-RTHandle}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_const_handle_ab3edd1f8238479acc7b2ecb408937b59}{
+\index{embree::ConstHandle@{embree::ConstHandle}!instance@{instance}}
+\index{instance@{instance}!embree::ConstHandle@{embree::ConstHandle}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ Ref$<$T$>$ {\bf embree::ConstHandle}$<$ T $>$::{\bf instance}}}
+\label{classembree_1_1_const_handle_ab3edd1f8238479acc7b2ecb408937b59}
+
+
+Referenced object. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/api.cpp\end{DoxyCompactItemize}

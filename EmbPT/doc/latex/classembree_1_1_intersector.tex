@@ -1,0 +1,102 @@
+\hypertarget{classembree_1_1_intersector}{
+\section{embree::Intersector Class Reference}
+\label{classembree_1_1_intersector}\index{embree::Intersector@{embree::Intersector}}
+}
+
+
+Single ray interface to the traverser.  
+
+
+
+
+{\ttfamily \#include $<$rtcore.h$>$}
+
+Inheritance diagram for embree::Intersector:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_intersector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_intersector_aef0184a1283800328629df73372c35b5}{$\sim$Intersector} ()
+\begin{DoxyCompactList}\small\item\em A virtual destructor is required. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classembree_1_1_intersector_ae488adb126f9e7f48ca45e4e776a2926}{intersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_hit}{Hit} \&hit) const =0
+\begin{DoxyCompactList}\small\item\em Intersects the ray with the geometry and returns the hit information. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classembree_1_1_intersector_a47cf036c3eab7060590c72e7bb51255c}{occluded} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray) const =0
+\begin{DoxyCompactList}\small\item\em Tests the ray for occlusion with the scene. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single ray interface to the traverser. A closest intersection point of a ray with the geometry can be found. A ray can also be tested for occlusion by any geometry. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_intersector_aef0184a1283800328629df73372c35b5}{
+\index{embree::Intersector@{embree::Intersector}!$\sim$Intersector@{$\sim$Intersector}}
+\index{$\sim$Intersector@{$\sim$Intersector}!embree::Intersector@{embree::Intersector}}
+\subsubsection[{$\sim$Intersector}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Intersector::$\sim$Intersector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_intersector_aef0184a1283800328629df73372c35b5}
+
+
+A virtual destructor is required. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_intersector_ae488adb126f9e7f48ca45e4e776a2926}{
+\index{embree::Intersector@{embree::Intersector}!intersect@{intersect}}
+\index{intersect@{intersect}!embree::Intersector@{embree::Intersector}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::Intersector::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf Hit} \&}]{hit}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_intersector_ae488adb126f9e7f48ca45e4e776a2926}
+
+
+Intersects the ray with the geometry and returns the hit information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \hyperlink{structembree_1_1_ray}{Ray} to shoot. \\
+\hline
+{\em hit} & \hyperlink{structembree_1_1_hit}{Hit} result. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_b_v_h2_traverser_aa3957f20e8dc2f86ca98d4f8671b503a}{embree::BVH2Traverser}, and \hyperlink{classembree_1_1_b_v_h4_traverser_ad7a096791c029d3bb8e3d925785fa52f}{embree::BVH4Traverser}.
+
+\hypertarget{classembree_1_1_intersector_a47cf036c3eab7060590c72e7bb51255c}{
+\index{embree::Intersector@{embree::Intersector}!occluded@{occluded}}
+\index{occluded@{occluded}!embree::Intersector@{embree::Intersector}}
+\subsubsection[{occluded}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool embree::Intersector::occluded (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_intersector_a47cf036c3eab7060590c72e7bb51255c}
+
+
+Tests the ray for occlusion with the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \hyperlink{structembree_1_1_ray}{Ray} to test occlusion for. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_b_v_h2_traverser_a6602c3460d258d2dee9e91c622568548}{embree::BVH2Traverser}, and \hyperlink{classembree_1_1_b_v_h4_traverser_ab008fbe9dd78c3f2c960554052804657}{embree::BVH4Traverser}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/rtcore.h\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task}{
+\section{embree::BVH2Builder::ParallelSplitTask Class Reference}
+\label{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task}\index{embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}}
+}
+
+
+Multi-\/threaded task that builds a single node and creates subtasks for the children.  
+
+
+
+
+{\ttfamily \#include $<$bvh2\_\-builder.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_aa7d41a2477517e3622ed2aa4204690ca}{ParallelSplitTask} (\hyperlink{classembree_1_1_b_v_h2_builder}{BVH2Builder} $\ast$parent, int \&nodeID, size\_\-t depth, const \hyperlink{structembree_1_1_build_range}{BuildRange} \&job)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_af75fc64e4a75ab2e3b5488dc6e8dcb50}{target} (const \hyperlink{structembree_1_1_build_range}{BuildRange} \&r)
+\begin{DoxyCompactList}\small\item\em Compute target location for parallel binning job. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_a3523df518aec16ead541abbc51c6b165}{createNode} (size\_\-t tid)
+\begin{DoxyCompactList}\small\item\em Called after the parallel binning to creates the node. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_a39d99df4b7cf29ebcee2ed5b8311a4b1}{\_\-createNode} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task}{ParallelSplitTask} $\ast$This)
+\begin{DoxyCompactList}\small\item\em Called after the parallel binning to creates the node. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multi-\/threaded task that builds a single node and creates subtasks for the children. The box array has to have twice the size of the triangle array, as the parallel binner does not split in-\/place. It has to copy the boxes from the left half to the right half and vice versa. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_aa7d41a2477517e3622ed2aa4204690ca}{
+\index{embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}!ParallelSplitTask@{ParallelSplitTask}}
+\index{ParallelSplitTask@{ParallelSplitTask}!embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}}
+\subsubsection[{ParallelSplitTask}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH2Builder::ParallelSplitTask::ParallelSplitTask (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH2Builder} $\ast$}]{parent, }
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf BuildRange} \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_aa7d41a2477517e3622ed2aa4204690ca}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_a39d99df4b7cf29ebcee2ed5b8311a4b1}{
+\index{embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}!\_\-createNode@{\_\-createNode}}
+\index{\_\-createNode@{\_\-createNode}!embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}}
+\subsubsection[{\_\-createNode}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH2Builder::ParallelSplitTask::\_\-createNode (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ParallelSplitTask} $\ast$}]{This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_a39d99df4b7cf29ebcee2ed5b8311a4b1}
+
+
+Called after the parallel binning to creates the node. 
+
+Static function \hypertarget{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_a3523df518aec16ead541abbc51c6b165}{
+\index{embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}!createNode@{createNode}}
+\index{createNode@{createNode}!embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}}
+\subsubsection[{createNode}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH2Builder::ParallelSplitTask::createNode (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_a3523df518aec16ead541abbc51c6b165}
+
+
+Called after the parallel binning to creates the node. 
+
+
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+create an inner node 
+
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_af75fc64e4a75ab2e3b5488dc6e8dcb50}{
+\index{embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}!target@{target}}
+\index{target@{target}!embree::BVH2Builder::ParallelSplitTask@{embree::BVH2Builder::ParallelSplitTask}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::BVH2Builder::ParallelSplitTask::target (
+\begin{DoxyParamCaption}
+\item[{const {\bf BuildRange} \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_1_1_parallel_split_task_af75fc64e4a75ab2e3b5488dc6e8dcb50}
+
+
+Compute target location for parallel binning job. 
+
+It the boxes are in the left half of the box array we copy into the right half and vice versa. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2\_\-builder.h\item 
+rtcore/bvh2/bvh2\_\-builder.cpp\end{DoxyCompactItemize}

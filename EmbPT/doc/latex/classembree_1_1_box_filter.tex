@@ -1,0 +1,70 @@
+\hypertarget{classembree_1_1_box_filter}{
+\section{embree::BoxFilter Class Reference}
+\label{classembree_1_1_box_filter}\index{embree::BoxFilter@{embree::BoxFilter}}
+}
+
+
+Implements a simple box filter.  
+
+
+
+
+{\ttfamily \#include $<$boxfilter.h$>$}
+
+Inheritance diagram for embree::BoxFilter:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_box_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_box_filter_adf13faac545f407f8763499a2f6c79c6}{BoxFilter} (const float halfWidth=0.5f)
+\begin{DoxyCompactList}\small\item\em Constructs a box filter of specified half width. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_box_filter_af91c351f0b286d9dde2f20a75d206012}{eval} (const Vec2f distanceToCenter) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the filter at some location relative to the pixel center. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a simple box filter. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_box_filter_adf13faac545f407f8763499a2f6c79c6}{
+\index{embree::BoxFilter@{embree::BoxFilter}!BoxFilter@{BoxFilter}}
+\index{BoxFilter@{BoxFilter}!embree::BoxFilter@{embree::BoxFilter}}
+\subsubsection[{BoxFilter}]{\setlength{\rightskip}{0pt plus 5cm}embree::BoxFilter::BoxFilter (
+\begin{DoxyParamCaption}
+\item[{const float}]{halfWidth = {\ttfamily 0.5f}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_box_filter_adf13faac545f407f8763499a2f6c79c6}
+
+
+Constructs a box filter of specified half width. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_box_filter_af91c351f0b286d9dde2f20a75d206012}{
+\index{embree::BoxFilter@{embree::BoxFilter}!eval@{eval}}
+\index{eval@{eval}!embree::BoxFilter@{embree::BoxFilter}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}float embree::BoxFilter::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec2f}]{distanceToCenter}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_box_filter_af91c351f0b286d9dde2f20a75d206012}
+
+
+Evaluates the filter at some location relative to the pixel center. 
+
+
+
+Implements \hyperlink{classembree_1_1_filter_affb7e4c8efedfed1fa2b636d439c3dc2}{embree::Filter}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/filters/boxfilter.h\end{DoxyCompactItemize}

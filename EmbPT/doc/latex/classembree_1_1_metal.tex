@@ -1,0 +1,79 @@
+\hypertarget{classembree_1_1_metal}{
+\section{embree::Metal Class Reference}
+\label{classembree_1_1_metal}\index{embree::Metal@{embree::Metal}}
+}
+
+
+Implements a rough metal material.  
+
+
+
+
+{\ttfamily \#include $<$metal.h$>$}
+
+Inheritance diagram for embree::Metal:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_metal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_metal_a83855b6ad04483ec33efc483066cd886}{Metal} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_metal_a6df7cc1be73ee906f56b92aec13c6ecf}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const 
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a rough metal material. The metal is modelled by a microfacet \hyperlink{classembree_1_1_b_r_d_f}{BRDF} with a fresnel term for metals and a power cosine distribution for different roughness of the material. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_metal_a83855b6ad04483ec33efc483066cd886}{
+\index{embree::Metal@{embree::Metal}!Metal@{Metal}}
+\index{Metal@{Metal}!embree::Metal@{embree::Metal}}
+\subsubsection[{Metal}]{\setlength{\rightskip}{0pt plus 5cm}embree::Metal::Metal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_metal_a83855b6ad04483ec33efc483066cd886}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_metal_a6df7cc1be73ee906f56b92aec13c6ecf}{
+\index{embree::Metal@{embree::Metal}!shade@{shade}}
+\index{shade@{shade}!embree::Metal@{embree::Metal}}
+\subsubsection[{shade}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Metal::shade (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const {\bf Medium} \&}]{currentMedium, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{CompositedBRDF \&}]{brdfs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_metal_a6df7cc1be73ee906f56b92aec13c6ecf}
+
+
+Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+
+
+handle the special case of a specular metal through a special \hyperlink{classembree_1_1_b_r_d_f}{BRDF}
+
+otherwise use the microfacet \hyperlink{classembree_1_1_b_r_d_f}{BRDF} model 
+
+
+
+Implements \hyperlink{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{embree::Material}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/metal.h\end{DoxyCompactItemize}

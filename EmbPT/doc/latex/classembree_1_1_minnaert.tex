@@ -1,0 +1,119 @@
+\hypertarget{classembree_1_1_minnaert}{
+\section{embree::Minnaert Class Reference}
+\label{classembree_1_1_minnaert}\index{embree::Minnaert@{embree::Minnaert}}
+}
+
+
+\hyperlink{classembree_1_1_minnaert}{Minnaert} \hyperlink{classembree_1_1_b_r_d_f}{BRDF}.  
+
+
+
+
+{\ttfamily \#include $<$minnaert.h$>$}
+
+Inheritance diagram for embree::Minnaert:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_minnaert}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_minnaert_af1b00c4a76b0861b47a3e59787cc3054}{Minnaert} (const Col3f \&R, const float b)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_minnaert}{Minnaert} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_minnaert_a9c297817db021bff59b90fd44a22ae0f}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_minnaert_af68ead9a773b6f55b21dad888870a10d}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_minnaert_a52cdcd2bc7700f4aeb61de5e1c980823}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_minnaert}{Minnaert} \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. For backscattering materials (e.g. dust, fabric) The \hyperlink{classembree_1_1_b_r_d_f}{BRDF} has a reflectance parameter that determines the color of the surface and a parameter to determine the amount of backscattering. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_minnaert_af1b00c4a76b0861b47a3e59787cc3054}{
+\index{embree::Minnaert@{embree::Minnaert}!Minnaert@{Minnaert}}
+\index{Minnaert@{Minnaert}!embree::Minnaert@{embree::Minnaert}}
+\subsubsection[{Minnaert}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Minnaert::Minnaert (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{R, }
+\item[{const float}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_minnaert_af1b00c4a76b0861b47a3e59787cc3054}
+
+
+\hyperlink{classembree_1_1_minnaert}{Minnaert} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+This is a diffuse reflection \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_minnaert_a9c297817db021bff59b90fd44a22ae0f}{
+\index{embree::Minnaert@{embree::Minnaert}!eval@{eval}}
+\index{eval@{eval}!embree::Minnaert@{embree::Minnaert}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::Minnaert::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_minnaert_a9c297817db021bff59b90fd44a22ae0f}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_minnaert_a52cdcd2bc7700f4aeb61de5e1c980823}{
+\index{embree::Minnaert@{embree::Minnaert}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Minnaert@{embree::Minnaert}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Minnaert::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_minnaert_a52cdcd2bc7700f4aeb61de5e1c980823}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_minnaert_af68ead9a773b6f55b21dad888870a10d}{
+\index{embree::Minnaert@{embree::Minnaert}!sample@{sample}}
+\index{sample@{sample}!embree::Minnaert@{embree::Minnaert}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Minnaert::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_minnaert_af68ead9a773b6f55b21dad888870a10d}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/minnaert.h\end{DoxyCompactItemize}

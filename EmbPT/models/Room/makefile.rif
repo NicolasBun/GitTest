@@ -1,0 +1,5 @@
+material = /mat/mat2.rad
+scene = /rad/test.rad
+
+EXP = 0.5
+

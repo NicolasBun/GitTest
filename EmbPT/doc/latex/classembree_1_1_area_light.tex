@@ -1,0 +1,60 @@
+\hypertarget{classembree_1_1_area_light}{
+\section{embree::AreaLight Class Reference}
+\label{classembree_1_1_area_light}\index{embree::AreaLight@{embree::AreaLight}}
+}
+
+
+Interface to an area light.  
+
+
+
+
+{\ttfamily \#include $<$light.h$>$}
+
+Inheritance diagram for embree::AreaLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_area_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Col3f \hyperlink{classembree_1_1_area_light_aee1e622de193947d1b089231b230e1e2}{Le} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wo) const =0
+\begin{DoxyCompactList}\small\item\em Returns the the emitted radiance for a location on the light and direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to an area light. In addition to a basic light, the area light allows to query the emitted radiance at a location on the light itself. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_area_light_aee1e622de193947d1b089231b230e1e2}{
+\index{embree::AreaLight@{embree::AreaLight}!Le@{Le}}
+\index{Le@{Le}!embree::AreaLight@{embree::AreaLight}}
+\subsubsection[{Le}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::AreaLight::Le (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wo}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_area_light_aee1e622de193947d1b089231b230e1e2}
+
+
+Returns the the emitted radiance for a location on the light and direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dg} & The location on the light. \\
+\hline
+{\em wo} & The direction the light is emitted into. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_triangle_light_ae70fea93eb5774f352f856805f072313}{embree::TriangleLight}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/light.h\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\hypertarget{classembree_1_1_specular}{
+\section{embree::Specular Class Reference}
+\label{classembree_1_1_specular}\index{embree::Specular@{embree::Specular}}
+}
+
+
+\hyperlink{classembree_1_1_specular}{Specular} Phong \hyperlink{classembree_1_1_b_r_d_f}{BRDF}.  
+
+
+
+
+{\ttfamily \#include $<$specular.h$>$}
+
+Inheritance diagram for embree::Specular:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_specular}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_specular_a967fa06a9ba134b46f4b7a624bffb410}{Specular} (const Col3f \&R, float exp)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_specular}{Specular} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_specular_a557981e01db890cc5e873b8b3734fce9}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_specular_a1386f2ba135c410b176d07dd4e3c6a42}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_specular_a0ae69bd36689b06e6800e5db06dac7ca}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_specular}{Specular} Phong \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. The cosine of the angle between incoming ray direction and reflection direction is raised to some power to approximate a glossy reflection. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_specular_a967fa06a9ba134b46f4b7a624bffb410}{
+\index{embree::Specular@{embree::Specular}!Specular@{Specular}}
+\index{Specular@{Specular}!embree::Specular@{embree::Specular}}
+\subsubsection[{Specular}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Specular::Specular (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{R, }
+\item[{float}]{exp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_specular_a967fa06a9ba134b46f4b7a624bffb410}
+
+
+\hyperlink{classembree_1_1_specular}{Specular} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_specular_a557981e01db890cc5e873b8b3734fce9}{
+\index{embree::Specular@{embree::Specular}!eval@{eval}}
+\index{eval@{eval}!embree::Specular@{embree::Specular}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::Specular::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_specular_a557981e01db890cc5e873b8b3734fce9}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_specular_a0ae69bd36689b06e6800e5db06dac7ca}{
+\index{embree::Specular@{embree::Specular}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Specular@{embree::Specular}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Specular::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_specular_a0ae69bd36689b06e6800e5db06dac7ca}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_specular_a1386f2ba135c410b176d07dd4e3c6a42}{
+\index{embree::Specular@{embree::Specular}!sample@{sample}}
+\index{sample@{sample}!embree::Specular@{embree::Specular}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Specular::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_specular_a1386f2ba135c410b176d07dd4e3c6a42}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/specular.h\end{DoxyCompactItemize}

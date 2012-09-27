@@ -1,0 +1,208 @@
+\hypertarget{classembree_1_1_film}{
+\section{embree::Film Class Reference}
+\label{classembree_1_1_film}\index{embree::Film@{embree::Film}}
+}
+
+
+Framebuffer with filtering and accumulation features.  
+
+
+
+
+{\ttfamily \#include $<$film.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_film_ac76a9b540d10b69d2d82c94b745e196e}{Film} (size\_\-t width, size\_\-t height, float gamma=1.0f, bool vignetting=true)
+\begin{DoxyCompactList}\small\item\em Construction of a new film of specified size. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_film_a2865cd4fdc84fe321ec0200150d0860f}{$\sim$Film} ()
+\begin{DoxyCompactList}\small\item\em Destruction of film. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_a06f4760c53434d7a8575befebf57c947}{clear} (Vec2i start, Vec2i end)
+\begin{DoxyCompactList}\small\item\em Clear a part of the film. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_film_af6f9dcfb2b727a8dcb967e1b8b250ca4}{getIteration} () const 
+\begin{DoxyCompactList}\small\item\em Get the current accumulation iteration. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_af8438f0f2b2598796249482a8e3bd82f}{setIteration} (const int i)
+\begin{DoxyCompactList}\small\item\em Set the current accumulation iteration. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_a5b056c860759fa84a4b3db06a9ce2bcb}{incIteration} ()
+\begin{DoxyCompactList}\small\item\em Goto next accumulation iteration. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_ad720f149d57528b344b83f73f6da8008}{setGamma} (const float g)
+\begin{DoxyCompactList}\small\item\em Set the gamma value for the film. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_ad374b405b07336cc9fd325729aab817a}{setVignetting} (const bool v)
+\begin{DoxyCompactList}\small\item\em Turn the vignetting effect on/of. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_a780366147a5ef1e674ab4628db8e8e11}{accumulate} (const Vec2f \&p, Vec2i start, Vec2i end, const Col3f \&color, const float weight)
+\begin{DoxyCompactList}\small\item\em Add a new sample to the film. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_film_a3c9e1fc94e813fc8f11bacad02b00a96}{normalize} (Vec2i start, Vec2i end)
+\begin{DoxyCompactList}\small\item\em Normalizes a tile of the accumulation buffer and copies the result into the frame buffer. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Framebuffer with filtering and accumulation features. The film implements the image interface, but contains an additional accumulation and weight image. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_film_ac76a9b540d10b69d2d82c94b745e196e}{
+\index{embree::Film@{embree::Film}!Film@{Film}}
+\index{Film@{Film}!embree::Film@{embree::Film}}
+\subsubsection[{Film}]{\setlength{\rightskip}{0pt plus 5cm}embree::Film::Film (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{width, }
+\item[{size\_\-t}]{height, }
+\item[{float}]{gamma = {\ttfamily 1.0f}, }
+\item[{bool}]{vignetting = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_ac76a9b540d10b69d2d82c94b745e196e}
+
+
+Construction of a new film of specified size. 
+
+\hypertarget{classembree_1_1_film_a2865cd4fdc84fe321ec0200150d0860f}{
+\index{embree::Film@{embree::Film}!$\sim$Film@{$\sim$Film}}
+\index{$\sim$Film@{$\sim$Film}!embree::Film@{embree::Film}}
+\subsubsection[{$\sim$Film}]{\setlength{\rightskip}{0pt plus 5cm}embree::Film::$\sim$Film (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_a2865cd4fdc84fe321ec0200150d0860f}
+
+
+Destruction of film. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_film_a780366147a5ef1e674ab4628db8e8e11}{
+\index{embree::Film@{embree::Film}!accumulate@{accumulate}}
+\index{accumulate@{accumulate}!embree::Film@{embree::Film}}
+\subsubsection[{accumulate}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::accumulate (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{p, }
+\item[{Vec2i}]{start, }
+\item[{Vec2i}]{end, }
+\item[{const Col3f \&}]{color, }
+\item[{const float}]{weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_a780366147a5ef1e674ab4628db8e8e11}
+
+
+Add a new sample to the film. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is the location of the sample \\
+\hline
+{\em start} & is the beginning of the tile \\
+\hline
+{\em end} & is the end of the tile \\
+\hline
+{\em color} & is the color of the sample \\
+\hline
+{\em weight} & is the weight of the sample \\
+\hline
+\end{DoxyParams}
+
+
+ignore samples outside the tile
+
+accumulate color and weight 
+
+\hypertarget{classembree_1_1_film_a06f4760c53434d7a8575befebf57c947}{
+\index{embree::Film@{embree::Film}!clear@{clear}}
+\index{clear@{clear}!embree::Film@{embree::Film}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::clear (
+\begin{DoxyParamCaption}
+\item[{Vec2i}]{start, }
+\item[{Vec2i}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_a06f4760c53434d7a8575befebf57c947}
+
+
+Clear a part of the film. 
+
+\hypertarget{classembree_1_1_film_af6f9dcfb2b727a8dcb967e1b8b250ca4}{
+\index{embree::Film@{embree::Film}!getIteration@{getIteration}}
+\index{getIteration@{getIteration}!embree::Film@{embree::Film}}
+\subsubsection[{getIteration}]{\setlength{\rightskip}{0pt plus 5cm}int embree::Film::getIteration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_af6f9dcfb2b727a8dcb967e1b8b250ca4}
+
+
+Get the current accumulation iteration. 
+
+\hypertarget{classembree_1_1_film_a5b056c860759fa84a4b3db06a9ce2bcb}{
+\index{embree::Film@{embree::Film}!incIteration@{incIteration}}
+\index{incIteration@{incIteration}!embree::Film@{embree::Film}}
+\subsubsection[{incIteration}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::incIteration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_a5b056c860759fa84a4b3db06a9ce2bcb}
+
+
+Goto next accumulation iteration. 
+
+\hypertarget{classembree_1_1_film_a3c9e1fc94e813fc8f11bacad02b00a96}{
+\index{embree::Film@{embree::Film}!normalize@{normalize}}
+\index{normalize@{normalize}!embree::Film@{embree::Film}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::normalize (
+\begin{DoxyParamCaption}
+\item[{Vec2i}]{start, }
+\item[{Vec2i}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_a3c9e1fc94e813fc8f11bacad02b00a96}
+
+
+Normalizes a tile of the accumulation buffer and copies the result into the frame buffer. 
+
+\hypertarget{classembree_1_1_film_ad720f149d57528b344b83f73f6da8008}{
+\index{embree::Film@{embree::Film}!setGamma@{setGamma}}
+\index{setGamma@{setGamma}!embree::Film@{embree::Film}}
+\subsubsection[{setGamma}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::setGamma (
+\begin{DoxyParamCaption}
+\item[{const float}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_ad720f149d57528b344b83f73f6da8008}
+
+
+Set the gamma value for the film. 
+
+\hypertarget{classembree_1_1_film_af8438f0f2b2598796249482a8e3bd82f}{
+\index{embree::Film@{embree::Film}!setIteration@{setIteration}}
+\index{setIteration@{setIteration}!embree::Film@{embree::Film}}
+\subsubsection[{setIteration}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::setIteration (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_af8438f0f2b2598796249482a8e3bd82f}
+
+
+Set the current accumulation iteration. 
+
+\hypertarget{classembree_1_1_film_ad374b405b07336cc9fd325729aab817a}{
+\index{embree::Film@{embree::Film}!setVignetting@{setVignetting}}
+\index{setVignetting@{setVignetting}!embree::Film@{embree::Film}}
+\subsubsection[{setVignetting}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Film::setVignetting (
+\begin{DoxyParamCaption}
+\item[{const bool}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_film_ad374b405b07336cc9fd325729aab817a}
+
+
+Turn the vignetting effect on/of. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/film.h\end{DoxyCompactItemize}

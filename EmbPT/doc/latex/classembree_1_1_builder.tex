@@ -1,0 +1,209 @@
+\hypertarget{classembree_1_1_builder}{
+\section{embree::Builder Class Reference}
+\label{classembree_1_1_builder}\index{embree::Builder@{embree::Builder}}
+}
+
+
+\hyperlink{classembree_1_1_builder}{Builder} base class.  
+
+
+
+
+{\ttfamily \#include $<$builder.h$>$}
+
+Inheritance diagram for embree::Builder:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.564246cm]{classembree_1_1_builder}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structembree_1_1_builder_1_1_thread_allocator}{ThreadAllocator}
+\begin{DoxyCompactList}\small\item\em Per thread structure holding the current memory block. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries allocBlockSize} =  4096
+ \}
+\begin{DoxyCompactList}\small\item\em Allocation Block size. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_builder_aa7f973aeacd2ecb6837fae9b06ced89e}{Builder} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_builder}{Builder} default construction. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classembree_1_1_builder_aaa90623edd90081825e272723756acf6}{$\sim$Builder} ()
+\begin{DoxyCompactList}\small\item\em Builders need a virtual destructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_builder_a0ff2e2a1eeafffbf417febe2ad07a4d0}{globalAllocNodes} (size\_\-t num=1)
+\begin{DoxyCompactList}\small\item\em Global atomic node allocator. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_builder_a0b2a4d9c818cdf0a1712ce98ab70b271}{threadAllocNodes} (size\_\-t tid, size\_\-t num=1)
+\begin{DoxyCompactList}\small\item\em Thread local allocation of nodes. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_builder_ac648dbaeb8c35174bf31a81bd15a528e}{globalAllocPrimitives} (size\_\-t num=1)
+\begin{DoxyCompactList}\small\item\em Global atomic primitive allocator. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_builder_a21584f3087a1b946bdf0459427b4e65f}{threadAllocPrimitives} (size\_\-t tid, size\_\-t num=1)
+\begin{DoxyCompactList}\small\item\em Thread local allocation of primitives. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_builder_ad7a981fa7a2855b1efd27d5748ca564b}{
+size\_\-t \hyperlink{classembree_1_1_builder_ad7a981fa7a2855b1efd27d5748ca564b}{allocatedNodes}}
+\label{classembree_1_1_builder_ad7a981fa7a2855b1efd27d5748ca564b}
+
+\begin{DoxyCompactList}\small\item\em Total number of nodes available for allocation. \item\end{DoxyCompactList}\item 
+Atomic \hyperlink{classembree_1_1_builder_a5de33d69fa2c9fb5057672a268e4485e}{atomicNextNode}
+\begin{DoxyCompactList}\small\item\em Next available node for global allocator. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_builder_a9bcfa909ab6e789c27cb6007d18d0555}{
+\hyperlink{structembree_1_1_builder_1_1_thread_allocator}{ThreadAllocator} \hyperlink{classembree_1_1_builder_a9bcfa909ab6e789c27cb6007d18d0555}{threadNextNode} \mbox{[}128\mbox{]}}
+\label{classembree_1_1_builder_a9bcfa909ab6e789c27cb6007d18d0555}
+
+\begin{DoxyCompactList}\small\item\em thread local allocator for nodes \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_builder_a2bf55a7c8cc541b2c8ebb6346195aa9f}{allocatedPrimitives}
+\begin{DoxyCompactList}\small\item\em Total number of primitives available for allocation. \item\end{DoxyCompactList}\item 
+Atomic \hyperlink{classembree_1_1_builder_a1f1348c5b8ba03a6396570823e44fc4c}{atomicNextPrimitive}
+\begin{DoxyCompactList}\small\item\em Next available primitive for global allocator. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_builder_1_1_thread_allocator}{ThreadAllocator} \hyperlink{classembree_1_1_builder_a83eb9ae6190fbd6e3dcb304aea6cbfd2}{threadNextPrimitive} \mbox{[}128\mbox{]}
+\begin{DoxyCompactList}\small\item\em Thread local allocator for primitives. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_builder}{Builder} base class. This class implements an efficient multi-\/threaded memory allocation scheme used by the builders. A builder thread can request new memory for a number of nodes or triangles (threadAllocXXX function). The per thread allocator allocates from its current memory block or requests a new block from the slower global allocator (globalAllocXXX function) when this block is full. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classembree_1_1_builder_ae436dfb6dc224f74ee153ccbd1fe0674}{
+\subsubsection[{"@7}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{classembree_1_1_builder_ae436dfb6dc224f74ee153ccbd1fe0674}
+
+
+Allocation Block size. 
+
+Number of nodes and triangles to request from the global allocator when the thread memory block is empty. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_builder_aa7f973aeacd2ecb6837fae9b06ced89e}{
+\index{embree::Builder@{embree::Builder}!Builder@{Builder}}
+\index{Builder@{Builder}!embree::Builder@{embree::Builder}}
+\subsubsection[{Builder}]{\setlength{\rightskip}{0pt plus 5cm}embree::Builder::Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_builder_aa7f973aeacd2ecb6837fae9b06ced89e}
+
+
+\hyperlink{classembree_1_1_builder}{Builder} default construction. 
+
+\hypertarget{classembree_1_1_builder_aaa90623edd90081825e272723756acf6}{
+\index{embree::Builder@{embree::Builder}!$\sim$Builder@{$\sim$Builder}}
+\index{$\sim$Builder@{$\sim$Builder}!embree::Builder@{embree::Builder}}
+\subsubsection[{$\sim$Builder}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Builder::$\sim$Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_builder_aaa90623edd90081825e272723756acf6}
+
+
+Builders need a virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_builder_a0ff2e2a1eeafffbf417febe2ad07a4d0}{
+\index{embree::Builder@{embree::Builder}!globalAllocNodes@{globalAllocNodes}}
+\index{globalAllocNodes@{globalAllocNodes}!embree::Builder@{embree::Builder}}
+\subsubsection[{globalAllocNodes}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::Builder::globalAllocNodes (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_builder_a0ff2e2a1eeafffbf417febe2ad07a4d0}
+
+
+Global atomic node allocator. 
+
+\hypertarget{classembree_1_1_builder_ac648dbaeb8c35174bf31a81bd15a528e}{
+\index{embree::Builder@{embree::Builder}!globalAllocPrimitives@{globalAllocPrimitives}}
+\index{globalAllocPrimitives@{globalAllocPrimitives}!embree::Builder@{embree::Builder}}
+\subsubsection[{globalAllocPrimitives}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::Builder::globalAllocPrimitives (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_builder_ac648dbaeb8c35174bf31a81bd15a528e}
+
+
+Global atomic primitive allocator. 
+
+\hypertarget{classembree_1_1_builder_a0b2a4d9c818cdf0a1712ce98ab70b271}{
+\index{embree::Builder@{embree::Builder}!threadAllocNodes@{threadAllocNodes}}
+\index{threadAllocNodes@{threadAllocNodes}!embree::Builder@{embree::Builder}}
+\subsubsection[{threadAllocNodes}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::Builder::threadAllocNodes (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{size\_\-t}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_builder_a0b2a4d9c818cdf0a1712ce98ab70b271}
+
+
+Thread local allocation of nodes. 
+
+\hypertarget{classembree_1_1_builder_a21584f3087a1b946bdf0459427b4e65f}{
+\index{embree::Builder@{embree::Builder}!threadAllocPrimitives@{threadAllocPrimitives}}
+\index{threadAllocPrimitives@{threadAllocPrimitives}!embree::Builder@{embree::Builder}}
+\subsubsection[{threadAllocPrimitives}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::Builder::threadAllocPrimitives (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{size\_\-t}]{num = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_builder_a21584f3087a1b946bdf0459427b4e65f}
+
+
+Thread local allocation of primitives. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_builder_a2bf55a7c8cc541b2c8ebb6346195aa9f}{
+\index{embree::Builder@{embree::Builder}!allocatedPrimitives@{allocatedPrimitives}}
+\index{allocatedPrimitives@{allocatedPrimitives}!embree::Builder@{embree::Builder}}
+\subsubsection[{allocatedPrimitives}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::Builder::allocatedPrimitives}}}
+\label{classembree_1_1_builder_a2bf55a7c8cc541b2c8ebb6346195aa9f}
+
+
+Total number of primitives available for allocation. 
+
+\hypertarget{classembree_1_1_builder_a5de33d69fa2c9fb5057672a268e4485e}{
+\index{embree::Builder@{embree::Builder}!atomicNextNode@{atomicNextNode}}
+\index{atomicNextNode@{atomicNextNode}!embree::Builder@{embree::Builder}}
+\subsubsection[{atomicNextNode}]{\setlength{\rightskip}{0pt plus 5cm}Atomic {\bf embree::Builder::atomicNextNode}}}
+\label{classembree_1_1_builder_a5de33d69fa2c9fb5057672a268e4485e}
+
+
+Next available node for global allocator. 
+
+\hypertarget{classembree_1_1_builder_a1f1348c5b8ba03a6396570823e44fc4c}{
+\index{embree::Builder@{embree::Builder}!atomicNextPrimitive@{atomicNextPrimitive}}
+\index{atomicNextPrimitive@{atomicNextPrimitive}!embree::Builder@{embree::Builder}}
+\subsubsection[{atomicNextPrimitive}]{\setlength{\rightskip}{0pt plus 5cm}Atomic {\bf embree::Builder::atomicNextPrimitive}}}
+\label{classembree_1_1_builder_a1f1348c5b8ba03a6396570823e44fc4c}
+
+
+Next available primitive for global allocator. 
+
+\hypertarget{classembree_1_1_builder_a83eb9ae6190fbd6e3dcb304aea6cbfd2}{
+\index{embree::Builder@{embree::Builder}!threadNextPrimitive@{threadNextPrimitive}}
+\index{threadNextPrimitive@{threadNextPrimitive}!embree::Builder@{embree::Builder}}
+\subsubsection[{threadNextPrimitive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ThreadAllocator} {\bf embree::Builder::threadNextPrimitive}\mbox{[}128\mbox{]}}}
+\label{classembree_1_1_builder_a83eb9ae6190fbd6e3dcb304aea6cbfd2}
+
+
+Thread local allocator for primitives. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/builder.h\end{DoxyCompactItemize}

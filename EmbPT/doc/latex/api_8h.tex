@@ -1,0 +1,139 @@
+\hypertarget{api_8h}{
+\section{renderer/api/api.h File Reference}
+\label{api_8h}\index{renderer/api/api.h@{renderer/api/api.h}}
+}
+
+
+This file implements the interface to the renderer backend.  
+
+
+{\ttfamily \#include $<$stddef.h$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structembree_1_1___r_t_handle}{embree::\_\-RTHandle}
+\begin{DoxyCompactList}\small\item\em Generic handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_transform}{embree::\_\-RTTransform}
+\begin{DoxyCompactList}\small\item\em Transformation handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_camera}{embree::\_\-RTCamera}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_camera}{Camera} handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_image}{embree::\_\-RTImage}
+\begin{DoxyCompactList}\small\item\em Image handle (constant). \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_texture}{embree::\_\-RTTexture}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_texture}{Texture} handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_material}{embree::\_\-RTMaterial}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_material}{Material} handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_shape}{embree::\_\-RTShape}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_shape}{Shape} handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_light}{embree::\_\-RTLight}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_light}{Light} handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_primitive}{embree::\_\-RTPrimitive}
+\begin{DoxyCompactList}\small\item\em Primitive handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_scene}{embree::\_\-RTScene}
+\begin{DoxyCompactList}\small\item\em Scene handle (constant). \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_renderer}{embree::\_\-RTRenderer}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_renderer}{Renderer} handle. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1___r_t_frame_buffer}{embree::\_\-RTFrameBuffer}
+\begin{DoxyCompactList}\small\item\em Framebuffer handle (constant). \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1_r_t_ray}{embree::RTRay}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_ray}{Ray} structure. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1_r_t_ray_1_1vec3}{embree::RTRay::vec3}
+\begin{DoxyCompactList}\small\item\em internal \hyperlink{structembree_1_1_r_t_ray_1_1vec3}{vec3} structure \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1_r_t_hit}{embree::RTHit}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_hit}{Hit} structure. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{api_8h_a1e45aefa0ada36cfcd459edcfedfefaf}{
+\#define \hyperlink{api_8h_a1e45aefa0ada36cfcd459edcfedfefaf}{RT\_\-API\_\-SYMBOL}~extern \char`\"{}C\char`\"{}}
+\label{api_8h_a1e45aefa0ada36cfcd459edcfedfefaf}
+
+\begin{DoxyCompactList}\small\item\em makes API functions use C name mangling \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structembree_1_1___r_t_transform}{embree::\_\-RTTransform} $\ast$ \hyperlink{namespaceembree_a4395c1f361a51e8175f5274c4af299ae}{embree::RTTransform}
+\begin{DoxyCompactList}\small\item\em Transformation handle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a8e124ec38da078b79657d56a4c015fc0}{embree::rtInit} ()
+\begin{DoxyCompactList}\small\item\em Initialized the Embree library. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a13105354fa187df1a7f45eb44cc14c9d}{embree::rtExit} ()
+\begin{DoxyCompactList}\small\item\em Cleanup of the Embree library. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTCamera \hyperlink{namespaceembree_a582e4c2c3b7fb7c6e2b649385306591e}{embree::rtNewCamera} (const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Creates a new camera. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTImage \hyperlink{namespaceembree_a552b266640f112ddfc929cd90ef6f5bd}{embree::rtNewImage} (const char $\ast$type, size\_\-t width, size\_\-t height, const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Creates a new image. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTTexture \hyperlink{namespaceembree_ad4c3c3e3cdbe3f8678dbf907d7a092c2}{embree::rtNewTexture} (const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Creates a texture. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTMaterial \hyperlink{namespaceembree_af35bd5d6d7ec298e6667e0a89ef1b35e}{embree::rtNewMaterial} (const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Creates a new material. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTShape \hyperlink{namespaceembree_a5c4faf2955bf824c9b8addeea8156f87}{embree::rtNewShape} (const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Creates a new shape. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTLight \hyperlink{namespaceembree_a513ce19c7fa230cf70a911ec3534af3f}{embree::rtNewLight} (const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Creates a new light source. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTPrimitive \hyperlink{namespaceembree_adca73944902f8a99e0316fc76f804eb5}{embree::rtNewShapePrimitive} (RTShape shape, RTMaterial material, float $\ast$transform=NULL)
+\begin{DoxyCompactList}\small\item\em Creates a new shape primitive. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTPrimitive \hyperlink{namespaceembree_a487b85b8cc64c34dd0771005e29cc338}{embree::rtNewLightPrimitive} (RTLight light, float $\ast$transform=NULL)
+\begin{DoxyCompactList}\small\item\em Creates a new light primitive. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTScene \hyperlink{namespaceembree_a9d9ffc8bb2da8543fb6e9efaa890a5f3}{embree::rtNewScene} (const char $\ast$type, RTPrimitive $\ast$prims, size\_\-t size)
+\begin{DoxyCompactList}\small\item\em Creates a new scene. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTRenderer \hyperlink{namespaceembree_ab5fa27f2cf79ab05c604d9d5ff23f822}{embree::rtNewRenderer} (const char $\ast$type)
+\begin{DoxyCompactList}\small\item\em Creates a new renderer. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL RTFrameBuffer \hyperlink{namespaceembree_ad15be7434c7dc680887f42464569dfce}{embree::rtNewFrameBuffer} (const char $\ast$type, size\_\-t width, size\_\-t height)
+\begin{DoxyCompactList}\small\item\em Creates a new framebuffer. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void $\ast$ \hyperlink{namespaceembree_ac5f0a0e20a108867ef1f72c1f86ca7c1}{embree::rtMapFrameBuffer} (RTFrameBuffer frameBuffer)
+\begin{DoxyCompactList}\small\item\em Map the framebuffer data. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_aaf368f56220c4159d5e92b5d8d077c93}{embree::rtUnmapFrameBuffer} (RTFrameBuffer frameBuffer)
+\begin{DoxyCompactList}\small\item\em Unmap the framebuffer data. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_aa122b6df26af58f6016f3614ea8e554d}{embree::rtDelete} (RTHandle handle)
+\begin{DoxyCompactList}\small\item\em Deletes a handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a52d15745ab651c29da5a3e7df4761a02}{embree::rtSetBool1} (RTHandle handle, const char $\ast$property, bool x)
+\begin{DoxyCompactList}\small\item\em Sets a boolean parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a02972ba19db8de239ca1c250953dbc4a}{embree::rtSetBool2} (RTHandle handle, const char $\ast$property, bool x, bool y)
+\begin{DoxyCompactList}\small\item\em Sets a bool2 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a76e2857d2df9be83d81a541f602e157b}{embree::rtSetBool3} (RTHandle handle, const char $\ast$property, bool x, bool y, bool z)
+\begin{DoxyCompactList}\small\item\em Sets a bool3 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a4051e4d69546a281e4cd4f03366c4e16}{embree::rtSetBool4} (RTHandle handle, const char $\ast$property, bool x, bool y, bool z, bool w)
+\begin{DoxyCompactList}\small\item\em Sets a bool4 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_ad5fec314d79224d8d14332c82ab6e261}{embree::rtSetInt1} (RTHandle handle, const char $\ast$property, int x)
+\begin{DoxyCompactList}\small\item\em Sets an integer parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a70d01c44f041de81f06313a5c43919df}{embree::rtSetInt2} (RTHandle handle, const char $\ast$property, int x, int y)
+\begin{DoxyCompactList}\small\item\em Sets an int2 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_aec9248a2f00c0551958f111427545e5e}{embree::rtSetInt3} (RTHandle handle, const char $\ast$property, int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em Sets an int3 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_af2b6d882b13f995ecd3166f56c35fe20}{embree::rtSetInt4} (RTHandle handle, const char $\ast$property, int x, int y, int z, int w)
+\begin{DoxyCompactList}\small\item\em Sets an int4 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a61dd2e4b331f76d73080e644b327bad3}{embree::rtSetFloat1} (RTHandle handle, const char $\ast$property, float x)
+\begin{DoxyCompactList}\small\item\em Sets a float parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_afa99d3f72ec0b9a2dd594d23fa12c8ba}{embree::rtSetFloat2} (RTHandle handle, const char $\ast$property, float x, float y)
+\begin{DoxyCompactList}\small\item\em Sets a float2 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_adac75ff1b51c3804317bd0b50dd64d86}{embree::rtSetFloat3} (RTHandle handle, const char $\ast$property, float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Sets a float3 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a021637b313326ccd0c4ae512e3893622}{embree::rtSetFloat4} (RTHandle handle, const char $\ast$property, float x, float y, float z, float w)
+\begin{DoxyCompactList}\small\item\em Sets a float4 parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a559b40c687c94745fa32ae4083e913c4}{embree::rtSetArray} (RTHandle handle, const char $\ast$property, const char $\ast$type, const void $\ast$ptr, size\_\-t size, size\_\-t stride=size\_\-t(-\/1))
+\begin{DoxyCompactList}\small\item\em Sets an typed array parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a48dc553874905764f90c49f3ab2cdff5}{embree::rtSetString} (RTHandle handle, const char $\ast$property, const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Sets a string parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_abad593f76188845fb2cb40ebc3310a42}{embree::rtSetImage} (RTHandle handle, const char $\ast$property, RTImage img)
+\begin{DoxyCompactList}\small\item\em Sets an image parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_af355c7fcc3253ed1e818967c9d17feff}{embree::rtSetTexture} (RTHandle handle, const char $\ast$property, RTTexture tex)
+\begin{DoxyCompactList}\small\item\em Sets a texture parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a9ef2dcb0c93dd2306be06e357dfccde9}{embree::rtSetTextureStack} (RTHandle handle, const char $\ast$property, std::vector$<$ RTTexture $>$ tx\_\-stack)
+\begin{DoxyCompactList}\small\item\em Sets a texture parameter of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_adfa4d6aa3728e423e999b02ea2ae49b2}{embree::rtSetTransform} (RTHandle handle, const char $\ast$property, float vxx, float vxy, float vxz, float vyx, float vyy, float vyz, float vzx, float vzy, float vzz, float px, float py, float pz)
+\begin{DoxyCompactList}\small\item\em Sets a transformation of the handle. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_af3daad443fa07eb46a12bb723e4d3190}{embree::rtCommit} (RTHandle handle)
+\begin{DoxyCompactList}\small\item\em Commits all changes by setting the reference of the handle to a new object with specified parameters. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_ae1d793c20108ee40e500fe714bd0c505}{embree::rtRenderFrame} (RTRenderer renderer, RTCamera camera, RTScene scene, RTFrameBuffer frameBuffer)
+\begin{DoxyCompactList}\small\item\em Renders a frame. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL void \hyperlink{namespaceembree_a0eee1834f0b88f100d6f16f79577f88e}{embree::rtTraceRays} (const RTRay $\ast$rays, RTScene scene, RTHit $\ast$hits, size\_\-t numRays)
+\begin{DoxyCompactList}\small\item\em Traces rays. \item\end{DoxyCompactList}\item 
+RT\_\-API\_\-SYMBOL bool \hyperlink{namespaceembree_a2d2055054ade2dc5bbba355a63110f1f}{embree::rtPick} (float x, float y, Vec3f \&p, RTCamera cmaera, RTScene scene)
+\begin{DoxyCompactList}\small\item\em Pick a 3D point. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements the interface to the renderer backend. The library has to get initialized by calling rtInit() at the beginning and rtExit() at the end of your application. The API is completely functional, meaning that objects can NOT be modified. Handles are references to objects, and objects are internally reference counted, thus destroyed when no longer needed. Calling rtDelete does only delete the handle, not the object the handle references. The first parameter of every rtNewXXX function is a type that selects the object to create. For an overview of the parameters supported by a specific object see the header file of the object implementation. Using the rtSetXXX functions buffers the set values inside the handle. A subsequent call to rtCommit will set the handle reference to a new object with the changed parameters. The original object is not changed by this process. The semantics of modifying an object A used by another object B can only be achieved by creating A' and a new B' that uses A'. The RTImage, RTFramebuffer, and RTScene handles are constant, thus the rtSetXXX and rtCommit function cannot be used for them. 

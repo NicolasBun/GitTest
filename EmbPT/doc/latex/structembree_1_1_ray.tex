@@ -1,0 +1,88 @@
+\hypertarget{structembree_1_1_ray}{
+\section{embree::Ray Struct Reference}
+\label{structembree_1_1_ray}\index{embree::Ray@{embree::Ray}}
+}
+
+
+\hyperlink{structembree_1_1_ray}{Ray} structure.  
+
+
+
+
+{\ttfamily \#include $<$ray.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_ray_a223693cb6d884edd6fc76086afaa7ac3}{Ray} ()
+\begin{DoxyCompactList}\small\item\em Default construction does nothing. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_ray_a032f315b90ca77866d255238418ba256}{Ray} (const Vec3f \&\hyperlink{structembree_1_1_ray_a0a9e1d8cf6c42453d0fa5c3b410526dc}{org}, const Vec3f \&\hyperlink{structembree_1_1_ray_a1293d54db01207411c5068245e5c9d4e}{dir}, const float \&\hyperlink{structembree_1_1_ray_acbf0f6c2fd6cca9aa909a4085ab6352b}{near}=zero, const float \&\hyperlink{structembree_1_1_ray_adeae2ec1595d757f20713d6e4a365f1d}{far}=inf)
+\begin{DoxyCompactList}\small\item\em Constructs a ray from origin, direction, and ray segment. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_ray_a0a9e1d8cf6c42453d0fa5c3b410526dc}{
+Vec3f \hyperlink{structembree_1_1_ray_a0a9e1d8cf6c42453d0fa5c3b410526dc}{org}}
+\label{structembree_1_1_ray_a0a9e1d8cf6c42453d0fa5c3b410526dc}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_ray}{Ray} origin. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_ray_a1293d54db01207411c5068245e5c9d4e}{
+Vec3f \hyperlink{structembree_1_1_ray_a1293d54db01207411c5068245e5c9d4e}{dir}}
+\label{structembree_1_1_ray_a1293d54db01207411c5068245e5c9d4e}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_ray}{Ray} direction. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_ray_a9957c63b0b130802ab602e72610c3bcf}{
+Vec3f \hyperlink{structembree_1_1_ray_a9957c63b0b130802ab602e72610c3bcf}{rdir}}
+\label{structembree_1_1_ray_a9957c63b0b130802ab602e72610c3bcf}
+
+\begin{DoxyCompactList}\small\item\em Reciprocal ray direction. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_ray_acbf0f6c2fd6cca9aa909a4085ab6352b}{
+float \hyperlink{structembree_1_1_ray_acbf0f6c2fd6cca9aa909a4085ab6352b}{near}}
+\label{structembree_1_1_ray_acbf0f6c2fd6cca9aa909a4085ab6352b}
+
+\begin{DoxyCompactList}\small\item\em Start of ray segment. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_ray_adeae2ec1595d757f20713d6e4a365f1d}{
+float \hyperlink{structembree_1_1_ray_adeae2ec1595d757f20713d6e4a365f1d}{far}}
+\label{structembree_1_1_ray_adeae2ec1595d757f20713d6e4a365f1d}
+
+\begin{DoxyCompactList}\small\item\em End of ray segment. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structembree_1_1_ray}{Ray} structure. Contains all information about a ray including precomputed reciprocal direction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structembree_1_1_ray_a223693cb6d884edd6fc76086afaa7ac3}{
+\index{embree::Ray@{embree::Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!embree::Ray@{embree::Ray}}
+\subsubsection[{Ray}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Ray::Ray (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_ray_a223693cb6d884edd6fc76086afaa7ac3}
+
+
+Default construction does nothing. 
+
+\hypertarget{structembree_1_1_ray_a032f315b90ca77866d255238418ba256}{
+\index{embree::Ray@{embree::Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!embree::Ray@{embree::Ray}}
+\subsubsection[{Ray}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Ray::Ray (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{org, }
+\item[{const Vec3f \&}]{dir, }
+\item[{const float \&}]{near = {\ttfamily zero}, }
+\item[{const float \&}]{far = {\ttfamily inf}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_ray_a032f315b90ca77866d255238418ba256}
+
+
+Constructs a ray from origin, direction, and ray segment. 
+
+Near has to be smaller than far. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/ray.h\end{DoxyCompactItemize}

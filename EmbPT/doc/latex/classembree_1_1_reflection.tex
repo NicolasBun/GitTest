@@ -1,0 +1,123 @@
+\hypertarget{classembree_1_1_reflection}{
+\section{embree::Reflection Class Reference}
+\label{classembree_1_1_reflection}\index{embree::Reflection@{embree::Reflection}}
+}
+
+
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of a perfect mirror.  
+
+
+
+
+{\ttfamily \#include $<$reflection.h$>$}
+
+Inheritance diagram for embree::Reflection:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_reflection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_reflection_a80622c4f49e04da0c994dc27c3495d02}{Reflection} (const Col3f \&R)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_reflection}{Reflection} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_reflection_a6c444d0ee7455fed9a56a54aefc08d50}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_reflection_ac8763a319aba0109e6283b17b64d719c}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_reflection_a8b574ee9c903dd83c5cfcb9fe9e80746}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of a perfect mirror. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_reflection_a80622c4f49e04da0c994dc27c3495d02}{
+\index{embree::Reflection@{embree::Reflection}!Reflection@{Reflection}}
+\index{Reflection@{Reflection}!embree::Reflection@{embree::Reflection}}
+\subsubsection[{Reflection}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Reflection::Reflection (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{R}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_reflection_a80622c4f49e04da0c994dc27c3495d02}
+
+
+\hyperlink{classembree_1_1_reflection}{Reflection} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+This is a specular reflection \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+\begin{DoxyParams}{Parameters}
+{\em R} & is the reflectivity of the mirror. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_reflection_a6c444d0ee7455fed9a56a54aefc08d50}{
+\index{embree::Reflection@{embree::Reflection}!eval@{eval}}
+\index{eval@{eval}!embree::Reflection@{embree::Reflection}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::Reflection::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_reflection_a6c444d0ee7455fed9a56a54aefc08d50}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_reflection_a8b574ee9c903dd83c5cfcb9fe9e80746}{
+\index{embree::Reflection@{embree::Reflection}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Reflection@{embree::Reflection}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Reflection::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_reflection_a8b574ee9c903dd83c5cfcb9fe9e80746}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_reflection_ac8763a319aba0109e6283b17b64d719c}{
+\index{embree::Reflection@{embree::Reflection}!sample@{sample}}
+\index{sample@{sample}!embree::Reflection@{embree::Reflection}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Reflection::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_reflection_ac8763a319aba0109e6283b17b64d719c}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/reflection.h\end{DoxyCompactItemize}

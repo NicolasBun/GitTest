@@ -1,0 +1,127 @@
+\hypertarget{classembree_1_1_primitive_handle}{
+\section{embree::PrimitiveHandle Class Reference}
+\label{classembree_1_1_primitive_handle}\index{embree::PrimitiveHandle@{embree::PrimitiveHandle}}
+}
+
+
+Primitive Handle.  
+
+
+Inheritance diagram for embree::PrimitiveHandle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_primitive_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_primitive_handle_a158bfc7b85bbb53ddb4f45a0b34f9719}{PrimitiveHandle} (const Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \&\hyperlink{classembree_1_1_primitive_handle_a5e41b912766d99fe26a76b67e57e8a66}{shape}, const Ref$<$ \hyperlink{classembree_1_1_material}{Material} $>$ \&\hyperlink{classembree_1_1_primitive_handle_a0fc57652da580a13c6b0da9ffc3b8bf4}{material}, const AffineSpace \&\hyperlink{classembree_1_1_primitive_handle_af719dfb6ffb4227d36d0d838be649325}{transform})
+\begin{DoxyCompactList}\small\item\em Constructs shape primitive. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_primitive_handle_ac365ebe1df7fcef94065dff7e2be1f4c}{PrimitiveHandle} (const Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \&\hyperlink{classembree_1_1_primitive_handle_a12cc18cebf95189241fe315c031307e0}{light}, const AffineSpace \&\hyperlink{classembree_1_1_primitive_handle_af719dfb6ffb4227d36d0d838be649325}{transform})
+\begin{DoxyCompactList}\small\item\em Constructs light primitive. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_primitive_handle_ae730fb9b00684388aab1542bd95f71e6}{create} ()
+\begin{DoxyCompactList}\small\item\em Creation is not allowed. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_primitive_handle_ac7fac33f0838f97732fa61cab03f75bd}{set} (const std::string \&property, const \hyperlink{structembree_1_1_variant}{Variant} \&data)
+\begin{DoxyCompactList}\small\item\em Setting parameters is not allowed. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_primitive_handle_a5e41b912766d99fe26a76b67e57e8a66}{
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_primitive_handle_a5e41b912766d99fe26a76b67e57e8a66}{shape}}
+\label{classembree_1_1_primitive_handle_a5e41b912766d99fe26a76b67e57e8a66}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_shape}{Shape} in case of a shape primitive. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_primitive_handle_a12cc18cebf95189241fe315c031307e0}{
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_primitive_handle_a12cc18cebf95189241fe315c031307e0}{light}}
+\label{classembree_1_1_primitive_handle_a12cc18cebf95189241fe315c031307e0}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_light}{Light} in case of a light primitive. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_primitive_handle_a0fc57652da580a13c6b0da9ffc3b8bf4}{
+Ref$<$ \hyperlink{classembree_1_1_material}{Material} $>$ \hyperlink{classembree_1_1_primitive_handle_a0fc57652da580a13c6b0da9ffc3b8bf4}{material}}
+\label{classembree_1_1_primitive_handle_a0fc57652da580a13c6b0da9ffc3b8bf4}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_material}{Material} of shape primitive. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_primitive_handle_af719dfb6ffb4227d36d0d838be649325}{
+AffineSpace \hyperlink{classembree_1_1_primitive_handle_af719dfb6ffb4227d36d0d838be649325}{transform}}
+\label{classembree_1_1_primitive_handle_af719dfb6ffb4227d36d0d838be649325}
+
+\begin{DoxyCompactList}\small\item\em Transformation of primitive. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive Handle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_primitive_handle_a158bfc7b85bbb53ddb4f45a0b34f9719}{
+\index{embree::PrimitiveHandle@{embree::PrimitiveHandle}!PrimitiveHandle@{PrimitiveHandle}}
+\index{PrimitiveHandle@{PrimitiveHandle}!embree::PrimitiveHandle@{embree::PrimitiveHandle}}
+\subsubsection[{PrimitiveHandle}]{\setlength{\rightskip}{0pt plus 5cm}embree::PrimitiveHandle::PrimitiveHandle (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Shape} $>$ \&}]{shape, }
+\item[{const Ref$<$ {\bf Material} $>$ \&}]{material, }
+\item[{const AffineSpace \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_primitive_handle_a158bfc7b85bbb53ddb4f45a0b34f9719}
+
+
+Constructs shape primitive. 
+
+\hypertarget{classembree_1_1_primitive_handle_ac365ebe1df7fcef94065dff7e2be1f4c}{
+\index{embree::PrimitiveHandle@{embree::PrimitiveHandle}!PrimitiveHandle@{PrimitiveHandle}}
+\index{PrimitiveHandle@{PrimitiveHandle}!embree::PrimitiveHandle@{embree::PrimitiveHandle}}
+\subsubsection[{PrimitiveHandle}]{\setlength{\rightskip}{0pt plus 5cm}embree::PrimitiveHandle::PrimitiveHandle (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Light} $>$ \&}]{light, }
+\item[{const AffineSpace \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_primitive_handle_ac365ebe1df7fcef94065dff7e2be1f4c}
+
+
+Constructs light primitive. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_primitive_handle_ae730fb9b00684388aab1542bd95f71e6}{
+\index{embree::PrimitiveHandle@{embree::PrimitiveHandle}!create@{create}}
+\index{create@{create}!embree::PrimitiveHandle@{embree::PrimitiveHandle}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void embree::PrimitiveHandle::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_primitive_handle_ae730fb9b00684388aab1542bd95f71e6}
+
+
+Creation is not allowed. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}{embree::\_\-RTHandle}.
+
+\hypertarget{classembree_1_1_primitive_handle_ac7fac33f0838f97732fa61cab03f75bd}{
+\index{embree::PrimitiveHandle@{embree::PrimitiveHandle}!set@{set}}
+\index{set@{set}!embree::PrimitiveHandle@{embree::PrimitiveHandle}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void embree::PrimitiveHandle::set (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{property, }
+\item[{const {\bf Variant} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_primitive_handle_ac7fac33f0838f97732fa61cab03f75bd}
+
+
+Setting parameters is not allowed. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}{embree::\_\-RTHandle}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/api.cpp\end{DoxyCompactItemize}

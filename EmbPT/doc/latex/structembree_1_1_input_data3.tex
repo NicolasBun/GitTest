@@ -1,0 +1,78 @@
+\hypertarget{structembree_1_1_input_data3}{
+\section{embree::InputData3 Struct Reference}
+\label{structembree_1_1_input_data3}\index{embree::InputData3@{embree::InputData3}}
+}
+
+
+Input data wrapper allowing -\/-\/ data access as p(i), n(i), t(i); -\/-\/ sorting using operator().  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_input_data3_a89c0df89ad67e3b77adde63059ed0fe5}{
+\hyperlink{structembree_1_1_input_data3_a89c0df89ad67e3b77adde63059ed0fe5}{InputData3} (const char $\ast$\_\-position, size\_\-t \_\-stridePositions, const char $\ast$\_\-normal, size\_\-t \_\-strideNormals, const char $\ast$\_\-texcoord, size\_\-t \_\-strideTexCoords)}
+\label{structembree_1_1_input_data3_a89c0df89ad67e3b77adde63059ed0fe5}
+
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_a0934a2fa70cacba4d32a91ce032ad1be}{
+bool \hyperlink{structembree_1_1_input_data3_a0934a2fa70cacba4d32a91ce032ad1be}{operator()} (const Vec2i \&pair0, const Vec2i \&pair1) const }
+\label{structembree_1_1_input_data3_a0934a2fa70cacba4d32a91ce032ad1be}
+
+\begin{DoxyCompactList}\small\item\em Operator() used by std::sort. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_a0bf7d066158f4ea7e521b8dbd855a080}{
+const Vec3f \hyperlink{structembree_1_1_input_data3_a0bf7d066158f4ea7e521b8dbd855a080}{p} (int i) const }
+\label{structembree_1_1_input_data3_a0bf7d066158f4ea7e521b8dbd855a080}
+
+\begin{DoxyCompactList}\small\item\em Get a position. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_ad98fd1a06577cfa22e4a4c11b227aa37}{
+const Vec3f \hyperlink{structembree_1_1_input_data3_ad98fd1a06577cfa22e4a4c11b227aa37}{n} (int i) const }
+\label{structembree_1_1_input_data3_ad98fd1a06577cfa22e4a4c11b227aa37}
+
+\begin{DoxyCompactList}\small\item\em Get a normal. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_a2d1187da5886cf81980653f713616d57}{
+const Vec2f \hyperlink{structembree_1_1_input_data3_a2d1187da5886cf81980653f713616d57}{t} (int i) const }
+\label{structembree_1_1_input_data3_a2d1187da5886cf81980653f713616d57}
+
+\begin{DoxyCompactList}\small\item\em Get a texture coord. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_input_data3_addaaa457a280515441fd3b7682307cc9}{
+const char $\ast$ \hyperlink{structembree_1_1_input_data3_addaaa457a280515441fd3b7682307cc9}{position}}
+\label{structembree_1_1_input_data3_addaaa457a280515441fd3b7682307cc9}
+
+\begin{DoxyCompactList}\small\item\em Array of coordinates. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_a24290f946a0642e672e3370a8a751159}{
+size\_\-t \hyperlink{structembree_1_1_input_data3_a24290f946a0642e672e3370a8a751159}{stridePositions}}
+\label{structembree_1_1_input_data3_a24290f946a0642e672e3370a8a751159}
+
+\begin{DoxyCompactList}\small\item\em Stride for positions. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_a8a50e61140c5b8de21a15bf08650658f}{
+const char $\ast$ \hyperlink{structembree_1_1_input_data3_a8a50e61140c5b8de21a15bf08650658f}{normal}}
+\label{structembree_1_1_input_data3_a8a50e61140c5b8de21a15bf08650658f}
+
+\begin{DoxyCompactList}\small\item\em Array of normals. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_ae80d83fdf49415749192c3fed0f64cc8}{
+size\_\-t \hyperlink{structembree_1_1_input_data3_ae80d83fdf49415749192c3fed0f64cc8}{strideNormals}}
+\label{structembree_1_1_input_data3_ae80d83fdf49415749192c3fed0f64cc8}
+
+\begin{DoxyCompactList}\small\item\em Stride for normals. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_af4ef582a675c8d54e65e460bcb7ca15b}{
+const char $\ast$ \hyperlink{structembree_1_1_input_data3_af4ef582a675c8d54e65e460bcb7ca15b}{texcoord}}
+\label{structembree_1_1_input_data3_af4ef582a675c8d54e65e460bcb7ca15b}
+
+\begin{DoxyCompactList}\small\item\em Array of tex coordinates. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_input_data3_a0bfa76c26c7ca711488dea456c7d024b}{
+size\_\-t \hyperlink{structembree_1_1_input_data3_a0bfa76c26c7ca711488dea456c7d024b}{strideTexCoords}}
+\label{structembree_1_1_input_data3_a0bfa76c26c7ca711488dea456c7d024b}
+
+\begin{DoxyCompactList}\small\item\em Stride for tex coord. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Input data wrapper allowing -\/-\/ data access as p(i), n(i), t(i); -\/-\/ sorting using operator(). 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/trianglemesh\_\-consistent\_\-normals.cpp\end{DoxyCompactItemize}

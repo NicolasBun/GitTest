@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<scene>
+  <Group>
+    <HDRILight>
+      <AffineSpace>-1 0 0 0 
+				   0 -1 0 0 
+				   0 0 -1 0 
+				   0 0 0 0</AffineSpace>
+      <L>1.0 1.0 1.0</L>
+      <image>"sky2.ppm"</image>
+    </HDRILight>
+  </Group>
+</scene>

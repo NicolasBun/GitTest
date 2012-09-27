@@ -1,0 +1,143 @@
+\hypertarget{classembree_1_1_filter}{
+\section{embree::Filter Class Reference}
+\label{classembree_1_1_filter}\index{embree::Filter@{embree::Filter}}
+}
+
+
+Interface to pixel filters.  
+
+
+
+
+{\ttfamily \#include $<$filter.h$>$}
+
+Inheritance diagram for embree::Filter:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_filter_a8cb0d91f27a7a4754d2cc2e0234a64a4}{Filter} (float \hyperlink{classembree_1_1_filter_a1c8f51881c3ffe113aa4433bb0e33c3a}{radius}, float \hyperlink{classembree_1_1_filter_a82efb36dcfd8c1b88b924b73750126e7}{width}, float \hyperlink{classembree_1_1_filter_a3e7d76c1870c7a37ff9cbad3b6eeff61}{height}, int32 \hyperlink{classembree_1_1_filter_ab2f83d581309ffb8807c891326291712}{border}, uint32 tableSize=256)
+\begin{DoxyCompactList}\small\item\em Constructs a filter interface. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_filter_a33c5fc5aa9807c91cf13d59a1fb67590}{init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the automatic importance sampling feature. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classembree_1_1_filter_a7e39ea23eb4ee9a806b4358ee2d0d679}{$\sim$Filter} ()
+\begin{DoxyCompactList}\small\item\em Filters need a virtual destructor. \item\end{DoxyCompactList}\item 
+virtual float \hyperlink{classembree_1_1_filter_affb7e4c8efedfed1fa2b636d439c3dc2}{eval} (const Vec2f distanceToCenter) const =0
+\begin{DoxyCompactList}\small\item\em Evaluates the filter at some location relative to the pixel center. \item\end{DoxyCompactList}\item 
+virtual Vec2f \hyperlink{classembree_1_1_filter_acd5773d409b5d97fb108341dfa303ac3}{sample} (const Vec2f uv) const 
+\begin{DoxyCompactList}\small\item\em Draws a filter sample. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_filter_a1c8f51881c3ffe113aa4433bb0e33c3a}{
+const float \hyperlink{classembree_1_1_filter_a1c8f51881c3ffe113aa4433bb0e33c3a}{radius}}
+\label{classembree_1_1_filter_a1c8f51881c3ffe113aa4433bb0e33c3a}
+
+\begin{DoxyCompactList}\small\item\em Radius of the filter. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_filter_a82efb36dcfd8c1b88b924b73750126e7}{
+const float \hyperlink{classembree_1_1_filter_a82efb36dcfd8c1b88b924b73750126e7}{width}}
+\label{classembree_1_1_filter_a82efb36dcfd8c1b88b924b73750126e7}
+
+\begin{DoxyCompactList}\small\item\em Width of the filter. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_filter_a3e7d76c1870c7a37ff9cbad3b6eeff61}{
+const float \hyperlink{classembree_1_1_filter_a3e7d76c1870c7a37ff9cbad3b6eeff61}{height}}
+\label{classembree_1_1_filter_a3e7d76c1870c7a37ff9cbad3b6eeff61}
+
+\begin{DoxyCompactList}\small\item\em Height of the filter. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_filter_ab2f83d581309ffb8807c891326291712}{
+const int32 \hyperlink{classembree_1_1_filter_ab2f83d581309ffb8807c891326291712}{border}}
+\label{classembree_1_1_filter_ab2f83d581309ffb8807c891326291712}
+
+\begin{DoxyCompactList}\small\item\em Number of border pixels of the filter. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to pixel filters. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_filter_a8cb0d91f27a7a4754d2cc2e0234a64a4}{
+\index{embree::Filter@{embree::Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!embree::Filter@{embree::Filter}}
+\subsubsection[{Filter}]{\setlength{\rightskip}{0pt plus 5cm}embree::Filter::Filter (
+\begin{DoxyParamCaption}
+\item[{float}]{radius, }
+\item[{float}]{width, }
+\item[{float}]{height, }
+\item[{int32}]{border, }
+\item[{uint32}]{tableSize = {\ttfamily 256}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_filter_a8cb0d91f27a7a4754d2cc2e0234a64a4}
+
+
+Constructs a filter interface. 
+
+\hypertarget{classembree_1_1_filter_a7e39ea23eb4ee9a806b4358ee2d0d679}{
+\index{embree::Filter@{embree::Filter}!$\sim$Filter@{$\sim$Filter}}
+\index{$\sim$Filter@{$\sim$Filter}!embree::Filter@{embree::Filter}}
+\subsubsection[{$\sim$Filter}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Filter::$\sim$Filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_filter_a7e39ea23eb4ee9a806b4358ee2d0d679}
+
+
+Filters need a virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_filter_affb7e4c8efedfed1fa2b636d439c3dc2}{
+\index{embree::Filter@{embree::Filter}!eval@{eval}}
+\index{eval@{eval}!embree::Filter@{embree::Filter}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}virtual float embree::Filter::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec2f}]{distanceToCenter}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_filter_affb7e4c8efedfed1fa2b636d439c3dc2}
+
+
+Evaluates the filter at some location relative to the pixel center. 
+
+
+
+Implemented in \hyperlink{classembree_1_1_box_filter_af91c351f0b286d9dde2f20a75d206012}{embree::BoxFilter}, and \hyperlink{classembree_1_1_b_spline_filter_a43711f575149d124abc9750088c3ffec}{embree::BSplineFilter}.
+
+\hypertarget{classembree_1_1_filter_a33c5fc5aa9807c91cf13d59a1fb67590}{
+\index{embree::Filter@{embree::Filter}!init@{init}}
+\index{init@{init}!embree::Filter@{embree::Filter}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Filter::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_filter_a33c5fc5aa9807c91cf13d59a1fb67590}
+
+
+Initializes the automatic importance sampling feature. 
+
+\hypertarget{classembree_1_1_filter_acd5773d409b5d97fb108341dfa303ac3}{
+\index{embree::Filter@{embree::Filter}!sample@{sample}}
+\index{sample@{sample}!embree::Filter@{embree::Filter}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Filter::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec2f}]{uv}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_filter_acd5773d409b5d97fb108341dfa303ac3}
+
+
+Draws a filter sample. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/filters/filter.h\item 
+renderer/filters/filter.cpp\end{DoxyCompactItemize}

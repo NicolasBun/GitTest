@@ -1,0 +1,180 @@
+\hypertarget{classembree_1_1_h_d_r_i_light}{
+\section{embree::HDRILight Class Reference}
+\label{classembree_1_1_h_d_r_i_light}\index{embree::HDRILight@{embree::HDRILight}}
+}
+
+
+Implements a texture mapped environment light.  
+
+
+
+
+{\ttfamily \#include $<$hdrilight.h$>$}
+
+Inheritance diagram for embree::HDRILight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_h_d_r_i_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_h_d_r_i_light_a7107a2127da8ead737c5c50a15faae87}{HDRILight} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_h_d_r_i_light_af116d30023fec29a9e0bc046151f604b}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_h_d_r_i_light_ae2b1f108f969a62ce73e1404705ecb45}{Le} (const Vec3f \&wo) const 
+\begin{DoxyCompactList}\small\item\em Returns the emitted radiance of the environment light. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_h_d_r_i_light_ab9bf74a2d856a458b9c19b9d6d09b3ac}{eval} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_h_d_r_i_light_a12fc5f0adebf246c6323be76800a7804}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_h_d_r_i_light_a1897fdcd0dd747e3dda2cc9644f5b843}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classembree_1_1_h_d_r_i_light_a6e5d1e66f4cb510c3be6d01696f537a8}{precompute} () const 
+\begin{DoxyCompactList}\small\item\em Indicates that the sampling of the light is expensive and the integrator should presample the light. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a texture mapped environment light. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_h_d_r_i_light_a7107a2127da8ead737c5c50a15faae87}{
+\index{embree::HDRILight@{embree::HDRILight}!HDRILight@{HDRILight}}
+\index{HDRILight@{HDRILight}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{HDRILight}]{\setlength{\rightskip}{0pt plus 5cm}home venceslas Recherche Project GlobIll EmbPT renderer lights hdrilight cpp embree::HDRILight::HDRILight (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_h_d_r_i_light_a7107a2127da8ead737c5c50a15faae87}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_h_d_r_i_light_ab9bf74a2d856a458b9c19b9d6d09b3ac}{
+\index{embree::HDRILight@{embree::HDRILight}!eval@{eval}}
+\index{eval@{eval}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::HDRILight::eval (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_h_d_r_i_light_ab9bf74a2d856a458b9c19b9d6d09b3ac}
+
+
+Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. 
+
+\begin{DoxyReturn}{Returns}
+the emitted radiance. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_light_a5cc835d46bd10b81c7253512cfd8c9e5}{embree::Light}.
+
+\hypertarget{classembree_1_1_h_d_r_i_light_ae2b1f108f969a62ce73e1404705ecb45}{
+\index{embree::HDRILight@{embree::HDRILight}!Le@{Le}}
+\index{Le@{Le}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{Le}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::HDRILight::Le (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_h_d_r_i_light_ae2b1f108f969a62ce73e1404705ecb45}
+
+
+Returns the emitted radiance of the environment light. 
+
+
+
+Implements \hyperlink{classembree_1_1_environment_light_a4cb3a8e11f5b737c714ceca203bddb8e}{embree::EnvironmentLight}.
+
+\hypertarget{classembree_1_1_h_d_r_i_light_a1897fdcd0dd747e3dda2cc9644f5b843}{
+\index{embree::HDRILight@{embree::HDRILight}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::HDRILight::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_h_d_r_i_light_a1897fdcd0dd747e3dda2cc9644f5b843}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{embree::Light}.
+
+\hypertarget{classembree_1_1_h_d_r_i_light_a6e5d1e66f4cb510c3be6d01696f537a8}{
+\index{embree::HDRILight@{embree::HDRILight}!precompute@{precompute}}
+\index{precompute@{precompute}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{precompute}]{\setlength{\rightskip}{0pt plus 5cm}bool embree::HDRILight::precompute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_h_d_r_i_light_a6e5d1e66f4cb510c3be6d01696f537a8}
+
+
+Indicates that the sampling of the light is expensive and the integrator should presample the light. 
+
+
+
+Reimplemented from \hyperlink{classembree_1_1_light_a99d50320be632f677439774efeb5c62e}{embree::Light}.
+
+\hypertarget{classembree_1_1_h_d_r_i_light_a12fc5f0adebf246c6323be76800a7804}{
+\index{embree::HDRILight@{embree::HDRILight}!sample@{sample}}
+\index{sample@{sample}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::HDRILight::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_h_d_r_i_light_a12fc5f0adebf246c6323be76800a7804}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{embree::Light}.
+
+\hypertarget{classembree_1_1_h_d_r_i_light_af116d30023fec29a9e0bc046151f604b}{
+\index{embree::HDRILight@{embree::HDRILight}!transform@{transform}}
+\index{transform@{transform}!embree::HDRILight@{embree::HDRILight}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Light}$>$ embree::HDRILight::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_h_d_r_i_light_af116d30023fec29a9e0bc046151f604b}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implements \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{embree::Light}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/hdrilight.h\item 
+renderer/lights/hdrilight.cpp\end{DoxyCompactItemize}

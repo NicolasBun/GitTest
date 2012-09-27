@@ -1,0 +1,63 @@
+\hypertarget{shapesampler_8h}{
+\section{renderer/samplers/shapesampler.h File Reference}
+\label{shapesampler_8h}\index{renderer/samplers/shapesampler.h@{renderer/samplers/shapesampler.h}}
+}
+
+
+Implements sampling functions for different geometric shapes.  
+
+
+{\ttfamily \#include \char`\"{}default.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a7d1553925641732b4e28290176f13993}{embree::uniformSampleSphere} (const float \&u, const float \&v)
+\begin{DoxyCompactList}\small\item\em Uniform sphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a94229d1f21041fb3da8d78d0038ca0ec}{embree::uniformSampleSpherePDF} ()
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the uniform shere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a1c8b9911d568d85f62fd911846fe2cae}{embree::cosineSampleSphere} (const float \&u, const float \&v)
+\begin{DoxyCompactList}\small\item\em Cosine weighted sphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a0ce10d1393e6580f2a81e57a8d373b1e}{embree::cosineSampleSpherePDF} (const Vec3f \&s)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the cosine weighted sphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_acc12014d796ccaaf108d0fe206008047}{embree::cosineSampleSphere} (const float \&u, const float \&v, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Cosine weighted sphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a9f2c479f2087a5a7432eb62e7e2e86bc}{embree::cosineSampleSpherePDF} (const Vec3f \&s, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the cosine weighted sphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_aa45e9134c277dd3d7f63013d727caab7}{embree::uniformSampleHemisphere} (const float \&u, const float \&v)
+\begin{DoxyCompactList}\small\item\em Uniform hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a9798739eb476a7fd030316d80ccbbf17}{embree::uniformSampleHemispherePDF} (const Vec3f \&s)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the uniform hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a4795c87d3f20368796e3a1b20f4e8b71}{embree::uniformSampleHemisphere} (const float \&u, const float \&v, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Uniform hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_ac159452ea6fdf523731cd63e623842d1}{embree::uniformSampleHemispherePDF} (const Vec3f \&s, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the uniform hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a1c0e57a0cc371c0456f7ef88ab9ec7f2}{embree::cosineSampleHemisphere} (const float \&u, const float \&v)
+\begin{DoxyCompactList}\small\item\em Cosine weighted hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_aeab02ed82059a2b0f05b39124549c0c0}{embree::cosineSampleHemispherePDF} (const Vec3f \&s)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the cosine weighted hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a77964d255a5fcfe69fba8c835a2f06c4}{embree::cosineSampleHemisphere} (const float \&u, const float \&v, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Cosine weighted hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a69115c5034d25a0078016f6f168cbeb8}{embree::cosineSampleHemispherePDF} (const Vec3f \&s, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the cosine weighted hemisphere sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a45fd77e3e687909dbc4c2505527cb782}{embree::powerCosineSampleHemisphere} (const float \&u, const float \&v, float exp)
+\begin{DoxyCompactList}\small\item\em Samples hemisphere with power cosine distribution. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a483a055f07c667629c24c87742049a9b}{embree::powerCosineSampleHemispherePDF} (const Vec3f \&s, float exp)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the power cosine sampling of the hemisphere. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_afc08f29dfd4e0b70017f22e98cdb89df}{embree::powerCosineSampleHemisphere} (const float \&u, const float \&v, const Vec3f \&N, float exp)
+\begin{DoxyCompactList}\small\item\em Samples hemisphere with power cosine distribution. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a7d021dd3b03fa886ef54bac1032c039d}{embree::powerCosineSampleHemispherePDF} (const Vec3f \&s, const Vec3f \&N, float exp)
+\begin{DoxyCompactList}\small\item\em Computes the probability density for the power cosine sampling of the hemisphere. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_aac70a018658bf54e66a3229bb2193c1d}{embree::uniformSampleCone} (const float \&u, const float \&v, const float \&angle)
+\begin{DoxyCompactList}\small\item\em Uniform sampling of spherical cone. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a39ccfd2768e51e6a55e96a55dbb221e3}{embree::uniformSampleConePDF} (const Vec3f \&s, const float \&angle)
+\begin{DoxyCompactList}\small\item\em Computes the probability density of uniform spherical cone sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_add635ae436cc716c73e7ac0f36ad25f9}{embree::uniformSampleCone} (const float \&u, const float \&v, const float \&angle, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Uniform sampling of spherical cone. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a7503f097f0c628e459abfd888b22f4a3}{embree::uniformSampleConePDF} (const Vec3f \&s, const float \&angle, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Computes the probability density of uniform spherical cone sampling. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Vec3f \hyperlink{namespaceembree_ab41a8f35622e92a54ecc43cd740847d5}{embree::uniformSampleTriangle} (const float \&u, const float \&v, const Vec3f \&A, const Vec3f \&B, const Vec3f \&C)
+\begin{DoxyCompactList}\small\item\em Uniform sampling of triangle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements sampling functions for different geometric shapes. 

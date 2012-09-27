@@ -1,0 +1,66 @@
+\hypertarget{classembree_1_1_metallic_paint}{
+\section{embree::MetallicPaint Class Reference}
+\label{classembree_1_1_metallic_paint}\index{embree::MetallicPaint@{embree::MetallicPaint}}
+}
+
+
+Implements a car paint \hyperlink{classembree_1_1_b_r_d_f}{BRDF}.  
+
+
+
+
+{\ttfamily \#include $<$metallicpaint.h$>$}
+
+Inheritance diagram for embree::MetallicPaint:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_metallic_paint}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_metallic_paint_a6d24af1cb7708e23597bef4241128c33}{MetallicPaint} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_metallic_paint_ad1efa08386c07a67804c2effd70e73a4}{
+\hyperlink{classembree_1_1_metallic_paint_ad1efa08386c07a67804c2effd70e73a4}{$\sim$MetallicPaint} ()}
+\label{classembree_1_1_metallic_paint_ad1efa08386c07a67804c2effd70e73a4}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_metallic_paint_a348f5ecba9ce8dd81cd83175905a10af}{
+void \hyperlink{classembree_1_1_metallic_paint_a348f5ecba9ce8dd81cd83175905a10af}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const }
+\label{classembree_1_1_metallic_paint_a348f5ecba9ce8dd81cd83175905a10af}
+
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a car paint \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. Models a dielectric layer over a diffuse ground layer. Additionally the ground layer may contain metallic glitter. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_metallic_paint_a6d24af1cb7708e23597bef4241128c33}{
+\index{embree::MetallicPaint@{embree::MetallicPaint}!MetallicPaint@{MetallicPaint}}
+\index{MetallicPaint@{MetallicPaint}!embree::MetallicPaint@{embree::MetallicPaint}}
+\subsubsection[{MetallicPaint}]{\setlength{\rightskip}{0pt plus 5cm}embree::MetallicPaint::MetallicPaint (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_metallic_paint_a6d24af1cb7708e23597bef4241128c33}
+
+
+Construction from parameters. 
+
+
+
+extract parameters
+
+Use the fresnel relfectance of Aluminium for the flakes. Modulate with glitterColor.
+
+precompute \hyperlink{classembree_1_1_b_r_d_f}{BRDF} component for performance reasons 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/metallicpaint.h\end{DoxyCompactItemize}

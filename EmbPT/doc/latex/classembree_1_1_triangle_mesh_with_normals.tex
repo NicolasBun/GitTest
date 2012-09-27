@@ -1,0 +1,158 @@
+\hypertarget{classembree_1_1_triangle_mesh_with_normals}{
+\section{embree::TriangleMeshWithNormals Class Reference}
+\label{classembree_1_1_triangle_mesh_with_normals}\index{embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}}
+}
+
+
+\hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle} mesh that only supports vertex normals.  
+
+
+
+
+{\ttfamily \#include $<$trianglemesh\_\-normals.h$>$}
+
+Inheritance diagram for embree::TriangleMeshWithNormals:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_triangle_mesh_with_normals}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle} indices description. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_vertex}{Vertex} description. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_triangle_mesh_with_normals_a91adf7cab2b275f3db5b46a500ddd6a0}{TriangleMeshWithNormals} (size\_\-t numVertices, const char $\ast$position, size\_\-t stridePositions, const char $\ast$normal, size\_\-t strideNormals, size\_\-t numTriangles, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_with_normals_ae98a0f001155d29277e327eab98f2992}{triangles}, size\_\-t strideTriangles)
+\begin{DoxyCompactList}\small\item\em Construction from vertex data and triangle index data. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_triangle_mesh_with_normals_adab234358ea31808f2670aa9175f1a83}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new shape by transforming this shape to a different location. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_triangle_mesh_with_normals_a7f3c8da7379f312f423ba6846c7daa5c}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const 
+\begin{DoxyCompactList}\small\item\em Performs interpolation of shading vertex parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector\_\-t$<$ \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_vertex}{Vertex} $>$ \hyperlink{classembree_1_1_triangle_mesh_with_normals_a25d34ce69475feabd324c012739665a1}{vertices}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_vertex}{Vertex} array (positions and normals). \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle} $>$ \hyperlink{classembree_1_1_triangle_mesh_with_normals_ae98a0f001155d29277e327eab98f2992}{triangles}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle} indices array. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle} mesh that only supports vertex normals. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_with_normals_a91adf7cab2b275f3db5b46a500ddd6a0}{
+\index{embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}!TriangleMeshWithNormals@{TriangleMeshWithNormals}}
+\index{TriangleMeshWithNormals@{TriangleMeshWithNormals}!embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}}
+\subsubsection[{TriangleMeshWithNormals}]{\setlength{\rightskip}{0pt plus 5cm}embree::TriangleMeshWithNormals::TriangleMeshWithNormals (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{numVertices, }
+\item[{const char $\ast$}]{position, }
+\item[{size\_\-t}]{stridePositions, }
+\item[{const char $\ast$}]{normal, }
+\item[{size\_\-t}]{strideNormals, }
+\item[{size\_\-t}]{numTriangles, }
+\item[{const char $\ast$}]{triangles, }
+\item[{size\_\-t}]{strideTriangles}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_triangle_mesh_with_normals_a91adf7cab2b275f3db5b46a500ddd6a0}
+
+
+Construction from vertex data and triangle index data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numVertices} & Number of mesh vertices. \\
+\hline
+{\em position} & Pointer to vertex positions. \\
+\hline
+{\em stridePositions} & Stride of vertex positions. \\
+\hline
+{\em normal} & Optional poiner to vertex normals. \\
+\hline
+{\em strideNormals} & Stride of vertex positions. \\
+\hline
+{\em numTriangles} & Number of mesh triangles. \\
+\hline
+{\em triangles} & Pointer to triangle indices. \\
+\hline
+{\em strideTriangles} & Stride of vertex positions. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_with_normals_a7f3c8da7379f312f423ba6846c7daa5c}{
+\index{embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}void embree::TriangleMeshWithNormals::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_with_normals_a7f3c8da7379f312f423ba6846c7daa5c}
+
+
+Performs interpolation of shading vertex parameters. 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}{embree::Shape}.
+
+\hypertarget{classembree_1_1_triangle_mesh_with_normals_adab234358ea31808f2670aa9175f1a83}{
+\index{embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}!transform@{transform}}
+\index{transform@{transform}!embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<$ {\bf Shape} $>$ embree::TriangleMeshWithNormals::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_with_normals_adab234358ea31808f2670aa9175f1a83}
+
+
+Instantiates a new shape by transforming this shape to a different location. 
+
+
+
+do nothing for identity matrix
+
+create transformed mesh 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}{embree::Shape}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_with_normals_ae98a0f001155d29277e327eab98f2992}{
+\index{embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}!triangles@{triangles}}
+\index{triangles@{triangles}!embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}}
+\subsubsection[{triangles}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<${\bf Triangle}$>$ {\bf embree::TriangleMeshWithNormals::triangles}}}
+\label{classembree_1_1_triangle_mesh_with_normals_ae98a0f001155d29277e327eab98f2992}
+
+
+\hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_triangle}{Triangle} indices array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_with_normals_a25d34ce69475feabd324c012739665a1}{
+\index{embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}!vertices@{vertices}}
+\index{vertices@{vertices}!embree::TriangleMeshWithNormals@{embree::TriangleMeshWithNormals}}
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<${\bf Vertex}$>$ {\bf embree::TriangleMeshWithNormals::vertices}}}
+\label{classembree_1_1_triangle_mesh_with_normals_a25d34ce69475feabd324c012739665a1}
+
+
+\hyperlink{structembree_1_1_triangle_mesh_with_normals_1_1_vertex}{Vertex} array (positions and normals). 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/trianglemesh\_\-normals.h\item 
+renderer/shapes/trianglemesh\_\-normals.cpp\end{DoxyCompactItemize}

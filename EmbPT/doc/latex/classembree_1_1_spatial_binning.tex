@@ -1,0 +1,203 @@
+\hypertarget{classembree_1_1_spatial_binning}{
+\section{embree::SpatialBinning$<$ logBlockSize $>$ Class Template Reference}
+\label{classembree_1_1_spatial_binning}\index{embree::SpatialBinning@{embree::SpatialBinning}}
+}
+
+
+Single threaded combined object and spatial binner.  
+
+
+
+
+{\ttfamily \#include $<$spatial\_\-binning.h$>$}
+
+Inheritance diagram for embree::SpatialBinning$<$ logBlockSize $>$:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_spatial_binning}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_spatial_binning_abaa0256d09fa6e70ec3f846d109de6c1}{SpatialBinning} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_spatial_binning_a347bab70e79de373c23a924490428241}{SpatialBinning} (const \hyperlink{structembree_1_1_build_range}{BuildRange} \&job, Box $\ast$prims, const BuildTriangle $\ast$triangles, size\_\-t \hyperlink{classembree_1_1_spatial_binning_a99c86e2b94dc1c23e6309860571db996}{depth})
+\begin{DoxyCompactList}\small\item\em Construct from build range. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_spatial_binning_afd0297032faf28126ce5d5bd1becf753}{split\_\-l2r} (bool spatial, Box $\ast$prims, const BuildTriangle $\ast$triangles, \hyperlink{classembree_1_1_spatial_binning}{SpatialBinning} \&left\_\-o, \hyperlink{classembree_1_1_spatial_binning}{SpatialBinning} \&right\_\-o, size\_\-t \&rprim) const 
+\begin{DoxyCompactList}\small\item\em Split the list and move primitives from the left side to the right side of the primitive array. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_spatial_binning_ad56a26ee1beda2a56215f18da89ddf3f}{split\_\-r2l} (bool spatial, Box $\ast$prims, const BuildTriangle $\ast$triangles, \hyperlink{classembree_1_1_spatial_binning}{SpatialBinning} \&left\_\-o, \hyperlink{classembree_1_1_spatial_binning}{SpatialBinning} \&right\_\-o, size\_\-t \&lprim) const 
+\begin{DoxyCompactList}\small\item\em Split the list and move primitives from the right side to the left side of the primitive array. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classembree_1_1_spatial_binning_a99c86e2b94dc1c23e6309860571db996}{depth}
+\begin{DoxyCompactList}\small\item\em Tree depth of this job was generated at. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_spatial_binning_aa3dccdc5ce1318633ebab0d9499f29d4}{
+char \hyperlink{classembree_1_1_spatial_binning_aa3dccdc5ce1318633ebab0d9499f29d4}{objectDim}}
+\label{classembree_1_1_spatial_binning_aa3dccdc5ce1318633ebab0d9499f29d4}
+
+\begin{DoxyCompactList}\small\item\em Best object split dimension. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_spatial_binning_a742173419f39f071a1f8e66118ddfb55}{
+char \hyperlink{classembree_1_1_spatial_binning_a742173419f39f071a1f8e66118ddfb55}{spatialDim}}
+\label{classembree_1_1_spatial_binning_a742173419f39f071a1f8e66118ddfb55}
+
+\begin{DoxyCompactList}\small\item\em Best spatial split dimension. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_spatial_binning_a66eb2b271c4fc00695644003537de701}{
+char \hyperlink{classembree_1_1_spatial_binning_a66eb2b271c4fc00695644003537de701}{objectPos}}
+\label{classembree_1_1_spatial_binning_a66eb2b271c4fc00695644003537de701}
+
+\begin{DoxyCompactList}\small\item\em Best object split position. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_spatial_binning_a1ada2daf6f7b65b4f4b6a9a1ee91846b}{
+float \hyperlink{classembree_1_1_spatial_binning_a1ada2daf6f7b65b4f4b6a9a1ee91846b}{leafSAH}}
+\label{classembree_1_1_spatial_binning_a1ada2daf6f7b65b4f4b6a9a1ee91846b}
+
+\begin{DoxyCompactList}\small\item\em SAH cost of creating a leaf. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_spatial_binning_a03e4944bfe387fce15387d90e84acc8f}{
+float \hyperlink{classembree_1_1_spatial_binning_a03e4944bfe387fce15387d90e84acc8f}{objectSAH}}
+\label{classembree_1_1_spatial_binning_a03e4944bfe387fce15387d90e84acc8f}
+
+\begin{DoxyCompactList}\small\item\em SAH cost of performing best object split. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_spatial_binning_a369e84edd78878f0fb2deaedbfac8be8}{
+float \hyperlink{classembree_1_1_spatial_binning_a369e84edd78878f0fb2deaedbfac8be8}{spatialSAH}}
+\label{classembree_1_1_spatial_binning_a369e84edd78878f0fb2deaedbfac8be8}
+
+\begin{DoxyCompactList}\small\item\em SAH cost of performing best spatial split. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_spatial_binning_a32adb1161fa055c1ad51a625ca56ca92}{spatialSize}
+\begin{DoxyCompactList}\small\item\em Maximal number of primitive space required for performing the split. \item\end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{classembree_1_1_spatial_binning_ac43bbdf3b0fd5cf462ba203d96ce4ba8}{node}
+\begin{DoxyCompactList}\small\item\em Target node. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int logBlockSize$>$ class embree::SpatialBinning$<$ logBlockSize $>$}
+
+Single threaded combined object and spatial binner. Performs the same object binning procedure as the ObjectBinner class. In addition tries spatial splits, by splitting each dimension spatially in the center. In contrast to object binning, spatial binning potentially cuts triangles along the splitting plane and sortes the corresponding parts into the left and right set. The splitting functions allow primitives to be moved from the left of the primitive array to the right and vice versa. When moving from left-\/to-\/right the source is shrinked from the right and the destination expanded towards the left (analogous for right-\/to-\/left splits). This allows splits to be performed even when only the number of duplicates of additional space is available in the primitive array. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_spatial_binning_abaa0256d09fa6e70ec3f846d109de6c1}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!SpatialBinning@{SpatialBinning}}
+\index{SpatialBinning@{SpatialBinning}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{SpatialBinning}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ \_\-\_\-forceinline {\bf embree::SpatialBinning}$<$ logBlockSize $>$::{\bf SpatialBinning} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_spatial_binning_abaa0256d09fa6e70ec3f846d109de6c1}
+
+
+Default constructor. 
+
+\hypertarget{classembree_1_1_spatial_binning_a347bab70e79de373c23a924490428241}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!SpatialBinning@{SpatialBinning}}
+\index{SpatialBinning@{SpatialBinning}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{SpatialBinning}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ {\bf embree::SpatialBinning}$<$ logBlockSize $>$::{\bf SpatialBinning} (
+\begin{DoxyParamCaption}
+\item[{const {\bf BuildRange} \&}]{job, }
+\item[{Box $\ast$}]{prims, }
+\item[{const BuildTriangle $\ast$}]{triangles, }
+\item[{size\_\-t}]{depth}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_spatial_binning_a347bab70e79de373c23a924490428241}
+
+
+Construct from build range. 
+
+The constructor will directly find the best split. 
+
+compute number of bins to use and precompute scaling factor for binning
+
+initialize counters for spatial split
+
+map primitive to bin
+
+increase bounds of bins
+
+Test spatial split in center of each dimension.
+
+Choose better side for primitives between rightBound and leftBound.
+
+These definitely go to the left.
+
+These definitely go to the right.
+
+These have to get split and put to left and right.
+
+set SAH of building a leaf node 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_spatial_binning_afd0297032faf28126ce5d5bd1becf753}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!split\_\-l2r@{split\_\-l2r}}
+\index{split\_\-l2r@{split\_\-l2r}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{split\_\-l2r}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ void {\bf embree::SpatialBinning}$<$ logBlockSize $>$::split\_\-l2r (
+\begin{DoxyParamCaption}
+\item[{bool}]{spatial, }
+\item[{Box $\ast$}]{prims, }
+\item[{const BuildTriangle $\ast$}]{triangles, }
+\item[{{\bf SpatialBinning}$<$ logBlockSize $>$ \&}]{left\_\-o, }
+\item[{{\bf SpatialBinning}$<$ logBlockSize $>$ \&}]{right\_\-o, }
+\item[{size\_\-t \&}]{rprim}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_spatial_binning_afd0297032faf28126ce5d5bd1becf753}
+
+
+Split the list and move primitives from the left side to the right side of the primitive array. 
+
+\hypertarget{classembree_1_1_spatial_binning_ad56a26ee1beda2a56215f18da89ddf3f}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!split\_\-r2l@{split\_\-r2l}}
+\index{split\_\-r2l@{split\_\-r2l}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{split\_\-r2l}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ void {\bf embree::SpatialBinning}$<$ logBlockSize $>$::split\_\-r2l (
+\begin{DoxyParamCaption}
+\item[{bool}]{spatial, }
+\item[{Box $\ast$}]{prims, }
+\item[{const BuildTriangle $\ast$}]{triangles, }
+\item[{{\bf SpatialBinning}$<$ logBlockSize $>$ \&}]{left\_\-o, }
+\item[{{\bf SpatialBinning}$<$ logBlockSize $>$ \&}]{right\_\-o, }
+\item[{size\_\-t \&}]{lprim}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_spatial_binning_ad56a26ee1beda2a56215f18da89ddf3f}
+
+
+Split the list and move primitives from the right side to the left side of the primitive array. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_spatial_binning_a99c86e2b94dc1c23e6309860571db996}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!depth@{depth}}
+\index{depth@{depth}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ char {\bf embree::SpatialBinning}$<$ logBlockSize $>$::{\bf depth}}}
+\label{classembree_1_1_spatial_binning_a99c86e2b94dc1c23e6309860571db996}
+
+
+Tree depth of this job was generated at. 
+
+\hypertarget{classembree_1_1_spatial_binning_ac43bbdf3b0fd5cf462ba203d96ce4ba8}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!node@{node}}
+\index{node@{node}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ int$\ast$ {\bf embree::SpatialBinning}$<$ logBlockSize $>$::{\bf node}}}
+\label{classembree_1_1_spatial_binning_ac43bbdf3b0fd5cf462ba203d96ce4ba8}
+
+
+Target node. 
+
+\hypertarget{classembree_1_1_spatial_binning_a32adb1161fa055c1ad51a625ca56ca92}{
+\index{embree::SpatialBinning@{embree::SpatialBinning}!spatialSize@{spatialSize}}
+\index{spatialSize@{spatialSize}!embree::SpatialBinning@{embree::SpatialBinning}}
+\subsubsection[{spatialSize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ int {\bf embree::SpatialBinning}$<$ logBlockSize $>$::{\bf spatialSize}}}
+\label{classembree_1_1_spatial_binning_a32adb1161fa055c1ad51a625ca56ca92}
+
+
+Maximal number of primitive space required for performing the split. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/spatial\_\-binning.h\item 
+rtcore/common/spatial\_\-binning.cpp\end{DoxyCompactItemize}

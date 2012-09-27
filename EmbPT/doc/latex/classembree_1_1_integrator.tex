@@ -1,0 +1,104 @@
+\hypertarget{classembree_1_1_integrator}{
+\section{embree::Integrator Class Reference}
+\label{classembree_1_1_integrator}\index{embree::Integrator@{embree::Integrator}}
+}
+
+
+Interface to different integrators.  
+
+
+
+
+{\ttfamily \#include $<$integrator.h$>$}
+
+Inheritance diagram for embree::Integrator:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_integrator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_integrator_a7a164449b773825dcdf1da0486914bfd}{$\sim$Integrator} ()
+\begin{DoxyCompactList}\small\item\em Integrators need a virtual destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classembree_1_1_integrator_a7dbd4474e5bbda044ef8b44ffa3dcf95}{requestSamples} (Ref$<$ \hyperlink{classembree_1_1_sampler_factory}{SamplerFactory} $>$ \&samplerFactory, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene)
+\begin{DoxyCompactList}\small\item\em Allows the integrator to register required samples at the sampler. \item\end{DoxyCompactList}\item 
+virtual Col3f \hyperlink{classembree_1_1_integrator_a39cfbf2d078f8e072e17d8cdf2a1b604}{Li} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, \hyperlink{classembree_1_1_sampler}{Sampler} $\ast$sampler, size\_\-t \&numRays)=0
+\begin{DoxyCompactList}\small\item\em Computes the radiance arriving at the origin of the ray from the ray direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to different integrators. The task of the integrator is to compute the incoming radiance along some ray. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_integrator_a7a164449b773825dcdf1da0486914bfd}{
+\index{embree::Integrator@{embree::Integrator}!$\sim$Integrator@{$\sim$Integrator}}
+\index{$\sim$Integrator@{$\sim$Integrator}!embree::Integrator@{embree::Integrator}}
+\subsubsection[{$\sim$Integrator}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Integrator::$\sim$Integrator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_integrator_a7a164449b773825dcdf1da0486914bfd}
+
+
+Integrators need a virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_integrator_a39cfbf2d078f8e072e17d8cdf2a1b604}{
+\index{embree::Integrator@{embree::Integrator}!Li@{Li}}
+\index{Li@{Li}!embree::Integrator@{embree::Integrator}}
+\subsubsection[{Li}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::Integrator::Li (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{{\bf Sampler} $\ast$}]{sampler, }
+\item[{size\_\-t \&}]{numRays}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_integrator_a39cfbf2d078f8e072e17d8cdf2a1b604}
+
+
+Computes the radiance arriving at the origin of the ray from the ray direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & \hyperlink{structembree_1_1_ray}{Ray} to compute the radiance along. \\
+\hline
+{\em scene} & Scene geometry and lights. \\
+\hline
+{\em sampler} & \hyperlink{classembree_1_1_sampler}{Sampler} used to generate (pseudo) random numbers. \\
+\hline
+{\em numRays} & Used to count the number of rays shot. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_direct_lighting_integrator_a4dbebb16520d11bcd37cc271971a6d24}{embree::DirectLightingIntegrator}, and \hyperlink{classembree_1_1_path_trace_integrator_a544309a59d94c3e6d24e5fa65923b0e4}{embree::PathTraceIntegrator}.
+
+\hypertarget{classembree_1_1_integrator_a7dbd4474e5bbda044ef8b44ffa3dcf95}{
+\index{embree::Integrator@{embree::Integrator}!requestSamples@{requestSamples}}
+\index{requestSamples@{requestSamples}!embree::Integrator@{embree::Integrator}}
+\subsubsection[{requestSamples}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::Integrator::requestSamples (
+\begin{DoxyParamCaption}
+\item[{Ref$<$ {\bf SamplerFactory} $>$ \&}]{samplerFactory, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_integrator_a7dbd4474e5bbda044ef8b44ffa3dcf95}
+
+
+Allows the integrator to register required samples at the sampler. 
+
+
+
+Reimplemented in \hyperlink{classembree_1_1_direct_lighting_integrator_a6043ec2711ed0aa764c3ff386223cbca}{embree::DirectLightingIntegrator}, and \hyperlink{classembree_1_1_path_trace_integrator_a1c111e1fabea384da5878f7cd3962c79}{embree::PathTraceIntegrator}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/integrators/integrator.h\end{DoxyCompactItemize}

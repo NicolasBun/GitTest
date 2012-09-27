@@ -1,0 +1,118 @@
+\hypertarget{classembree_1_1_directional_light}{
+\section{embree::DirectionalLight Class Reference}
+\label{classembree_1_1_directional_light}\index{embree::DirectionalLight@{embree::DirectionalLight}}
+}
+
+
+Implements a directional light.  
+
+
+
+
+{\ttfamily \#include $<$directionallight.h$>$}
+
+Inheritance diagram for embree::DirectionalLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_directional_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_directional_light_a09b63657f26ce7adaeeb787a2e95d4d6}{DirectionalLight} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_directional_light_aea27ef2ba60eb7f2d8945a9e0f6c48c7}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_directional_light_a6af3bc942cd0f35726d7abe39cc96393}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_directional_light_a4b1fbe653eb467dad05bf0d280b09def}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a directional light. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_directional_light_a09b63657f26ce7adaeeb787a2e95d4d6}{
+\index{embree::DirectionalLight@{embree::DirectionalLight}!DirectionalLight@{DirectionalLight}}
+\index{DirectionalLight@{DirectionalLight}!embree::DirectionalLight@{embree::DirectionalLight}}
+\subsubsection[{DirectionalLight}]{\setlength{\rightskip}{0pt plus 5cm}embree::DirectionalLight::DirectionalLight (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_directional_light_a09b63657f26ce7adaeeb787a2e95d4d6}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_directional_light_a4b1fbe653eb467dad05bf0d280b09def}{
+\index{embree::DirectionalLight@{embree::DirectionalLight}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::DirectionalLight@{embree::DirectionalLight}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::DirectionalLight::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_directional_light_a4b1fbe653eb467dad05bf0d280b09def}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{embree::Light}.
+
+\hypertarget{classembree_1_1_directional_light_a6af3bc942cd0f35726d7abe39cc96393}{
+\index{embree::DirectionalLight@{embree::DirectionalLight}!sample@{sample}}
+\index{sample@{sample}!embree::DirectionalLight@{embree::DirectionalLight}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::DirectionalLight::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_directional_light_a6af3bc942cd0f35726d7abe39cc96393}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{embree::Light}.
+
+\hypertarget{classembree_1_1_directional_light_aea27ef2ba60eb7f2d8945a9e0f6c48c7}{
+\index{embree::DirectionalLight@{embree::DirectionalLight}!transform@{transform}}
+\index{transform@{transform}!embree::DirectionalLight@{embree::DirectionalLight}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Light}$>$ embree::DirectionalLight::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_directional_light_aea27ef2ba60eb7f2d8945a9e0f6c48c7}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implements \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{embree::Light}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/directionallight.h\end{DoxyCompactItemize}

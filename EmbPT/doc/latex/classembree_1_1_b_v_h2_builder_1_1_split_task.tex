@@ -1,0 +1,94 @@
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_split_task}{
+\section{embree::BVH2Builder::SplitTask Class Reference}
+\label{classembree_1_1_b_v_h2_builder_1_1_split_task}\index{embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}}
+}
+
+
+Single-\/threaded task that builds a single node and creates subtasks for the children.  
+
+
+
+
+{\ttfamily \#include $<$bvh2\_\-builder.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_builder_1_1_split_task_a743330eb2e45e78f9ecb6a30ea6b24e6}{SplitTask} (\hyperlink{classembree_1_1_b_v_h2_builder}{BVH2Builder} $\ast$parent, int \&nodeID, size\_\-t depth, const \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h2_builder_1_1_split_task_a8458a27bc3f0fe437a2cf8bb6c02e0bf}{split} ()
+\begin{DoxyCompactList}\small\item\em Task entry function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h2_builder_1_1_split_task_ab67bd15abbc7eb1a8e90b79f2d7a7953}{\_\-split} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h2_builder_1_1_split_task}{SplitTask} $\ast$This, size\_\-t elts)
+\begin{DoxyCompactList}\small\item\em Task entry static function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single-\/threaded task that builds a single node and creates subtasks for the children. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_split_task_a743330eb2e45e78f9ecb6a30ea6b24e6}{
+\index{embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}!SplitTask@{SplitTask}}
+\index{SplitTask@{SplitTask}!embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}}
+\subsubsection[{SplitTask}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH2Builder::SplitTask::SplitTask (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH2Builder} $\ast$}]{parent, }
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_1_1_split_task_a743330eb2e45e78f9ecb6a30ea6b24e6}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_split_task_ab67bd15abbc7eb1a8e90b79f2d7a7953}{
+\index{embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}!\_\-split@{\_\-split}}
+\index{\_\-split@{\_\-split}!embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}}
+\subsubsection[{\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH2Builder::SplitTask::\_\-split (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf SplitTask} $\ast$}]{This, }
+\item[{size\_\-t}]{elts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_1_1_split_task_ab67bd15abbc7eb1a8e90b79f2d7a7953}
+
+
+Task entry static function. 
+
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_split_task_a8458a27bc3f0fe437a2cf8bb6c02e0bf}{
+\index{embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}!split@{split}}
+\index{split@{split}!embree::BVH2Builder::SplitTask@{embree::BVH2Builder::SplitTask}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH2Builder::SplitTask::split (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_1_1_split_task_a8458a27bc3f0fe437a2cf8bb6c02e0bf}
+
+
+Task entry function. 
+
+
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+perform split
+
+create an inner node 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2\_\-builder.h\item 
+rtcore/bvh2/bvh2\_\-builder.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\hypertarget{classembree_1_1_medium}{
+\section{embree::Medium Class Reference}
+\label{classembree_1_1_medium}\index{embree::Medium@{embree::Medium}}
+}
+
+
+\hyperlink{classembree_1_1_medium}{Medium} description.  
+
+
+
+
+{\ttfamily \#include $<$medium.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_medium_ac834ea19fdceff8a6b8ae41aa043c08d}{Medium} (const Col3f \&\hyperlink{classembree_1_1_medium_a4adaa3f000afbe7bf57fb61764dbcb87}{transmission}=one, float \hyperlink{classembree_1_1_medium_a99756af7cc156fb28ecd2c733872774f}{eta}=1.0f)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_medium}{Medium} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline bool \hyperlink{classembree_1_1_medium_a9c2a24d0796dd9dd7bd97f9f2e4d2cfe}{operator==} (const \hyperlink{classembree_1_1_medium}{Medium} \&m) const 
+\begin{DoxyCompactList}\small\item\em Comparision of two media. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classembree_1_1_medium}{Medium} \hyperlink{classembree_1_1_medium_a2b2d256d68fe5b3d8a69a96232613504}{Vacuum} ()
+\begin{DoxyCompactList}\small\item\em Builds a vacuum. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Col3f \hyperlink{classembree_1_1_medium_a4adaa3f000afbe7bf57fb61764dbcb87}{transmission}
+\begin{DoxyCompactList}\small\item\em Transmissivity of medium. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_medium_a99756af7cc156fb28ecd2c733872774f}{eta}
+\begin{DoxyCompactList}\small\item\em Refraction index of medium. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_medium}{Medium} description. The integrator tracks the current medium for computing volumetric effects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_medium_ac834ea19fdceff8a6b8ae41aa043c08d}{
+\index{embree::Medium@{embree::Medium}!Medium@{Medium}}
+\index{Medium@{Medium}!embree::Medium@{embree::Medium}}
+\subsubsection[{Medium}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Medium::Medium (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{transmission = {\ttfamily one}, }
+\item[{float}]{eta = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_medium_ac834ea19fdceff8a6b8ae41aa043c08d}
+
+
+\hyperlink{classembree_1_1_medium}{Medium} constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_medium_a9c2a24d0796dd9dd7bd97f9f2e4d2cfe}{
+\index{embree::Medium@{embree::Medium}!operator==@{operator==}}
+\index{operator==@{operator==}!embree::Medium@{embree::Medium}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline bool embree::Medium::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Medium} \&}]{m}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_medium_a9c2a24d0796dd9dd7bd97f9f2e4d2cfe}
+
+
+Comparision of two media. 
+
+\hypertarget{classembree_1_1_medium_a2b2d256d68fe5b3d8a69a96232613504}{
+\index{embree::Medium@{embree::Medium}!Vacuum@{Vacuum}}
+\index{Vacuum@{Vacuum}!embree::Medium@{embree::Medium}}
+\subsubsection[{Vacuum}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Medium} embree::Medium::Vacuum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_medium_a2b2d256d68fe5b3d8a69a96232613504}
+
+
+Builds a vacuum. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_medium_a99756af7cc156fb28ecd2c733872774f}{
+\index{embree::Medium@{embree::Medium}!eta@{eta}}
+\index{eta@{eta}!embree::Medium@{embree::Medium}}
+\subsubsection[{eta}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf embree::Medium::eta}}}
+\label{classembree_1_1_medium_a99756af7cc156fb28ecd2c733872774f}
+
+
+Refraction index of medium. 
+
+\hypertarget{classembree_1_1_medium_a4adaa3f000afbe7bf57fb61764dbcb87}{
+\index{embree::Medium@{embree::Medium}!transmission@{transmission}}
+\index{transmission@{transmission}!embree::Medium@{embree::Medium}}
+\subsubsection[{transmission}]{\setlength{\rightskip}{0pt plus 5cm}Col3f {\bf embree::Medium::transmission}}}
+\label{classembree_1_1_medium_a4adaa3f000afbe7bf57fb61764dbcb87}
+
+
+Transmissivity of medium. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/medium.h\end{DoxyCompactItemize}

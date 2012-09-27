@@ -1,0 +1,144 @@
+\hypertarget{classembree_1_1_distribution1_d}{
+\section{embree::Distribution1D Class Reference}
+\label{classembree_1_1_distribution1_d}\index{embree::Distribution1D@{embree::Distribution1D}}
+}
+
+
+1D probability distribution.  
+
+
+
+
+{\ttfamily \#include $<$distribution1d.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_distribution1_d_aef24399abf0bc4c919f5bcaa0e8aae5b}{Distribution1D} ()
+\begin{DoxyCompactList}\small\item\em Default construction. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_distribution1_d_a3e7d5bdb62d200fa895f7a70d7e87068}{Distribution1D} (const float $\ast$f, const size\_\-t size)
+\begin{DoxyCompactList}\small\item\em Construction from distribution array f. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_distribution1_d_ac4ae0f1b2459c60af4468faa5fd0c24b}{$\sim$Distribution1D} ()
+\begin{DoxyCompactList}\small\item\em Destruction. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_distribution1_d_a01e1d6f356833cdbf476c41e6fc25c1f}{init} (const float $\ast$f, const size\_\-t size)
+\begin{DoxyCompactList}\small\item\em Initialized the PDF and CDF arrays. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_sample}{Sample1f} \hyperlink{classembree_1_1_distribution1_d_ab91970cf11f35f2d4ebb95ed8fa48e6d}{sample} (const float u) const 
+\begin{DoxyCompactList}\small\item\em Draws a sample from the distribution. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_distribution1_d_ae6eb578ecad3848fdc60df5a9b6f31fb}{pdf} (const float p) const 
+\begin{DoxyCompactList}\small\item\em Returns the probability density a sample would be drawn from location p. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+1D probability distribution. The probability distribution function (PDF) can be initialized with arbitrary data and be sampled. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_distribution1_d_aef24399abf0bc4c919f5bcaa0e8aae5b}{
+\index{embree::Distribution1D@{embree::Distribution1D}!Distribution1D@{Distribution1D}}
+\index{Distribution1D@{Distribution1D}!embree::Distribution1D@{embree::Distribution1D}}
+\subsubsection[{Distribution1D}]{\setlength{\rightskip}{0pt plus 5cm}home venceslas Recherche Project GlobIll EmbPT renderer samplers distribution1d cpp embree::Distribution1D::Distribution1D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution1_d_aef24399abf0bc4c919f5bcaa0e8aae5b}
+
+
+Default construction. 
+
+\hypertarget{classembree_1_1_distribution1_d_a3e7d5bdb62d200fa895f7a70d7e87068}{
+\index{embree::Distribution1D@{embree::Distribution1D}!Distribution1D@{Distribution1D}}
+\index{Distribution1D@{Distribution1D}!embree::Distribution1D@{embree::Distribution1D}}
+\subsubsection[{Distribution1D}]{\setlength{\rightskip}{0pt plus 5cm}embree::Distribution1D::Distribution1D (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{f, }
+\item[{const size\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution1_d_a3e7d5bdb62d200fa895f7a70d7e87068}
+
+
+Construction from distribution array f. 
+
+\hypertarget{classembree_1_1_distribution1_d_ac4ae0f1b2459c60af4468faa5fd0c24b}{
+\index{embree::Distribution1D@{embree::Distribution1D}!$\sim$Distribution1D@{$\sim$Distribution1D}}
+\index{$\sim$Distribution1D@{$\sim$Distribution1D}!embree::Distribution1D@{embree::Distribution1D}}
+\subsubsection[{$\sim$Distribution1D}]{\setlength{\rightskip}{0pt plus 5cm}embree::Distribution1D::$\sim$Distribution1D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution1_d_ac4ae0f1b2459c60af4468faa5fd0c24b}
+
+
+Destruction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_distribution1_d_a01e1d6f356833cdbf476c41e6fc25c1f}{
+\index{embree::Distribution1D@{embree::Distribution1D}!init@{init}}
+\index{init@{init}!embree::Distribution1D@{embree::Distribution1D}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Distribution1D::init (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{f, }
+\item[{const size\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution1_d_a01e1d6f356833cdbf476c41e6fc25c1f}
+
+
+Initialized the PDF and CDF arrays. 
+
+
+
+create arrays
+
+accumulate the function f
+
+compute reciprocal sum
+
+normalize the probability distribution and cumulative distribution 
+
+\hypertarget{classembree_1_1_distribution1_d_ae6eb578ecad3848fdc60df5a9b6f31fb}{
+\index{embree::Distribution1D@{embree::Distribution1D}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Distribution1D@{embree::Distribution1D}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Distribution1D::pdf (
+\begin{DoxyParamCaption}
+\item[{const float}]{p}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_distribution1_d_ae6eb578ecad3848fdc60df5a9b6f31fb}
+
+
+Returns the probability density a sample would be drawn from location p. 
+
+\hypertarget{classembree_1_1_distribution1_d_ab91970cf11f35f2d4ebb95ed8fa48e6d}{
+\index{embree::Distribution1D@{embree::Distribution1D}!sample@{sample}}
+\index{sample@{sample}!embree::Distribution1D@{embree::Distribution1D}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sample1f} embree::Distribution1D::sample (
+\begin{DoxyParamCaption}
+\item[{const float}]{u}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_distribution1_d_ab91970cf11f35f2d4ebb95ed8fa48e6d}
+
+
+Draws a sample from the distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & is a random number to use for sampling \\
+\hline
+\end{DoxyParams}
+
+
+coarse sampling of the distribution
+
+refine sampling linearly by assuming the distribution being a step function 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/samplers/distribution1d.h\item 
+renderer/samplers/distribution1d.cpp\end{DoxyCompactItemize}

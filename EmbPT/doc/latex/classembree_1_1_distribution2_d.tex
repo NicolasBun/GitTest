@@ -1,0 +1,148 @@
+\hypertarget{classembree_1_1_distribution2_d}{
+\section{embree::Distribution2D Class Reference}
+\label{classembree_1_1_distribution2_d}\index{embree::Distribution2D@{embree::Distribution2D}}
+}
+
+
+2D probability distribution.  
+
+
+
+
+{\ttfamily \#include $<$distribution2d.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_distribution2_d_ac430c301c5f1ad80173e0cfff67be22f}{Distribution2D} ()
+\begin{DoxyCompactList}\small\item\em Default construction. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_distribution2_d_ab67b542f7d81dd42db250ed6f54d8792}{Distribution2D} (const float $\ast$$\ast$f, const size\_\-t width, const size\_\-t height)
+\begin{DoxyCompactList}\small\item\em Construction from 2D distribution array f. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_distribution2_d_a982b5f1cd4e4ef6ef25fa484b960f926}{$\sim$Distribution2D} ()
+\begin{DoxyCompactList}\small\item\em Destruction. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_distribution2_d_a4ce39b16aea3da7ecc4e0aaeec9c802c}{init} (const float $\ast$$\ast$f, const size\_\-t width, const size\_\-t height)
+\begin{DoxyCompactList}\small\item\em Initialized the PDF and CDF arrays. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_sample}{Sample2f} \hyperlink{classembree_1_1_distribution2_d_a7f6af9dbadc51b5f07ad021823f99c61}{sample} (const Vec2f \&u) const 
+\begin{DoxyCompactList}\small\item\em Draws a sample from the distribution. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_distribution2_d_a621c08414d8c5c216d52434711661b00}{pdf} (const Vec2f \&p) const 
+\begin{DoxyCompactList}\small\item\em Returns the probability density a sample would be drawn from location p. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+2D probability distribution. The probability distribution function (PDF) can be initialized with arbitrary data and be sampled. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_distribution2_d_ac430c301c5f1ad80173e0cfff67be22f}{
+\index{embree::Distribution2D@{embree::Distribution2D}!Distribution2D@{Distribution2D}}
+\index{Distribution2D@{Distribution2D}!embree::Distribution2D@{embree::Distribution2D}}
+\subsubsection[{Distribution2D}]{\setlength{\rightskip}{0pt plus 5cm}home venceslas Recherche Project GlobIll EmbPT renderer samplers distribution2d cpp embree::Distribution2D::Distribution2D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution2_d_ac430c301c5f1ad80173e0cfff67be22f}
+
+
+Default construction. 
+
+\hypertarget{classembree_1_1_distribution2_d_ab67b542f7d81dd42db250ed6f54d8792}{
+\index{embree::Distribution2D@{embree::Distribution2D}!Distribution2D@{Distribution2D}}
+\index{Distribution2D@{Distribution2D}!embree::Distribution2D@{embree::Distribution2D}}
+\subsubsection[{Distribution2D}]{\setlength{\rightskip}{0pt plus 5cm}embree::Distribution2D::Distribution2D (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$$\ast$}]{f, }
+\item[{const size\_\-t}]{width, }
+\item[{const size\_\-t}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution2_d_ab67b542f7d81dd42db250ed6f54d8792}
+
+
+Construction from 2D distribution array f. 
+
+\hypertarget{classembree_1_1_distribution2_d_a982b5f1cd4e4ef6ef25fa484b960f926}{
+\index{embree::Distribution2D@{embree::Distribution2D}!$\sim$Distribution2D@{$\sim$Distribution2D}}
+\index{$\sim$Distribution2D@{$\sim$Distribution2D}!embree::Distribution2D@{embree::Distribution2D}}
+\subsubsection[{$\sim$Distribution2D}]{\setlength{\rightskip}{0pt plus 5cm}embree::Distribution2D::$\sim$Distribution2D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution2_d_a982b5f1cd4e4ef6ef25fa484b960f926}
+
+
+Destruction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_distribution2_d_a4ce39b16aea3da7ecc4e0aaeec9c802c}{
+\index{embree::Distribution2D@{embree::Distribution2D}!init@{init}}
+\index{init@{init}!embree::Distribution2D@{embree::Distribution2D}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Distribution2D::init (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$$\ast$}]{f, }
+\item[{const size\_\-t}]{width, }
+\item[{const size\_\-t}]{height}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_distribution2_d_a4ce39b16aea3da7ecc4e0aaeec9c802c}
+
+
+Initialized the PDF and CDF arrays. 
+
+
+
+create arrays
+
+compute y distribution and initialize row distributions
+
+accumulate row to compute y distribution
+
+initialize distribution for current row
+
+initializes the y distribution 
+
+\hypertarget{classembree_1_1_distribution2_d_a621c08414d8c5c216d52434711661b00}{
+\index{embree::Distribution2D@{embree::Distribution2D}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Distribution2D@{embree::Distribution2D}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Distribution2D::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{p}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_distribution2_d_a621c08414d8c5c216d52434711661b00}
+
+
+Returns the probability density a sample would be drawn from location p. 
+
+\hypertarget{classembree_1_1_distribution2_d_a7f6af9dbadc51b5f07ad021823f99c61}{
+\index{embree::Distribution2D@{embree::Distribution2D}!sample@{sample}}
+\index{sample@{sample}!embree::Distribution2D@{embree::Distribution2D}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sample2f} embree::Distribution2D::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{u}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_distribution2_d_a7f6af9dbadc51b5f07ad021823f99c61}
+
+
+Draws a sample from the distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & is a pair of random numbers to use for sampling \\
+\hline
+\end{DoxyParams}
+
+
+use u.y to sample a row
+
+use u.x to sample inside the row 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/samplers/distribution2d.h\item 
+renderer/samplers/distribution2d.cpp\end{DoxyCompactItemize}

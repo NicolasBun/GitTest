@@ -1,0 +1,73 @@
+\hypertarget{classembree_1_1_fresnel_dielectric}{
+\section{embree::FresnelDielectric Class Reference}
+\label{classembree_1_1_fresnel_dielectric}\index{embree::FresnelDielectric@{embree::FresnelDielectric}}
+}
+
+
+Fresnel term of a dielectric surface.  
+
+
+
+
+{\ttfamily \#include $<$microfacet.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_fresnel_dielectric_a48b7b5ba52a93aadb00aaf6b1e92586f}{FresnelDielectric} (float etai, float etat)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_dielectric}{Dielectric} fresnel term constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_fresnel_dielectric_a5d682ca1a75395b2ffd4e154a2d24bc2}{eval} (float cosTheta) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the fresnel term. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fresnel term of a dielectric surface. A dielectric surface is for instance glass or water. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_fresnel_dielectric_a48b7b5ba52a93aadb00aaf6b1e92586f}{
+\index{embree::FresnelDielectric@{embree::FresnelDielectric}!FresnelDielectric@{FresnelDielectric}}
+\index{FresnelDielectric@{FresnelDielectric}!embree::FresnelDielectric@{embree::FresnelDielectric}}
+\subsubsection[{FresnelDielectric}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::FresnelDielectric::FresnelDielectric (
+\begin{DoxyParamCaption}
+\item[{float}]{etai, }
+\item[{float}]{etat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_fresnel_dielectric_a48b7b5ba52a93aadb00aaf6b1e92586f}
+
+
+\hyperlink{classembree_1_1_dielectric}{Dielectric} fresnel term constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em etai} & is the refraction index of the medium the incident ray travels in \\
+\hline
+{\em etat} & is the refraction index of the opposite medium \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_fresnel_dielectric_a5d682ca1a75395b2ffd4e154a2d24bc2}{
+\index{embree::FresnelDielectric@{embree::FresnelDielectric}!eval@{eval}}
+\index{eval@{eval}!embree::FresnelDielectric@{embree::FresnelDielectric}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::FresnelDielectric::eval (
+\begin{DoxyParamCaption}
+\item[{float}]{cosTheta}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_fresnel_dielectric_a5d682ca1a75395b2ffd4e154a2d24bc2}
+
+
+Evaluates the fresnel term. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cosTheta} & is the cosine between the facet normal (half vector) and the viewing vector. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/microfacet.h\end{DoxyCompactItemize}

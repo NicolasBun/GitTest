@@ -1,0 +1,7 @@
+-i Room/makefile.rif
+-quadlight 30.0 0.0 0.0 	0.0 5.0 0.0  3.0 5.0 0.0 		100 100 100
+-vp 2.25 .375 1
+-vi -.25 .125 -.125
+-vu 0.0 1.0 0.0 
+-fov 60
+-renderer opengl

@@ -1,0 +1,122 @@
+\hypertarget{classembree_1_1_microfacet}{
+\section{embree::Microfacet$<$ Fresnel, Distribution $>$ Class Template Reference}
+\label{classembree_1_1_microfacet}\index{embree::Microfacet@{embree::Microfacet}}
+}
+
+
+\hyperlink{classembree_1_1_microfacet}{Microfacet} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} model.  
+
+
+
+
+{\ttfamily \#include $<$microfacet.h$>$}
+
+Inheritance diagram for embree::Microfacet$<$ Fresnel, Distribution $>$:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_microfacet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_microfacet_a64046281562efbd298fca3d27161395f}{Microfacet} (const Col3f \&R, const Fresnel \&fresnel, const Distribution \&distribution)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_microfacet}{Microfacet} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_microfacet_a7de0e49c1425eff3003c40f875e43466}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_microfacet_a9e9f979b2aaaecb899110bd9e9c2f7ef}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_microfacet_a72fac81dfc79a57c4f719a1b62942ea3}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Fresnel, typename Distribution$>$ class embree::Microfacet$<$ Fresnel, Distribution $>$}
+
+\hyperlink{classembree_1_1_microfacet}{Microfacet} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} model. The class is templated over the fresnel term and microfacet distribution to use. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_microfacet_a64046281562efbd298fca3d27161395f}{
+\index{embree::Microfacet@{embree::Microfacet}!Microfacet@{Microfacet}}
+\index{Microfacet@{Microfacet}!embree::Microfacet@{embree::Microfacet}}
+\subsubsection[{Microfacet}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Fresnel , typename Distribution $>$ \_\-\_\-forceinline {\bf embree::Microfacet}$<$ Fresnel, Distribution $>$::{\bf Microfacet} (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{R, }
+\item[{const Fresnel \&}]{fresnel, }
+\item[{const Distribution \&}]{distribution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_microfacet_a64046281562efbd298fca3d27161395f}
+
+
+\hyperlink{classembree_1_1_microfacet}{Microfacet} \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+This is a glossy \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_microfacet_a7de0e49c1425eff3003c40f875e43466}{
+\index{embree::Microfacet@{embree::Microfacet}!eval@{eval}}
+\index{eval@{eval}!embree::Microfacet@{embree::Microfacet}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Fresnel , typename Distribution $>$ \_\-\_\-forceinline Col3f {\bf embree::Microfacet}$<$ Fresnel, Distribution $>$::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_microfacet_a7de0e49c1425eff3003c40f875e43466}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_microfacet_a72fac81dfc79a57c4f719a1b62942ea3}{
+\index{embree::Microfacet@{embree::Microfacet}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Microfacet@{embree::Microfacet}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Fresnel , typename Distribution $>$ float {\bf embree::Microfacet}$<$ Fresnel, Distribution $>$::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_microfacet_a72fac81dfc79a57c4f719a1b62942ea3}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_microfacet_a9e9f979b2aaaecb899110bd9e9c2f7ef}{
+\index{embree::Microfacet@{embree::Microfacet}!sample@{sample}}
+\index{sample@{sample}!embree::Microfacet@{embree::Microfacet}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Fresnel , typename Distribution $>$ Col3f {\bf embree::Microfacet}$<$ Fresnel, Distribution $>$::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_microfacet_a9e9f979b2aaaecb899110bd9e9c2f7ef}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/microfacet.h\end{DoxyCompactItemize}

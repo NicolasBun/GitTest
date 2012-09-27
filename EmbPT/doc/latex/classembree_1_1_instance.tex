@@ -1,0 +1,125 @@
+\hypertarget{classembree_1_1_instance}{
+\section{embree::Instance Class Reference}
+\label{classembree_1_1_instance}\index{embree::Instance@{embree::Instance}}
+}
+
+
+\hyperlink{classembree_1_1_shape}{Shape} instance.  
+
+
+
+
+{\ttfamily \#include $<$instance.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_instance_af122cf422e3dab06a6cafcf74ce288dc}{Instance} (size\_\-t \hyperlink{classembree_1_1_instance_ab9ba19e8d4aff6c227a838c32f6b8177}{id}, const Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \&\hyperlink{classembree_1_1_instance_aa9909b2b3ee187625a4369ca6b95d5d1}{shape}, const Ref$<$ \hyperlink{classembree_1_1_material}{Material} $>$ \&\hyperlink{classembree_1_1_instance_ad5fe641abd632683f5d19fbc6147451d}{material}, const Ref$<$ \hyperlink{classembree_1_1_area_light}{AreaLight} $>$ \&\hyperlink{classembree_1_1_instance_a49f4f82835231478a9e524a025e35461}{light})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_shape}{Shape} instance constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{classembree_1_1_instance_abdcdfec46b8e1761bda129fc7604335a}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const 
+\begin{DoxyCompactList}\small\item\em Post intersection for the instance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\_\-t \hyperlink{classembree_1_1_instance_ab9ba19e8d4aff6c227a838c32f6b8177}{id}
+\begin{DoxyCompactList}\small\item\em User ID of the instance. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_instance_aa9909b2b3ee187625a4369ca6b95d5d1}{shape}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_shape}{Shape} of the instance. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_material}{Material} $>$ \hyperlink{classembree_1_1_instance_ad5fe641abd632683f5d19fbc6147451d}{material}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_material}{Material} attached to the shape. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_area_light}{AreaLight} $>$ \hyperlink{classembree_1_1_instance_a49f4f82835231478a9e524a025e35461}{light}
+\begin{DoxyCompactList}\small\item\em Area light attached to the shape. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_shape}{Shape} instance. A shape instance is a shape with attached material and area light. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_instance_af122cf422e3dab06a6cafcf74ce288dc}{
+\index{embree::Instance@{embree::Instance}!Instance@{Instance}}
+\index{Instance@{Instance}!embree::Instance@{embree::Instance}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}embree::Instance::Instance (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{id, }
+\item[{const Ref$<$ {\bf Shape} $>$ \&}]{shape, }
+\item[{const Ref$<$ {\bf Material} $>$ \&}]{material, }
+\item[{const Ref$<$ {\bf AreaLight} $>$ \&}]{light}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_instance_af122cf422e3dab06a6cafcf74ce288dc}
+
+
+\hyperlink{classembree_1_1_shape}{Shape} instance constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & User ID of the instance. \\
+\hline
+{\em shape} & \hyperlink{classembree_1_1_shape}{Shape} of the instance. \\
+\hline
+{\em material} & \hyperlink{classembree_1_1_material}{Material} attached to the shape. \\
+\hline
+{\em light} & Area light attached to the shape. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_instance_abdcdfec46b8e1761bda129fc7604335a}{
+\index{embree::Instance@{embree::Instance}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::Instance@{embree::Instance}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline void embree::Instance::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_instance_abdcdfec46b8e1761bda129fc7604335a}
+
+
+Post intersection for the instance. 
+
+The instance is responsible for setting the material and area light, while the shape for interpolating shading data. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_instance_ab9ba19e8d4aff6c227a838c32f6b8177}{
+\index{embree::Instance@{embree::Instance}!id@{id}}
+\index{id@{id}!embree::Instance@{embree::Instance}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::Instance::id}}}
+\label{classembree_1_1_instance_ab9ba19e8d4aff6c227a838c32f6b8177}
+
+
+User ID of the instance. 
+
+\hypertarget{classembree_1_1_instance_a49f4f82835231478a9e524a025e35461}{
+\index{embree::Instance@{embree::Instance}!light@{light}}
+\index{light@{light}!embree::Instance@{embree::Instance}}
+\subsubsection[{light}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf AreaLight}$>$ {\bf embree::Instance::light}}}
+\label{classembree_1_1_instance_a49f4f82835231478a9e524a025e35461}
+
+
+Area light attached to the shape. 
+
+\hypertarget{classembree_1_1_instance_ad5fe641abd632683f5d19fbc6147451d}{
+\index{embree::Instance@{embree::Instance}!material@{material}}
+\index{material@{material}!embree::Instance@{embree::Instance}}
+\subsubsection[{material}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Material}$>$ {\bf embree::Instance::material}}}
+\label{classembree_1_1_instance_ad5fe641abd632683f5d19fbc6147451d}
+
+
+\hyperlink{classembree_1_1_material}{Material} attached to the shape. 
+
+\hypertarget{classembree_1_1_instance_aa9909b2b3ee187625a4369ca6b95d5d1}{
+\index{embree::Instance@{embree::Instance}!shape@{shape}}
+\index{shape@{shape}!embree::Instance@{embree::Instance}}
+\subsubsection[{shape}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Shape}$>$ {\bf embree::Instance::shape}}}
+\label{classembree_1_1_instance_aa9909b2b3ee187625a4369ca6b95d5d1}
+
+
+\hyperlink{classembree_1_1_shape}{Shape} of the instance. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/instance.h\end{DoxyCompactItemize}

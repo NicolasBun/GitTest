@@ -1,0 +1,138 @@
+\hypertarget{classembree_1_1_compute_bounds_task}{
+\section{embree::ComputeBoundsTask Class Reference}
+\label{classembree_1_1_compute_bounds_task}\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+}
+
+
+Computes bounds of triangles.  
+
+
+
+
+{\ttfamily \#include $<$compute\_\-bounds.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_compute_bounds_task_ad5782489c54e8497e8ffa5642e76a7b4}{ComputeBoundsTask} (const BuildTriangle $\ast$triangles\_\-i, size\_\-t numTriangles, Box $\ast$prims\_\-o)
+\begin{DoxyCompactList}\small\item\em Constructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_compute_bounds_task_a65a2620317492e8b96819d54b24c8a72}{go} ()
+\begin{DoxyCompactList}\small\item\em Initiates the parallel compute bounds task. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_compute_bounds_task_a1380790c5816494778c99218b1e979f9}{computeBounds} (size\_\-t tid, \hyperlink{classembree_1_1_compute_bounds_task}{ComputeBoundsTask} $\ast$This, size\_\-t elt)
+\begin{DoxyCompactList}\small\item\em Parallel computation of geometry bounding and centroid bounding. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classembree_1_1_compute_bounds_task_a77b1f9885a52fb87d9efb975a1e4ab28}{mergeBounds} (size\_\-t tid, \hyperlink{classembree_1_1_compute_bounds_task}{ComputeBoundsTask} $\ast$This)
+\begin{DoxyCompactList}\small\item\em Merging of bounds. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Box \hyperlink{classembree_1_1_compute_bounds_task_a9d9691967473a2fb5317bd1f4d8c442d}{geomBound}
+\begin{DoxyCompactList}\small\item\em Merged geometry bounds. \item\end{DoxyCompactList}\item 
+Box \hyperlink{classembree_1_1_compute_bounds_task_a7b7eb44229e94eeb13c587eb6153d3d5}{centBound}
+\begin{DoxyCompactList}\small\item\em Merged centroid bounds. \item\end{DoxyCompactList}\item 
+Box $\ast$ \hyperlink{classembree_1_1_compute_bounds_task_aae812d1cb3a99694619bb1fdab6f5fee}{prims}
+\begin{DoxyCompactList}\small\item\em Primitive bounds get stored here. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Computes bounds of triangles. Parallel task that computes the geometry and centroid bounds of primitives as well as an array of bounding boxes, one per primitive. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_compute_bounds_task_ad5782489c54e8497e8ffa5642e76a7b4}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!ComputeBoundsTask@{ComputeBoundsTask}}
+\index{ComputeBoundsTask@{ComputeBoundsTask}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{ComputeBoundsTask}]{\setlength{\rightskip}{0pt plus 5cm}embree::ComputeBoundsTask::ComputeBoundsTask (
+\begin{DoxyParamCaption}
+\item[{const BuildTriangle $\ast$}]{triangles\_\-i, }
+\item[{size\_\-t}]{numTriangles, }
+\item[{Box $\ast$}]{prims\_\-o}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_compute_bounds_task_ad5782489c54e8497e8ffa5642e76a7b4}
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_compute_bounds_task_a1380790c5816494778c99218b1e979f9}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!computeBounds@{computeBounds}}
+\index{computeBounds@{computeBounds}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{computeBounds}]{\setlength{\rightskip}{0pt plus 5cm}void embree::ComputeBoundsTask::computeBounds (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ComputeBoundsTask} $\ast$}]{This, }
+\item[{size\_\-t}]{elt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classembree_1_1_compute_bounds_task_a1380790c5816494778c99218b1e979f9}
+
+
+Parallel computation of geometry bounding and centroid bounding. 
+
+\hypertarget{classembree_1_1_compute_bounds_task_a65a2620317492e8b96819d54b24c8a72}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!go@{go}}
+\index{go@{go}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}void embree::ComputeBoundsTask::go (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_compute_bounds_task_a65a2620317492e8b96819d54b24c8a72}
+
+
+Initiates the parallel compute bounds task. 
+
+\hypertarget{classembree_1_1_compute_bounds_task_a77b1f9885a52fb87d9efb975a1e4ab28}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!mergeBounds@{mergeBounds}}
+\index{mergeBounds@{mergeBounds}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{mergeBounds}]{\setlength{\rightskip}{0pt plus 5cm}void embree::ComputeBoundsTask::mergeBounds (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ComputeBoundsTask} $\ast$}]{This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classembree_1_1_compute_bounds_task_a77b1f9885a52fb87d9efb975a1e4ab28}
+
+
+Merging of bounds. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_compute_bounds_task_a7b7eb44229e94eeb13c587eb6153d3d5}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!centBound@{centBound}}
+\index{centBound@{centBound}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{centBound}]{\setlength{\rightskip}{0pt plus 5cm}Box {\bf embree::ComputeBoundsTask::centBound}}}
+\label{classembree_1_1_compute_bounds_task_a7b7eb44229e94eeb13c587eb6153d3d5}
+
+
+Merged centroid bounds. 
+
+\hypertarget{classembree_1_1_compute_bounds_task_a9d9691967473a2fb5317bd1f4d8c442d}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!geomBound@{geomBound}}
+\index{geomBound@{geomBound}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{geomBound}]{\setlength{\rightskip}{0pt plus 5cm}Box {\bf embree::ComputeBoundsTask::geomBound}}}
+\label{classembree_1_1_compute_bounds_task_a9d9691967473a2fb5317bd1f4d8c442d}
+
+
+Merged geometry bounds. 
+
+\hypertarget{classembree_1_1_compute_bounds_task_aae812d1cb3a99694619bb1fdab6f5fee}{
+\index{embree::ComputeBoundsTask@{embree::ComputeBoundsTask}!prims@{prims}}
+\index{prims@{prims}!embree::ComputeBoundsTask@{embree::ComputeBoundsTask}}
+\subsubsection[{prims}]{\setlength{\rightskip}{0pt plus 5cm}Box$\ast$ {\bf embree::ComputeBoundsTask::prims}}}
+\label{classembree_1_1_compute_bounds_task_aae812d1cb3a99694619bb1fdab6f5fee}
+
+
+Primitive bounds get stored here. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/compute\_\-bounds.h\item 
+rtcore/common/compute\_\-bounds.cpp\end{DoxyCompactItemize}

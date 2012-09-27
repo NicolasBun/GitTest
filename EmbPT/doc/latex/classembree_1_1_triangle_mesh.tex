@@ -1,0 +1,184 @@
+\hypertarget{classembree_1_1_triangle_mesh}{
+\section{embree::TriangleMesh Class Reference}
+\label{classembree_1_1_triangle_mesh}\index{embree::TriangleMesh@{embree::TriangleMesh}}
+}
+
+
+Implements a triangle mesh.  
+
+
+
+
+{\ttfamily \#include $<$trianglemesh.h$>$}
+
+Inheritance diagram for embree::TriangleMesh:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_triangle_mesh}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structembree_1_1_triangle_mesh_1_1_triangle}{Triangle}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_1_1_triangle}{Triangle} indices description. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_triangle_mesh_a6a4745eb26447862a8b2b91c993d7221}{TriangleMesh} (size\_\-t numVertices, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_a8a02076acbbf919564dd43a729924fa2}{position}, size\_\-t stridePositions, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_af313e5aa4a8898c5cf34c3383ad0f1a2}{normal}, size\_\-t strideNormals, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_a3d26d3b80193bfb3382ac34c217f1b2d}{texcoord}, size\_\-t strideTexCoords, size\_\-t numTriangles, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_a0687f3b2a9800ef845be1770c94f76f8}{triangles}, size\_\-t strideTriangles)
+\begin{DoxyCompactList}\small\item\em Construction from vertex data and triangle index data. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_triangle_mesh_a1cb8ab9a95adfba8b8866fd6995df06f}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new shape by transforming this shape to a different location. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_triangle_mesh_a3980899de9e3a599ac9bcd0e12306046}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const 
+\begin{DoxyCompactList}\small\item\em Performs interpolation of shading vertex parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector\_\-t$<$ Vec3f $>$ \hyperlink{classembree_1_1_triangle_mesh_a8a02076acbbf919564dd43a729924fa2}{position}
+\begin{DoxyCompactList}\small\item\em Position array. \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ Vec3f $>$ \hyperlink{classembree_1_1_triangle_mesh_af313e5aa4a8898c5cf34c3383ad0f1a2}{normal}
+\begin{DoxyCompactList}\small\item\em Normal array (can be empty). \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ Vec2f $>$ \hyperlink{classembree_1_1_triangle_mesh_a3d26d3b80193bfb3382ac34c217f1b2d}{texcoord}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_texture}{Texture} coordinates array (can be empty). \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ \hyperlink{structembree_1_1_triangle_mesh_1_1_triangle}{Triangle} $>$ \hyperlink{classembree_1_1_triangle_mesh_a0687f3b2a9800ef845be1770c94f76f8}{triangles}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_1_1_triangle}{Triangle} indices array. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a triangle mesh. The mesh supports optional vertex normals and texture coordinates. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_a6a4745eb26447862a8b2b91c993d7221}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!TriangleMesh@{TriangleMesh}}
+\index{TriangleMesh@{TriangleMesh}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{TriangleMesh}]{\setlength{\rightskip}{0pt plus 5cm}embree::TriangleMesh::TriangleMesh (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{numVertices, }
+\item[{const char $\ast$}]{position, }
+\item[{size\_\-t}]{stridePositions, }
+\item[{const char $\ast$}]{normal, }
+\item[{size\_\-t}]{strideNormals, }
+\item[{const char $\ast$}]{texcoord, }
+\item[{size\_\-t}]{strideTexCoords, }
+\item[{size\_\-t}]{numTriangles, }
+\item[{const char $\ast$}]{triangles, }
+\item[{size\_\-t}]{strideTriangles}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_triangle_mesh_a6a4745eb26447862a8b2b91c993d7221}
+
+
+Construction from vertex data and triangle index data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numVertices} & Number of mesh vertices. \\
+\hline
+{\em position} & Pointer to vertex positions. \\
+\hline
+{\em stridePositions} & Stride of vertex positions. \\
+\hline
+{\em normal} & Optional poiner to vertex normals. \\
+\hline
+{\em strideNormals} & Stride of vertex positions. \\
+\hline
+{\em texcoord} & Optional pointer to texture coordinates. \\
+\hline
+{\em strideTexCoords} & Stride of vertex positions. \\
+\hline
+{\em numTriangles} & Number of mesh triangles. \\
+\hline
+{\em triangles} & Pointer to triangle indices. \\
+\hline
+{\em strideTriangles} & Stride of vertex positions. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_a3980899de9e3a599ac9bcd0e12306046}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}void embree::TriangleMesh::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_a3980899de9e3a599ac9bcd0e12306046}
+
+
+Performs interpolation of shading vertex parameters. 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}{embree::Shape}.
+
+\hypertarget{classembree_1_1_triangle_mesh_a1cb8ab9a95adfba8b8866fd6995df06f}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!transform@{transform}}
+\index{transform@{transform}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<$ {\bf Shape} $>$ embree::TriangleMesh::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_a1cb8ab9a95adfba8b8866fd6995df06f}
+
+
+Instantiates a new shape by transforming this shape to a different location. 
+
+
+
+do nothing for identity matrix
+
+create transformed 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}{embree::Shape}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_af313e5aa4a8898c5cf34c3383ad0f1a2}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!normal@{normal}}
+\index{normal@{normal}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<$Vec3f$>$ {\bf embree::TriangleMesh::normal}}}
+\label{classembree_1_1_triangle_mesh_af313e5aa4a8898c5cf34c3383ad0f1a2}
+
+
+Normal array (can be empty). 
+
+\hypertarget{classembree_1_1_triangle_mesh_a8a02076acbbf919564dd43a729924fa2}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!position@{position}}
+\index{position@{position}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<$Vec3f$>$ {\bf embree::TriangleMesh::position}}}
+\label{classembree_1_1_triangle_mesh_a8a02076acbbf919564dd43a729924fa2}
+
+
+Position array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_a3d26d3b80193bfb3382ac34c217f1b2d}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!texcoord@{texcoord}}
+\index{texcoord@{texcoord}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{texcoord}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<$Vec2f$>$ {\bf embree::TriangleMesh::texcoord}}}
+\label{classembree_1_1_triangle_mesh_a3d26d3b80193bfb3382ac34c217f1b2d}
+
+
+\hyperlink{classembree_1_1_texture}{Texture} coordinates array (can be empty). 
+
+\hypertarget{classembree_1_1_triangle_mesh_a0687f3b2a9800ef845be1770c94f76f8}{
+\index{embree::TriangleMesh@{embree::TriangleMesh}!triangles@{triangles}}
+\index{triangles@{triangles}!embree::TriangleMesh@{embree::TriangleMesh}}
+\subsubsection[{triangles}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<${\bf Triangle}$>$ {\bf embree::TriangleMesh::triangles}}}
+\label{classembree_1_1_triangle_mesh_a0687f3b2a9800ef845be1770c94f76f8}
+
+
+\hyperlink{structembree_1_1_triangle_mesh_1_1_triangle}{Triangle} indices array. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/trianglemesh.h\item 
+renderer/shapes/trianglemesh.cpp\end{DoxyCompactItemize}

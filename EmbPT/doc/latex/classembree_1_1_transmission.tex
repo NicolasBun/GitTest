@@ -1,0 +1,123 @@
+\hypertarget{classembree_1_1_transmission}{
+\section{embree::Transmission Class Reference}
+\label{classembree_1_1_transmission}\index{embree::Transmission@{embree::Transmission}}
+}
+
+
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of transmissive material.  
+
+
+
+
+{\ttfamily \#include $<$transmission.h$>$}
+
+Inheritance diagram for embree::Transmission:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_transmission}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_transmission_a834db24f3883ab5c808aeb0bd98e4ad0}{Transmission} (const Col3f \&T)
+\begin{DoxyCompactList}\small\item\em Transmissive \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{classembree_1_1_transmission_a2b7f2db78edbb393103bc1f2605c2aa4}{eval} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_transmission_aa22d7761c728167e6aa009dde0bd6f53}{sample} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_transmission_a5d6c2a769d14d6d598f6d7315e1bcb52}{pdf} (const Vec3f \&wo, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the sampling PDF. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_r_d_f}{BRDF} of transmissive material. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_transmission_a834db24f3883ab5c808aeb0bd98e4ad0}{
+\index{embree::Transmission@{embree::Transmission}!Transmission@{Transmission}}
+\index{Transmission@{Transmission}!embree::Transmission@{embree::Transmission}}
+\subsubsection[{Transmission}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Transmission::Transmission (
+\begin{DoxyParamCaption}
+\item[{const Col3f \&}]{T}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_transmission_a834db24f3883ab5c808aeb0bd98e4ad0}
+
+
+Transmissive \hyperlink{classembree_1_1_b_r_d_f}{BRDF} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & is the transmission coefficient \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_transmission_a2b7f2db78edbb393103bc1f2605c2aa4}{
+\index{embree::Transmission@{embree::Transmission}!eval@{eval}}
+\index{eval@{eval}!embree::Transmission@{embree::Transmission}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline Col3f embree::Transmission::eval (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_transmission_a2b7f2db78edbb393103bc1f2605c2aa4}
+
+
+Evaluates the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a given outgoing direction, shade location, and incoming light direction. 
+
+Perfectly specular \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components cannot be evaluated and should return zero. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a0c9f743878ab59613073c63772075b4f}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_transmission_a5d6c2a769d14d6d598f6d7315e1bcb52}{
+\index{embree::Transmission@{embree::Transmission}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Transmission@{embree::Transmission}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Transmission::pdf (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_transmission_a5d6c2a769d14d6d598f6d7315e1bcb52}
+
+
+Evaluates the sampling PDF. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a99b2d76b1283764f67df2f582f4519a2}{embree::BRDF}.
+
+\hypertarget{classembree_1_1_transmission_aa22d7761c728167e6aa009dde0bd6f53}{
+\index{embree::Transmission@{embree::Transmission}!sample@{sample}}
+\index{sample@{sample}!embree::Transmission@{embree::Transmission}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Transmission::sample (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{const Vec2f \&}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_transmission_aa22d7761c728167e6aa009dde0bd6f53}
+
+
+Samples the \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for a point to shade and outgoing light direction. 
+
+By default we perform a cosine weighted hemisphere sampling. 
+
+Reimplemented from \hyperlink{classembree_1_1_b_r_d_f_a6eb1a114a4f36dc2c1ad65bcbce5f809}{embree::BRDF}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/brdfs/transmission.h\end{DoxyCompactItemize}

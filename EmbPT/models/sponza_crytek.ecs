@@ -1,0 +1,11 @@
+-i sponza_crytek/sponza.obj
+#-gamma 5.0
+-quadlight 1050.0 775.0 375.0 0.0 -50.0 50.0 50.0 0.0 0.0 200 200 200
+# Near light and front door
+-vp 894.841 619.519 -483.549 -vi 901.021 619.519 -475.708 -vu 0.0 1.0 0.0 -fov 37
+# See sponza in the center on the balconny
+#-vp -1350 630 0.0 -vd 10 0 0 -vu 0 1 0 -fov 37
+#-renderer pathtracer { integrator = pathtracer depth = 3 spp = 512 }
+#-o ../build/sponza_d3_s512b.png
+#-renderer debug
+-renderer material

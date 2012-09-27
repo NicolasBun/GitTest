@@ -1,0 +1,95 @@
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_build_task}{
+\section{embree::BVH2Builder::BuildTask Class Reference}
+\label{classembree_1_1_b_v_h2_builder_1_1_build_task}\index{embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}}
+}
+
+
+Single-\/threaded task that builds a complete BVH.  
+
+
+
+
+{\ttfamily \#include $<$bvh2\_\-builder.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_builder_1_1_build_task_a50b0324e02c69c09e39b62b695f16858}{BuildTask} (\hyperlink{classembree_1_1_b_v_h2_builder}{BVH2Builder} $\ast$parent, int \&nodeID, size\_\-t depth, const \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_b_v_h2_builder_1_1_build_task_a8a37d46c5fd460e8545cf899bcecb967}{recurse} (size\_\-t depth, \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Recursively finishes the BVH construction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h2_builder_1_1_build_task_a60c4d349c27b23727886769d0b7a25b8}{run} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h2_builder_1_1_build_task}{BuildTask} $\ast$This, size\_\-t elts)
+\begin{DoxyCompactList}\small\item\em Task entry function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single-\/threaded task that builds a complete BVH. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_build_task_a50b0324e02c69c09e39b62b695f16858}{
+\index{embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}!BuildTask@{BuildTask}}
+\index{BuildTask@{BuildTask}!embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}}
+\subsubsection[{BuildTask}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH2Builder::BuildTask::BuildTask (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH2Builder} $\ast$}]{parent, }
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_1_1_build_task_a50b0324e02c69c09e39b62b695f16858}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_build_task_a8a37d46c5fd460e8545cf899bcecb967}{
+\index{embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}!recurse@{recurse}}
+\index{recurse@{recurse}!embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}}
+\subsubsection[{recurse}]{\setlength{\rightskip}{0pt plus 5cm}int embree::BVH2Builder::BuildTask::recurse (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{depth, }
+\item[{{\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_1_1_build_task_a8a37d46c5fd460e8545cf899bcecb967}
+
+
+Recursively finishes the BVH construction. 
+
+
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+perform split
+
+create an inner node 
+
+\hypertarget{classembree_1_1_b_v_h2_builder_1_1_build_task_a60c4d349c27b23727886769d0b7a25b8}{
+\index{embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}!run@{run}}
+\index{run@{run}!embree::BVH2Builder::BuildTask@{embree::BVH2Builder::BuildTask}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH2Builder::BuildTask::run (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf BuildTask} $\ast$}]{This, }
+\item[{size\_\-t}]{elts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_1_1_build_task_a60c4d349c27b23727886769d0b7a25b8}
+
+
+Task entry function. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2\_\-builder.h\item 
+rtcore/bvh2/bvh2\_\-builder.cpp\end{DoxyCompactItemize}

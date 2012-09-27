@@ -1,0 +1,214 @@
+\hypertarget{classembree_1_1_triangle_light}{
+\section{embree::TriangleLight Class Reference}
+\label{classembree_1_1_triangle_light}\index{embree::TriangleLight@{embree::TriangleLight}}
+}
+
+
+Implements a triangle shaped area light.  
+
+
+
+
+{\ttfamily \#include $<$trianglelight.h$>$}
+
+Inheritance diagram for embree::TriangleLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_triangle_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_triangle_light_a9ba8605d1533d7b44b65638115f7ed85}{TriangleLight} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_triangle_light_a5f232bd6f2f5220af56acf02807250b9}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_triangle_light_a82dc022211dba8b809f0526ad71eccf4}{shape} ()
+\begin{DoxyCompactList}\small\item\em Returns the shape of the triangle light. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{classembree_1_1_triangle_light_a25afe449f2064af19858a481f520bebb}{intersect} (const Vec3f \&O, const Vec3f \&D, float \&t, float \&u, float \&v, float \&w) const 
+\begin{DoxyCompactList}\small\item\em Intersects the triangle with a ray of origin O and directio D. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_triangle_light_ae70fea93eb5774f352f856805f072313}{Le} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wo) const 
+\begin{DoxyCompactList}\small\item\em Returns the the emitted radiance for a location on the light and direction. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_triangle_light_afa7279779945284d960d42427445d405}{eval} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_triangle_light_a3bf331c747d07fb3c60e50c066c631b9}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_triangle_light_a74999d99d8c5876afd3a9ddc5acc41ad}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_triangle_light_a3b90184aafbe9c89960e0a453f6bd18e}{
+Vec3f \hyperlink{classembree_1_1_triangle_light_a3b90184aafbe9c89960e0a453f6bd18e}{v0}}
+\label{classembree_1_1_triangle_light_a3b90184aafbe9c89960e0a453f6bd18e}
+
+\begin{DoxyCompactList}\small\item\em First vertex of the triangle. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_triangle_light_ae0769df4964af61388c732afc9e8ec82}{
+Vec3f \hyperlink{classembree_1_1_triangle_light_ae0769df4964af61388c732afc9e8ec82}{v1}}
+\label{classembree_1_1_triangle_light_ae0769df4964af61388c732afc9e8ec82}
+
+\begin{DoxyCompactList}\small\item\em Second vertex of the triangle. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_triangle_light_a3ef87da2dfb896302ad28f52027d70f4}{
+Vec3f \hyperlink{classembree_1_1_triangle_light_a3ef87da2dfb896302ad28f52027d70f4}{v2}}
+\label{classembree_1_1_triangle_light_a3ef87da2dfb896302ad28f52027d70f4}
+
+\begin{DoxyCompactList}\small\item\em Third vertex of the triangle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a triangle shaped area light. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_triangle_light_a9ba8605d1533d7b44b65638115f7ed85}{
+\index{embree::TriangleLight@{embree::TriangleLight}!TriangleLight@{TriangleLight}}
+\index{TriangleLight@{TriangleLight}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{TriangleLight}]{\setlength{\rightskip}{0pt plus 5cm}embree::TriangleLight::TriangleLight (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_triangle_light_a9ba8605d1533d7b44b65638115f7ed85}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_triangle_light_afa7279779945284d960d42427445d405}{
+\index{embree::TriangleLight@{embree::TriangleLight}!eval@{eval}}
+\index{eval@{eval}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::TriangleLight::eval (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_light_afa7279779945284d960d42427445d405}
+
+
+Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. 
+
+\begin{DoxyReturn}{Returns}
+the emitted radiance. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classembree_1_1_light_a5cc835d46bd10b81c7253512cfd8c9e5}{embree::Light}.
+
+\hypertarget{classembree_1_1_triangle_light_a25afe449f2064af19858a481f520bebb}{
+\index{embree::TriangleLight@{embree::TriangleLight}!intersect@{intersect}}
+\index{intersect@{intersect}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline void embree::TriangleLight::intersect (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{O, }
+\item[{const Vec3f \&}]{D, }
+\item[{float \&}]{t, }
+\item[{float \&}]{u, }
+\item[{float \&}]{v, }
+\item[{float \&}]{w}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_triangle_light_a25afe449f2064af19858a481f520bebb}
+
+
+Intersects the triangle with a ray of origin O and directio D. 
+
+\hypertarget{classembree_1_1_triangle_light_ae70fea93eb5774f352f856805f072313}{
+\index{embree::TriangleLight@{embree::TriangleLight}!Le@{Le}}
+\index{Le@{Le}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{Le}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::TriangleLight::Le (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wo}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_light_ae70fea93eb5774f352f856805f072313}
+
+
+Returns the the emitted radiance for a location on the light and direction. 
+
+
+
+Implements \hyperlink{classembree_1_1_area_light_aee1e622de193947d1b089231b230e1e2}{embree::AreaLight}.
+
+\hypertarget{classembree_1_1_triangle_light_a74999d99d8c5876afd3a9ddc5acc41ad}{
+\index{embree::TriangleLight@{embree::TriangleLight}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::TriangleLight::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_light_a74999d99d8c5876afd3a9ddc5acc41ad}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{embree::Light}.
+
+\hypertarget{classembree_1_1_triangle_light_a3bf331c747d07fb3c60e50c066c631b9}{
+\index{embree::TriangleLight@{embree::TriangleLight}!sample@{sample}}
+\index{sample@{sample}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::TriangleLight::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_light_a3bf331c747d07fb3c60e50c066c631b9}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{embree::Light}.
+
+\hypertarget{classembree_1_1_triangle_light_a82dc022211dba8b809f0526ad71eccf4}{
+\index{embree::TriangleLight@{embree::TriangleLight}!shape@{shape}}
+\index{shape@{shape}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{shape}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Shape}$>$ embree::TriangleLight::shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_triangle_light_a82dc022211dba8b809f0526ad71eccf4}
+
+
+Returns the shape of the triangle light. 
+
+\hypertarget{classembree_1_1_triangle_light_a5f232bd6f2f5220af56acf02807250b9}{
+\index{embree::TriangleLight@{embree::TriangleLight}!transform@{transform}}
+\index{transform@{transform}!embree::TriangleLight@{embree::TriangleLight}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Light}$>$ embree::TriangleLight::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_light_a5f232bd6f2f5220af56acf02807250b9}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implements \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{embree::Light}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/trianglelight.h\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{structembree_1_1_b_v_h2_1_1_node}{
+\section{embree::BVH2$<$ T $>$::Node Struct Reference}
+\label{structembree_1_1_b_v_h2_1_1_node}\index{embree::BVH2::Node@{embree::BVH2::Node}}
+}
+
+
+\hyperlink{classembree_1_1_b_v_h2}{BVH2} \hyperlink{structembree_1_1_b_v_h2_1_1_node}{Node}.  
+
+
+
+
+{\ttfamily \#include $<$bvh2.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_b_v_h2_1_1_node}{Node} \& \hyperlink{structembree_1_1_b_v_h2_1_1_node_a614f87897a52970e98ac6e65b6e8ca1e}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the node. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{structembree_1_1_b_v_h2_1_1_node_a2701f495156c62e058a2a376d76b6295}{set} (size\_\-t i, const Box \&bounds, int32 childID)
+\begin{DoxyCompactList}\small\item\em Sets bounding box and ID of child. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Box \hyperlink{structembree_1_1_b_v_h2_1_1_node_a897a528e3b0c989342eb30c35ccb161f}{bounds} (size\_\-t i)
+\begin{DoxyCompactList}\small\item\em Returns bounds of specified child. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_ae7baaf42c200bcb460390230aa06f168}{
+ssef \hyperlink{structembree_1_1_b_v_h2_1_1_node_ae7baaf42c200bcb460390230aa06f168}{lower\_\-upper\_\-x}}
+\label{structembree_1_1_b_v_h2_1_1_node_ae7baaf42c200bcb460390230aa06f168}
+
+\begin{DoxyCompactList}\small\item\em left\_\-lower\_\-x, right\_\-lower\_\-x, left\_\-upper\_\-x, right\_\-upper\_\-x \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_ac82637262749c3d28e28093109ea4a41}{
+ssef \hyperlink{structembree_1_1_b_v_h2_1_1_node_ac82637262749c3d28e28093109ea4a41}{lower\_\-upper\_\-y}}
+\label{structembree_1_1_b_v_h2_1_1_node_ac82637262749c3d28e28093109ea4a41}
+
+\begin{DoxyCompactList}\small\item\em left\_\-lower\_\-y, right\_\-lower\_\-y, left\_\-upper\_\-y, right\_\-upper\_\-y \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_a9af5124be172a0476106dc247375b3ce}{
+ssef \hyperlink{structembree_1_1_b_v_h2_1_1_node_a9af5124be172a0476106dc247375b3ce}{lower\_\-upper\_\-z}}
+\label{structembree_1_1_b_v_h2_1_1_node_a9af5124be172a0476106dc247375b3ce}
+
+\begin{DoxyCompactList}\small\item\em left\_\-lower\_\-z, right\_\-lower\_\-z, left\_\-upper\_\-z, right\_\-upper\_\-z \item\end{DoxyCompactList}\item 
+int32 \hyperlink{structembree_1_1_b_v_h2_1_1_node_a016e6c98b42539d721e00b811062f7b0}{child} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Offset to both children. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_abb13971a84067966bca39107a3e8ad91}{
+int32 \hyperlink{structembree_1_1_b_v_h2_1_1_node_abb13971a84067966bca39107a3e8ad91}{dummy} \mbox{[}2\mbox{]}}
+\label{structembree_1_1_b_v_h2_1_1_node_abb13971a84067966bca39107a3e8ad91}
+
+\begin{DoxyCompactList}\small\item\em Padding to one cacheline (64 bytes) \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ struct embree::BVH2$<$ T $>$::Node}
+
+\hyperlink{classembree_1_1_b_v_h2}{BVH2} \hyperlink{structembree_1_1_b_v_h2_1_1_node}{Node}. The nodes store for each dimension the lower and upper bounds of the left and right child in one SSE vector. This allows for a fast swap of the left and right bounds inside traversal for rays going from \char`\"{}right to left\char`\"{} in some dimension. 
+
+\subsection{Member Function Documentation}
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_a897a528e3b0c989342eb30c35ccb161f}{
+\index{embree::BVH2::Node@{embree::BVH2::Node}!bounds@{bounds}}
+\index{bounds@{bounds}!embree::BVH2::Node@{embree::BVH2::Node}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ \_\-\_\-forceinline Box {\bf embree::BVH2}$<$ T $>$::Node::bounds (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_b_v_h2_1_1_node_a897a528e3b0c989342eb30c35ccb161f}
+
+
+Returns bounds of specified child. 
+
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_a614f87897a52970e98ac6e65b6e8ca1e}{
+\index{embree::BVH2::Node@{embree::BVH2::Node}!clear@{clear}}
+\index{clear@{clear}!embree::BVH2::Node@{embree::BVH2::Node}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ \_\-\_\-forceinline {\bf Node}\& {\bf embree::BVH2}$<$ T $>$::Node::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_b_v_h2_1_1_node_a614f87897a52970e98ac6e65b6e8ca1e}
+
+
+Clears the node. 
+
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_a2701f495156c62e058a2a376d76b6295}{
+\index{embree::BVH2::Node@{embree::BVH2::Node}!set@{set}}
+\index{set@{set}!embree::BVH2::Node@{embree::BVH2::Node}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ \_\-\_\-forceinline void {\bf embree::BVH2}$<$ T $>$::Node::set (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{i, }
+\item[{const Box \&}]{bounds, }
+\item[{int32}]{childID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_b_v_h2_1_1_node_a2701f495156c62e058a2a376d76b6295}
+
+
+Sets bounding box and ID of child. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structembree_1_1_b_v_h2_1_1_node_a016e6c98b42539d721e00b811062f7b0}{
+\index{embree::BVH2::Node@{embree::BVH2::Node}!child@{child}}
+\index{child@{child}!embree::BVH2::Node@{embree::BVH2::Node}}
+\subsubsection[{child}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int32 {\bf embree::BVH2}$<$ T $>$::{\bf Node::child}\mbox{[}2\mbox{]}}}
+\label{structembree_1_1_b_v_h2_1_1_node_a016e6c98b42539d721e00b811062f7b0}
+
+
+Offset to both children. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2.h\end{DoxyCompactItemize}

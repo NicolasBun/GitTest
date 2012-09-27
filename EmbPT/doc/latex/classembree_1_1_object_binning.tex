@@ -1,0 +1,155 @@
+\hypertarget{classembree_1_1_object_binning}{
+\section{embree::ObjectBinning$<$ logBlockSize $>$ Class Template Reference}
+\label{classembree_1_1_object_binning}\index{embree::ObjectBinning@{embree::ObjectBinning}}
+}
+
+
+Single threaded object binner.  
+
+
+
+
+{\ttfamily \#include $<$object\_\-binning.h$>$}
+
+Inheritance diagram for embree::ObjectBinning$<$ logBlockSize $>$:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_object_binning}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_object_binning_a30e5010aac43e76453d4be01669dffcb}{ObjectBinning} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_object_binning_ac88408313aef2246464bdf6bbb0d9fb7}{ObjectBinning} (const \hyperlink{structembree_1_1_build_range}{BuildRange} \&job, Box $\ast$prims)
+\begin{DoxyCompactList}\small\item\em Construct from build range. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_object_binning_a33f5083b8e6e66e098c3efb1007fa4c2}{split} (Box $\ast$prims, \hyperlink{classembree_1_1_object_binning}{ObjectBinning} \&left\_\-o, \hyperlink{classembree_1_1_object_binning}{ObjectBinning} \&right\_\-o) const 
+\begin{DoxyCompactList}\small\item\em Execute the best found split. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classembree_1_1_object_binning_a413d9359e346517eb179b1843fd1982d}{splitSAH}
+\begin{DoxyCompactList}\small\item\em SAH cost of the best split. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_object_binning_a7f1285f86b45fc662186f891ef7ce49c}{leafSAH}
+\begin{DoxyCompactList}\small\item\em SAH cost of creating a leaf. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int logBlockSize$>$ class embree::ObjectBinning$<$ logBlockSize $>$}
+
+Single threaded object binner. Finds the split with the best SAH heuristic by testing for each dimension multiple partitionings for regular spaced partition locations. A partitioning for a partition location is computed, by putting primitives whose centroid is on the left and right of the split location to different sets. The SAH is evaluated by computing the number of blocks occupied by the primitives in the partitions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_object_binning_a30e5010aac43e76453d4be01669dffcb}{
+\index{embree::ObjectBinning@{embree::ObjectBinning}!ObjectBinning@{ObjectBinning}}
+\index{ObjectBinning@{ObjectBinning}!embree::ObjectBinning@{embree::ObjectBinning}}
+\subsubsection[{ObjectBinning}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ \_\-\_\-forceinline {\bf embree::ObjectBinning}$<$ logBlockSize $>$::{\bf ObjectBinning} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_object_binning_a30e5010aac43e76453d4be01669dffcb}
+
+
+Default constructor. 
+
+\hypertarget{classembree_1_1_object_binning_ac88408313aef2246464bdf6bbb0d9fb7}{
+\index{embree::ObjectBinning@{embree::ObjectBinning}!ObjectBinning@{ObjectBinning}}
+\index{ObjectBinning@{ObjectBinning}!embree::ObjectBinning@{embree::ObjectBinning}}
+\subsubsection[{ObjectBinning}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ {\bf embree::ObjectBinning}$<$ logBlockSize $>$::{\bf ObjectBinning} (
+\begin{DoxyParamCaption}
+\item[{const {\bf BuildRange} \&}]{job, }
+\item[{Box $\ast$}]{prims}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_object_binning_ac88408313aef2246464bdf6bbb0d9fb7}
+
+
+Construct from build range. 
+
+The constructor will directly find the best split. 
+
+compute number of bins to use and precompute scaling factor for binning
+
+initialize binning counter and bounds
+
+$<$ bounds for every bin in every dimension
+
+$<$ number of primitives mapped to bin
+
+map geometry to bins, unrolled once
+
+map even and odd primitive to bin
+
+increase bounds for bins for even primitive
+
+increase bounds of bins for odd primitive
+
+for uneven number of primitives
+
+map primitive to bin
+
+increase bounds of bins
+
+sweep from right to left and compute parallel prefix of merged bounds
+
+$<$ area of bounds of primitives on the right
+
+$<$ number of primitives on the right
+
+sweep from left to right and compute SAH
+
+find best dimension 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_object_binning_a33f5083b8e6e66e098c3efb1007fa4c2}{
+\index{embree::ObjectBinning@{embree::ObjectBinning}!split@{split}}
+\index{split@{split}!embree::ObjectBinning@{embree::ObjectBinning}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ void {\bf embree::ObjectBinning}$<$ logBlockSize $>$::split (
+\begin{DoxyParamCaption}
+\item[{Box $\ast$}]{prims, }
+\item[{{\bf ObjectBinning}$<$ logBlockSize $>$ \&}]{left\_\-o, }
+\item[{{\bf ObjectBinning}$<$ logBlockSize $>$ \&}]{right\_\-o}
+\end{DoxyParamCaption}
+) const}}
+\label{classembree_1_1_object_binning_a33f5083b8e6e66e098c3efb1007fa4c2}
+
+
+Execute the best found split. 
+
+
+
+finish
+
+object medium split if we did not make progress, can happen when all primitives have same centroid 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_object_binning_a7f1285f86b45fc662186f891ef7ce49c}{
+\index{embree::ObjectBinning@{embree::ObjectBinning}!leafSAH@{leafSAH}}
+\index{leafSAH@{leafSAH}!embree::ObjectBinning@{embree::ObjectBinning}}
+\subsubsection[{leafSAH}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ float {\bf embree::ObjectBinning}$<$ logBlockSize $>$::{\bf leafSAH}}}
+\label{classembree_1_1_object_binning_a7f1285f86b45fc662186f891ef7ce49c}
+
+
+SAH cost of creating a leaf. 
+
+\hypertarget{classembree_1_1_object_binning_a413d9359e346517eb179b1843fd1982d}{
+\index{embree::ObjectBinning@{embree::ObjectBinning}!splitSAH@{splitSAH}}
+\index{splitSAH@{splitSAH}!embree::ObjectBinning@{embree::ObjectBinning}}
+\subsubsection[{splitSAH}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ float {\bf embree::ObjectBinning}$<$ logBlockSize $>$::{\bf splitSAH}}}
+\label{classembree_1_1_object_binning_a413d9359e346517eb179b1843fd1982d}
+
+
+SAH cost of the best split. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/object\_\-binning.h\item 
+rtcore/common/object\_\-binning.cpp\end{DoxyCompactItemize}

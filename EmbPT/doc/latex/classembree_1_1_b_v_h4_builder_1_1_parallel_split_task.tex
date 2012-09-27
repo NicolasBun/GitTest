@@ -1,0 +1,207 @@
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{
+\section{embree::BVH4Builder::ParallelSplitTask Class Reference}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+}
+
+
+Multi-\/threaded task that builds a single node and creates subtasks for the children.  
+
+
+
+
+{\ttfamily \#include $<$bvh4\_\-builder.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a48d106b9c363aab0d89a0e7ba2f1d973}{ParallelSplitTask} (\hyperlink{classembree_1_1_b_v_h4_builder}{BVH4Builder} $\ast$parent, int \&nodeID, size\_\-t depth, const \hyperlink{structembree_1_1_build_range}{BuildRange} \&job)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a7e7213c44791d45fed9dc067df571991}{target} (const \hyperlink{structembree_1_1_build_range}{BuildRange} \&r)
+\begin{DoxyCompactList}\small\item\em Compute target location for parallel binning job. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a9bbc20b1eaced467e1215538a7c29dae}{stage0} (size\_\-t tid)
+\begin{DoxyCompactList}\small\item\em initial stage: tests if leaf node has to be generated \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a8c0ea23a31dc2336d305bd58273f98d7}{stage1} (size\_\-t tid)
+\begin{DoxyCompactList}\small\item\em 1st stage: splits the right sub-\/job of the best child. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a8a68218be4327a524a96e0b6abf4f0ac}{stage2} (size\_\-t tid)
+\begin{DoxyCompactList}\small\item\em 2nd stage: splits the left sub-\/job of the best child. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ad1ab8b17aa8ad5ea0a9479a218450973}{stage3} (size\_\-t tid)
+\begin{DoxyCompactList}\small\item\em 3rd stage: finds the best child to proceed with or creates the node \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ab07682dbc62196371107fff9bede7c97}{\_\-stage0} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{ParallelSplitTask} $\ast$This)
+\begin{DoxyCompactList}\small\item\em initial stage: tests if leaf node has to be generated. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_af8387b32540e7f7d72006d9280a90dee}{\_\-stage1} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{ParallelSplitTask} $\ast$This)
+\begin{DoxyCompactList}\small\item\em 1st stage: splits the right sub-\/job of the best child. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ad90c9a0d59eb577a2f1af5728a1292ce}{\_\-stage2} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{ParallelSplitTask} $\ast$This)
+\begin{DoxyCompactList}\small\item\em 2nd stage: splits the left sub-\/job of the best child. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_af3d420d3ca386559ae4249c4ee756a8f}{\_\-stage3} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{ParallelSplitTask} $\ast$This)
+\begin{DoxyCompactList}\small\item\em 3rd stage: finds the best child to proceed with or creates the node. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multi-\/threaded task that builds a single node and creates subtasks for the children. The box array has to have twice the size of the triangle array, as the parallel binner does not split in-\/place. It has to copy the boxes from the left half to the right half and vice versa. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a48d106b9c363aab0d89a0e7ba2f1d973}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!ParallelSplitTask@{ParallelSplitTask}}
+\index{ParallelSplitTask@{ParallelSplitTask}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{ParallelSplitTask}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH4Builder::ParallelSplitTask::ParallelSplitTask (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH4Builder} $\ast$}]{parent, }
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf BuildRange} \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a48d106b9c363aab0d89a0e7ba2f1d973}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ab07682dbc62196371107fff9bede7c97}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!\_\-stage0@{\_\-stage0}}
+\index{\_\-stage0@{\_\-stage0}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{\_\-stage0}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH4Builder::ParallelSplitTask::\_\-stage0 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ParallelSplitTask} $\ast$}]{This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ab07682dbc62196371107fff9bede7c97}
+
+
+initial stage: tests if leaf node has to be generated. 
+
+Static function \hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_af8387b32540e7f7d72006d9280a90dee}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!\_\-stage1@{\_\-stage1}}
+\index{\_\-stage1@{\_\-stage1}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{\_\-stage1}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH4Builder::ParallelSplitTask::\_\-stage1 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ParallelSplitTask} $\ast$}]{This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_af8387b32540e7f7d72006d9280a90dee}
+
+
+1st stage: splits the right sub-\/job of the best child. 
+
+Static function \hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ad90c9a0d59eb577a2f1af5728a1292ce}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!\_\-stage2@{\_\-stage2}}
+\index{\_\-stage2@{\_\-stage2}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{\_\-stage2}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH4Builder::ParallelSplitTask::\_\-stage2 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ParallelSplitTask} $\ast$}]{This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ad90c9a0d59eb577a2f1af5728a1292ce}
+
+
+2nd stage: splits the left sub-\/job of the best child. 
+
+Static function \hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_af3d420d3ca386559ae4249c4ee756a8f}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!\_\-stage3@{\_\-stage3}}
+\index{\_\-stage3@{\_\-stage3}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{\_\-stage3}]{\setlength{\rightskip}{0pt plus 5cm}static void embree::BVH4Builder::ParallelSplitTask::\_\-stage3 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf ParallelSplitTask} $\ast$}]{This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_af3d420d3ca386559ae4249c4ee756a8f}
+
+
+3rd stage: finds the best child to proceed with or creates the node. 
+
+Static function. \hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a9bbc20b1eaced467e1215538a7c29dae}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!stage0@{stage0}}
+\index{stage0@{stage0}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{stage0}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::ParallelSplitTask::stage0 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a9bbc20b1eaced467e1215538a7c29dae}
+
+
+initial stage: tests if leaf node has to be generated 
+
+
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+goto next stage 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a8c0ea23a31dc2336d305bd58273f98d7}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!stage1@{stage1}}
+\index{stage1@{stage1}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{stage1}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::ParallelSplitTask::stage1 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a8c0ea23a31dc2336d305bd58273f98d7}
+
+
+1st stage: splits the right sub-\/job of the best child. 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a8a68218be4327a524a96e0b6abf4f0ac}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!stage2@{stage2}}
+\index{stage2@{stage2}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{stage2}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::ParallelSplitTask::stage2 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a8a68218be4327a524a96e0b6abf4f0ac}
+
+
+2nd stage: splits the left sub-\/job of the best child. 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ad1ab8b17aa8ad5ea0a9479a218450973}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!stage3@{stage3}}
+\index{stage3@{stage3}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{stage3}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::ParallelSplitTask::stage3 (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_ad1ab8b17aa8ad5ea0a9479a218450973}
+
+
+3rd stage: finds the best child to proceed with or creates the node 
+
+
+
+continue splitting as long as node not full
+
+find best child to split next
+
+create an inner node 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a7e7213c44791d45fed9dc067df571991}{
+\index{embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}!target@{target}}
+\index{target@{target}!embree::BVH4Builder::ParallelSplitTask@{embree::BVH4Builder::ParallelSplitTask}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::BVH4Builder::ParallelSplitTask::target (
+\begin{DoxyParamCaption}
+\item[{const {\bf BuildRange} \&}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task_a7e7213c44791d45fed9dc067df571991}
+
+
+Compute target location for parallel binning job. 
+
+It the boxes are in the left half of the box array we copy into the right half and vice versa. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh4/bvh4\_\-builder.h\item 
+rtcore/bvh4/bvh4\_\-builder.cpp\end{DoxyCompactItemize}

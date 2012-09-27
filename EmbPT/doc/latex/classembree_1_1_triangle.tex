@@ -1,0 +1,142 @@
+\hypertarget{classembree_1_1_triangle}{
+\section{embree::Triangle Class Reference}
+\label{classembree_1_1_triangle}\index{embree::Triangle@{embree::Triangle}}
+}
+
+
+Implements a single triangle.  
+
+
+
+
+{\ttfamily \#include $<$triangle.h$>$}
+
+Inheritance diagram for embree::Triangle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_triangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_triangle_ae1dbfc77fbab52ea17880ae415df4c14}{Triangle} (const Vec3f \&\hyperlink{classembree_1_1_triangle_ac196941206e28259cde3a53d85d0e2d7}{v0}, const Vec3f \&\hyperlink{classembree_1_1_triangle_afa24c04d894b0ef9fda12873ac5aa12f}{v1}, const Vec3f \&\hyperlink{classembree_1_1_triangle_a8637eb32ee174a4466d8ba4bfee81ee1}{v2})
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_triangle}{Triangle} construction from its vertices. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_triangle_a53d1f5916d7066466b66c301488f64ef}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Transforms the triangle. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_triangle_ada64fe08f46c32919169fe2cc73e9090}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const 
+\begin{DoxyCompactList}\small\item\em Post intersection to compute shading data. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vec3f \hyperlink{classembree_1_1_triangle_ac196941206e28259cde3a53d85d0e2d7}{v0}
+\begin{DoxyCompactList}\small\item\em 1st vertex of triangle. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{classembree_1_1_triangle_afa24c04d894b0ef9fda12873ac5aa12f}{v1}
+\begin{DoxyCompactList}\small\item\em 2nd vertex of triangle. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{classembree_1_1_triangle_a8637eb32ee174a4466d8ba4bfee81ee1}{v2}
+\begin{DoxyCompactList}\small\item\em 3rd vertex of triangle. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{classembree_1_1_triangle_a2754b3be98c820b91f341582e2d860e1}{Ng}
+\begin{DoxyCompactList}\small\item\em Geometry normal of triangle. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a single triangle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_triangle_ae1dbfc77fbab52ea17880ae415df4c14}{
+\index{embree::Triangle@{embree::Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{Triangle}]{\setlength{\rightskip}{0pt plus 5cm}embree::Triangle::Triangle (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{v0, }
+\item[{const Vec3f \&}]{v1, }
+\item[{const Vec3f \&}]{v2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_triangle_ae1dbfc77fbab52ea17880ae415df4c14}
+
+
+\hyperlink{classembree_1_1_triangle}{Triangle} construction from its vertices. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_triangle_ada64fe08f46c32919169fe2cc73e9090}{
+\index{embree::Triangle@{embree::Triangle}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Triangle::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_ada64fe08f46c32919169fe2cc73e9090}
+
+
+Post intersection to compute shading data. 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}{embree::Shape}.
+
+\hypertarget{classembree_1_1_triangle_a53d1f5916d7066466b66c301488f64ef}{
+\index{embree::Triangle@{embree::Triangle}!transform@{transform}}
+\index{transform@{transform}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Shape}$>$ embree::Triangle::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_a53d1f5916d7066466b66c301488f64ef}
+
+
+Transforms the triangle. 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}{embree::Shape}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_triangle_a2754b3be98c820b91f341582e2d860e1}{
+\index{embree::Triangle@{embree::Triangle}!Ng@{Ng}}
+\index{Ng@{Ng}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{Ng}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::Triangle::Ng}}}
+\label{classembree_1_1_triangle_a2754b3be98c820b91f341582e2d860e1}
+
+
+Geometry normal of triangle. 
+
+\hypertarget{classembree_1_1_triangle_ac196941206e28259cde3a53d85d0e2d7}{
+\index{embree::Triangle@{embree::Triangle}!v0@{v0}}
+\index{v0@{v0}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{v0}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::Triangle::v0}}}
+\label{classembree_1_1_triangle_ac196941206e28259cde3a53d85d0e2d7}
+
+
+1st vertex of triangle. 
+
+\hypertarget{classembree_1_1_triangle_afa24c04d894b0ef9fda12873ac5aa12f}{
+\index{embree::Triangle@{embree::Triangle}!v1@{v1}}
+\index{v1@{v1}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{v1}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::Triangle::v1}}}
+\label{classembree_1_1_triangle_afa24c04d894b0ef9fda12873ac5aa12f}
+
+
+2nd vertex of triangle. 
+
+\hypertarget{classembree_1_1_triangle_a8637eb32ee174a4466d8ba4bfee81ee1}{
+\index{embree::Triangle@{embree::Triangle}!v2@{v2}}
+\index{v2@{v2}!embree::Triangle@{embree::Triangle}}
+\subsubsection[{v2}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::Triangle::v2}}}
+\label{classembree_1_1_triangle_a8637eb32ee174a4466d8ba4bfee81ee1}
+
+
+3rd vertex of triangle. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/triangle.h\end{DoxyCompactItemize}

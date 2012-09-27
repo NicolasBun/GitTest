@@ -1,0 +1,53 @@
+\hypertarget{classembree_1_1_thin_dielectric}{
+\section{embree::ThinDielectric Class Reference}
+\label{classembree_1_1_thin_dielectric}\index{embree::ThinDielectric@{embree::ThinDielectric}}
+}
+
+
+Implements a thin dielectricum material.  
+
+
+
+
+{\ttfamily \#include $<$thindielectric.h$>$}
+
+Inheritance diagram for embree::ThinDielectric:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_thin_dielectric}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_thin_dielectric_a6d352da646ebe0a86391cd595445fac0}{ThinDielectric} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_thin_dielectric_a20eb8f2855e1b6c0220491841834b741}{
+void \hyperlink{classembree_1_1_thin_dielectric_a20eb8f2855e1b6c0220491841834b741}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const }
+\label{classembree_1_1_thin_dielectric_a20eb8f2855e1b6c0220491841834b741}
+
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a thin dielectricum material. The model uses a dielectric reflection \hyperlink{classembree_1_1_b_r_d_f}{BRDF} and thin dielectric transmission \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_thin_dielectric_a6d352da646ebe0a86391cd595445fac0}{
+\index{embree::ThinDielectric@{embree::ThinDielectric}!ThinDielectric@{ThinDielectric}}
+\index{ThinDielectric@{ThinDielectric}!embree::ThinDielectric@{embree::ThinDielectric}}
+\subsubsection[{ThinDielectric}]{\setlength{\rightskip}{0pt plus 5cm}embree::ThinDielectric::ThinDielectric (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_thin_dielectric_a6d352da646ebe0a86391cd595445fac0}
+
+
+Construction from parameters. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/thindielectric.h\end{DoxyCompactItemize}

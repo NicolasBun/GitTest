@@ -1,0 +1,340 @@
+\hypertarget{classembree_1_1_sampler}{
+\section{embree::Sampler Class Reference}
+\label{classembree_1_1_sampler}\index{embree::Sampler@{embree::Sampler}}
+}
+
+
+A sampler thread responsible for sampling a complete tile.  
+
+
+
+
+{\ttfamily \#include $<$sampler.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_sampler_a0dd644463856319badfbcaa914f27546}{Sampler} (const Ref$<$ \hyperlink{classembree_1_1_sampler_factory}{SamplerFactory} $>$ \&\hyperlink{classembree_1_1_sampler_a66d739c6b33ea75337cf3fb96c2b3cf5}{factory})
+\begin{DoxyCompactList}\small\item\em Create a sampler using the specified sampler factory. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_sampler_aa62a4b315a67723685e7950845089247}{init} (const Vec2i \&\hyperlink{classembree_1_1_sampler_ab87a1a43193c03831de1c238b426531d}{imageSize}, const Vec2i \&\hyperlink{classembree_1_1_sampler_abf235b415b0617f18908ab5488b14aab}{tileBegin}, const Vec2i \&\hyperlink{classembree_1_1_sampler_aeab1cdc06154d519f670138ed5d16298}{tileEnd}, int \hyperlink{classembree_1_1_sampler_af6a3139e4ac5ef9e34b3e86c15164fb8}{iteration}=0)
+\begin{DoxyCompactList}\small\item\em Initialize the sampler for a given tile. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{classembree_1_1_sampler_a036f24eff634198119b81c52f53f7322}{proceed} ()
+\begin{DoxyCompactList}\small\item\em Proceed to the next sample. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{classembree_1_1_sampler_ad053e70caa9ef2cb54c37859b8c04228}{getPrimary} ()
+\begin{DoxyCompactList}\small\item\em Get the raster position of the current sample. \item\end{DoxyCompactList}\item 
+Vec2i \hyperlink{classembree_1_1_sampler_a68accf79911787a1ba51a1ae46118646}{getIntegerRaster} ()
+\begin{DoxyCompactList}\small\item\em Get the integer raster coordinates of the current sample. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{classembree_1_1_sampler_a70118c01611b459d336303e461365c21}{getLens} ()
+\begin{DoxyCompactList}\small\item\em Get the current lens sample. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_sampler_a6451f11e22a6f4b441870d647821c3df}{getFloat} (int dim)
+\begin{DoxyCompactList}\small\item\em Get the specified additional 1D sample for the current sample. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{classembree_1_1_sampler_aafe31261ee43f47c7a3c0d05418ea03d}{getVec2f} (int dim)
+\begin{DoxyCompactList}\small\item\em Get the specified additional 2D sample for the current sample. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_light_sample}{LightSample} \hyperlink{classembree_1_1_sampler_a997fc74367303a9d775f7c2f0d175b6e}{getLightSample} (int lightSampleId)
+\begin{DoxyCompactList}\small\item\em Get the specified precomputed light sample for the current sample. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_sampler_ad40824c5d87723a6a8219c72aefba5a0}{
+bool \hyperlink{classembree_1_1_sampler_ad40824c5d87723a6a8219c72aefba5a0}{finished} () const }
+\label{classembree_1_1_sampler_ad40824c5d87723a6a8219c72aefba5a0}
+
+\begin{DoxyCompactList}\small\item\em Has the tile been sampled completely? \item\end{DoxyCompactList}\item 
+const Vec2i \& \hyperlink{classembree_1_1_sampler_a322ebd7692889c02eccd26a967a0a46b}{getImageSize} () const 
+\begin{DoxyCompactList}\small\item\em Get dimensions of entire image. \item\end{DoxyCompactList}\item 
+const Vec2i \& \hyperlink{classembree_1_1_sampler_ab4791f27b649933c0b73c46ef4518fe7}{getTileBegin} () const 
+\begin{DoxyCompactList}\small\item\em Get coordinates of first pixel in tile. \item\end{DoxyCompactList}\item 
+const Vec2i \& \hyperlink{classembree_1_1_sampler_a3d1423396ba037139211a84325d0cd40}{getTileEnd} () const 
+\begin{DoxyCompactList}\small\item\em Get coordinates of last pixel in tile. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vec2i \hyperlink{classembree_1_1_sampler_ab87a1a43193c03831de1c238b426531d}{imageSize}
+\begin{DoxyCompactList}\small\item\em Dimesions of the entire image. \item\end{DoxyCompactList}\item 
+Vec2i \hyperlink{classembree_1_1_sampler_abf235b415b0617f18908ab5488b14aab}{tileBegin}
+\begin{DoxyCompactList}\small\item\em Coordinates of first pixel in current tile. \item\end{DoxyCompactList}\item 
+Vec2i \hyperlink{classembree_1_1_sampler_aeab1cdc06154d519f670138ed5d16298}{tileEnd}
+\begin{DoxyCompactList}\small\item\em Coordinates of last pixel in current tile. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_af6a3139e4ac5ef9e34b3e86c15164fb8}{iteration}
+\begin{DoxyCompactList}\small\item\em Current iteration. \item\end{DoxyCompactList}\item 
+Random \hyperlink{classembree_1_1_sampler_ac12f4b87473624b4927fbf8a0aa5c63f}{randomNumberGenerator}
+\begin{DoxyCompactList}\small\item\em Random number generated used by this sampler thread. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_sampler_factory}{SamplerFactory} $>$ \hyperlink{classembree_1_1_sampler_a66d739c6b33ea75337cf3fb96c2b3cf5}{factory}
+\begin{DoxyCompactList}\small\item\em A reference to the sampler factory shared by all threads. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_precomputed_sample}{PrecomputedSample} \hyperlink{classembree_1_1_sampler_a69bf7ba758fa6d8b48986ab8f4dbd682}{sample}
+\begin{DoxyCompactList}\small\item\em The current sample. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_sampler_ab9944f61c4eeeee85569dee6a284a9a5}{
+bool \hyperlink{classembree_1_1_sampler_ab9944f61c4eeeee85569dee6a284a9a5}{done}}
+\label{classembree_1_1_sampler_ab9944f61c4eeeee85569dee6a284a9a5}
+
+\begin{DoxyCompactList}\small\item\em Has the tile been sampled completely? \item\end{DoxyCompactList}\item 
+Vec2i \hyperlink{classembree_1_1_sampler_a74b47fa80bd0380e31c4c54d8a2467ce}{currentPixel}
+\begin{DoxyCompactList}\small\item\em Coordinates of the currently sampled pixel. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_ae2b3b42c1fdb1edc47f1768f5da477d0}{currentSample}
+\begin{DoxyCompactList}\small\item\em Index of current sample in current pixel. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sampler_a0654a2f76c561619a3741ac89a59ee96}{currentSet}
+\begin{DoxyCompactList}\small\item\em Index of the precomputed sample set that is used for current pixel. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A sampler thread responsible for sampling a complete tile. The sampler uses precomputed samples from a sampler factory. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_sampler_a0dd644463856319badfbcaa914f27546}{
+\index{embree::Sampler@{embree::Sampler}!Sampler@{Sampler}}
+\index{Sampler@{Sampler}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{Sampler}]{\setlength{\rightskip}{0pt plus 5cm}embree::Sampler::Sampler (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf SamplerFactory} $>$ \&}]{factory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a0dd644463856319badfbcaa914f27546}
+
+
+Create a sampler using the specified sampler factory. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_sampler_a6451f11e22a6f4b441870d647821c3df}{
+\index{embree::Sampler@{embree::Sampler}!getFloat@{getFloat}}
+\index{getFloat@{getFloat}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getFloat}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Sampler::getFloat (
+\begin{DoxyParamCaption}
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a6451f11e22a6f4b441870d647821c3df}
+
+
+Get the specified additional 1D sample for the current sample. 
+
+\hypertarget{classembree_1_1_sampler_a322ebd7692889c02eccd26a967a0a46b}{
+\index{embree::Sampler@{embree::Sampler}!getImageSize@{getImageSize}}
+\index{getImageSize@{getImageSize}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getImageSize}]{\setlength{\rightskip}{0pt plus 5cm}const Vec2i\& embree::Sampler::getImageSize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a322ebd7692889c02eccd26a967a0a46b}
+
+
+Get dimensions of entire image. 
+
+\hypertarget{classembree_1_1_sampler_a68accf79911787a1ba51a1ae46118646}{
+\index{embree::Sampler@{embree::Sampler}!getIntegerRaster@{getIntegerRaster}}
+\index{getIntegerRaster@{getIntegerRaster}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getIntegerRaster}]{\setlength{\rightskip}{0pt plus 5cm}Vec2i embree::Sampler::getIntegerRaster (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a68accf79911787a1ba51a1ae46118646}
+
+
+Get the integer raster coordinates of the current sample. 
+
+\hypertarget{classembree_1_1_sampler_a70118c01611b459d336303e461365c21}{
+\index{embree::Sampler@{embree::Sampler}!getLens@{getLens}}
+\index{getLens@{getLens}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getLens}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Sampler::getLens (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a70118c01611b459d336303e461365c21}
+
+
+Get the current lens sample. 
+
+\hypertarget{classembree_1_1_sampler_a997fc74367303a9d775f7c2f0d175b6e}{
+\index{embree::Sampler@{embree::Sampler}!getLightSample@{getLightSample}}
+\index{getLightSample@{getLightSample}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getLightSample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LightSample} embree::Sampler::getLightSample (
+\begin{DoxyParamCaption}
+\item[{int}]{lightSampleId}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a997fc74367303a9d775f7c2f0d175b6e}
+
+
+Get the specified precomputed light sample for the current sample. 
+
+\hypertarget{classembree_1_1_sampler_ad053e70caa9ef2cb54c37859b8c04228}{
+\index{embree::Sampler@{embree::Sampler}!getPrimary@{getPrimary}}
+\index{getPrimary@{getPrimary}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getPrimary}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Sampler::getPrimary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_ad053e70caa9ef2cb54c37859b8c04228}
+
+
+Get the raster position of the current sample. 
+
+\hypertarget{classembree_1_1_sampler_ab4791f27b649933c0b73c46ef4518fe7}{
+\index{embree::Sampler@{embree::Sampler}!getTileBegin@{getTileBegin}}
+\index{getTileBegin@{getTileBegin}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getTileBegin}]{\setlength{\rightskip}{0pt plus 5cm}const Vec2i\& embree::Sampler::getTileBegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_ab4791f27b649933c0b73c46ef4518fe7}
+
+
+Get coordinates of first pixel in tile. 
+
+\hypertarget{classembree_1_1_sampler_a3d1423396ba037139211a84325d0cd40}{
+\index{embree::Sampler@{embree::Sampler}!getTileEnd@{getTileEnd}}
+\index{getTileEnd@{getTileEnd}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getTileEnd}]{\setlength{\rightskip}{0pt plus 5cm}const Vec2i\& embree::Sampler::getTileEnd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_a3d1423396ba037139211a84325d0cd40}
+
+
+Get coordinates of last pixel in tile. 
+
+\hypertarget{classembree_1_1_sampler_aafe31261ee43f47c7a3c0d05418ea03d}{
+\index{embree::Sampler@{embree::Sampler}!getVec2f@{getVec2f}}
+\index{getVec2f@{getVec2f}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{getVec2f}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Sampler::getVec2f (
+\begin{DoxyParamCaption}
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sampler_aafe31261ee43f47c7a3c0d05418ea03d}
+
+
+Get the specified additional 2D sample for the current sample. 
+
+\hypertarget{classembree_1_1_sampler_aa62a4b315a67723685e7950845089247}{
+\index{embree::Sampler@{embree::Sampler}!init@{init}}
+\index{init@{init}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Sampler::init (
+\begin{DoxyParamCaption}
+\item[{const Vec2i \&}]{imageSize, }
+\item[{const Vec2i \&}]{tileBegin, }
+\item[{const Vec2i \&}]{tileEnd, }
+\item[{int}]{iteration = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_aa62a4b315a67723685e7950845089247}
+
+
+Initialize the sampler for a given tile. 
+
+\hypertarget{classembree_1_1_sampler_a036f24eff634198119b81c52f53f7322}{
+\index{embree::Sampler@{embree::Sampler}!proceed@{proceed}}
+\index{proceed@{proceed}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{proceed}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Sampler::proceed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_sampler_a036f24eff634198119b81c52f53f7322}
+
+
+Proceed to the next sample. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_sampler_a74b47fa80bd0380e31c4c54d8a2467ce}{
+\index{embree::Sampler@{embree::Sampler}!currentPixel@{currentPixel}}
+\index{currentPixel@{currentPixel}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{currentPixel}]{\setlength{\rightskip}{0pt plus 5cm}Vec2i {\bf embree::Sampler::currentPixel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_a74b47fa80bd0380e31c4c54d8a2467ce}
+
+
+Coordinates of the currently sampled pixel. 
+
+\hypertarget{classembree_1_1_sampler_ae2b3b42c1fdb1edc47f1768f5da477d0}{
+\index{embree::Sampler@{embree::Sampler}!currentSample@{currentSample}}
+\index{currentSample@{currentSample}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{currentSample}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::Sampler::currentSample}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_ae2b3b42c1fdb1edc47f1768f5da477d0}
+
+
+Index of current sample in current pixel. 
+
+\hypertarget{classembree_1_1_sampler_a0654a2f76c561619a3741ac89a59ee96}{
+\index{embree::Sampler@{embree::Sampler}!currentSet@{currentSet}}
+\index{currentSet@{currentSet}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{currentSet}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::Sampler::currentSet}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_a0654a2f76c561619a3741ac89a59ee96}
+
+
+Index of the precomputed sample set that is used for current pixel. 
+
+\hypertarget{classembree_1_1_sampler_a66d739c6b33ea75337cf3fb96c2b3cf5}{
+\index{embree::Sampler@{embree::Sampler}!factory@{factory}}
+\index{factory@{factory}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{factory}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf SamplerFactory}$>$ {\bf embree::Sampler::factory}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_a66d739c6b33ea75337cf3fb96c2b3cf5}
+
+
+A reference to the sampler factory shared by all threads. 
+
+\hypertarget{classembree_1_1_sampler_ab87a1a43193c03831de1c238b426531d}{
+\index{embree::Sampler@{embree::Sampler}!imageSize@{imageSize}}
+\index{imageSize@{imageSize}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{imageSize}]{\setlength{\rightskip}{0pt plus 5cm}Vec2i {\bf embree::Sampler::imageSize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_ab87a1a43193c03831de1c238b426531d}
+
+
+Dimesions of the entire image. 
+
+\hypertarget{classembree_1_1_sampler_af6a3139e4ac5ef9e34b3e86c15164fb8}{
+\index{embree::Sampler@{embree::Sampler}!iteration@{iteration}}
+\index{iteration@{iteration}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{iteration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::Sampler::iteration}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_af6a3139e4ac5ef9e34b3e86c15164fb8}
+
+
+Current iteration. 
+
+\hypertarget{classembree_1_1_sampler_ac12f4b87473624b4927fbf8a0aa5c63f}{
+\index{embree::Sampler@{embree::Sampler}!randomNumberGenerator@{randomNumberGenerator}}
+\index{randomNumberGenerator@{randomNumberGenerator}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{randomNumberGenerator}]{\setlength{\rightskip}{0pt plus 5cm}Random {\bf embree::Sampler::randomNumberGenerator}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_ac12f4b87473624b4927fbf8a0aa5c63f}
+
+
+Random number generated used by this sampler thread. 
+
+\hypertarget{classembree_1_1_sampler_a69bf7ba758fa6d8b48986ab8f4dbd682}{
+\index{embree::Sampler@{embree::Sampler}!sample@{sample}}
+\index{sample@{sample}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PrecomputedSample} {\bf embree::Sampler::sample}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_a69bf7ba758fa6d8b48986ab8f4dbd682}
+
+
+The current sample. 
+
+\hypertarget{classembree_1_1_sampler_abf235b415b0617f18908ab5488b14aab}{
+\index{embree::Sampler@{embree::Sampler}!tileBegin@{tileBegin}}
+\index{tileBegin@{tileBegin}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{tileBegin}]{\setlength{\rightskip}{0pt plus 5cm}Vec2i {\bf embree::Sampler::tileBegin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_abf235b415b0617f18908ab5488b14aab}
+
+
+Coordinates of first pixel in current tile. 
+
+\hypertarget{classembree_1_1_sampler_aeab1cdc06154d519f670138ed5d16298}{
+\index{embree::Sampler@{embree::Sampler}!tileEnd@{tileEnd}}
+\index{tileEnd@{tileEnd}!embree::Sampler@{embree::Sampler}}
+\subsubsection[{tileEnd}]{\setlength{\rightskip}{0pt plus 5cm}Vec2i {\bf embree::Sampler::tileEnd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classembree_1_1_sampler_aeab1cdc06154d519f670138ed5d16298}
+
+
+Coordinates of last pixel in current tile. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/samplers/sampler.h\item 
+renderer/samplers/sampler.cpp\end{DoxyCompactItemize}

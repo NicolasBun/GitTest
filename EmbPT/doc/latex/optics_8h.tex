@@ -1,0 +1,35 @@
+\hypertarget{optics_8h}{
+\section{renderer/brdfs/optics.h File Reference}
+\label{optics_8h}\index{renderer/brdfs/optics.h@{renderer/brdfs/optics.h}}
+}
+
+
+This file collects all operations of light waves relevant for rendering, such as: computing reflection and refraction directions, or fresnel terms for different kind of media.  
+
+
+{\ttfamily \#include \char`\"{}default.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a2a1a7dea30e0190893b620632979c113}{embree::reflect} (const Vec3f \&V, const Vec3f \&N)
+\begin{DoxyCompactList}\small\item\em Reflects a viewing vector V at a normal N. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a69c3e65265f98afb52587c02e09dfad2}{embree::reflect} (const Vec3f \&V, const Vec3f \&N, float cosi)
+\begin{DoxyCompactList}\small\item\em Reflects a viewing vector V at a normal N. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a07791f8f478cacc42d82bc1bd2e3a32f}{embree::refract} (const Vec3f \&V, const Vec3f \&N, float eta)
+\begin{DoxyCompactList}\small\item\em Refracts a viewing vector V at a normal N using the relative refraction index eta. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_a478882520f7ee2f438f3943576841701}{embree::refract} (const Vec3f \&V, const Vec3f \&N, float eta, float cosi)
+\begin{DoxyCompactList}\small\item\em Refracts a viewing vector V at a normal N using the relative refraction index eta. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Sample3f \hyperlink{namespaceembree_aab75d05e1031ac727f8ec9ead3cd5bcf}{embree::refract} (const Vec3f \&V, const Vec3f \&N, float eta, float cosi, float \&cost)
+\begin{DoxyCompactList}\small\item\em Refracts a viewing vector V at a normal N using the relative refraction index eta. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_ac7e098ebe17b60a7ee6f33a01a9d8a4c}{embree::fresnelDielectric} (float cosi, float cost, float etai, float etat)
+\begin{DoxyCompactList}\small\item\em Computes fresnel coefficient for a media interface with ouside refraction index of etai and inside refraction index of etat. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_a95622cc1eba032bdf8e0a75fa30111e1}{embree::fresnelDielectric} (float cosi, float cost, float eta)
+\begin{DoxyCompactList}\small\item\em Computes fresnel coefficient for media interface with relative refraction index eta. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline float \hyperlink{namespaceembree_aa854fd243b460a51337ff585fb715632}{embree::fresnelDielectric} (float cosi, float eta)
+\begin{DoxyCompactList}\small\item\em Computes fresnel coefficient for media interface with relative refraction index eta. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline Col3f \hyperlink{namespaceembree_a437e0f24544101be21f67f39d51651da}{embree::fresnelConductor} (float cosi, const Col3f \&eta, const Col3f \&k)
+\begin{DoxyCompactList}\small\item\em Computes fresnel coefficient for conductor medium with complex refraction index (eta,k). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file collects all operations of light waves relevant for rendering, such as: computing reflection and refraction directions, or fresnel terms for different kind of media. 

@@ -1,0 +1,87 @@
+\hypertarget{classembree_1_1_obj}{
+\section{embree::Obj Class Reference}
+\label{classembree_1_1_obj}\index{embree::Obj@{embree::Obj}}
+}
+
+
+Implements an OBJ format material.  
+
+
+
+
+{\ttfamily \#include $<$obj.h$>$}
+
+Inheritance diagram for embree::Obj:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_obj}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_obj_a22a1bbb02cfd1b07e50694ddcbf0d23b}{Obj} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_obj_a37881d0c57dede7a0d95256a9172d0a2}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const 
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements an OBJ format material. Special material to model important features of the material from the OBJ file format. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_obj_a22a1bbb02cfd1b07e50694ddcbf0d23b}{
+\index{embree::Obj@{embree::Obj}!Obj@{Obj}}
+\index{Obj@{Obj}!embree::Obj@{embree::Obj}}
+\subsubsection[{Obj}]{\setlength{\rightskip}{0pt plus 5cm}embree::Obj::Obj (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_obj_a22a1bbb02cfd1b07e50694ddcbf0d23b}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_obj_a37881d0c57dede7a0d95256a9172d0a2}{
+\index{embree::Obj@{embree::Obj}!shade@{shade}}
+\index{shade@{shade}!embree::Obj@{embree::Obj}}
+\subsubsection[{shade}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Obj::shade (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const {\bf Medium} \&}]{currentMedium, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{CompositedBRDF \&}]{brdfs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_obj_a37881d0c57dede7a0d95256a9172d0a2}
+
+
+Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+
+
+combine dissolve factor.
+
+adjust transmission filter
+
+combine diffuse color
+
+combine specular color
+
+combine specular exponent
+
+add all relevant \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components 
+
+
+
+Implements \hyperlink{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{embree::Material}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/obj.h\end{DoxyCompactItemize}

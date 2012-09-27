@@ -1,0 +1,154 @@
+\hypertarget{classembree_1_1_material}{
+\section{embree::Material Class Reference}
+\label{classembree_1_1_material}\index{embree::Material@{embree::Material}}
+}
+
+
+Interface to different materials.  
+
+
+
+
+{\ttfamily \#include $<$material.h$>$}
+
+Inheritance diagram for embree::Material:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classembree_1_1_material}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_material_ac39480b8bb420977c387e07765b27dc0}{Material} (const \hyperlink{classembree_1_1_medium}{Medium} \&\hyperlink{classembree_1_1_material_af5c721cdded6b10003304fbc781f479b}{mediumOutside}=Medium::Vacuum(), const \hyperlink{classembree_1_1_medium}{Medium} \&\hyperlink{classembree_1_1_material_a02b33b77edd5fe04ce258e0eb72f175d}{mediumInside}=Medium::Vacuum(), bool \hyperlink{classembree_1_1_material_a6158f547322780ca4aff8af0c9d00f6a}{isMediaInterface}=false)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_material}{Material} constructor. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_material_ac69794ac4ea4e2207b27671f4b7bedcc}{
+virtual \hyperlink{classembree_1_1_material_ac69794ac4ea4e2207b27671f4b7bedcc}{$\sim$Material} ()}
+\label{classembree_1_1_material_ac69794ac4ea4e2207b27671f4b7bedcc}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor for materials. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const =0
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_medium}{Medium} \hyperlink{classembree_1_1_material_a325ad6d182d3bc3f8fa209f624bb0074}{nextMedium} (const \hyperlink{classembree_1_1_medium}{Medium} \&current)
+\begin{DoxyCompactList}\small\item\em Tracks the medium when crossing the surface. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_medium}{Medium} \hyperlink{classembree_1_1_material_af5c721cdded6b10003304fbc781f479b}{mediumOutside}
+\begin{DoxyCompactList}\small\item\em Outside medium. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_medium}{Medium} \hyperlink{classembree_1_1_material_a02b33b77edd5fe04ce258e0eb72f175d}{mediumInside}
+\begin{DoxyCompactList}\small\item\em Inside medium. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classembree_1_1_material_a6158f547322780ca4aff8af0c9d00f6a}{isMediaInterface}
+\begin{DoxyCompactList}\small\item\em True if the surface is an interface between two different media. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to different materials. A material implements a shader that creates a composition of BRDFs for the point to shade. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_material_ac39480b8bb420977c387e07765b27dc0}{
+\index{embree::Material@{embree::Material}!Material@{Material}}
+\index{Material@{Material}!embree::Material@{embree::Material}}
+\subsubsection[{Material}]{\setlength{\rightskip}{0pt plus 5cm}embree::Material::Material (
+\begin{DoxyParamCaption}
+\item[{const {\bf Medium} \&}]{mediumOutside = {\ttfamily Medium::Vacuum()}, }
+\item[{const {\bf Medium} \&}]{mediumInside = {\ttfamily Medium::Vacuum()}, }
+\item[{bool}]{isMediaInterface = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_material_ac39480b8bb420977c387e07765b27dc0}
+
+
+\hyperlink{classembree_1_1_material}{Material} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mediumOutside} & The medium the geometry normal points into. \\
+\hline
+{\em mediumInside} & The medium on the opposite side. \\
+\hline
+{\em isMediaInterface} & True if the surface is an interface between two different media. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_material_a325ad6d182d3bc3f8fa209f624bb0074}{
+\index{embree::Material@{embree::Material}!nextMedium@{nextMedium}}
+\index{nextMedium@{nextMedium}!embree::Material@{embree::Material}}
+\subsubsection[{nextMedium}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline {\bf Medium} embree::Material::nextMedium (
+\begin{DoxyParamCaption}
+\item[{const {\bf Medium} \&}]{current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_material_a325ad6d182d3bc3f8fa209f624bb0074}
+
+
+Tracks the medium when crossing the surface. 
+
+\hypertarget{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{
+\index{embree::Material@{embree::Material}!shade@{shade}}
+\index{shade@{shade}!embree::Material@{embree::Material}}
+\subsubsection[{shade}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::Material::shade (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const {\bf Medium} \&}]{currentMedium, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{CompositedBRDF \&}]{brdfs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}
+
+
+Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray arriving at the point to shade. \\
+\hline
+{\em currentMedium} & The medium this ray travels inside. \\
+\hline
+{\em dg} & The point to shade on a surface. \\
+\hline
+{\em brdfs} & Container for generated \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_assimp_a41253494303759e35a284c5bdcb890a5}{embree::Assimp}, \hyperlink{classembree_1_1_dielectric_a5e4ab074789a02d8de29881020829a76}{embree::Dielectric}, \hyperlink{classembree_1_1_g3_d_a03fd4021f086a07c713848a3d3d1bd97}{embree::G3D}, \hyperlink{classembree_1_1_matte_a7f0c79d7b1010957bd2045e3ea5c0207}{embree::Matte}, \hyperlink{classembree_1_1_matte_textured_a300cb0b2a429dfa509baf860e96d4efb}{embree::MatteTextured}, \hyperlink{classembree_1_1_metal_a6df7cc1be73ee906f56b92aec13c6ecf}{embree::Metal}, \hyperlink{classembree_1_1_metallic_paint_a348f5ecba9ce8dd81cd83175905a10af}{embree::MetallicPaint}, \hyperlink{classembree_1_1_mirror_ae46c2ccf317c491ca7ecaca5d1f3f557}{embree::Mirror}, \hyperlink{classembree_1_1_obj_a37881d0c57dede7a0d95256a9172d0a2}{embree::Obj}, \hyperlink{classembree_1_1_plastic_a72224b06607ffda7d507003260ba2d47}{embree::Plastic}, \hyperlink{classembree_1_1_thin_dielectric_a20eb8f2855e1b6c0220491841834b741}{embree::ThinDielectric}, and \hyperlink{classembree_1_1_velvet_aff0abd42409671e154e3864b5e5e970c}{embree::Velvet}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_material_a6158f547322780ca4aff8af0c9d00f6a}{
+\index{embree::Material@{embree::Material}!isMediaInterface@{isMediaInterface}}
+\index{isMediaInterface@{isMediaInterface}!embree::Material@{embree::Material}}
+\subsubsection[{isMediaInterface}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf embree::Material::isMediaInterface}}}
+\label{classembree_1_1_material_a6158f547322780ca4aff8af0c9d00f6a}
+
+
+True if the surface is an interface between two different media. 
+
+\hypertarget{classembree_1_1_material_a02b33b77edd5fe04ce258e0eb72f175d}{
+\index{embree::Material@{embree::Material}!mediumInside@{mediumInside}}
+\index{mediumInside@{mediumInside}!embree::Material@{embree::Material}}
+\subsubsection[{mediumInside}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Medium} {\bf embree::Material::mediumInside}}}
+\label{classembree_1_1_material_a02b33b77edd5fe04ce258e0eb72f175d}
+
+
+Inside medium. 
+
+\hypertarget{classembree_1_1_material_af5c721cdded6b10003304fbc781f479b}{
+\index{embree::Material@{embree::Material}!mediumOutside@{mediumOutside}}
+\index{mediumOutside@{mediumOutside}!embree::Material@{embree::Material}}
+\subsubsection[{mediumOutside}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Medium} {\bf embree::Material::mediumOutside}}}
+\label{classembree_1_1_material_af5c721cdded6b10003304fbc781f479b}
+
+
+Outside medium. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/material.h\end{DoxyCompactItemize}

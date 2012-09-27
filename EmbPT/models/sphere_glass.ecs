@@ -1,0 +1,4 @@
+-i Room/makefile2.rif 
+-i sphere_glass.xml
+-c sphere_view.ecs
+-renderer pathtracer

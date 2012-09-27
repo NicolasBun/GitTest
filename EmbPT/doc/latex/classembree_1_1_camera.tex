@@ -1,0 +1,81 @@
+\hypertarget{classembree_1_1_camera}{
+\section{embree::Camera Class Reference}
+\label{classembree_1_1_camera}\index{embree::Camera@{embree::Camera}}
+}
+
+
+Interface to different camera models.  
+
+
+
+
+{\ttfamily \#include $<$camera.h$>$}
+
+Inheritance diagram for embree::Camera:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_camera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_camera_af12dce0d47ac3ba31ec65e47fde64107}{$\sim$Camera} ()
+\begin{DoxyCompactList}\small\item\em Virtual interface destructor. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classembree_1_1_camera_a30a3c91afaa91e78bd963d1e70e0fcdf}{ray} (const Vec2f \&pixel, const Vec2f \&sample, \hyperlink{structembree_1_1_ray}{Ray} \&ray\_\-o) const =0
+\begin{DoxyCompactList}\small\item\em Computes a primary ray for a pixel. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to different camera models. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_camera_af12dce0d47ac3ba31ec65e47fde64107}{
+\index{embree::Camera@{embree::Camera}!$\sim$Camera@{$\sim$Camera}}
+\index{$\sim$Camera@{$\sim$Camera}!embree::Camera@{embree::Camera}}
+\subsubsection[{$\sim$Camera}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Camera::$\sim$Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_camera_af12dce0d47ac3ba31ec65e47fde64107}
+
+
+Virtual interface destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_camera_a30a3c91afaa91e78bd963d1e70e0fcdf}{
+\index{embree::Camera@{embree::Camera}!ray@{ray}}
+\index{ray@{ray}!embree::Camera@{embree::Camera}}
+\subsubsection[{ray}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::Camera::ray (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{pixel, }
+\item[{const Vec2f \&}]{sample, }
+\item[{{\bf Ray} \&}]{ray\_\-o}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_camera_a30a3c91afaa91e78bd963d1e70e0fcdf}
+
+
+Computes a primary ray for a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixel} & The pixel location on the on image plane in the range from 0 to 1. \\
+\hline
+{\em sample} & The lens sample in \mbox{[}0,1) for depth of field. \\
+\hline
+{\em ray\_\-o} & To return the ray. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_pinhole_camera_a0118a538d8bfe698ca79ae672c313e8b}{embree::PinholeCamera}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/cameras/camera.h\end{DoxyCompactItemize}

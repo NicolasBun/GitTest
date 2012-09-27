@@ -1,0 +1,118 @@
+\hypertarget{classembree_1_1_point_light}{
+\section{embree::PointLight Class Reference}
+\label{classembree_1_1_point_light}\index{embree::PointLight@{embree::PointLight}}
+}
+
+
+Implements a point light source.  
+
+
+
+
+{\ttfamily \#include $<$pointlight.h$>$}
+
+Inheritance diagram for embree::PointLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_point_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_point_light_a6383ddeeee65820669675b9cb77b9e28}{PointLight} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_point_light_a819014dd76584e8d695ef39834ce7446}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_point_light_a1ef13f8d67a82292933199775f37c5b1}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_point_light_a9625baf678c9d70005f256b9e8839f6e}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a point light source. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_point_light_a6383ddeeee65820669675b9cb77b9e28}{
+\index{embree::PointLight@{embree::PointLight}!PointLight@{PointLight}}
+\index{PointLight@{PointLight}!embree::PointLight@{embree::PointLight}}
+\subsubsection[{PointLight}]{\setlength{\rightskip}{0pt plus 5cm}embree::PointLight::PointLight (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_point_light_a6383ddeeee65820669675b9cb77b9e28}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_point_light_a9625baf678c9d70005f256b9e8839f6e}{
+\index{embree::PointLight@{embree::PointLight}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::PointLight@{embree::PointLight}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::PointLight::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_point_light_a9625baf678c9d70005f256b9e8839f6e}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{embree::Light}.
+
+\hypertarget{classembree_1_1_point_light_a1ef13f8d67a82292933199775f37c5b1}{
+\index{embree::PointLight@{embree::PointLight}!sample@{sample}}
+\index{sample@{sample}!embree::PointLight@{embree::PointLight}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::PointLight::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_point_light_a1ef13f8d67a82292933199775f37c5b1}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{embree::Light}.
+
+\hypertarget{classembree_1_1_point_light_a819014dd76584e8d695ef39834ce7446}{
+\index{embree::PointLight@{embree::PointLight}!transform@{transform}}
+\index{transform@{transform}!embree::PointLight@{embree::PointLight}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Light}$>$ embree::PointLight::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_point_light_a819014dd76584e8d695ef39834ce7446}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implements \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{embree::Light}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/pointlight.h\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{classembree_1_1_shape}{
+\section{embree::Shape Class Reference}
+\label{classembree_1_1_shape}\index{embree::Shape@{embree::Shape}}
+}
+
+
+Interface to different shapes.  
+
+
+
+
+{\ttfamily \#include $<$shape.h$>$}
+
+Inheritance diagram for embree::Shape:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.124498cm]{classembree_1_1_shape}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_shape_ac3ffc89a90af933f648c404eecc0121f}{$\sim$Shape} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_shape}{Shape} virtual destructor. \item\end{DoxyCompactList}\item 
+virtual Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}{transform} (const AffineSpace \&xfm) const =0
+\begin{DoxyCompactList}\small\item\em Instantiates a new shape by transforming this shape to a different location. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const =0
+\begin{DoxyCompactList}\small\item\em Performs interpolation of shading vertex parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to different shapes. A shape is the smallest geometric primitive materials and area lights can be assigned to. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_shape_ac3ffc89a90af933f648c404eecc0121f}{
+\index{embree::Shape@{embree::Shape}!$\sim$Shape@{$\sim$Shape}}
+\index{$\sim$Shape@{$\sim$Shape}!embree::Shape@{embree::Shape}}
+\subsubsection[{$\sim$Shape}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Shape::$\sim$Shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_shape_ac3ffc89a90af933f648c404eecc0121f}
+
+
+\hyperlink{classembree_1_1_shape}{Shape} virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}{
+\index{embree::Shape@{embree::Shape}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::Shape@{embree::Shape}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void embree::Shape::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}
+
+
+Performs interpolation of shading vertex parameters. 
+
+
+
+Implemented in \hyperlink{classembree_1_1_triangle_ada64fe08f46c32919169fe2cc73e9090}{embree::Triangle}, \hyperlink{classembree_1_1_triangle_mesh_a3980899de9e3a599ac9bcd0e12306046}{embree::TriangleMesh}, \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_a86e8123b83f40ff259f12bba8662d557}{embree::TriangleMeshConsistentNormals}, and \hyperlink{classembree_1_1_triangle_mesh_with_normals_a7f3c8da7379f312f423ba6846c7daa5c}{embree::TriangleMeshWithNormals}.
+
+\hypertarget{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}{
+\index{embree::Shape@{embree::Shape}!transform@{transform}}
+\index{transform@{transform}!embree::Shape@{embree::Shape}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}virtual Ref$<${\bf Shape}$>$ embree::Shape::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}
+
+
+Instantiates a new shape by transforming this shape to a different location. 
+
+
+
+Implemented in \hyperlink{classembree_1_1_triangle_a53d1f5916d7066466b66c301488f64ef}{embree::Triangle}, \hyperlink{classembree_1_1_triangle_mesh_a1cb8ab9a95adfba8b8866fd6995df06f}{embree::TriangleMesh}, \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_a37a0a6d70ee5386cb297fc01465324b5}{embree::TriangleMeshConsistentNormals}, and \hyperlink{classembree_1_1_triangle_mesh_with_normals_adab234358ea31808f2670aa9175f1a83}{embree::TriangleMeshWithNormals}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/shape.h\end{DoxyCompactItemize}

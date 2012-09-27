@@ -1,0 +1,60 @@
+\hypertarget{structembree_1_1_builder_1_1_thread_allocator}{
+\section{embree::Builder::ThreadAllocator Struct Reference}
+\label{structembree_1_1_builder_1_1_thread_allocator}\index{embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}}
+}
+
+
+Per thread structure holding the current memory block.  
+
+
+
+
+{\ttfamily \#include $<$builder.h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\_\-t \hyperlink{structembree_1_1_builder_1_1_thread_allocator_abb22b1418877f34397ba8dedd4c3ce70}{cur}
+\begin{DoxyCompactList}\small\item\em Current location of the allocator. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{structembree_1_1_builder_1_1_thread_allocator_a88f9641d7ce77a79cacca61799318f6a}{end}
+\begin{DoxyCompactList}\small\item\em End of the memory block. \item\end{DoxyCompactList}\item 
+char \hyperlink{structembree_1_1_builder_1_1_thread_allocator_aac64ccddbecccfb0a5d20421b9974179}{align} \mbox{[}64-\/3 $\ast$sizeof(size\_\-t)\mbox{]}
+\begin{DoxyCompactList}\small\item\em Aligns structure to cache line size. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Per thread structure holding the current memory block. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structembree_1_1_builder_1_1_thread_allocator_aac64ccddbecccfb0a5d20421b9974179}{
+\index{embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}!align@{align}}
+\index{align@{align}!embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf embree::Builder::ThreadAllocator::align}\mbox{[}64-\/3 $\ast$sizeof(size\_\-t)\mbox{]}}}
+\label{structembree_1_1_builder_1_1_thread_allocator_aac64ccddbecccfb0a5d20421b9974179}
+
+
+Aligns structure to cache line size. 
+
+\hypertarget{structembree_1_1_builder_1_1_thread_allocator_abb22b1418877f34397ba8dedd4c3ce70}{
+\index{embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}!cur@{cur}}
+\index{cur@{cur}!embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}}
+\subsubsection[{cur}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::Builder::ThreadAllocator::cur}}}
+\label{structembree_1_1_builder_1_1_thread_allocator_abb22b1418877f34397ba8dedd4c3ce70}
+
+
+Current location of the allocator. 
+
+\hypertarget{structembree_1_1_builder_1_1_thread_allocator_a88f9641d7ce77a79cacca61799318f6a}{
+\index{embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}!end@{end}}
+\index{end@{end}!embree::Builder::ThreadAllocator@{embree::Builder::ThreadAllocator}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::Builder::ThreadAllocator::end}}}
+\label{structembree_1_1_builder_1_1_thread_allocator_a88f9641d7ce77a79cacca61799318f6a}
+
+
+End of the memory block. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/builder.h\end{DoxyCompactItemize}

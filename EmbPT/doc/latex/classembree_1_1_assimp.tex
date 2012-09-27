@@ -1,0 +1,93 @@
+\hypertarget{classembree_1_1_assimp}{
+\section{embree::Assimp Class Reference}
+\label{classembree_1_1_assimp}\index{embree::Assimp@{embree::Assimp}}
+}
+
+
+Implements an Assim format material which is quite generic.  
+
+
+
+
+{\ttfamily \#include $<$assimp.h$>$}
+
+Inheritance diagram for embree::Assimp:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_assimp}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_assimp_ac98e9bd9e464cccd1f68c456881cb0b3}{Assimp} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em This structure details the necessary stuff to handle the texture... \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_assimp_a41253494303759e35a284c5bdcb890a5}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const 
+\begin{DoxyCompactList}\small\item\em Shading for \hyperlink{classembree_1_1_assimp}{Assimp} material. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements an Assim format material which is quite generic. This material is intended to store a range of material effect that can capture the Assim I/O library. Therefore it is quite generic... Full description can be seen in \begin{DoxySeeAlso}{See also}
+\href{http://assimp.sourceforge.net/lib_html/materials.html}{\tt http://assimp.sourceforge.net/lib\_\-html/materials.html} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_assimp_ac98e9bd9e464cccd1f68c456881cb0b3}{
+\index{embree::Assimp@{embree::Assimp}!Assimp@{Assimp}}
+\index{Assimp@{Assimp}!embree::Assimp@{embree::Assimp}}
+\subsubsection[{Assimp}]{\setlength{\rightskip}{0pt plus 5cm}embree::Assimp::Assimp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_assimp_ac98e9bd9e464cccd1f68c456881cb0b3}
+
+
+This structure details the necessary stuff to handle the texture... 
+
+Construction from parameters. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_assimp_a41253494303759e35a284c5bdcb890a5}{
+\index{embree::Assimp@{embree::Assimp}!shade@{shade}}
+\index{shade@{shade}!embree::Assimp@{embree::Assimp}}
+\subsubsection[{shade}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Assimp::shade (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const {\bf Medium} \&}]{currentMedium, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{CompositedBRDF \&}]{brdfs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_assimp_a41253494303759e35a284c5bdcb890a5}
+
+
+Shading for \hyperlink{classembree_1_1_assimp}{Assimp} material. 
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]Handling Opacity ! 
+
+Handling orean nayer + minnaert + fresnel shading model 
+
+Handling texture mapping \end{Desc}
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & incomming ray \\
+\hline
+{\em currentMedium} & medium from the ray \\
+\hline
+{\em dg} & point on the surface \\
+\hline
+{\em brdfs} & composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF} generated... \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{embree::Material}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/assimp.h\end{DoxyCompactItemize}

@@ -1,0 +1,189 @@
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals}{
+\section{embree::TriangleMeshConsistentNormals Class Reference}
+\label{classembree_1_1_triangle_mesh_consistent_normals}\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+}
+
+
+Implements a triangle mesh.  
+
+
+
+
+{\ttfamily \#include $<$trianglemesh\_\-consistent\_\-normals.h$>$}
+
+Inheritance diagram for embree::TriangleMeshConsistentNormals:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_triangle_mesh_consistent_normals}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structembree_1_1_triangle_mesh_consistent_normals_1_1_triangle}{Triangle}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_consistent_normals_1_1_triangle}{Triangle} indices description. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_triangle_mesh_consistent_normals_af8de1cf592d99cc4bde7f8d2af809e87}{TriangleMeshConsistentNormals} (size\_\-t numVertices, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_consistent_normals_ac123e3f2933e7ba9983a46e35da96e3c}{position}, size\_\-t stridePositions, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_consistent_normals_a847dd1f07b178d54ee7da385d0d58f6f}{normal}, size\_\-t strideNormals, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_consistent_normals_aea3e6097dde4ed0fbd5e4050dc61d5c1}{texcoord}, size\_\-t strideTexCoords, size\_\-t numTriangles, const char $\ast$\hyperlink{classembree_1_1_triangle_mesh_consistent_normals_aa707ca2ad499a3073debfc02ef1bf6c6}{triangles}, size\_\-t strideTriangles)
+\begin{DoxyCompactList}\small\item\em Construction from vertex data and triangle index data. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_shape}{Shape} $>$ \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_a37a0a6d70ee5386cb297fc01465324b5}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new shape by transforming this shape to a different location. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_a86e8123b83f40ff259f12bba8662d557}{postIntersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg) const 
+\begin{DoxyCompactList}\small\item\em Performs interpolation of shading vertex parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector\_\-t$<$ Vec3f $>$ \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_ac123e3f2933e7ba9983a46e35da96e3c}{position}
+\begin{DoxyCompactList}\small\item\em Position array. \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ Vec3f $>$ \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_a847dd1f07b178d54ee7da385d0d58f6f}{normal}
+\begin{DoxyCompactList}\small\item\em Normal array (can be empty). \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ Vec2f $>$ \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_aea3e6097dde4ed0fbd5e4050dc61d5c1}{texcoord}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_texture}{Texture} coordinates array (can be empty). \item\end{DoxyCompactList}\item 
+vector\_\-t$<$ \hyperlink{structembree_1_1_triangle_mesh_consistent_normals_1_1_triangle}{Triangle} $>$ \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_aa707ca2ad499a3073debfc02ef1bf6c6}{triangles}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structembree_1_1_triangle_mesh_consistent_normals_1_1_triangle}{Triangle} indices array. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_ae7e322b5010d1708dbea32dd89af2bd6}{
+vector\_\-t$<$ float $>$ \hyperlink{classembree_1_1_triangle_mesh_consistent_normals_ae7e322b5010d1708dbea32dd89af2bd6}{maxangle}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_ae7e322b5010d1708dbea32dd89af2bd6}
+
+\begin{DoxyCompactList}\small\item\em Max angle array (?) \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a triangle mesh. The mesh supports optional vertex normals and texture coordinates. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_af8de1cf592d99cc4bde7f8d2af809e87}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!TriangleMeshConsistentNormals@{TriangleMeshConsistentNormals}}
+\index{TriangleMeshConsistentNormals@{TriangleMeshConsistentNormals}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{TriangleMeshConsistentNormals}]{\setlength{\rightskip}{0pt plus 5cm}embree::TriangleMeshConsistentNormals::TriangleMeshConsistentNormals (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{numVertices, }
+\item[{const char $\ast$}]{position, }
+\item[{size\_\-t}]{stridePositions, }
+\item[{const char $\ast$}]{normal, }
+\item[{size\_\-t}]{strideNormals, }
+\item[{const char $\ast$}]{texcoord, }
+\item[{size\_\-t}]{strideTexCoords, }
+\item[{size\_\-t}]{numTriangles, }
+\item[{const char $\ast$}]{triangles, }
+\item[{size\_\-t}]{strideTriangles}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_af8de1cf592d99cc4bde7f8d2af809e87}
+
+
+Construction from vertex data and triangle index data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numVertices} & Number of mesh vertices. \\
+\hline
+{\em position} & Pointer to vertex positions. \\
+\hline
+{\em stridePositions} & Stride of vertex positions. \\
+\hline
+{\em normal} & Optional poiner to vertex normals. \\
+\hline
+{\em strideNormals} & Stride of vertex positions. \\
+\hline
+{\em texcoord} & Optional pointer to texture coordinates. \\
+\hline
+{\em strideTexCoords} & Stride of vertex positions. \\
+\hline
+{\em numTriangles} & Number of mesh triangles. \\
+\hline
+{\em triangles} & Pointer to triangle indices. \\
+\hline
+{\em strideTriangles} & Stride of vertex positions. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_a86e8123b83f40ff259f12bba8662d557}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!postIntersect@{postIntersect}}
+\index{postIntersect@{postIntersect}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{postIntersect}]{\setlength{\rightskip}{0pt plus 5cm}void embree::TriangleMeshConsistentNormals::postIntersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf DifferentialGeometry} \&}]{dg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_a86e8123b83f40ff259f12bba8662d557}
+
+
+Performs interpolation of shading vertex parameters. 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_ad8890936622a2208c2b418484731d776}{embree::Shape}.
+
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_a37a0a6d70ee5386cb297fc01465324b5}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!transform@{transform}}
+\index{transform@{transform}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<$ {\bf Shape} $>$ embree::TriangleMeshConsistentNormals::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_a37a0a6d70ee5386cb297fc01465324b5}
+
+
+Instantiates a new shape by transforming this shape to a different location. 
+
+
+
+do nothing for identity matrix
+
+create transformed 
+
+
+
+Implements \hyperlink{classembree_1_1_shape_a33a3df726fed0bf3e6e36da428091305}{embree::Shape}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_a847dd1f07b178d54ee7da385d0d58f6f}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!normal@{normal}}
+\index{normal@{normal}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<$Vec3f$>$ {\bf embree::TriangleMeshConsistentNormals::normal}}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_a847dd1f07b178d54ee7da385d0d58f6f}
+
+
+Normal array (can be empty). 
+
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_ac123e3f2933e7ba9983a46e35da96e3c}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!position@{position}}
+\index{position@{position}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<$Vec3f$>$ {\bf embree::TriangleMeshConsistentNormals::position}}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_ac123e3f2933e7ba9983a46e35da96e3c}
+
+
+Position array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_aea3e6097dde4ed0fbd5e4050dc61d5c1}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!texcoord@{texcoord}}
+\index{texcoord@{texcoord}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{texcoord}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<$Vec2f$>$ {\bf embree::TriangleMeshConsistentNormals::texcoord}}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_aea3e6097dde4ed0fbd5e4050dc61d5c1}
+
+
+\hyperlink{classembree_1_1_texture}{Texture} coordinates array (can be empty). 
+
+\hypertarget{classembree_1_1_triangle_mesh_consistent_normals_aa707ca2ad499a3073debfc02ef1bf6c6}{
+\index{embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}!triangles@{triangles}}
+\index{triangles@{triangles}!embree::TriangleMeshConsistentNormals@{embree::TriangleMeshConsistentNormals}}
+\subsubsection[{triangles}]{\setlength{\rightskip}{0pt plus 5cm}vector\_\-t$<${\bf Triangle}$>$ {\bf embree::TriangleMeshConsistentNormals::triangles}}}
+\label{classembree_1_1_triangle_mesh_consistent_normals_aa707ca2ad499a3073debfc02ef1bf6c6}
+
+
+\hyperlink{structembree_1_1_triangle_mesh_consistent_normals_1_1_triangle}{Triangle} indices array. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/shapes/trianglemesh\_\-consistent\_\-normals.h\item 
+renderer/shapes/trianglemesh\_\-consistent\_\-normals.cpp\end{DoxyCompactItemize}

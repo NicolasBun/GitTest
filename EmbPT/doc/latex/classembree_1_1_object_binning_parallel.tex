@@ -1,0 +1,148 @@
+\hypertarget{classembree_1_1_object_binning_parallel}{
+\section{embree::ObjectBinningParallel$<$ logBlockSize $>$ Class Template Reference}
+\label{classembree_1_1_object_binning_parallel}\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+}
+
+
+Multi threaded object binner.  
+
+
+
+
+{\ttfamily \#include $<$object\_\-binning\_\-parallel.h$>$}
+
+Inheritance diagram for embree::ObjectBinningParallel$<$ logBlockSize $>$:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_object_binning_parallel}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Thread}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{classembree_1_1_object_binning_parallel_a342fe4274d9209490ef655a6880c2ea5}{ObjectBinningParallel} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_object_binning_parallel_a4245a8d00124f419e23885e0c4d51f2b}{ObjectBinningParallel} (const \hyperlink{structembree_1_1_build_range}{BuildRange} \&range, size\_\-t target, Box $\ast$prims)
+\begin{DoxyCompactList}\small\item\em Construct from build range. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_object_binning_parallel_a2b861c82ba2da2702206090fd3318ccb}{go} (Task::completeFunction continuation, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Start parallel binning. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classembree_1_1_object_binning_parallel_a41d417b66e217e9f1703404fdc57f8db}{splitSAH}
+\begin{DoxyCompactList}\small\item\em SAH cost for the best split. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_object_binning_parallel_a6b960f1ed6ddbf38da900a6bd378629c}{leafSAH}
+\begin{DoxyCompactList}\small\item\em SAH cost for creating a leaf. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_build_range}{BuildRange} \hyperlink{classembree_1_1_object_binning_parallel_a4475a71969aef36af6173760da4e43ec}{left}
+\begin{DoxyCompactList}\small\item\em Build job to continue with left geometry. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_build_range}{BuildRange} \hyperlink{classembree_1_1_object_binning_parallel_a9bc006f56e93a16bc1d070e8db742533}{right}
+\begin{DoxyCompactList}\small\item\em Build job to continue with right geometry. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int logBlockSize$>$ class embree::ObjectBinningParallel$<$ logBlockSize $>$}
+
+Multi threaded object binner. Finds the split with the best SAH heuristic by testing for each dimension multiple partitionings for regular spaced partition locations. A partitioning for a partition location is computed, by putting primitives whose centroid is on the left and right of the split location to different sets. The SAH is evaluated by computing the number of blocks occupied by the primitives in the partitions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_object_binning_parallel_a342fe4274d9209490ef655a6880c2ea5}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!ObjectBinningParallel@{ObjectBinningParallel}}
+\index{ObjectBinningParallel@{ObjectBinningParallel}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{ObjectBinningParallel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ \_\-\_\-forceinline {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::{\bf ObjectBinningParallel} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_object_binning_parallel_a342fe4274d9209490ef655a6880c2ea5}
+
+
+Default constructor. 
+
+\hypertarget{classembree_1_1_object_binning_parallel_a4245a8d00124f419e23885e0c4d51f2b}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!ObjectBinningParallel@{ObjectBinningParallel}}
+\index{ObjectBinningParallel@{ObjectBinningParallel}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{ObjectBinningParallel}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ \_\-\_\-forceinline {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::{\bf ObjectBinningParallel} (
+\begin{DoxyParamCaption}
+\item[{const {\bf BuildRange} \&}]{range, }
+\item[{size\_\-t}]{target, }
+\item[{Box $\ast$}]{prims}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_object_binning_parallel_a4245a8d00124f419e23885e0c4d51f2b}
+
+
+Construct from build range. 
+
+
+
+compute number of bins to use and precompute scaling factor for binning
+
+pointer to source and target locations 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_object_binning_parallel_a2b861c82ba2da2702206090fd3318ccb}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!go@{go}}
+\index{go@{go}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ void {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::go (
+\begin{DoxyParamCaption}
+\item[{Task::completeFunction}]{continuation, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_object_binning_parallel_a2b861c82ba2da2702206090fd3318ccb}
+
+
+Start parallel binning. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_object_binning_parallel_a6b960f1ed6ddbf38da900a6bd378629c}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!leafSAH@{leafSAH}}
+\index{leafSAH@{leafSAH}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{leafSAH}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ float {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::{\bf leafSAH}}}
+\label{classembree_1_1_object_binning_parallel_a6b960f1ed6ddbf38da900a6bd378629c}
+
+
+SAH cost for creating a leaf. 
+
+\hypertarget{classembree_1_1_object_binning_parallel_a4475a71969aef36af6173760da4e43ec}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!left@{left}}
+\index{left@{left}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ {\bf BuildRange} {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::{\bf left}}}
+\label{classembree_1_1_object_binning_parallel_a4475a71969aef36af6173760da4e43ec}
+
+
+Build job to continue with left geometry. 
+
+\hypertarget{classembree_1_1_object_binning_parallel_a9bc006f56e93a16bc1d070e8db742533}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!right@{right}}
+\index{right@{right}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ {\bf BuildRange} {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::{\bf right}}}
+\label{classembree_1_1_object_binning_parallel_a9bc006f56e93a16bc1d070e8db742533}
+
+
+Build job to continue with right geometry. 
+
+\hypertarget{classembree_1_1_object_binning_parallel_a41d417b66e217e9f1703404fdc57f8db}{
+\index{embree::ObjectBinningParallel@{embree::ObjectBinningParallel}!splitSAH@{splitSAH}}
+\index{splitSAH@{splitSAH}!embree::ObjectBinningParallel@{embree::ObjectBinningParallel}}
+\subsubsection[{splitSAH}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int logBlockSize$>$ float {\bf embree::ObjectBinningParallel}$<$ logBlockSize $>$::{\bf splitSAH}}}
+\label{classembree_1_1_object_binning_parallel_a41d417b66e217e9f1703404fdc57f8db}
+
+
+SAH cost for the best split. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/object\_\-binning\_\-parallel.h\item 
+rtcore/common/object\_\-binning\_\-parallel.cpp\end{DoxyCompactItemize}

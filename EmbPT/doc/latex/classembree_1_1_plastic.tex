@@ -1,0 +1,81 @@
+\hypertarget{classembree_1_1_plastic}{
+\section{embree::Plastic Class Reference}
+\label{classembree_1_1_plastic}\index{embree::Plastic@{embree::Plastic}}
+}
+
+
+Implements a plastic material.  
+
+
+
+
+{\ttfamily \#include $<$plastic.h$>$}
+
+Inheritance diagram for embree::Plastic:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_plastic}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_plastic_aadd07699a007b52fc035b9a9e7dd509c}{Plastic} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_plastic_a72224b06607ffda7d507003260ba2d47}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const 
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a plastic material. A dielectric layer over a diffuse surface is modeled through a dieletric layer \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for the covered diffuse part, and a microfacet \hyperlink{classembree_1_1_b_r_d_f}{BRDF} for the rough dielectric surface. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_plastic_aadd07699a007b52fc035b9a9e7dd509c}{
+\index{embree::Plastic@{embree::Plastic}!Plastic@{Plastic}}
+\index{Plastic@{Plastic}!embree::Plastic@{embree::Plastic}}
+\subsubsection[{Plastic}]{\setlength{\rightskip}{0pt plus 5cm}embree::Plastic::Plastic (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_plastic_aadd07699a007b52fc035b9a9e7dd509c}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_plastic_a72224b06607ffda7d507003260ba2d47}{
+\index{embree::Plastic@{embree::Plastic}!shade@{shade}}
+\index{shade@{shade}!embree::Plastic@{embree::Plastic}}
+\subsubsection[{shade}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Plastic::shade (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const {\bf Medium} \&}]{currentMedium, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{CompositedBRDF \&}]{brdfs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_plastic_a72224b06607ffda7d507003260ba2d47}
+
+
+Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+
+
+the dielectric layer that models the covered diffuse part
+
+use dielectric reflection in case of a specular surface
+
+otherwise use the microfacet \hyperlink{classembree_1_1_b_r_d_f}{BRDF} to model the rough surface 
+
+
+
+Implements \hyperlink{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{embree::Material}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/plastic.h\end{DoxyCompactItemize}

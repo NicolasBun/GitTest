@@ -1,0 +1,101 @@
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_build_task}{
+\section{embree::BVH4Builder::BuildTask Class Reference}
+\label{classembree_1_1_b_v_h4_builder_1_1_build_task}\index{embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}}
+}
+
+
+Single-\/threaded task that builds a complete BVH.  
+
+
+
+
+{\ttfamily \#include $<$bvh4\_\-builder.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h4_builder_1_1_build_task_a75b2b6f3d8c69148e4f8edc01bc6b3e7}{BuildTask} (\hyperlink{classembree_1_1_b_v_h4_builder}{BVH4Builder} $\ast$parent, int \&nodeID, size\_\-t depth, const \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_b_v_h4_builder_1_1_build_task_acf52407fae5c1ac962391be94106ef95}{recurse} (size\_\-t depth, \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Recursively finishes the BVH construction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h4_builder_1_1_build_task_a13adfdd8ea4668e533ad924d0e5dc5f0}{run} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h4_builder_1_1_build_task}{BuildTask} $\ast$This, size\_\-t elts)
+\begin{DoxyCompactList}\small\item\em Task entry function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single-\/threaded task that builds a complete BVH. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_build_task_a75b2b6f3d8c69148e4f8edc01bc6b3e7}{
+\index{embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}!BuildTask@{BuildTask}}
+\index{BuildTask@{BuildTask}!embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}}
+\subsubsection[{BuildTask}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH4Builder::BuildTask::BuildTask (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH4Builder} $\ast$}]{parent, }
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_build_task_a75b2b6f3d8c69148e4f8edc01bc6b3e7}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_build_task_acf52407fae5c1ac962391be94106ef95}{
+\index{embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}!recurse@{recurse}}
+\index{recurse@{recurse}!embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}}
+\subsubsection[{recurse}]{\setlength{\rightskip}{0pt plus 5cm}int embree::BVH4Builder::BuildTask::recurse (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{depth, }
+\item[{{\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_1_1_build_task_acf52407fae5c1ac962391be94106ef95}
+
+
+Recursively finishes the BVH construction. 
+
+
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+perform initial split
+
+split until node is full or SAH tells us to stop
+
+find best child to split
+
+perform split of best possible child
+
+create an inner node 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_1_1_build_task_a13adfdd8ea4668e533ad924d0e5dc5f0}{
+\index{embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}!run@{run}}
+\index{run@{run}!embree::BVH4Builder::BuildTask@{embree::BVH4Builder::BuildTask}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::BuildTask::run (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf BuildTask} $\ast$}]{This, }
+\item[{size\_\-t}]{elts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_1_1_build_task_a13adfdd8ea4668e533ad924d0e5dc5f0}
+
+
+Task entry function. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh4/bvh4\_\-builder.h\item 
+rtcore/bvh4/bvh4\_\-builder.cpp\end{DoxyCompactItemize}

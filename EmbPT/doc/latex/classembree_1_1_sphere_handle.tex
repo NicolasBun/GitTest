@@ -1,0 +1,147 @@
+\hypertarget{classembree_1_1_sphere_handle}{
+\section{embree::SphereHandle Class Reference}
+\label{classembree_1_1_sphere_handle}\index{embree::SphereHandle@{embree::SphereHandle}}
+}
+
+
+Sphere Handle.  
+
+
+Inheritance diagram for embree::SphereHandle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_sphere_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_sphere_handle_a6290ffae6d31b3a9342139f537cba348}{SphereHandle} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_sphere_handle_a4e520008f643d76d0292f5272a2c42e4}{create} ()
+\begin{DoxyCompactList}\small\item\em Creates a triangulated sphere. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_sphere_handle_af5087e2534473b8fe63094a78fbe7f41}{set} (const std::string \&property, const \hyperlink{structembree_1_1_variant}{Variant} \&data)
+\begin{DoxyCompactList}\small\item\em Sets shere parameters. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vec3f \hyperlink{classembree_1_1_sphere_handle_a5517706468c65621fed3fe75a5c1e435}{pos}
+\begin{DoxyCompactList}\small\item\em Center of the sphere. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_sphere_handle_a84283a6dcc7412631db5f563ee2e7af0}{radius}
+\begin{DoxyCompactList}\small\item\em Radius of the sphere. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sphere_handle_a390f2744a81ad1a6dcce91d46c7d285b}{numTheta}
+\begin{DoxyCompactList}\small\item\em Subdivisions from north to south pole. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_sphere_handle_aea0bffe7ea72ea3921cf214ab98c7293}{numPhi}
+\begin{DoxyCompactList}\small\item\em Subdivisions from east to west. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classembree_1_1_sphere_handle_a8afa61052d682cb1257ae6c0f8e73e64}{consistentNormals}
+\begin{DoxyCompactList}\small\item\em Activates consistent normal interpolation. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sphere Handle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_sphere_handle_a6290ffae6d31b3a9342139f537cba348}{
+\index{embree::SphereHandle@{embree::SphereHandle}!SphereHandle@{SphereHandle}}
+\index{SphereHandle@{SphereHandle}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{SphereHandle}]{\setlength{\rightskip}{0pt plus 5cm}embree::SphereHandle::SphereHandle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_sphere_handle_a6290ffae6d31b3a9342139f537cba348}
+
+
+Default constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_sphere_handle_a4e520008f643d76d0292f5272a2c42e4}{
+\index{embree::SphereHandle@{embree::SphereHandle}!create@{create}}
+\index{create@{create}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void embree::SphereHandle::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_sphere_handle_a4e520008f643d76d0292f5272a2c42e4}
+
+
+Creates a triangulated sphere. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}{embree::\_\-RTHandle}.
+
+\hypertarget{classembree_1_1_sphere_handle_af5087e2534473b8fe63094a78fbe7f41}{
+\index{embree::SphereHandle@{embree::SphereHandle}!set@{set}}
+\index{set@{set}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void embree::SphereHandle::set (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{property, }
+\item[{const {\bf Variant} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_sphere_handle_af5087e2534473b8fe63094a78fbe7f41}
+
+
+Sets shere parameters. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}{embree::\_\-RTHandle}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_sphere_handle_a8afa61052d682cb1257ae6c0f8e73e64}{
+\index{embree::SphereHandle@{embree::SphereHandle}!consistentNormals@{consistentNormals}}
+\index{consistentNormals@{consistentNormals}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{consistentNormals}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf embree::SphereHandle::consistentNormals}}}
+\label{classembree_1_1_sphere_handle_a8afa61052d682cb1257ae6c0f8e73e64}
+
+
+Activates consistent normal interpolation. 
+
+\hypertarget{classembree_1_1_sphere_handle_aea0bffe7ea72ea3921cf214ab98c7293}{
+\index{embree::SphereHandle@{embree::SphereHandle}!numPhi@{numPhi}}
+\index{numPhi@{numPhi}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{numPhi}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SphereHandle::numPhi}}}
+\label{classembree_1_1_sphere_handle_aea0bffe7ea72ea3921cf214ab98c7293}
+
+
+Subdivisions from east to west. 
+
+\hypertarget{classembree_1_1_sphere_handle_a390f2744a81ad1a6dcce91d46c7d285b}{
+\index{embree::SphereHandle@{embree::SphereHandle}!numTheta@{numTheta}}
+\index{numTheta@{numTheta}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{numTheta}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::SphereHandle::numTheta}}}
+\label{classembree_1_1_sphere_handle_a390f2744a81ad1a6dcce91d46c7d285b}
+
+
+Subdivisions from north to south pole. 
+
+\hypertarget{classembree_1_1_sphere_handle_a5517706468c65621fed3fe75a5c1e435}{
+\index{embree::SphereHandle@{embree::SphereHandle}!pos@{pos}}
+\index{pos@{pos}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f {\bf embree::SphereHandle::pos}}}
+\label{classembree_1_1_sphere_handle_a5517706468c65621fed3fe75a5c1e435}
+
+
+Center of the sphere. 
+
+\hypertarget{classembree_1_1_sphere_handle_a84283a6dcc7412631db5f563ee2e7af0}{
+\index{embree::SphereHandle@{embree::SphereHandle}!radius@{radius}}
+\index{radius@{radius}!embree::SphereHandle@{embree::SphereHandle}}
+\subsubsection[{radius}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf embree::SphereHandle::radius}}}
+\label{classembree_1_1_sphere_handle_a84283a6dcc7412631db5f563ee2e7af0}
+
+
+Radius of the sphere. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/api.cpp\end{DoxyCompactItemize}

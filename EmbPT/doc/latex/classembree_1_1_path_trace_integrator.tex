@@ -1,0 +1,155 @@
+\hypertarget{classembree_1_1_path_trace_integrator}{
+\section{embree::PathTraceIntegrator Class Reference}
+\label{classembree_1_1_path_trace_integrator}\index{embree::PathTraceIntegrator@{embree::PathTraceIntegrator}}
+}
+
+
+Path tracer integrator.  
+
+
+
+
+{\ttfamily \#include $<$pathtraceintegrator.h$>$}
+
+Inheritance diagram for embree::PathTraceIntegrator:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_path_trace_integrator}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries LightPath}
+\begin{DoxyCompactList}\small\item\em Tracks the state of the path. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_path_trace_integrator_a9615d8a919f47e319b0178b72eb72f39}{PathTraceIntegrator} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction of integrator from parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_path_trace_integrator_a1c111e1fabea384da5878f7cd3962c79}{requestSamples} (Ref$<$ \hyperlink{classembree_1_1_sampler_factory}{SamplerFactory} $>$ \&samplerFactory, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene)
+\begin{DoxyCompactList}\small\item\em Registers samples we need to the sampler. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_path_trace_integrator_ad801f594f07f1cc3d90080ff2f9f80c1}{Li} (const LightPath \&lightPath, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, \hyperlink{classembree_1_1_sampler}{Sampler} $\ast$sampler, size\_\-t \&numRays)
+\begin{DoxyCompactList}\small\item\em Function that is recursively called to compute the path. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_path_trace_integrator_a544309a59d94c3e6d24e5fa65923b0e4}{Li} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const Ref$<$ \hyperlink{classembree_1_1_backend_scene}{BackendScene} $>$ \&scene, \hyperlink{classembree_1_1_sampler}{Sampler} $\ast$sampler, size\_\-t \&numRays)
+\begin{DoxyCompactList}\small\item\em Computes the radiance arriving at the origin of the ray from the ray direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Path tracer integrator. The implementation follows a single path from the camera into the scene and connect the path at each diffuse or glossy surface to all light sources. Except for this the path is never split, also not at glass surfaces. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_path_trace_integrator_a9615d8a919f47e319b0178b72eb72f39}{
+\index{embree::PathTraceIntegrator@{embree::PathTraceIntegrator}!PathTraceIntegrator@{PathTraceIntegrator}}
+\index{PathTraceIntegrator@{PathTraceIntegrator}!embree::PathTraceIntegrator@{embree::PathTraceIntegrator}}
+\subsubsection[{PathTraceIntegrator}]{\setlength{\rightskip}{0pt plus 5cm}embree::PathTraceIntegrator::PathTraceIntegrator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_path_trace_integrator_a9615d8a919f47e319b0178b72eb72f39}
+
+
+Construction of integrator from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_path_trace_integrator_ad801f594f07f1cc3d90080ff2f9f80c1}{
+\index{embree::PathTraceIntegrator@{embree::PathTraceIntegrator}!Li@{Li}}
+\index{Li@{Li}!embree::PathTraceIntegrator@{embree::PathTraceIntegrator}}
+\subsubsection[{Li}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::PathTraceIntegrator::Li (
+\begin{DoxyParamCaption}
+\item[{const LightPath \&}]{lightPath, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{{\bf Sampler} $\ast$}]{sampler, }
+\item[{size\_\-t \&}]{numRays}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_path_trace_integrator_ad801f594f07f1cc3d90080ff2f9f80c1}
+
+
+Function that is recursively called to compute the path. 
+
+
+
+Terminate path if too long or contribution too low.
+
+Traverse ray.
+
+Environment shading when nothing hit.
+
+Shade surface.
+
+face forward normals
+
+Add light emitted by hit area light source.
+
+Global illumination. Pick one \hyperlink{classembree_1_1_b_r_d_f}{BRDF} component and sample it.
+
+sample brdf
+
+Continue only if we hit something valid.
+
+Compute simple volumetric effect.
+
+Tracking medium if we hit a medium interface.
+
+Continue the path.
+
+Check if any \hyperlink{classembree_1_1_b_r_d_f}{BRDF} component uses direct lighting.
+
+Direct lighting. Shoot shadow rays to all light sources.
+
+Either use precomputed samples for the light or sample light now.
+
+Ignore zero radiance or illumination from the back.
+
+Test for shadows.
+
+Evaluate \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+\hypertarget{classembree_1_1_path_trace_integrator_a544309a59d94c3e6d24e5fa65923b0e4}{
+\index{embree::PathTraceIntegrator@{embree::PathTraceIntegrator}!Li@{Li}}
+\index{Li@{Li}!embree::PathTraceIntegrator@{embree::PathTraceIntegrator}}
+\subsubsection[{Li}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::PathTraceIntegrator::Li (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene, }
+\item[{{\bf Sampler} $\ast$}]{sampler, }
+\item[{size\_\-t \&}]{numRays}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_path_trace_integrator_a544309a59d94c3e6d24e5fa65923b0e4}
+
+
+Computes the radiance arriving at the origin of the ray from the ray direction. 
+
+
+
+Implements \hyperlink{classembree_1_1_integrator_a39cfbf2d078f8e072e17d8cdf2a1b604}{embree::Integrator}.
+
+\hypertarget{classembree_1_1_path_trace_integrator_a1c111e1fabea384da5878f7cd3962c79}{
+\index{embree::PathTraceIntegrator@{embree::PathTraceIntegrator}!requestSamples@{requestSamples}}
+\index{requestSamples@{requestSamples}!embree::PathTraceIntegrator@{embree::PathTraceIntegrator}}
+\subsubsection[{requestSamples}]{\setlength{\rightskip}{0pt plus 5cm}void embree::PathTraceIntegrator::requestSamples (
+\begin{DoxyParamCaption}
+\item[{Ref$<$ {\bf SamplerFactory} $>$ \&}]{samplerFactory, }
+\item[{const Ref$<$ {\bf BackendScene} $>$ \&}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_path_trace_integrator_a1c111e1fabea384da5878f7cd3962c79}
+
+
+Registers samples we need to the sampler. 
+
+
+
+Reimplemented from \hyperlink{classembree_1_1_integrator_a7dbd4474e5bbda044ef8b44ffa3dcf95}{embree::Integrator}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+renderer/integrators/pathtraceintegrator.h\item 
+renderer/integrators/pathtraceintegrator.cpp\end{DoxyCompactItemize}

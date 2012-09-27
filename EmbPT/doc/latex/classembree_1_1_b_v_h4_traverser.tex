@@ -1,0 +1,161 @@
+\hypertarget{classembree_1_1_b_v_h4_traverser}{
+\section{embree::BVH4Traverser Class Reference}
+\label{classembree_1_1_b_v_h4_traverser}\index{embree::BVH4Traverser@{embree::BVH4Traverser}}
+}
+
+
+\hyperlink{classembree_1_1_b_v_h4}{BVH4} Traverser.  
+
+
+
+
+{\ttfamily \#include $<$bvh4\_\-traverser.h$>$}
+
+Inheritance diagram for embree::BVH4Traverser:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_b_v_h4_traverser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h4_traverser_a98ca127f4925cffb63315c514e251b0e}{BVH4Traverser} (const Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \&bvh)
+\begin{DoxyCompactList}\small\item\em Constructs the traverser from a BVH. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_traverser_ad7a096791c029d3bb8e3d925785fa52f}{intersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_hit}{Hit} \&hit) const 
+\begin{DoxyCompactList}\small\item\em Intersects the ray with the geometry and returns the hit information. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classembree_1_1_b_v_h4_traverser_ab008fbe9dd78c3f2c960554052804657}{occluded} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray) const 
+\begin{DoxyCompactList}\small\item\em Tests the ray for occlusion with the scene. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_v_h4}{BVH4} Traverser. Single ray traversal implementation for a Quad BVH. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h4_traverser_a98ca127f4925cffb63315c514e251b0e}{
+\index{embree::BVH4Traverser@{embree::BVH4Traverser}!BVH4Traverser@{BVH4Traverser}}
+\index{BVH4Traverser@{BVH4Traverser}!embree::BVH4Traverser@{embree::BVH4Traverser}}
+\subsubsection[{BVH4Traverser}]{\setlength{\rightskip}{0pt plus 5cm}embree::BVH4Traverser::BVH4Traverser (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf BVH4}$<$ {\bf Triangle4} $>$ $>$ \&}]{bvh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_traverser_a98ca127f4925cffb63315c514e251b0e}
+
+
+Constructs the traverser from a BVH. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h4_traverser_ad7a096791c029d3bb8e3d925785fa52f}{
+\index{embree::BVH4Traverser@{embree::BVH4Traverser}!intersect@{intersect}}
+\index{intersect@{intersect}!embree::BVH4Traverser@{embree::BVH4Traverser}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}home venceslas Recherche Project GlobIll EmbPT rtcore bvh4 bvh4\_\-traverser cpp home venceslas Recherche Project GlobIll EmbPT rtcore bvh4 bvh4\_\-traverser cpp void embree::BVH4Traverser::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf Hit} \&}]{hit}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_traverser_ad7a096791c029d3bb8e3d925785fa52f}
+
+
+Intersects the ray with the geometry and returns the hit information. 
+
+
+
+stack state
+
+$<$ current stack pointer
+
+$<$ pre-\/popped top node from the stack
+
+$<$ pre-\/popped distance of top node from the stack
+
+$<$ stack of nodes that still need to get traversed
+
+offsets to select the side that becomes the lower or upper bound
+
+load the ray into SIMD registers
+
+pop next node
+
+if popped node is too far, pop next one
+
+we mostly go into the inner node case
+
+single ray intersection with 4 boxes
+
+$<$ pre-\/pop of topmost stack item
+
+$<$ pre-\/pop of distance of topmost stack item
+
+if no child is hit, pop next node
+
+one child is hit, continue with that child
+
+two children are hit, push far child, and continue with closer child
+
+Here starts the slow path for 3 or 4 hit children. We push all nodes onto the stack to sort them there.
+
+three children are hit, push all onto stack and sort 3 stack items, continue with closest child
+
+four children are hit, push all onto stack and sort 4 stack items, continue with closest child
+
+this is a leaf node
+
+$<$ pre-\/pop of topmost stack item
+
+$<$ pre-\/pop of distance of topmost stack item 
+
+
+
+Implements \hyperlink{classembree_1_1_intersector_ae488adb126f9e7f48ca45e4e776a2926}{embree::Intersector}.
+
+\hypertarget{classembree_1_1_b_v_h4_traverser_ab008fbe9dd78c3f2c960554052804657}{
+\index{embree::BVH4Traverser@{embree::BVH4Traverser}!occluded@{occluded}}
+\index{occluded@{occluded}!embree::BVH4Traverser@{embree::BVH4Traverser}}
+\subsubsection[{occluded}]{\setlength{\rightskip}{0pt plus 5cm}bool embree::BVH4Traverser::occluded (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_traverser_ab008fbe9dd78c3f2c960554052804657}
+
+
+Tests the ray for occlusion with the scene. 
+
+
+
+stack state
+
+$<$ current stack pointer
+
+$<$ stack of nodes that still need to get traversed
+
+$<$ push first node onto stack
+
+offsets to select the side that becomes the lower or upper bound
+
+load the ray into SIMD registers
+
+pop node from stack
+
+this is an inner node
+
+single ray intersection with 4 boxes
+
+push hit nodes onto stack
+
+this is a leaf node 
+
+
+
+Implements \hyperlink{classembree_1_1_intersector_a47cf036c3eab7060590c72e7bb51255c}{embree::Intersector}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh4/bvh4\_\-traverser.h\item 
+rtcore/bvh4/bvh4\_\-traverser.cpp\end{DoxyCompactItemize}

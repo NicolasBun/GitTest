@@ -1,0 +1,142 @@
+\hypertarget{structembree_1_1_build_range}{
+\section{embree::BuildRange Struct Reference}
+\label{structembree_1_1_build_range}\index{embree::BuildRange@{embree::BuildRange}}
+}
+
+
+Build job.  
+
+
+
+
+{\ttfamily \#include $<$build\_\-range.h$>$}
+
+Inheritance diagram for embree::BuildRange:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.305361cm]{structembree_1_1_build_range}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_build_range_a0326a94b8cf4024d0f5489ba77e0057c}{BuildRange} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_build_range_ab24ae43f6abdbb30b01cb4552b3c45c9}{BuildRange} (size\_\-t start, size\_\-t N, const Box \&\hyperlink{structembree_1_1_build_range_a08845e5503dde4f26585423c3fc623c8}{geomBounds}, const Box \&\hyperlink{structembree_1_1_build_range_a988222440926b9ff9035a53762199c75}{centBounds})
+\begin{DoxyCompactList}\small\item\em Construct range from members. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{structembree_1_1_build_range_a3092b5cc10f2d1cf2c97ab79ccb68ae5}{start} () const 
+\begin{DoxyCompactList}\small\item\em Returns the start. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{structembree_1_1_build_range_a55862ebd1c80916945e07bc34d756074}{end} () const 
+\begin{DoxyCompactList}\small\item\em Returns the end. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{structembree_1_1_build_range_a5eaf9793776fd1957ee18cab77408f99}{size} () const 
+\begin{DoxyCompactList}\small\item\em Returns the number of primitives. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{structembree_1_1_build_range_aaa37afe4037b28096ba75431474a20eb}{moveTo} (size\_\-t start)
+\begin{DoxyCompactList}\small\item\em Moves the range to a different start location. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_build_range_a08845e5503dde4f26585423c3fc623c8}{
+Box \hyperlink{structembree_1_1_build_range_a08845e5503dde4f26585423c3fc623c8}{geomBounds}}
+\label{structembree_1_1_build_range_a08845e5503dde4f26585423c3fc623c8}
+
+\begin{DoxyCompactList}\small\item\em Geometry bounds of primitives (also stores start and end of range) \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_build_range_a988222440926b9ff9035a53762199c75}{
+Box \hyperlink{structembree_1_1_build_range_a988222440926b9ff9035a53762199c75}{centBounds}}
+\label{structembree_1_1_build_range_a988222440926b9ff9035a53762199c75}
+
+\begin{DoxyCompactList}\small\item\em Centroid bounds of primitives. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Build job. Contains all information required to initiate the build for a range of primitives. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structembree_1_1_build_range_a0326a94b8cf4024d0f5489ba77e0057c}{
+\index{embree::BuildRange@{embree::BuildRange}!BuildRange@{BuildRange}}
+\index{BuildRange@{BuildRange}!embree::BuildRange@{embree::BuildRange}}
+\subsubsection[{BuildRange}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BuildRange::BuildRange (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_build_range_a0326a94b8cf4024d0f5489ba77e0057c}
+
+
+Default constructor. 
+
+\hypertarget{structembree_1_1_build_range_ab24ae43f6abdbb30b01cb4552b3c45c9}{
+\index{embree::BuildRange@{embree::BuildRange}!BuildRange@{BuildRange}}
+\index{BuildRange@{BuildRange}!embree::BuildRange@{embree::BuildRange}}
+\subsubsection[{BuildRange}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BuildRange::BuildRange (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{start, }
+\item[{size\_\-t}]{N, }
+\item[{const Box \&}]{geomBounds, }
+\item[{const Box \&}]{centBounds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_build_range_ab24ae43f6abdbb30b01cb4552b3c45c9}
+
+
+Construct range from members. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structembree_1_1_build_range_a55862ebd1c80916945e07bc34d756074}{
+\index{embree::BuildRange@{embree::BuildRange}!end@{end}}
+\index{end@{end}!embree::BuildRange@{embree::BuildRange}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::BuildRange::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_build_range_a55862ebd1c80916945e07bc34d756074}
+
+
+Returns the end. 
+
+\hypertarget{structembree_1_1_build_range_aaa37afe4037b28096ba75431474a20eb}{
+\index{embree::BuildRange@{embree::BuildRange}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!embree::BuildRange@{embree::BuildRange}}
+\subsubsection[{moveTo}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline void embree::BuildRange::moveTo (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{start}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_build_range_aaa37afe4037b28096ba75431474a20eb}
+
+
+Moves the range to a different start location. 
+
+\hypertarget{structembree_1_1_build_range_a5eaf9793776fd1957ee18cab77408f99}{
+\index{embree::BuildRange@{embree::BuildRange}!size@{size}}
+\index{size@{size}!embree::BuildRange@{embree::BuildRange}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::BuildRange::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_build_range_a5eaf9793776fd1957ee18cab77408f99}
+
+
+Returns the number of primitives. 
+
+\hypertarget{structembree_1_1_build_range_a3092b5cc10f2d1cf2c97ab79ccb68ae5}{
+\index{embree::BuildRange@{embree::BuildRange}!start@{start}}
+\index{start@{start}!embree::BuildRange@{embree::BuildRange}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::BuildRange::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_build_range_a3092b5cc10f2d1cf2c97ab79ccb68ae5}
+
+
+Returns the start. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/build\_\-range.h\end{DoxyCompactItemize}

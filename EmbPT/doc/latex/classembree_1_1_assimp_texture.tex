@@ -1,0 +1,75 @@
+\hypertarget{classembree_1_1_assimp_texture}{
+\section{embree::AssimpTexture Class Reference}
+\label{classembree_1_1_assimp_texture}\index{embree::AssimpTexture@{embree::AssimpTexture}}
+}
+
+
+Implements an image mapped texture with nearest neighbor lookup comming from \hyperlink{classembree_1_1_assimp}{Assimp} import library.  
+
+
+
+
+{\ttfamily \#include $<$assimptexture.h$>$}
+
+Inheritance diagram for embree::AssimpTexture:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_assimp_texture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_assimp_texture_a09f96d31e8f620f0d4eaaf0be4a97084}{AssimpTexture} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_assimp_texture_a15cb80b04c8b3440580e8dfb26404e55}{get} (const Vec2f \&p) const 
+\begin{DoxyCompactList}\small\item\em Returns the color for a surface point p. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements an image mapped texture with nearest neighbor lookup comming from \hyperlink{classembree_1_1_assimp}{Assimp} import library. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_assimp_texture_a09f96d31e8f620f0d4eaaf0be4a97084}{
+\index{embree::AssimpTexture@{embree::AssimpTexture}!AssimpTexture@{AssimpTexture}}
+\index{AssimpTexture@{AssimpTexture}!embree::AssimpTexture@{embree::AssimpTexture}}
+\subsubsection[{AssimpTexture}]{\setlength{\rightskip}{0pt plus 5cm}embree::AssimpTexture::AssimpTexture (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_assimp_texture_a09f96d31e8f620f0d4eaaf0be4a97084}
+
+
+Construction from parameters. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_assimp_texture_a15cb80b04c8b3440580e8dfb26404e55}{
+\index{embree::AssimpTexture@{embree::AssimpTexture}!get@{get}}
+\index{get@{get}!embree::AssimpTexture@{embree::AssimpTexture}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::AssimpTexture::get (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_assimp_texture_a15cb80b04c8b3440580e8dfb26404e55}
+
+
+Returns the color for a surface point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is the location to query the color for. The range is 0 to 1. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classembree_1_1_texture_aa467dc197aaa52aad1312d45d499bb87}{embree::Texture}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/textures/assimptexture.h\end{DoxyCompactItemize}

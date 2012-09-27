@@ -1,0 +1,185 @@
+\hypertarget{classembree_1_1_light}{
+\section{embree::Light Class Reference}
+\label{classembree_1_1_light}\index{embree::Light@{embree::Light}}
+}
+
+
+Interface to different lights.  
+
+
+
+
+{\ttfamily \#include $<$light.h$>$}
+
+Inheritance diagram for embree::Light:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.036364cm]{classembree_1_1_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_light_a542a6f5ed399189c0cf2e815f0774a7c}{$\sim$Light} ()
+\begin{DoxyCompactList}\small\item\em Lights need a virtual destructor. \item\end{DoxyCompactList}\item 
+virtual Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{transform} (const AffineSpace \&xfm) const =0
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+virtual Col3f \hyperlink{classembree_1_1_light_a5cc835d46bd10b81c7253512cfd8c9e5}{eval} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. \item\end{DoxyCompactList}\item 
+virtual Col3f \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&sample) const =0
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+virtual float \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const =0
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classembree_1_1_light_a99d50320be632f677439774efeb5c62e}{precompute} () const 
+\begin{DoxyCompactList}\small\item\em Indicates that the sampling of the light is expensive and the integrator should presample the light. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to different lights. A light can be evaluated, sampled, and the sampling PDF be evaluated. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_light_a542a6f5ed399189c0cf2e815f0774a7c}{
+\index{embree::Light@{embree::Light}!$\sim$Light@{$\sim$Light}}
+\index{$\sim$Light@{$\sim$Light}!embree::Light@{embree::Light}}
+\subsubsection[{$\sim$Light}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Light::$\sim$Light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_light_a542a6f5ed399189c0cf2e815f0774a7c}
+
+
+Lights need a virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_light_a5cc835d46bd10b81c7253512cfd8c9e5}{
+\index{embree::Light@{embree::Light}!eval@{eval}}
+\index{eval@{eval}!embree::Light@{embree::Light}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::Light::eval (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_light_a5cc835d46bd10b81c7253512cfd8c9e5}
+
+
+Evaluates the radiance that would arrive at a given location from a given direction assuming no blocking geometry. 
+
+\begin{DoxyReturn}{Returns}
+the emitted radiance. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em dg} & The shade point that is illuminated. \\
+\hline
+{\em wi} & The direction the light is coming from. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classembree_1_1_ambient_light_a49bdb098ba60b92fb1ebeeac33715ab7}{embree::AmbientLight}, \hyperlink{classembree_1_1_distant_light_ad22e8ad0ef213cfd60c6d739d421bf11}{embree::DistantLight}, \hyperlink{classembree_1_1_h_d_r_i_light_ab9bf74a2d856a458b9c19b9d6d09b3ac}{embree::HDRILight}, and \hyperlink{classembree_1_1_triangle_light_afa7279779945284d960d42427445d405}{embree::TriangleLight}.
+
+\hypertarget{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{
+\index{embree::Light@{embree::Light}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::Light@{embree::Light}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}virtual float embree::Light::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em dg} & The shade location to compute the PDF for. \\
+\hline
+{\em wi} & The direction to compute the PDF for. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_ambient_light_a073c5cf164efacb39fb1b63e7c0f6237}{embree::AmbientLight}, \hyperlink{classembree_1_1_directional_light_a4b1fbe653eb467dad05bf0d280b09def}{embree::DirectionalLight}, \hyperlink{classembree_1_1_distant_light_a472994aa8ede8e9b1c3a2bb23ce15a26}{embree::DistantLight}, \hyperlink{classembree_1_1_h_d_r_i_light_a1897fdcd0dd747e3dda2cc9644f5b843}{embree::HDRILight}, \hyperlink{classembree_1_1_point_light_a9625baf678c9d70005f256b9e8839f6e}{embree::PointLight}, \hyperlink{classembree_1_1_spot_light_a80916ed69cf920d7fee8274eacb5f0d3}{embree::SpotLight}, and \hyperlink{classembree_1_1_triangle_light_a74999d99d8c5876afd3a9ddc5acc41ad}{embree::TriangleLight}.
+
+\hypertarget{classembree_1_1_light_a99d50320be632f677439774efeb5c62e}{
+\index{embree::Light@{embree::Light}!precompute@{precompute}}
+\index{precompute@{precompute}!embree::Light@{embree::Light}}
+\subsubsection[{precompute}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool embree::Light::precompute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_light_a99d50320be632f677439774efeb5c62e}
+
+
+Indicates that the sampling of the light is expensive and the integrator should presample the light. 
+
+
+
+Reimplemented in \hyperlink{classembree_1_1_h_d_r_i_light_a6e5d1e66f4cb510c3be6d01696f537a8}{embree::HDRILight}.
+
+\hypertarget{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{
+\index{embree::Light@{embree::Light}!sample@{sample}}
+\index{sample@{sample}!embree::Light@{embree::Light}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::Light::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em dg} & The shade point that is illuminated. \\
+\hline
+{\em wi} & Returns the sampled direction including PDF. \\
+\hline
+{\em tMax} & Returns the distance of the light. \\
+\hline
+{\em sample} & \hyperlink{structembree_1_1_sample}{Sample} locations are provided by the caller. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_ambient_light_aa733e3f68cd95ce4ff533facfa73df68}{embree::AmbientLight}, \hyperlink{classembree_1_1_directional_light_a6af3bc942cd0f35726d7abe39cc96393}{embree::DirectionalLight}, \hyperlink{classembree_1_1_distant_light_af38ed2d63728cdda5387095413aabc48}{embree::DistantLight}, \hyperlink{classembree_1_1_h_d_r_i_light_a12fc5f0adebf246c6323be76800a7804}{embree::HDRILight}, \hyperlink{classembree_1_1_point_light_a1ef13f8d67a82292933199775f37c5b1}{embree::PointLight}, \hyperlink{classembree_1_1_spot_light_a322a13a8d47115593bbd244baff4e398}{embree::SpotLight}, and \hyperlink{classembree_1_1_triangle_light_a3bf331c747d07fb3c60e50c066c631b9}{embree::TriangleLight}.
+
+\hypertarget{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{
+\index{embree::Light@{embree::Light}!transform@{transform}}
+\index{transform@{transform}!embree::Light@{embree::Light}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}virtual Ref$<${\bf Light}$>$ embree::Light::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implemented in \hyperlink{classembree_1_1_ambient_light_a7b9faa7bc4b88e2007fd9bba14d9f691}{embree::AmbientLight}, \hyperlink{classembree_1_1_directional_light_aea27ef2ba60eb7f2d8945a9e0f6c48c7}{embree::DirectionalLight}, \hyperlink{classembree_1_1_distant_light_ad72f9357ea880cf3d080367efc07d381}{embree::DistantLight}, \hyperlink{classembree_1_1_h_d_r_i_light_af116d30023fec29a9e0bc046151f604b}{embree::HDRILight}, \hyperlink{classembree_1_1_point_light_a819014dd76584e8d695ef39834ce7446}{embree::PointLight}, \hyperlink{classembree_1_1_spot_light_a52ad1d555a37fbd62c4f8233d69bed74}{embree::SpotLight}, and \hyperlink{classembree_1_1_triangle_light_a5f232bd6f2f5220af56acf02807250b9}{embree::TriangleLight}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/light.h\end{DoxyCompactItemize}

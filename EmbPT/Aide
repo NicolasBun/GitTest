@@ -1,0 +1,2 @@
+./embree -c ../models/Radiance.ecs make
+

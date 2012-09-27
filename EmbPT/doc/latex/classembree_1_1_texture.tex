@@ -1,0 +1,75 @@
+\hypertarget{classembree_1_1_texture}{
+\section{embree::Texture Class Reference}
+\label{classembree_1_1_texture}\index{embree::Texture@{embree::Texture}}
+}
+
+
+Interface for different textures.  
+
+
+
+
+{\ttfamily \#include $<$texture.h$>$}
+
+Inheritance diagram for embree::Texture:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_texture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classembree_1_1_texture_a8be22466da0b6859c878c42330047e5d}{$\sim$Texture} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_texture}{Texture} virtual destructor. \item\end{DoxyCompactList}\item 
+virtual Col3f \hyperlink{classembree_1_1_texture_aa467dc197aaa52aad1312d45d499bb87}{get} (const Vec2f \&p) const =0
+\begin{DoxyCompactList}\small\item\em Returns the color for a surface point p. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for different textures. Textures implement a mapping from a surface point to a color. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_texture_a8be22466da0b6859c878c42330047e5d}{
+\index{embree::Texture@{embree::Texture}!$\sim$Texture@{$\sim$Texture}}
+\index{$\sim$Texture@{$\sim$Texture}!embree::Texture@{embree::Texture}}
+\subsubsection[{$\sim$Texture}]{\setlength{\rightskip}{0pt plus 5cm}virtual embree::Texture::$\sim$Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_texture_a8be22466da0b6859c878c42330047e5d}
+
+
+\hyperlink{classembree_1_1_texture}{Texture} virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_texture_aa467dc197aaa52aad1312d45d499bb87}{
+\index{embree::Texture@{embree::Texture}!get@{get}}
+\index{get@{get}!embree::Texture@{embree::Texture}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::Texture::get (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_texture_aa467dc197aaa52aad1312d45d499bb87}
+
+
+Returns the color for a surface point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is the location to query the color for. The range is 0 to 1. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_assimp_texture_a15cb80b04c8b3440580e8dfb26404e55}{embree::AssimpTexture}, and \hyperlink{classembree_1_1_nearest_neighbor_a8cb7bc5733196269006ba7a1116017f4}{embree::NearestNeighbor}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/textures/texture.h\end{DoxyCompactItemize}

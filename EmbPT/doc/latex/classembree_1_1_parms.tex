@@ -1,0 +1,218 @@
+\hypertarget{classembree_1_1_parms}{
+\section{embree::Parms Class Reference}
+\label{classembree_1_1_parms}\index{embree::Parms@{embree::Parms}}
+}
+
+
+Parameter container.  
+
+
+
+
+{\ttfamily \#include $<$parms.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classembree_1_1_parms_a66d1d0d6754d9dc36ceea267a5c40b99}{getBool} (const char $\ast$name, bool def=false) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named boolean out of the container. \item\end{DoxyCompactList}\item 
+int \hyperlink{classembree_1_1_parms_abcaa48db7845627de5986fe73d68a06d}{getInt} (const char $\ast$name, int def=zero) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named integer out of the container. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_parms_aa48aa0635d289433e5339d4307b3b254}{getFloat} (const char $\ast$name, float def=zero) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named float out of the container. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{classembree_1_1_parms_a8dad07314879140e3974e6e2aaf504dc}{getVec2f} (const char $\ast$name, const Vec2f \&def=zero) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named Vec2f out of the container. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{classembree_1_1_parms_a137f0e81fa90efde4cae338eecf0898e}{getVec3f} (const char $\ast$name, const Vec3f \&def=zero) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named Vec3f out of the container. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_parms_a00fac023bc620ff533df312007872081}{getCol3f} (const char $\ast$name, const Col3f \&def=zero) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named color out of the container. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{classembree_1_1_parms_aac3a445b1a5c98537297e8b6f9face65}{getString} (const char $\ast$name, std::string def=\char`\"{}\char`\"{}) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named string out of the container. \item\end{DoxyCompactList}\item 
+Ref$<$ Image $>$ \hyperlink{classembree_1_1_parms_acdf69b87c0288b6acb2e2da27c825793}{getImage} (const char $\ast$name, Ref$<$ Image $>$ def=null) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named image reference out of the container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ \hyperlink{classembree_1_1_parms_aafbcf77bcc2bdecdcb550372f77166ab}{getTexture} (const char $\ast$name, Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ def=null) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named texture reference out of the container. \item\end{DoxyCompactList}\item 
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ $>$ \hyperlink{classembree_1_1_parms_a882e92d8b5e65b04d209171e109c7792}{getTextureStack} (const char $\ast$name) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named texture reference out of the container. \item\end{DoxyCompactList}\item 
+AffineSpace \hyperlink{classembree_1_1_parms_afc987dc1d7aa2583488ce45756889e91}{getTransform} (const char $\ast$name, const AffineSpace \&def=one) const 
+\begin{DoxyCompactList}\small\item\em Extracts a named transformation out of the container. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_parms_a4cb5bcb4de8bfe965c11600192d98500}{add} (const std::string \&name, \hyperlink{structembree_1_1_variant}{Variant} data)
+\begin{DoxyCompactList}\small\item\em Adds a new named element to the container. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Parameter container. Implements parameter container as a mapping from a string to variant values. This container is used to pass parameters for constructing objects from the API to the constructors of that objects. All the extraction functions return a default values in case the parameter is not found. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_parms_a4cb5bcb4de8bfe965c11600192d98500}{
+\index{embree::Parms@{embree::Parms}!add@{add}}
+\index{add@{add}!embree::Parms@{embree::Parms}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Parms::add (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{name, }
+\item[{{\bf Variant}}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_a4cb5bcb4de8bfe965c11600192d98500}
+
+
+Adds a new named element to the container. 
+
+\hypertarget{classembree_1_1_parms_a66d1d0d6754d9dc36ceea267a5c40b99}{
+\index{embree::Parms@{embree::Parms}!getBool@{getBool}}
+\index{getBool@{getBool}!embree::Parms@{embree::Parms}}
+\subsubsection[{getBool}]{\setlength{\rightskip}{0pt plus 5cm}bool embree::Parms::getBool (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{bool}]{def = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_a66d1d0d6754d9dc36ceea267a5c40b99}
+
+
+Extracts a named boolean out of the container. 
+
+\hypertarget{classembree_1_1_parms_a00fac023bc620ff533df312007872081}{
+\index{embree::Parms@{embree::Parms}!getCol3f@{getCol3f}}
+\index{getCol3f@{getCol3f}!embree::Parms@{embree::Parms}}
+\subsubsection[{getCol3f}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Parms::getCol3f (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const Col3f \&}]{def = {\ttfamily zero}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_a00fac023bc620ff533df312007872081}
+
+
+Extracts a named color out of the container. 
+
+\hypertarget{classembree_1_1_parms_aa48aa0635d289433e5339d4307b3b254}{
+\index{embree::Parms@{embree::Parms}!getFloat@{getFloat}}
+\index{getFloat@{getFloat}!embree::Parms@{embree::Parms}}
+\subsubsection[{getFloat}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Parms::getFloat (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{float}]{def = {\ttfamily zero}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_aa48aa0635d289433e5339d4307b3b254}
+
+
+Extracts a named float out of the container. 
+
+\hypertarget{classembree_1_1_parms_acdf69b87c0288b6acb2e2da27c825793}{
+\index{embree::Parms@{embree::Parms}!getImage@{getImage}}
+\index{getImage@{getImage}!embree::Parms@{embree::Parms}}
+\subsubsection[{getImage}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<$Image$>$ embree::Parms::getImage (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{Ref$<$ Image $>$}]{def = {\ttfamily null}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_acdf69b87c0288b6acb2e2da27c825793}
+
+
+Extracts a named image reference out of the container. 
+
+\hypertarget{classembree_1_1_parms_abcaa48db7845627de5986fe73d68a06d}{
+\index{embree::Parms@{embree::Parms}!getInt@{getInt}}
+\index{getInt@{getInt}!embree::Parms@{embree::Parms}}
+\subsubsection[{getInt}]{\setlength{\rightskip}{0pt plus 5cm}int embree::Parms::getInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{def = {\ttfamily zero}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_abcaa48db7845627de5986fe73d68a06d}
+
+
+Extracts a named integer out of the container. 
+
+\hypertarget{classembree_1_1_parms_aac3a445b1a5c98537297e8b6f9face65}{
+\index{embree::Parms@{embree::Parms}!getString@{getString}}
+\index{getString@{getString}!embree::Parms@{embree::Parms}}
+\subsubsection[{getString}]{\setlength{\rightskip}{0pt plus 5cm}std::string embree::Parms::getString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{std::string}]{def = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_aac3a445b1a5c98537297e8b6f9face65}
+
+
+Extracts a named string out of the container. 
+
+\hypertarget{classembree_1_1_parms_aafbcf77bcc2bdecdcb550372f77166ab}{
+\index{embree::Parms@{embree::Parms}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!embree::Parms@{embree::Parms}}
+\subsubsection[{getTexture}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Texture}$>$ embree::Parms::getTexture (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{Ref$<$ {\bf Texture} $>$}]{def = {\ttfamily null}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_aafbcf77bcc2bdecdcb550372f77166ab}
+
+
+Extracts a named texture reference out of the container. 
+
+\hypertarget{classembree_1_1_parms_a882e92d8b5e65b04d209171e109c7792}{
+\index{embree::Parms@{embree::Parms}!getTextureStack@{getTextureStack}}
+\index{getTextureStack@{getTextureStack}!embree::Parms@{embree::Parms}}
+\subsubsection[{getTextureStack}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$Ref$<${\bf Texture}$>$ $>$ embree::Parms::getTextureStack (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_a882e92d8b5e65b04d209171e109c7792}
+
+
+Extracts a named texture reference out of the container. 
+
+\hypertarget{classembree_1_1_parms_afc987dc1d7aa2583488ce45756889e91}{
+\index{embree::Parms@{embree::Parms}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!embree::Parms@{embree::Parms}}
+\subsubsection[{getTransform}]{\setlength{\rightskip}{0pt plus 5cm}AffineSpace embree::Parms::getTransform (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const AffineSpace \&}]{def = {\ttfamily one}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_afc987dc1d7aa2583488ce45756889e91}
+
+
+Extracts a named transformation out of the container. 
+
+\hypertarget{classembree_1_1_parms_a8dad07314879140e3974e6e2aaf504dc}{
+\index{embree::Parms@{embree::Parms}!getVec2f@{getVec2f}}
+\index{getVec2f@{getVec2f}!embree::Parms@{embree::Parms}}
+\subsubsection[{getVec2f}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Parms::getVec2f (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const Vec2f \&}]{def = {\ttfamily zero}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_a8dad07314879140e3974e6e2aaf504dc}
+
+
+Extracts a named Vec2f out of the container. 
+
+\hypertarget{classembree_1_1_parms_a137f0e81fa90efde4cae338eecf0898e}{
+\index{embree::Parms@{embree::Parms}!getVec3f@{getVec3f}}
+\index{getVec3f@{getVec3f}!embree::Parms@{embree::Parms}}
+\subsubsection[{getVec3f}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f embree::Parms::getVec3f (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const Vec3f \&}]{def = {\ttfamily zero}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_parms_a137f0e81fa90efde4cae338eecf0898e}
+
+
+Extracts a named Vec3f out of the container. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/parms.h\end{DoxyCompactItemize}

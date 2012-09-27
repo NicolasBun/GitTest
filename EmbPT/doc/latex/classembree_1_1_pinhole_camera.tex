@@ -1,0 +1,72 @@
+\hypertarget{classembree_1_1_pinhole_camera}{
+\section{embree::PinholeCamera Class Reference}
+\label{classembree_1_1_pinhole_camera}\index{embree::PinholeCamera@{embree::PinholeCamera}}
+}
+
+
+Implements the pinhole camera model.  
+
+
+
+
+{\ttfamily \#include $<$pinholecamera.h$>$}
+
+Inheritance diagram for embree::PinholeCamera:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_pinhole_camera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_pinhole_camera_ac5ff4e2585006995449a9fe9acf83b03}{PinholeCamera} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_pinhole_camera_a0118a538d8bfe698ca79ae672c313e8b}{ray} (const Vec2f \&pixel, const Vec2f \&sample, \hyperlink{structembree_1_1_ray}{Ray} \&ray\_\-o) const 
+\begin{DoxyCompactList}\small\item\em Computes a primary ray for a pixel. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the pinhole camera model. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_pinhole_camera_ac5ff4e2585006995449a9fe9acf83b03}{
+\index{embree::PinholeCamera@{embree::PinholeCamera}!PinholeCamera@{PinholeCamera}}
+\index{PinholeCamera@{PinholeCamera}!embree::PinholeCamera@{embree::PinholeCamera}}
+\subsubsection[{PinholeCamera}]{\setlength{\rightskip}{0pt plus 5cm}embree::PinholeCamera::PinholeCamera (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_pinhole_camera_ac5ff4e2585006995449a9fe9acf83b03}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_pinhole_camera_a0118a538d8bfe698ca79ae672c313e8b}{
+\index{embree::PinholeCamera@{embree::PinholeCamera}!ray@{ray}}
+\index{ray@{ray}!embree::PinholeCamera@{embree::PinholeCamera}}
+\subsubsection[{ray}]{\setlength{\rightskip}{0pt plus 5cm}void embree::PinholeCamera::ray (
+\begin{DoxyParamCaption}
+\item[{const Vec2f \&}]{pixel, }
+\item[{const Vec2f \&}]{sample, }
+\item[{{\bf Ray} \&}]{ray\_\-o}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_pinhole_camera_a0118a538d8bfe698ca79ae672c313e8b}
+
+
+Computes a primary ray for a pixel. 
+
+
+
+Implements \hyperlink{classembree_1_1_camera_a30a3c91afaa91e78bd963d1e70e0fcdf}{embree::Camera}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/cameras/pinholecamera.h\end{DoxyCompactItemize}

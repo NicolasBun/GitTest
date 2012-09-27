@@ -1,0 +1,197 @@
+\hypertarget{structembree_1_1_triangle4}{
+\section{embree::Triangle4 Struct Reference}
+\label{structembree_1_1_triangle4}\index{embree::Triangle4@{embree::Triangle4}}
+}
+
+
+\hyperlink{classembree_1_1_intersector}{Intersector} for 4 triangles.  
+
+
+
+
+{\ttfamily \#include $<$triangle4.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_triangle4_a1e783fdc515258970926889af778547b}{Triangle4} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline \hyperlink{structembree_1_1_triangle4_a61339e30b52ac95adc3d11c580d8a22c}{Triangle4} (const sse3f \&\hyperlink{structembree_1_1_triangle4_a6c0d196de65c16626387c56ba45b019d}{v0}, const sse3f \&v1, const sse3f \&v2, const ssei \&\hyperlink{structembree_1_1_triangle4_ac3629f411789f1190eea10d3f104bb2d}{id0}, const ssei \&\hyperlink{structembree_1_1_triangle4_af3ef7b3e6c8140aad0ee6de92083348b}{id1})
+\begin{DoxyCompactList}\small\item\em Construction from vertices and IDs. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline sseb \hyperlink{structembree_1_1_triangle4_acfedbc169bef2256b46d976e042324d3}{valid} () const 
+\begin{DoxyCompactList}\small\item\em Returns a mask that tells which triangles are valid. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline size\_\-t \hyperlink{structembree_1_1_triangle4_aac5e451d8c692ab40cb1f14f1ea02551}{size} () const 
+\begin{DoxyCompactList}\small\item\em Returns the number of stored triangles. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline void \hyperlink{structembree_1_1_triangle4_adc295d58a225e325534905a7ac3f7160}{intersect} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, \hyperlink{structembree_1_1_hit}{Hit} \&hit) const 
+\begin{DoxyCompactList}\small\item\em Intersect a ray with the 4 triangles and updates the hit. \item\end{DoxyCompactList}\item 
+\_\-\_\-forceinline bool \hyperlink{structembree_1_1_triangle4_a1e3495abae507495268b44573cfa56a7}{occluded} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray) const 
+\begin{DoxyCompactList}\small\item\em Test if the ray is occluded by one of the triangles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sse3f \hyperlink{structembree_1_1_triangle4_a6c0d196de65c16626387c56ba45b019d}{v0}
+\begin{DoxyCompactList}\small\item\em Base vertex of the triangles. \item\end{DoxyCompactList}\item 
+sse3f \hyperlink{structembree_1_1_triangle4_a2667c1aa50255c1d97d2f72241cc18a6}{e1}
+\begin{DoxyCompactList}\small\item\em 1st edge of the triangles (v0-\/v1). \item\end{DoxyCompactList}\item 
+sse3f \hyperlink{structembree_1_1_triangle4_aa8967fac9fd72a914d0a55337f230a5d}{e2}
+\begin{DoxyCompactList}\small\item\em 2nd edge of the triangles (v2-\/v0). \item\end{DoxyCompactList}\item 
+sse3f \hyperlink{structembree_1_1_triangle4_a0ab213645841eb42897e3d61a9cd3528}{Ng}
+\begin{DoxyCompactList}\small\item\em Geometry normal of the triangles. \item\end{DoxyCompactList}\item 
+ssei \hyperlink{structembree_1_1_triangle4_ac3629f411789f1190eea10d3f104bb2d}{id0}
+\begin{DoxyCompactList}\small\item\em 1st user ID. \item\end{DoxyCompactList}\item 
+ssei \hyperlink{structembree_1_1_triangle4_af3ef7b3e6c8140aad0ee6de92083348b}{id1}
+\begin{DoxyCompactList}\small\item\em 2nd user ID. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_intersector}{Intersector} for 4 triangles. Implements a modified version of the Moeller Trumbore intersector in order to take advantage of a precomputed geometry normal. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structembree_1_1_triangle4_a1e783fdc515258970926889af778547b}{
+\index{embree::Triangle4@{embree::Triangle4}!Triangle4@{Triangle4}}
+\index{Triangle4@{Triangle4}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{Triangle4}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Triangle4::Triangle4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_triangle4_a1e783fdc515258970926889af778547b}
+
+
+Default constructor. 
+
+\hypertarget{structembree_1_1_triangle4_a61339e30b52ac95adc3d11c580d8a22c}{
+\index{embree::Triangle4@{embree::Triangle4}!Triangle4@{Triangle4}}
+\index{Triangle4@{Triangle4}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{Triangle4}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::Triangle4::Triangle4 (
+\begin{DoxyParamCaption}
+\item[{const sse3f \&}]{v0, }
+\item[{const sse3f \&}]{v1, }
+\item[{const sse3f \&}]{v2, }
+\item[{const ssei \&}]{id0, }
+\item[{const ssei \&}]{id1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_triangle4_a61339e30b52ac95adc3d11c580d8a22c}
+
+
+Construction from vertices and IDs. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structembree_1_1_triangle4_adc295d58a225e325534905a7ac3f7160}{
+\index{embree::Triangle4@{embree::Triangle4}!intersect@{intersect}}
+\index{intersect@{intersect}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline void embree::Triangle4::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{{\bf Hit} \&}]{hit}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_triangle4_adc295d58a225e325534905a7ac3f7160}
+
+
+Intersect a ray with the 4 triangles and updates the hit. 
+
+\hypertarget{structembree_1_1_triangle4_a1e3495abae507495268b44573cfa56a7}{
+\index{embree::Triangle4@{embree::Triangle4}!occluded@{occluded}}
+\index{occluded@{occluded}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{occluded}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline bool embree::Triangle4::occluded (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_triangle4_a1e3495abae507495268b44573cfa56a7}
+
+
+Test if the ray is occluded by one of the triangles. 
+
+\hypertarget{structembree_1_1_triangle4_aac5e451d8c692ab40cb1f14f1ea02551}{
+\index{embree::Triangle4@{embree::Triangle4}!size@{size}}
+\index{size@{size}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline size\_\-t embree::Triangle4::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_triangle4_aac5e451d8c692ab40cb1f14f1ea02551}
+
+
+Returns the number of stored triangles. 
+
+\hypertarget{structembree_1_1_triangle4_acfedbc169bef2256b46d976e042324d3}{
+\index{embree::Triangle4@{embree::Triangle4}!valid@{valid}}
+\index{valid@{valid}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline sseb embree::Triangle4::valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_triangle4_acfedbc169bef2256b46d976e042324d3}
+
+
+Returns a mask that tells which triangles are valid. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structembree_1_1_triangle4_a2667c1aa50255c1d97d2f72241cc18a6}{
+\index{embree::Triangle4@{embree::Triangle4}!e1@{e1}}
+\index{e1@{e1}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{e1}]{\setlength{\rightskip}{0pt plus 5cm}sse3f {\bf embree::Triangle4::e1}}}
+\label{structembree_1_1_triangle4_a2667c1aa50255c1d97d2f72241cc18a6}
+
+
+1st edge of the triangles (v0-\/v1). 
+
+\hypertarget{structembree_1_1_triangle4_aa8967fac9fd72a914d0a55337f230a5d}{
+\index{embree::Triangle4@{embree::Triangle4}!e2@{e2}}
+\index{e2@{e2}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{e2}]{\setlength{\rightskip}{0pt plus 5cm}sse3f {\bf embree::Triangle4::e2}}}
+\label{structembree_1_1_triangle4_aa8967fac9fd72a914d0a55337f230a5d}
+
+
+2nd edge of the triangles (v2-\/v0). 
+
+\hypertarget{structembree_1_1_triangle4_ac3629f411789f1190eea10d3f104bb2d}{
+\index{embree::Triangle4@{embree::Triangle4}!id0@{id0}}
+\index{id0@{id0}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{id0}]{\setlength{\rightskip}{0pt plus 5cm}ssei {\bf embree::Triangle4::id0}}}
+\label{structembree_1_1_triangle4_ac3629f411789f1190eea10d3f104bb2d}
+
+
+1st user ID. 
+
+\hypertarget{structembree_1_1_triangle4_af3ef7b3e6c8140aad0ee6de92083348b}{
+\index{embree::Triangle4@{embree::Triangle4}!id1@{id1}}
+\index{id1@{id1}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{id1}]{\setlength{\rightskip}{0pt plus 5cm}ssei {\bf embree::Triangle4::id1}}}
+\label{structembree_1_1_triangle4_af3ef7b3e6c8140aad0ee6de92083348b}
+
+
+2nd user ID. 
+
+\hypertarget{structembree_1_1_triangle4_a0ab213645841eb42897e3d61a9cd3528}{
+\index{embree::Triangle4@{embree::Triangle4}!Ng@{Ng}}
+\index{Ng@{Ng}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{Ng}]{\setlength{\rightskip}{0pt plus 5cm}sse3f {\bf embree::Triangle4::Ng}}}
+\label{structembree_1_1_triangle4_a0ab213645841eb42897e3d61a9cd3528}
+
+
+Geometry normal of the triangles. 
+
+\hypertarget{structembree_1_1_triangle4_a6c0d196de65c16626387c56ba45b019d}{
+\index{embree::Triangle4@{embree::Triangle4}!v0@{v0}}
+\index{v0@{v0}!embree::Triangle4@{embree::Triangle4}}
+\subsubsection[{v0}]{\setlength{\rightskip}{0pt plus 5cm}sse3f {\bf embree::Triangle4::v0}}}
+\label{structembree_1_1_triangle4_a6c0d196de65c16626387c56ba45b019d}
+
+
+Base vertex of the triangles. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh4/triangle4.h\end{DoxyCompactItemize}

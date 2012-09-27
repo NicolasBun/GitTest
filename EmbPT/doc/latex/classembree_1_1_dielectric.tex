@@ -1,0 +1,90 @@
+\hypertarget{classembree_1_1_dielectric}{
+\section{embree::Dielectric Class Reference}
+\label{classembree_1_1_dielectric}\index{embree::Dielectric@{embree::Dielectric}}
+}
+
+
+Implements a dielectric material such as glass.  
+
+
+
+
+{\ttfamily \#include $<$dielectric.h$>$}
+
+Inheritance diagram for embree::Dielectric:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_dielectric}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_dielectric_a72d973dc0956e0d66f191c2dac74a605}{Dielectric} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameters. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_dielectric_a6f325ce381d1164eeda95fd9eac98439}{
+\hyperlink{classembree_1_1_dielectric_a6f325ce381d1164eeda95fd9eac98439}{$\sim$Dielectric} ()}
+\label{classembree_1_1_dielectric_a6f325ce381d1164eeda95fd9eac98439}
+
+\begin{DoxyCompactList}\small\item\em Destruction. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_dielectric_a5e4ab074789a02d8de29881020829a76}{shade} (const \hyperlink{structembree_1_1_ray}{Ray} \&ray, const \hyperlink{classembree_1_1_medium}{Medium} \&currentMedium, const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, CompositedBRDF \&brdfs) const 
+\begin{DoxyCompactList}\small\item\em Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a dielectric material such as glass. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_dielectric_a72d973dc0956e0d66f191c2dac74a605}{
+\index{embree::Dielectric@{embree::Dielectric}!Dielectric@{Dielectric}}
+\index{Dielectric@{Dielectric}!embree::Dielectric@{embree::Dielectric}}
+\subsubsection[{Dielectric}]{\setlength{\rightskip}{0pt plus 5cm}embree::Dielectric::Dielectric (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_dielectric_a72d973dc0956e0d66f191c2dac74a605}
+
+
+Construction from parameters. 
+
+
+
+extract parameters
+
+precompute \hyperlink{classembree_1_1_b_r_d_f}{BRDF} components for more efficient shading 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_dielectric_a5e4ab074789a02d8de29881020829a76}{
+\index{embree::Dielectric@{embree::Dielectric}!shade@{shade}}
+\index{shade@{shade}!embree::Dielectric@{embree::Dielectric}}
+\subsubsection[{shade}]{\setlength{\rightskip}{0pt plus 5cm}void embree::Dielectric::shade (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ray} \&}]{ray, }
+\item[{const {\bf Medium} \&}]{currentMedium, }
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{CompositedBRDF \&}]{brdfs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_dielectric_a5e4ab074789a02d8de29881020829a76}
+
+
+Shades a location and returns a composited \hyperlink{classembree_1_1_b_r_d_f}{BRDF}. 
+
+
+
+the ray transitions from outside to inside
+
+the ray transitions from inside to outside 
+
+
+
+Implements \hyperlink{classembree_1_1_material_a371ca178d6cc226c3d6c758cb41f8cef}{embree::Material}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/materials/dielectric.h\end{DoxyCompactItemize}

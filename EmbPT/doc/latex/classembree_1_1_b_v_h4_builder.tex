@@ -1,0 +1,182 @@
+\hypertarget{classembree_1_1_b_v_h4_builder}{
+\section{embree::BVH4Builder Class Reference}
+\label{classembree_1_1_b_v_h4_builder}\index{embree::BVH4Builder@{embree::BVH4Builder}}
+}
+
+
+\hyperlink{classembree_1_1_b_v_h4}{BVH4} builder.  
+
+
+
+
+{\ttfamily \#include $<$bvh4\_\-builder.h$>$}
+
+Inheritance diagram for embree::BVH4Builder:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_b_v_h4_builder}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classembree_1_1_b_v_h4_builder_1_1_build_task}{BuildTask}
+\begin{DoxyCompactList}\small\item\em Single-\/threaded task that builds a complete BVH. \item\end{DoxyCompactList}\item 
+class \hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{ParallelSplitTask}
+\begin{DoxyCompactList}\small\item\em Multi-\/threaded task that builds a single node and creates subtasks for the children. \item\end{DoxyCompactList}\item 
+class \hyperlink{classembree_1_1_b_v_h4_builder_1_1_split_task}{SplitTask}
+\begin{DoxyCompactList}\small\item\em Single-\/threaded task that builds a single node and creates subtasks for the children. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h4_builder_a992103ac9c73bed5782474533b461095}{BVH4Builder} (const BuildTriangle $\ast$\hyperlink{classembree_1_1_b_v_h4_builder_af89f5d1b610f84ab13f6868b2b41e8c6}{triangles}, size\_\-t \hyperlink{classembree_1_1_b_v_h4_builder_a69ad7ed26f43d932fd56a32368cf2482}{numTriangles}, Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h4_builder_aaf60392ce85c6554b4b58c5e001240f1}{bvh})
+\begin{DoxyCompactList}\small\item\em Constructs the builder. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_a209fb5a8d996c0526a25d20d279c5951}{recurse} (int \&nodeID, size\_\-t depth, const \hyperlink{structembree_1_1_build_range}{BuildRange} \&job)
+\begin{DoxyCompactList}\small\item\em Selects between full build, single-\/threaded split, and multi-\/threaded split strategy. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h4_builder_a347a7d332ac2cbec22aaacd28e888ab1}{recurse} (int \&nodeID, size\_\-t depth, const \hyperlink{classembree_1_1_object_binning}{ObjectBinning}$<$ 2 $>$ \&job)
+\begin{DoxyCompactList}\small\item\em Selects between full build and single-\/threaded split strategy. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_b_v_h4_builder_a06835538b2d6bb9df8f9c1b7e2f7036d}{
+static Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h4_builder_a06835538b2d6bb9df8f9c1b7e2f7036d}{build} (const BuildTriangle $\ast$\hyperlink{classembree_1_1_b_v_h4_builder_af89f5d1b610f84ab13f6868b2b41e8c6}{triangles}, size\_\-t \hyperlink{classembree_1_1_b_v_h4_builder_a69ad7ed26f43d932fd56a32368cf2482}{numTriangles})}
+\label{classembree_1_1_b_v_h4_builder_a06835538b2d6bb9df8f9c1b7e2f7036d}
+
+\begin{DoxyCompactList}\small\item\em API entry function for the builder. \item\end{DoxyCompactList}\item 
+static \_\-\_\-forceinline size\_\-t \hyperlink{classembree_1_1_b_v_h4_builder_a31ab848627b70f579b0a3aa60b9fd394}{blocks} (size\_\-t x)
+\begin{DoxyCompactList}\small\item\em Computes the number of blocks of a number of triangles. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classembree_1_1_b_v_h4_builder_af89f5d1b610f84ab13f6868b2b41e8c6}{
+const BuildTriangle $\ast$ \hyperlink{classembree_1_1_b_v_h4_builder_af89f5d1b610f84ab13f6868b2b41e8c6}{triangles}}
+\label{classembree_1_1_b_v_h4_builder_af89f5d1b610f84ab13f6868b2b41e8c6}
+
+\begin{DoxyCompactList}\small\item\em Source triangle array. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_b_v_h4_builder_a69ad7ed26f43d932fd56a32368cf2482}{
+size\_\-t \hyperlink{classembree_1_1_b_v_h4_builder_a69ad7ed26f43d932fd56a32368cf2482}{numTriangles}}
+\label{classembree_1_1_b_v_h4_builder_a69ad7ed26f43d932fd56a32368cf2482}
+
+\begin{DoxyCompactList}\small\item\em Number of triangles. \item\end{DoxyCompactList}\item 
+Box $\ast$ \hyperlink{classembree_1_1_b_v_h4_builder_a95aacdf4cc45706d06642ab484ceb0ea}{prims}
+\begin{DoxyCompactList}\small\item\em Working array. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_b_v_h4_builder_aaf60392ce85c6554b4b58c5e001240f1}{
+Ref$<$ \hyperlink{classembree_1_1_b_v_h4}{BVH4}$<$ \hyperlink{structembree_1_1_triangle4}{Triangle4} $>$ $>$ \hyperlink{classembree_1_1_b_v_h4_builder_aaf60392ce85c6554b4b58c5e001240f1}{bvh}}
+\label{classembree_1_1_b_v_h4_builder_aaf60392ce85c6554b4b58c5e001240f1}
+
+\begin{DoxyCompactList}\small\item\em BVH to overwrite. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_b_v_h4}{BVH4} builder. The builder is multi-\/threaded and implements 3 different build strategies. 1) Small tasks are finished in a single thread (\hyperlink{classembree_1_1_b_v_h4_builder_1_1_build_task}{BuildTask}) 2) \hyperlink{classembree_1_1_medium}{Medium} sized tasks are split into two tasks using a single thread (\hyperlink{classembree_1_1_b_v_h4_builder_1_1_split_task}{SplitTask}) and 3) Large tasks are split into two tasks in a parallel fashion (\hyperlink{classembree_1_1_b_v_h4_builder_1_1_parallel_split_task}{ParallelSplitTask}). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_a992103ac9c73bed5782474533b461095}{
+\index{embree::BVH4Builder@{embree::BVH4Builder}!BVH4Builder@{BVH4Builder}}
+\index{BVH4Builder@{BVH4Builder}!embree::BVH4Builder@{embree::BVH4Builder}}
+\subsubsection[{BVH4Builder}]{\setlength{\rightskip}{0pt plus 5cm}embree::BVH4Builder::BVH4Builder (
+\begin{DoxyParamCaption}
+\item[{const BuildTriangle $\ast$}]{triangles, }
+\item[{size\_\-t}]{numTriangles, }
+\item[{Ref$<$ {\bf BVH4}$<$ {\bf Triangle4} $>$ $>$}]{bvh}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_a992103ac9c73bed5782474533b461095}
+
+
+Constructs the builder. 
+
+
+
+Allocate storage for nodes. Each thread should at least be able to get one block.
+
+Allocate storage for triangles. Each thread should at least be able to get one block.
+
+Allocate array for splitting primitive lists. 2$\ast$N required for parallel splits.
+
+initiate parallel computation of bounds
+
+start build
+
+rotate top part of tree
+
+free temporary memory again 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_a31ab848627b70f579b0a3aa60b9fd394}{
+\index{embree::BVH4Builder@{embree::BVH4Builder}!blocks@{blocks}}
+\index{blocks@{blocks}!embree::BVH4Builder@{embree::BVH4Builder}}
+\subsubsection[{blocks}]{\setlength{\rightskip}{0pt plus 5cm}static \_\-\_\-forceinline size\_\-t embree::BVH4Builder::blocks (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classembree_1_1_b_v_h4_builder_a31ab848627b70f579b0a3aa60b9fd394}
+
+
+Computes the number of blocks of a number of triangles. 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_a347a7d332ac2cbec22aaacd28e888ab1}{
+\index{embree::BVH4Builder@{embree::BVH4Builder}!recurse@{recurse}}
+\index{recurse@{recurse}!embree::BVH4Builder@{embree::BVH4Builder}}
+\subsubsection[{recurse}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::recurse (
+\begin{DoxyParamCaption}
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf ObjectBinning}$<$ 2 $>$ \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_a347a7d332ac2cbec22aaacd28e888ab1}
+
+
+Selects between full build and single-\/threaded split strategy. 
+
+
+
+use full single threaded build for small jobs
+
+use single theaded split task to create subjobs 
+
+\hypertarget{classembree_1_1_b_v_h4_builder_a209fb5a8d996c0526a25d20d279c5951}{
+\index{embree::BVH4Builder@{embree::BVH4Builder}!recurse@{recurse}}
+\index{recurse@{recurse}!embree::BVH4Builder@{embree::BVH4Builder}}
+\subsubsection[{recurse}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH4Builder::recurse (
+\begin{DoxyParamCaption}
+\item[{int \&}]{nodeID, }
+\item[{size\_\-t}]{depth, }
+\item[{const {\bf BuildRange} \&}]{job}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h4_builder_a209fb5a8d996c0526a25d20d279c5951}
+
+
+Selects between full build, single-\/threaded split, and multi-\/threaded split strategy. 
+
+
+
+use full single threaded build for small jobs
+
+use single threaded split for medium size jobs
+
+use parallel splitter for big jobs 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_b_v_h4_builder_a95aacdf4cc45706d06642ab484ceb0ea}{
+\index{embree::BVH4Builder@{embree::BVH4Builder}!prims@{prims}}
+\index{prims@{prims}!embree::BVH4Builder@{embree::BVH4Builder}}
+\subsubsection[{prims}]{\setlength{\rightskip}{0pt plus 5cm}Box$\ast$ {\bf embree::BVH4Builder::prims}}}
+\label{classembree_1_1_b_v_h4_builder_a95aacdf4cc45706d06642ab484ceb0ea}
+
+
+Working array. 
+
+Build tasks operate on ranges in this array. $\ast$/ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh4/bvh4\_\-builder.h\item 
+rtcore/bvh4/bvh4\_\-builder.cpp\end{DoxyCompactItemize}

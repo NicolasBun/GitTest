@@ -1,0 +1,78 @@
+\hypertarget{structembree_1_1_stack_item}{
+\section{embree::StackItem Struct Reference}
+\label{structembree_1_1_stack_item}\index{embree::StackItem@{embree::StackItem}}
+}
+
+
+An item on the stack holds the node ID and distance of that node.  
+
+
+
+
+{\ttfamily \#include $<$stack\_\-item.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_stack_item_a23f8410a2b67c2bb8309cafdd8abbff3}{
+\hyperlink{structembree_1_1_stack_item}{StackItem} \& \hyperlink{structembree_1_1_stack_item_a23f8410a2b67c2bb8309cafdd8abbff3}{operator=} (const \hyperlink{structembree_1_1_stack_item}{StackItem} \&other)}
+\label{structembree_1_1_stack_item_a23f8410a2b67c2bb8309cafdd8abbff3}
+
+\begin{DoxyCompactList}\small\item\em Copy operator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \_\-\_\-forceinline void \hyperlink{structembree_1_1_stack_item_a84adf9ad34dec4dcd4e85b67e3517bb1}{sort} (\hyperlink{structembree_1_1_stack_item}{StackItem} \&a, \hyperlink{structembree_1_1_stack_item}{StackItem} \&b)
+\begin{DoxyCompactList}\small\item\em Sort a stack item by distance. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structembree_1_1_stack_item_acd7699760ad2734985ed6618d9ba2064}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{unionembree_1_1_stack_item_1_1@11_ac1269bf0be5b9e35207c7541fd8e976b}{
+\>struct \{\\
+\>\>int32 {\bfseries ofs}\\
+\>\>float {\bfseries dist}\\
+\>\} }
+\label{unionembree_1_1_stack_item_1_1@11_ac1269bf0be5b9e35207c7541fd8e976b}
+\\
+\hypertarget{unionembree_1_1_stack_item_1_1@11_afb5be93656ac5c89cd440f73b944aadb}{
+\>struct \{\\
+\>\>int32 {\bfseries low}\\
+\>\>int32 {\bfseries high}\\
+\>\} }
+\label{unionembree_1_1_stack_item_1_1@11_afb5be93656ac5c89cd440f73b944aadb}
+\\
+\>int64 {\bfseries all}\\
+\}; }
+\label{structembree_1_1_stack_item_acd7699760ad2734985ed6618d9ba2064}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An item on the stack holds the node ID and distance of that node. 
+
+\subsection{Member Function Documentation}
+\hypertarget{structembree_1_1_stack_item_a84adf9ad34dec4dcd4e85b67e3517bb1}{
+\index{embree::StackItem@{embree::StackItem}!sort@{sort}}
+\index{sort@{sort}!embree::StackItem@{embree::StackItem}}
+\subsubsection[{sort}]{\setlength{\rightskip}{0pt plus 5cm}static \_\-\_\-forceinline void embree::StackItem::sort (
+\begin{DoxyParamCaption}
+\item[{{\bf StackItem} \&}]{a, }
+\item[{{\bf StackItem} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{structembree_1_1_stack_item_a84adf9ad34dec4dcd4e85b67e3517bb1}
+
+
+Sort a stack item by distance. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+rtcore/common/stack\_\-item.h\end{DoxyCompactItemize}

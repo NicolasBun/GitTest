@@ -1,0 +1,112 @@
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low}{
+\section{embree::BVH2BuilderSpatial::BuildTaskLow Class Reference}
+\label{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low}\index{embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}}
+}
+
+
+Single-\/threaded breadth-\/first build task.  
+
+
+
+
+{\ttfamily \#include $<$bvh2\_\-builder\_\-spatial.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_a3a0c2ab37c1cd89f9f0d2931b1f34290}{BuildTaskLow} (\hyperlink{classembree_1_1_b_v_h2_builder_spatial}{BVH2BuilderSpatial} $\ast$parent, size\_\-t primBegin, size\_\-t primEnd, size\_\-t jobBegin, size\_\-t jobEnd, size\_\-t numJobs)
+\begin{DoxyCompactList}\small\item\em Default task construction. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_ad5ac8a766b968d10accd9718d232fa03}{build} ()
+\begin{DoxyCompactList}\small\item\em Recursively finishes the BVH construction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_a9b327dcd359a5e791d561ca2b542e1b2}{run} (size\_\-t tid, \hyperlink{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low}{BuildTaskLow} $\ast$This, size\_\-t elts)
+\begin{DoxyCompactList}\small\item\em Task entry function. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Single-\/threaded breadth-\/first build task. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_a3a0c2ab37c1cd89f9f0d2931b1f34290}{
+\index{embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}!BuildTaskLow@{BuildTaskLow}}
+\index{BuildTaskLow@{BuildTaskLow}!embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}}
+\subsubsection[{BuildTaskLow}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-forceinline embree::BVH2BuilderSpatial::BuildTaskLow::BuildTaskLow (
+\begin{DoxyParamCaption}
+\item[{{\bf BVH2BuilderSpatial} $\ast$}]{parent, }
+\item[{size\_\-t}]{primBegin, }
+\item[{size\_\-t}]{primEnd, }
+\item[{size\_\-t}]{jobBegin, }
+\item[{size\_\-t}]{jobEnd, }
+\item[{size\_\-t}]{numJobs}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_a3a0c2ab37c1cd89f9f0d2931b1f34290}
+
+
+Default task construction. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_ad5ac8a766b968d10accd9718d232fa03}{
+\index{embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}!build@{build}}
+\index{build@{build}!embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}}
+\subsubsection[{build}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH2BuilderSpatial::BuildTaskLow::build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_ad5ac8a766b968d10accd9718d232fa03}
+
+
+Recursively finishes the BVH construction. 
+
+
+
+counts number of generated triangles
+
+continue until no jobs are left
+
+process each split job
+
+compute leaf and split cost
+
+make leaf node when threshold reached or SAH tells us
+
+get destination for left and right sub-\/job
+
+perform split
+
+create an inner node 
+
+\hypertarget{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_a9b327dcd359a5e791d561ca2b542e1b2}{
+\index{embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}!run@{run}}
+\index{run@{run}!embree::BVH2BuilderSpatial::BuildTaskLow@{embree::BVH2BuilderSpatial::BuildTaskLow}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void embree::BVH2BuilderSpatial::BuildTaskLow::run (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{tid, }
+\item[{{\bf BuildTaskLow} $\ast$}]{This, }
+\item[{size\_\-t}]{elts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_builder_spatial_1_1_build_task_low_a9b327dcd359a5e791d561ca2b542e1b2}
+
+
+Task entry function. 
+
+
+
+remember all roots in order to rotate the subtree later
+
+build subtrees
+
+rotate subtrees 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2\_\-builder\_\-spatial.h\item 
+rtcore/bvh2/bvh2\_\-builder\_\-spatial.cpp\end{DoxyCompactItemize}

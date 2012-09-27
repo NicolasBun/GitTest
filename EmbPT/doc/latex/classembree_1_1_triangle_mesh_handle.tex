@@ -1,0 +1,250 @@
+\hypertarget{classembree_1_1_triangle_mesh_handle}{
+\section{embree::TriangleMeshHandle Class Reference}
+\label{classembree_1_1_triangle_mesh_handle}\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+}
+
+
+\hyperlink{classembree_1_1_triangle}{Triangle} Mesh Handle.  
+
+
+Inheritance diagram for embree::TriangleMeshHandle:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_triangle_mesh_handle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_triangle_mesh_handle_ab1c88eda9467eee729962ad72ab485a4}{TriangleMeshHandle} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_triangle_mesh_handle_af88d82911f201ed770858000079ced25}{$\sim$TriangleMeshHandle} ()
+\begin{DoxyCompactList}\small\item\em Destroys all temporary arrays. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_triangle_mesh_handle_a53385a149e3205c6044898b4adfc4bbf}{create} ()
+\begin{DoxyCompactList}\small\item\em Creates a new triangle mesh. \item\end{DoxyCompactList}\item 
+void \hyperlink{classembree_1_1_triangle_mesh_handle_a0a6d78c9b8f82b2a9f87349e5cd92560}{set} (const std::string \&property, const \hyperlink{structembree_1_1_variant}{Variant} \&data)
+\begin{DoxyCompactList}\small\item\em Sets an array of the triangle mesh. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_a6349157b77e67cc255f623db20a40720}{numPositions}
+\begin{DoxyCompactList}\small\item\em Number of positions stored in position array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_aff1d5657fd1540c469f7b5c347b8de32}{numNormals}
+\begin{DoxyCompactList}\small\item\em Number of normals stored in normal array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_abfad906cd249332f6811fe00add43738}{numTexCoords}
+\begin{DoxyCompactList}\small\item\em Number of texture coordinates stored in texcoord array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_a6933547b0ae57a6a1661218cfe2050c1}{numTriangles}
+\begin{DoxyCompactList}\small\item\em Number of triangles stored in triangle array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_a9e2c086b3028155438d81dad7deab2c8}{stridePositions}
+\begin{DoxyCompactList}\small\item\em Stride of positions stored in position array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_a57f7f38b30a0fca87239967894d3bf07}{strideNormals}
+\begin{DoxyCompactList}\small\item\em Stride of normals stored in normal array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_a49aff40aa876ddc6474b257314cae841}{strideTexCoords}
+\begin{DoxyCompactList}\small\item\em Stride of texture coordinates stored in texcoord array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_triangle_mesh_handle_ada71ff7f9d327215154981aa74506059}{strideTriangles}
+\begin{DoxyCompactList}\small\item\em Stride of triangles stored in triangle array. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classembree_1_1_triangle_mesh_handle_abb14d6b2d49813d44cc7d6a65bcc7590}{position}
+\begin{DoxyCompactList}\small\item\em Array containing all positions. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classembree_1_1_triangle_mesh_handle_ad4208d7cf617dbcba2a20f83ebb53ee4}{normal}
+\begin{DoxyCompactList}\small\item\em Array containing all normals. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classembree_1_1_triangle_mesh_handle_ae7c3847e8558019d88ed1bf236d1589c}{texcoord}
+\begin{DoxyCompactList}\small\item\em Array containging all texture coordinates. \item\end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classembree_1_1_triangle_mesh_handle_a8d27b047269688cfdadbb8088aa9430d}{triangle}
+\begin{DoxyCompactList}\small\item\em Array containing all triangles. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classembree_1_1_triangle_mesh_handle_a3e42905ff0990a908bfdebdde756e002}{consistentNormals}
+\begin{DoxyCompactList}\small\item\em Activates consistent normal interpolation. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classembree_1_1_triangle}{Triangle} Mesh Handle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_handle_ab1c88eda9467eee729962ad72ab485a4}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!TriangleMeshHandle@{TriangleMeshHandle}}
+\index{TriangleMeshHandle@{TriangleMeshHandle}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{TriangleMeshHandle}]{\setlength{\rightskip}{0pt plus 5cm}embree::TriangleMeshHandle::TriangleMeshHandle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_handle_ab1c88eda9467eee729962ad72ab485a4}
+
+
+Default constructor. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_af88d82911f201ed770858000079ced25}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!$\sim$TriangleMeshHandle@{$\sim$TriangleMeshHandle}}
+\index{$\sim$TriangleMeshHandle@{$\sim$TriangleMeshHandle}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{$\sim$TriangleMeshHandle}]{\setlength{\rightskip}{0pt plus 5cm}embree::TriangleMeshHandle::$\sim$TriangleMeshHandle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_handle_af88d82911f201ed770858000079ced25}
+
+
+Destroys all temporary arrays. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_handle_a53385a149e3205c6044898b4adfc4bbf}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!create@{create}}
+\index{create@{create}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void embree::TriangleMeshHandle::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_handle_a53385a149e3205c6044898b4adfc4bbf}
+
+
+Creates a new triangle mesh. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a51979dce13cfb1d25d78b4fdfbd6af2d}{embree::\_\-RTHandle}.
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a0a6d78c9b8f82b2a9f87349e5cd92560}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!set@{set}}
+\index{set@{set}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void embree::TriangleMeshHandle::set (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{property, }
+\item[{const {\bf Variant} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_triangle_mesh_handle_a0a6d78c9b8f82b2a9f87349e5cd92560}
+
+
+Sets an array of the triangle mesh. 
+
+
+
+Implements \hyperlink{structembree_1_1___r_t_handle_a411e84935602a43076ef6277603effca}{embree::\_\-RTHandle}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classembree_1_1_triangle_mesh_handle_a3e42905ff0990a908bfdebdde756e002}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!consistentNormals@{consistentNormals}}
+\index{consistentNormals@{consistentNormals}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{consistentNormals}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf embree::TriangleMeshHandle::consistentNormals}}}
+\label{classembree_1_1_triangle_mesh_handle_a3e42905ff0990a908bfdebdde756e002}
+
+
+Activates consistent normal interpolation. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_ad4208d7cf617dbcba2a20f83ebb53ee4}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!normal@{normal}}
+\index{normal@{normal}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{normal}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf embree::TriangleMeshHandle::normal}}}
+\label{classembree_1_1_triangle_mesh_handle_ad4208d7cf617dbcba2a20f83ebb53ee4}
+
+
+Array containing all normals. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_aff1d5657fd1540c469f7b5c347b8de32}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!numNormals@{numNormals}}
+\index{numNormals@{numNormals}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{numNormals}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::numNormals}}}
+\label{classembree_1_1_triangle_mesh_handle_aff1d5657fd1540c469f7b5c347b8de32}
+
+
+Number of normals stored in normal array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a6349157b77e67cc255f623db20a40720}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!numPositions@{numPositions}}
+\index{numPositions@{numPositions}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{numPositions}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::numPositions}}}
+\label{classembree_1_1_triangle_mesh_handle_a6349157b77e67cc255f623db20a40720}
+
+
+Number of positions stored in position array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_abfad906cd249332f6811fe00add43738}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!numTexCoords@{numTexCoords}}
+\index{numTexCoords@{numTexCoords}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{numTexCoords}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::numTexCoords}}}
+\label{classembree_1_1_triangle_mesh_handle_abfad906cd249332f6811fe00add43738}
+
+
+Number of texture coordinates stored in texcoord array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a6933547b0ae57a6a1661218cfe2050c1}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!numTriangles@{numTriangles}}
+\index{numTriangles@{numTriangles}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{numTriangles}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::numTriangles}}}
+\label{classembree_1_1_triangle_mesh_handle_a6933547b0ae57a6a1661218cfe2050c1}
+
+
+Number of triangles stored in triangle array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_abb14d6b2d49813d44cc7d6a65bcc7590}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!position@{position}}
+\index{position@{position}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf embree::TriangleMeshHandle::position}}}
+\label{classembree_1_1_triangle_mesh_handle_abb14d6b2d49813d44cc7d6a65bcc7590}
+
+
+Array containing all positions. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a57f7f38b30a0fca87239967894d3bf07}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!strideNormals@{strideNormals}}
+\index{strideNormals@{strideNormals}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{strideNormals}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::strideNormals}}}
+\label{classembree_1_1_triangle_mesh_handle_a57f7f38b30a0fca87239967894d3bf07}
+
+
+Stride of normals stored in normal array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a9e2c086b3028155438d81dad7deab2c8}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!stridePositions@{stridePositions}}
+\index{stridePositions@{stridePositions}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{stridePositions}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::stridePositions}}}
+\label{classembree_1_1_triangle_mesh_handle_a9e2c086b3028155438d81dad7deab2c8}
+
+
+Stride of positions stored in position array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a49aff40aa876ddc6474b257314cae841}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!strideTexCoords@{strideTexCoords}}
+\index{strideTexCoords@{strideTexCoords}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{strideTexCoords}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::strideTexCoords}}}
+\label{classembree_1_1_triangle_mesh_handle_a49aff40aa876ddc6474b257314cae841}
+
+
+Stride of texture coordinates stored in texcoord array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_ada71ff7f9d327215154981aa74506059}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!strideTriangles@{strideTriangles}}
+\index{strideTriangles@{strideTriangles}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{strideTriangles}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::TriangleMeshHandle::strideTriangles}}}
+\label{classembree_1_1_triangle_mesh_handle_ada71ff7f9d327215154981aa74506059}
+
+
+Stride of triangles stored in triangle array. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_ae7c3847e8558019d88ed1bf236d1589c}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!texcoord@{texcoord}}
+\index{texcoord@{texcoord}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{texcoord}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf embree::TriangleMeshHandle::texcoord}}}
+\label{classembree_1_1_triangle_mesh_handle_ae7c3847e8558019d88ed1bf236d1589c}
+
+
+Array containging all texture coordinates. 
+
+\hypertarget{classembree_1_1_triangle_mesh_handle_a8d27b047269688cfdadbb8088aa9430d}{
+\index{embree::TriangleMeshHandle@{embree::TriangleMeshHandle}!triangle@{triangle}}
+\index{triangle@{triangle}!embree::TriangleMeshHandle@{embree::TriangleMeshHandle}}
+\subsubsection[{triangle}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf embree::TriangleMeshHandle::triangle}}}
+\label{classembree_1_1_triangle_mesh_handle_a8d27b047269688cfdadbb8088aa9430d}
+
+
+Array containing all triangles. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/api.cpp\end{DoxyCompactItemize}

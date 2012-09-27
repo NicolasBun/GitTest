@@ -1,0 +1,770 @@
+\hypertarget{structembree_1_1_variant}{
+\section{embree::Variant Struct Reference}
+\label{structembree_1_1_variant}\index{embree::Variant@{embree::Variant}}
+}
+
+
+\hyperlink{structembree_1_1_variant}{Variant} type.  
+
+
+
+
+{\ttfamily \#include $<$variant.h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26b}{Type} \{ \par
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba7a95d5c7ee1f9261800fd605321f7347}{EMPTY}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26baa2a0553ee52bcf7025f67405238203b3}{BOOL1}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba2d6def946ed0d8d77966f42a5560cd10}{BOOL2}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26baa6f2e0db83425b11f95417d49cfc2178}{BOOL3}, 
+\par
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba3b43f712a9fa8eee87ef8746411bd25e}{BOOL4}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba6b21a79d06c7cf24ea62716f4f55e445}{INT1}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba010264e693e664c56b75f56537cdc7ab}{INT2}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26badc4ef96ee509224b65d85c487322df37}{INT3}, 
+\par
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba4aa63d4cd3a53260ce9207dacfd11b23}{INT4}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bae4e93eb8d07f6622af20641432bfa39f}{FLOAT1}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba0bb447feb257c8cb9a2e12458f92639b}{FLOAT2}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bac8cea71d88a1c32cc6a621c8de454ef8}{FLOAT3}, 
+\par
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bacf356e7e390e41b716158fcb455df65b}{FLOAT4}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba8fb78441446dcc76dc1e192383f47540}{STRING}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bab9e532d3fb2ec5e29151e79e054fa7c4}{IMAGE}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba53c0eeda209373f3d1d1d3a2c5f14b98}{TEXTURE}, 
+\par
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bafc40a9f9b84e34b97b3721f7a51947dc}{TEXTURESTACK}, 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba2f09a4c06ab5342f4b1901cc9342e2c7}{TRANSFORM}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines which kind of value is stored in the variant. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structembree_1_1_variant_a89e8d81ee473e502a9cb40059496aef8}{Variant} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty variant object. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a577af997bd9e3e1b9abf9adbee470e38}{Variant} (bool b0)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a bool value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a3a7f0a2290b1ff5bd323a298dd02c552}{Variant} (bool b0, bool b1)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a bool2 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a1faa589c6466865be47ad32af8fcbc1b}{Variant} (bool b0, bool b1, bool b2)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a bool3 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a86f7c957a0cd31cd62f08b3e1ac65649}{Variant} (bool b0, bool b1, bool b2, bool b3)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a bool4 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a742da9f1250f7c601ba8f24305d8767e}{Variant} (int i0)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding an int value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a5bd2754ec65907c65ef97691e99f8306}{Variant} (int i0, int i1)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding an int2 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_ad1730984e02131a7d43938986cae8bee}{Variant} (int i0, int i1, int i2)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding an int3 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_adfa1f700e1c305fd52f80f40927eb825}{Variant} (int i0, int i1, int i2, int i3)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding an int4 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_ae4c08fbeaa3158f71d0b0fe8ae2cc658}{Variant} (float f0)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a float value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_ac001ada296990aaec6073068d68be3d5}{Variant} (float f0, float f1)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a float2 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a9e6cfb2c59ed8748cc25141f54303282}{Variant} (float f0, float f1, float f2)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a float3 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a380dc924782c2a56a8bfc2940b6730da}{Variant} (float f0, float f1, float f2, float f3)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a float4 value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_ae0f6105646bbe545583d28142bc8d694}{Variant} (const void $\ast$\hyperlink{structembree_1_1_variant_abee4587142dc55fee814fddb904bd88a}{ptr}, \hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26b}{Type} \hyperlink{structembree_1_1_variant_a23d594de4575ead4ffdbb2e0bfef522c}{type}, size\_\-t \hyperlink{structembree_1_1_variant_a8e91a7eeadcecfa5e907ee8427a777e6}{size}, size\_\-t \hyperlink{structembree_1_1_variant_a3c6661cb3c0aa893fe61c3832862e46e}{stride})
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a pointer to a typed array. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a471a0d6872167eca764b1167a526b58a}{Variant} (const char $\ast$\hyperlink{structembree_1_1_variant_ae4163ae1235b6a41f2db49c2de56796e}{str})
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a string value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a928db9938f2dd71d7856d9161a491c7b}{Variant} (const std::string \&\hyperlink{structembree_1_1_variant_ae4163ae1235b6a41f2db49c2de56796e}{str})
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a string value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a921cb8dc5547bc03f1bc9e4b296e56af}{Variant} (const std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ $>$ \&tex\_\-st)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a string value. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_a67d9a1274d698ddbc2647bcba9b5926c}{Variant} (const Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ \&\hyperlink{structembree_1_1_variant_a75c8a7960d7bd076d7944f459587083b}{texture})
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a texture reference. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_ab4ab1c18870af4aeb956c13f2a2c68bc}{Variant} (const Ref$<$ Image $>$ \&\hyperlink{structembree_1_1_variant_a2357d59f6f9492d26781a6a70a70d847}{image})
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding an image reference. \item\end{DoxyCompactList}\item 
+\hyperlink{structembree_1_1_variant_af7aa29bfcdf7882392c81d75b6082ba5}{Variant} (AffineSpace \&xfm)
+\begin{DoxyCompactList}\small\item\em Constructs a variant object holding a transformation. \item\end{DoxyCompactList}\item 
+bool \hyperlink{structembree_1_1_variant_a6d8dac33b0ab0b967371d9eac030855c}{getBool} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a boolean from the variant. \item\end{DoxyCompactList}\item 
+int \hyperlink{structembree_1_1_variant_aa128898fc2e9f305782fd8cdf6f3df38}{getInt} () const 
+\begin{DoxyCompactList}\small\item\em Extracts an integer from the variant. \item\end{DoxyCompactList}\item 
+float \hyperlink{structembree_1_1_variant_a40bb51cd73081deaec10771885bd981b}{getFloat} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a float from the variant. \item\end{DoxyCompactList}\item 
+Vec2f \hyperlink{structembree_1_1_variant_ac19158d725ff8749a0b49c1b6eac171b}{getVec2f} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a Vec2f from the variant. \item\end{DoxyCompactList}\item 
+Vec3f \hyperlink{structembree_1_1_variant_aed1780d129281b9b6963117c0202e060}{getVec3f} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a Vec3f from the variant. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{structembree_1_1_variant_a83a7315e8ae1d69f0fe365072147f02c}{getCol3f} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a color from the variant. \item\end{DoxyCompactList}\item 
+std::string \hyperlink{structembree_1_1_variant_ae3b4b1c393ba99486060ad9d91f7a71f}{getString} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a string from the variant. \item\end{DoxyCompactList}\item 
+Ref$<$ Image $>$ \hyperlink{structembree_1_1_variant_adcf549001c402c783ef6539035cd2b15}{getImage} () const 
+\begin{DoxyCompactList}\small\item\em Extracts an image reference from the variant. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ \hyperlink{structembree_1_1_variant_a81c9570d30905908782be75f467f354a}{getTexture} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a texture reference from the variant. \item\end{DoxyCompactList}\item 
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ $>$ \hyperlink{structembree_1_1_variant_a1baf707cdcce30abade1b3c540840d25}{getTextureStack} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a texture reference from the variant. \item\end{DoxyCompactList}\item 
+AffineSpace \hyperlink{structembree_1_1_variant_aff8bbf7a08e748aac18dc8808a00ce3a}{getTransform} () const 
+\begin{DoxyCompactList}\small\item\em Extracts a transformation from the variant. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26b}{Type} \hyperlink{structembree_1_1_variant_a23d594de4575ead4ffdbb2e0bfef522c}{type}
+\begin{DoxyCompactList}\small\item\em Type of the data contained in the variant. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{structembree_1_1_variant_a8e91a7eeadcecfa5e907ee8427a777e6}{size}
+\begin{DoxyCompactList}\small\item\em Number of items of array. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{structembree_1_1_variant_a3c6661cb3c0aa893fe61c3832862e46e}{stride}
+\begin{DoxyCompactList}\small\item\em Element stride of array. \item\end{DoxyCompactList}\item 
+\hypertarget{structembree_1_1_variant_abcfae510152f6efc0507feafe245fe38}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>bool \hyperlink{structembree_1_1_variant_afce898bd5ef48288dffc755d8275b4c1}{b} \mbox{[}4\mbox{]}\\
+\>\>{\em Storage for single bool,bool2,bool3, and bool4 values. }\\
+\>int \hyperlink{structembree_1_1_variant_a8871347f6b589c80e14e1837769b615e}{i} \mbox{[}4\mbox{]}\\
+\>\>{\em Storage for single int,int2,int3, and int4 values. }\\
+\>float \hyperlink{structembree_1_1_variant_a5ab39778717d61bb5fb834731c509ae6}{f} \mbox{[}12\mbox{]}\\
+\>\>{\em Storage for single float,float2,float3, float4, and AffineSpace values. }\\
+\>const char $\ast$ \hyperlink{structembree_1_1_variant_abee4587142dc55fee814fddb904bd88a}{ptr}\\
+\>\>{\em Pointer to array. }\\
+\}; }
+\label{structembree_1_1_variant_abcfae510152f6efc0507feafe245fe38}
+\\
+
+\end{tabbing}\item 
+std::string \hyperlink{structembree_1_1_variant_ae4163ae1235b6a41f2db49c2de56796e}{str}
+\begin{DoxyCompactList}\small\item\em Storage for string values. \item\end{DoxyCompactList}\item 
+Ref$<$ Image $>$ \hyperlink{structembree_1_1_variant_a2357d59f6f9492d26781a6a70a70d847}{image}
+\begin{DoxyCompactList}\small\item\em Storage for image references. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ \hyperlink{structembree_1_1_variant_a75c8a7960d7bd076d7944f459587083b}{texture}
+\begin{DoxyCompactList}\small\item\em Storage for texture references. \item\end{DoxyCompactList}\item 
+std::vector$<$ Ref$<$ \hyperlink{classembree_1_1_texture}{Texture} $>$ $>$ \hyperlink{structembree_1_1_variant_ae8005313e7fc97c4a39d57e1e84f459b}{texture\_\-s}
+\begin{DoxyCompactList}\small\item\em Storage for texture stack references. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structembree_1_1_variant}{Variant} type. We use the variant type to pass values from the API to the constructors of different objects. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26b}{
+\index{embree::Variant@{embree::Variant}!Type@{Type}}
+\index{Type@{Type}!embree::Variant@{embree::Variant}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf embree::Variant::Type}}}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26b}
+
+
+Determines which kind of value is stored in the variant. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{EMPTY@{EMPTY}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!EMPTY@{EMPTY}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba7a95d5c7ee1f9261800fd605321f7347}{
+EMPTY}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba7a95d5c7ee1f9261800fd605321f7347}
+}]variant is empty \index{BOOL1@{BOOL1}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!BOOL1@{BOOL1}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26baa2a0553ee52bcf7025f67405238203b3}{
+BOOL1}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26baa2a0553ee52bcf7025f67405238203b3}
+}]variant stores bool value \index{BOOL2@{BOOL2}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!BOOL2@{BOOL2}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba2d6def946ed0d8d77966f42a5560cd10}{
+BOOL2}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba2d6def946ed0d8d77966f42a5560cd10}
+}]variant stores bool2 value \index{BOOL3@{BOOL3}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!BOOL3@{BOOL3}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26baa6f2e0db83425b11f95417d49cfc2178}{
+BOOL3}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26baa6f2e0db83425b11f95417d49cfc2178}
+}]variant stores bool3 value \index{BOOL4@{BOOL4}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!BOOL4@{BOOL4}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba3b43f712a9fa8eee87ef8746411bd25e}{
+BOOL4}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba3b43f712a9fa8eee87ef8746411bd25e}
+}]variant stores bool4 value \index{INT1@{INT1}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!INT1@{INT1}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba6b21a79d06c7cf24ea62716f4f55e445}{
+INT1}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba6b21a79d06c7cf24ea62716f4f55e445}
+}]variant stores int value \index{INT2@{INT2}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!INT2@{INT2}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba010264e693e664c56b75f56537cdc7ab}{
+INT2}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba010264e693e664c56b75f56537cdc7ab}
+}]variant stores int2 value \index{INT3@{INT3}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!INT3@{INT3}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26badc4ef96ee509224b65d85c487322df37}{
+INT3}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26badc4ef96ee509224b65d85c487322df37}
+}]variant stores int3 value \index{INT4@{INT4}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!INT4@{INT4}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba4aa63d4cd3a53260ce9207dacfd11b23}{
+INT4}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba4aa63d4cd3a53260ce9207dacfd11b23}
+}]variant stores int4 value \index{FLOAT1@{FLOAT1}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!FLOAT1@{FLOAT1}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bae4e93eb8d07f6622af20641432bfa39f}{
+FLOAT1}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bae4e93eb8d07f6622af20641432bfa39f}
+}]variant stores float value \index{FLOAT2@{FLOAT2}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!FLOAT2@{FLOAT2}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba0bb447feb257c8cb9a2e12458f92639b}{
+FLOAT2}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba0bb447feb257c8cb9a2e12458f92639b}
+}]variant stores float2 value \index{FLOAT3@{FLOAT3}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!FLOAT3@{FLOAT3}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bac8cea71d88a1c32cc6a621c8de454ef8}{
+FLOAT3}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bac8cea71d88a1c32cc6a621c8de454ef8}
+}]variant stores float3 value \index{FLOAT4@{FLOAT4}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!FLOAT4@{FLOAT4}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bacf356e7e390e41b716158fcb455df65b}{
+FLOAT4}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bacf356e7e390e41b716158fcb455df65b}
+}]variant stores float4 value \index{STRING@{STRING}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!STRING@{STRING}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba8fb78441446dcc76dc1e192383f47540}{
+STRING}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba8fb78441446dcc76dc1e192383f47540}
+}]variant stores string value \index{IMAGE@{IMAGE}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!IMAGE@{IMAGE}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bab9e532d3fb2ec5e29151e79e054fa7c4}{
+IMAGE}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bab9e532d3fb2ec5e29151e79e054fa7c4}
+}]variant stores image reference \index{TEXTURE@{TEXTURE}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!TEXTURE@{TEXTURE}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba53c0eeda209373f3d1d1d3a2c5f14b98}{
+TEXTURE}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba53c0eeda209373f3d1d1d3a2c5f14b98}
+}]variant stores texture reference \index{TEXTURESTACK@{TEXTURESTACK}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!TEXTURESTACK@{TEXTURESTACK}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bafc40a9f9b84e34b97b3721f7a51947dc}{
+TEXTURESTACK}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26bafc40a9f9b84e34b97b3721f7a51947dc}
+}]variant stores texture stack reference \index{TRANSFORM@{TRANSFORM}!embree::Variant@{embree::Variant}}\index{embree::Variant@{embree::Variant}!TRANSFORM@{TRANSFORM}}\item[{\em 
+\hypertarget{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba2f09a4c06ab5342f4b1901cc9342e2c7}{
+TRANSFORM}
+\label{structembree_1_1_variant_a10807086db8e8d61a05b0730b496e26ba2f09a4c06ab5342f4b1901cc9342e2c7}
+}]variant stores transformation \end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structembree_1_1_variant_a89e8d81ee473e502a9cb40059496aef8}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a89e8d81ee473e502a9cb40059496aef8}
+
+
+Constructs an empty variant object. 
+
+\hypertarget{structembree_1_1_variant_a577af997bd9e3e1b9abf9adbee470e38}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{bool}]{b0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a577af997bd9e3e1b9abf9adbee470e38}
+
+
+Constructs a variant object holding a bool value. 
+
+\hypertarget{structembree_1_1_variant_a3a7f0a2290b1ff5bd323a298dd02c552}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{bool}]{b0, }
+\item[{bool}]{b1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a3a7f0a2290b1ff5bd323a298dd02c552}
+
+
+Constructs a variant object holding a bool2 value. 
+
+\hypertarget{structembree_1_1_variant_a1faa589c6466865be47ad32af8fcbc1b}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{bool}]{b0, }
+\item[{bool}]{b1, }
+\item[{bool}]{b2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a1faa589c6466865be47ad32af8fcbc1b}
+
+
+Constructs a variant object holding a bool3 value. 
+
+\hypertarget{structembree_1_1_variant_a86f7c957a0cd31cd62f08b3e1ac65649}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{bool}]{b0, }
+\item[{bool}]{b1, }
+\item[{bool}]{b2, }
+\item[{bool}]{b3}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a86f7c957a0cd31cd62f08b3e1ac65649}
+
+
+Constructs a variant object holding a bool4 value. 
+
+\hypertarget{structembree_1_1_variant_a742da9f1250f7c601ba8f24305d8767e}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{int}]{i0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a742da9f1250f7c601ba8f24305d8767e}
+
+
+Constructs a variant object holding an int value. 
+
+\hypertarget{structembree_1_1_variant_a5bd2754ec65907c65ef97691e99f8306}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a5bd2754ec65907c65ef97691e99f8306}
+
+
+Constructs a variant object holding an int2 value. 
+
+\hypertarget{structembree_1_1_variant_ad1730984e02131a7d43938986cae8bee}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int}]{i2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ad1730984e02131a7d43938986cae8bee}
+
+
+Constructs a variant object holding an int3 value. 
+
+\hypertarget{structembree_1_1_variant_adfa1f700e1c305fd52f80f40927eb825}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{int}]{i0, }
+\item[{int}]{i1, }
+\item[{int}]{i2, }
+\item[{int}]{i3}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_adfa1f700e1c305fd52f80f40927eb825}
+
+
+Constructs a variant object holding an int4 value. 
+
+\hypertarget{structembree_1_1_variant_ae4c08fbeaa3158f71d0b0fe8ae2cc658}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{float}]{f0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ae4c08fbeaa3158f71d0b0fe8ae2cc658}
+
+
+Constructs a variant object holding a float value. 
+
+\hypertarget{structembree_1_1_variant_ac001ada296990aaec6073068d68be3d5}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{float}]{f0, }
+\item[{float}]{f1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ac001ada296990aaec6073068d68be3d5}
+
+
+Constructs a variant object holding a float2 value. 
+
+\hypertarget{structembree_1_1_variant_a9e6cfb2c59ed8748cc25141f54303282}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{float}]{f0, }
+\item[{float}]{f1, }
+\item[{float}]{f2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a9e6cfb2c59ed8748cc25141f54303282}
+
+
+Constructs a variant object holding a float3 value. 
+
+\hypertarget{structembree_1_1_variant_a380dc924782c2a56a8bfc2940b6730da}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{float}]{f0, }
+\item[{float}]{f1, }
+\item[{float}]{f2, }
+\item[{float}]{f3}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a380dc924782c2a56a8bfc2940b6730da}
+
+
+Constructs a variant object holding a float4 value. 
+
+\hypertarget{structembree_1_1_variant_ae0f6105646bbe545583d28142bc8d694}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{ptr, }
+\item[{{\bf Type}}]{type, }
+\item[{size\_\-t}]{size, }
+\item[{size\_\-t}]{stride}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ae0f6105646bbe545583d28142bc8d694}
+
+
+Constructs a variant object holding a pointer to a typed array. 
+
+\hypertarget{structembree_1_1_variant_a471a0d6872167eca764b1167a526b58a}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a471a0d6872167eca764b1167a526b58a}
+
+
+Constructs a variant object holding a string value. 
+
+\hypertarget{structembree_1_1_variant_a928db9938f2dd71d7856d9161a491c7b}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{const std::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a928db9938f2dd71d7856d9161a491c7b}
+
+
+Constructs a variant object holding a string value. 
+
+\hypertarget{structembree_1_1_variant_a921cb8dc5547bc03f1bc9e4b296e56af}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{const std::vector$<$ Ref$<$ {\bf Texture} $>$ $>$ \&}]{tex\_\-st}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a921cb8dc5547bc03f1bc9e4b296e56af}
+
+
+Constructs a variant object holding a string value. 
+
+\hypertarget{structembree_1_1_variant_a67d9a1274d698ddbc2647bcba9b5926c}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ {\bf Texture} $>$ \&}]{texture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a67d9a1274d698ddbc2647bcba9b5926c}
+
+
+Constructs a variant object holding a texture reference. 
+
+\hypertarget{structembree_1_1_variant_ab4ab1c18870af4aeb956c13f2a2c68bc}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{const Ref$<$ Image $>$ \&}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ab4ab1c18870af4aeb956c13f2a2c68bc}
+
+
+Constructs a variant object holding an image reference. 
+
+\hypertarget{structembree_1_1_variant_af7aa29bfcdf7882392c81d75b6082ba5}{
+\index{embree::Variant@{embree::Variant}!Variant@{Variant}}
+\index{Variant@{Variant}!embree::Variant@{embree::Variant}}
+\subsubsection[{Variant}]{\setlength{\rightskip}{0pt plus 5cm}embree::Variant::Variant (
+\begin{DoxyParamCaption}
+\item[{AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_af7aa29bfcdf7882392c81d75b6082ba5}
+
+
+Constructs a variant object holding a transformation. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structembree_1_1_variant_a6d8dac33b0ab0b967371d9eac030855c}{
+\index{embree::Variant@{embree::Variant}!getBool@{getBool}}
+\index{getBool@{getBool}!embree::Variant@{embree::Variant}}
+\subsubsection[{getBool}]{\setlength{\rightskip}{0pt plus 5cm}bool embree::Variant::getBool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a6d8dac33b0ab0b967371d9eac030855c}
+
+
+Extracts a boolean from the variant. 
+
+\hypertarget{structembree_1_1_variant_a83a7315e8ae1d69f0fe365072147f02c}{
+\index{embree::Variant@{embree::Variant}!getCol3f@{getCol3f}}
+\index{getCol3f@{getCol3f}!embree::Variant@{embree::Variant}}
+\subsubsection[{getCol3f}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::Variant::getCol3f (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a83a7315e8ae1d69f0fe365072147f02c}
+
+
+Extracts a color from the variant. 
+
+\hypertarget{structembree_1_1_variant_a40bb51cd73081deaec10771885bd981b}{
+\index{embree::Variant@{embree::Variant}!getFloat@{getFloat}}
+\index{getFloat@{getFloat}!embree::Variant@{embree::Variant}}
+\subsubsection[{getFloat}]{\setlength{\rightskip}{0pt plus 5cm}float embree::Variant::getFloat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a40bb51cd73081deaec10771885bd981b}
+
+
+Extracts a float from the variant. 
+
+\hypertarget{structembree_1_1_variant_adcf549001c402c783ef6539035cd2b15}{
+\index{embree::Variant@{embree::Variant}!getImage@{getImage}}
+\index{getImage@{getImage}!embree::Variant@{embree::Variant}}
+\subsubsection[{getImage}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<$Image$>$ embree::Variant::getImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_adcf549001c402c783ef6539035cd2b15}
+
+
+Extracts an image reference from the variant. 
+
+\hypertarget{structembree_1_1_variant_aa128898fc2e9f305782fd8cdf6f3df38}{
+\index{embree::Variant@{embree::Variant}!getInt@{getInt}}
+\index{getInt@{getInt}!embree::Variant@{embree::Variant}}
+\subsubsection[{getInt}]{\setlength{\rightskip}{0pt plus 5cm}int embree::Variant::getInt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_aa128898fc2e9f305782fd8cdf6f3df38}
+
+
+Extracts an integer from the variant. 
+
+\hypertarget{structembree_1_1_variant_ae3b4b1c393ba99486060ad9d91f7a71f}{
+\index{embree::Variant@{embree::Variant}!getString@{getString}}
+\index{getString@{getString}!embree::Variant@{embree::Variant}}
+\subsubsection[{getString}]{\setlength{\rightskip}{0pt plus 5cm}std::string embree::Variant::getString (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ae3b4b1c393ba99486060ad9d91f7a71f}
+
+
+Extracts a string from the variant. 
+
+\hypertarget{structembree_1_1_variant_a81c9570d30905908782be75f467f354a}{
+\index{embree::Variant@{embree::Variant}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!embree::Variant@{embree::Variant}}
+\subsubsection[{getTexture}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Texture}$>$ embree::Variant::getTexture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a81c9570d30905908782be75f467f354a}
+
+
+Extracts a texture reference from the variant. 
+
+\hypertarget{structembree_1_1_variant_a1baf707cdcce30abade1b3c540840d25}{
+\index{embree::Variant@{embree::Variant}!getTextureStack@{getTextureStack}}
+\index{getTextureStack@{getTextureStack}!embree::Variant@{embree::Variant}}
+\subsubsection[{getTextureStack}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$Ref$<${\bf Texture}$>$ $>$ embree::Variant::getTextureStack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_a1baf707cdcce30abade1b3c540840d25}
+
+
+Extracts a texture reference from the variant. 
+
+\hypertarget{structembree_1_1_variant_aff8bbf7a08e748aac18dc8808a00ce3a}{
+\index{embree::Variant@{embree::Variant}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!embree::Variant@{embree::Variant}}
+\subsubsection[{getTransform}]{\setlength{\rightskip}{0pt plus 5cm}AffineSpace embree::Variant::getTransform (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_aff8bbf7a08e748aac18dc8808a00ce3a}
+
+
+Extracts a transformation from the variant. 
+
+\hypertarget{structembree_1_1_variant_ac19158d725ff8749a0b49c1b6eac171b}{
+\index{embree::Variant@{embree::Variant}!getVec2f@{getVec2f}}
+\index{getVec2f@{getVec2f}!embree::Variant@{embree::Variant}}
+\subsubsection[{getVec2f}]{\setlength{\rightskip}{0pt plus 5cm}Vec2f embree::Variant::getVec2f (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_ac19158d725ff8749a0b49c1b6eac171b}
+
+
+Extracts a Vec2f from the variant. 
+
+\hypertarget{structembree_1_1_variant_aed1780d129281b9b6963117c0202e060}{
+\index{embree::Variant@{embree::Variant}!getVec3f@{getVec3f}}
+\index{getVec3f@{getVec3f}!embree::Variant@{embree::Variant}}
+\subsubsection[{getVec3f}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f embree::Variant::getVec3f (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{structembree_1_1_variant_aed1780d129281b9b6963117c0202e060}
+
+
+Extracts a Vec3f from the variant. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structembree_1_1_variant_afce898bd5ef48288dffc755d8275b4c1}{
+\index{embree::Variant@{embree::Variant}!b@{b}}
+\index{b@{b}!embree::Variant@{embree::Variant}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf embree::Variant::b}\mbox{[}4\mbox{]}}}
+\label{structembree_1_1_variant_afce898bd5ef48288dffc755d8275b4c1}
+
+
+Storage for single bool,bool2,bool3, and bool4 values. 
+
+\hypertarget{structembree_1_1_variant_a5ab39778717d61bb5fb834731c509ae6}{
+\index{embree::Variant@{embree::Variant}!f@{f}}
+\index{f@{f}!embree::Variant@{embree::Variant}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf embree::Variant::f}\mbox{[}12\mbox{]}}}
+\label{structembree_1_1_variant_a5ab39778717d61bb5fb834731c509ae6}
+
+
+Storage for single float,float2,float3, float4, and AffineSpace values. 
+
+\hypertarget{structembree_1_1_variant_a8871347f6b589c80e14e1837769b615e}{
+\index{embree::Variant@{embree::Variant}!i@{i}}
+\index{i@{i}!embree::Variant@{embree::Variant}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf embree::Variant::i}\mbox{[}4\mbox{]}}}
+\label{structembree_1_1_variant_a8871347f6b589c80e14e1837769b615e}
+
+
+Storage for single int,int2,int3, and int4 values. 
+
+\hypertarget{structembree_1_1_variant_a2357d59f6f9492d26781a6a70a70d847}{
+\index{embree::Variant@{embree::Variant}!image@{image}}
+\index{image@{image}!embree::Variant@{embree::Variant}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<$Image$>$ {\bf embree::Variant::image}}}
+\label{structembree_1_1_variant_a2357d59f6f9492d26781a6a70a70d847}
+
+
+Storage for image references. 
+
+\hypertarget{structembree_1_1_variant_abee4587142dc55fee814fddb904bd88a}{
+\index{embree::Variant@{embree::Variant}!ptr@{ptr}}
+\index{ptr@{ptr}!embree::Variant@{embree::Variant}}
+\subsubsection[{ptr}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf embree::Variant::ptr}}}
+\label{structembree_1_1_variant_abee4587142dc55fee814fddb904bd88a}
+
+
+Pointer to array. 
+
+\hypertarget{structembree_1_1_variant_a8e91a7eeadcecfa5e907ee8427a777e6}{
+\index{embree::Variant@{embree::Variant}!size@{size}}
+\index{size@{size}!embree::Variant@{embree::Variant}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::Variant::size}}}
+\label{structembree_1_1_variant_a8e91a7eeadcecfa5e907ee8427a777e6}
+
+
+Number of items of array. 
+
+\hypertarget{structembree_1_1_variant_ae4163ae1235b6a41f2db49c2de56796e}{
+\index{embree::Variant@{embree::Variant}!str@{str}}
+\index{str@{str}!embree::Variant@{embree::Variant}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf embree::Variant::str}}}
+\label{structembree_1_1_variant_ae4163ae1235b6a41f2db49c2de56796e}
+
+
+Storage for string values. 
+
+\hypertarget{structembree_1_1_variant_a3c6661cb3c0aa893fe61c3832862e46e}{
+\index{embree::Variant@{embree::Variant}!stride@{stride}}
+\index{stride@{stride}!embree::Variant@{embree::Variant}}
+\subsubsection[{stride}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf embree::Variant::stride}}}
+\label{structembree_1_1_variant_a3c6661cb3c0aa893fe61c3832862e46e}
+
+
+Element stride of array. 
+
+\hypertarget{structembree_1_1_variant_a75c8a7960d7bd076d7944f459587083b}{
+\index{embree::Variant@{embree::Variant}!texture@{texture}}
+\index{texture@{texture}!embree::Variant@{embree::Variant}}
+\subsubsection[{texture}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Texture}$>$ {\bf embree::Variant::texture}}}
+\label{structembree_1_1_variant_a75c8a7960d7bd076d7944f459587083b}
+
+
+Storage for texture references. 
+
+\hypertarget{structembree_1_1_variant_ae8005313e7fc97c4a39d57e1e84f459b}{
+\index{embree::Variant@{embree::Variant}!texture\_\-s@{texture\_\-s}}
+\index{texture\_\-s@{texture\_\-s}!embree::Variant@{embree::Variant}}
+\subsubsection[{texture\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$Ref$<${\bf Texture}$>$ $>$ {\bf embree::Variant::texture\_\-s}}}
+\label{structembree_1_1_variant_ae8005313e7fc97c4a39d57e1e84f459b}
+
+
+Storage for texture stack references. 
+
+\hypertarget{structembree_1_1_variant_a23d594de4575ead4ffdbb2e0bfef522c}{
+\index{embree::Variant@{embree::Variant}!type@{type}}
+\index{type@{type}!embree::Variant@{embree::Variant}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} {\bf embree::Variant::type}}}
+\label{structembree_1_1_variant_a23d594de4575ead4ffdbb2e0bfef522c}
+
+
+Type of the data contained in the variant. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/api/variant.h\end{DoxyCompactItemize}

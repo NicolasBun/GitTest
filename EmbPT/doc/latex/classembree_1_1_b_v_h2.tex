@@ -1,0 +1,242 @@
+\hypertarget{classembree_1_1_b_v_h2}{
+\section{embree::BVH2$<$ T $>$ Class Template Reference}
+\label{classembree_1_1_b_v_h2}\index{embree::BVH2@{embree::BVH2}}
+}
+
+
+Binary BVH datastructure.  
+
+
+
+
+{\ttfamily \#include $<$bvh2.h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structembree_1_1_b_v_h2_1_1_node}{Node}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_b_v_h2}{BVH2} \hyperlink{structembree_1_1_b_v_h2_1_1_node}{Node}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \par
+\hyperlink{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a9b4c00a0b7f9b78ec7c4d2b7acaf816f}{maxDepth} =  32, 
+\hyperlink{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a6d2e0b25a024c0f794bec3c21ee715a9}{maxLeafSize} =  31, 
+\hyperlink{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6abc7a468da73de47cb3e79d527bb72381}{travCost} =  1, 
+\hyperlink{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a75e3d2bc1e72635cb805bf1822b68630}{intCost} =  1, 
+\par
+\hyperlink{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6acd8990411f1dd72ce03c80cd8e55aeb9}{offsetFactor} =  8, 
+\hyperlink{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a0f23000cbf046f49a77214c37fc09713}{emptyNode} =  0x80000000
+ \}
+\begin{DoxyCompactList}\small\item\em Configuration of the BVH. \item\end{DoxyCompactList}\item 
+typedef T \hyperlink{classembree_1_1_b_v_h2_af8815fd128a203409a0fe00c103c2710}{Triangle}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_triangle}{Triangle} stored in the BVH. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_b_v_h2_a3c00b1dd6bebcead8c2f0b5ffb3b4a2f}{BVH2} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_b_v_h2}{BVH2} default constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classembree_1_1_b_v_h2_a3636a02edac0e06152b199036dfdd4c7}{$\sim$BVH2} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classembree_1_1_b_v_h2}{BVH2} destructor. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_b_v_h2_a960e1eed2f83e079720620d1b2a6635d}{getSAH} ()
+\begin{DoxyCompactList}\small\item\em Compute the SAH cost of the BVH. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_b_v_h2_a06658e48daaaac4975abb1dee5505a64}{getNumNodes} ()
+\begin{DoxyCompactList}\small\item\em Compute number of nodes of the BVH. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_b_v_h2_a0b602c268443e8e6ab743c95e2d5a291}{getNumLeaves} ()
+\begin{DoxyCompactList}\small\item\em Compute number of leaves of the BVH. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_b_v_h2_a7ba110cac4a00a722cb1ef1694cbc2bc}{getNumPrimBlocks} ()
+\begin{DoxyCompactList}\small\item\em Compute number of primitive blocks of the BVH. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classembree_1_1_b_v_h2_a6d96a57fc74d7b00ceb185fe39a8f424}{getNumPrims} ()
+\begin{DoxyCompactList}\small\item\em Compute number of primitives of the BVH. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classembree_1_1_b_v_h2_a0be7246bdb347122c952d0184bdb54c1}{BVH2Builder}
+\begin{DoxyCompactList}\small\item\em Builders and traversers need direct access to the BVH structure. \item\end{DoxyCompactList}\item 
+\hypertarget{classembree_1_1_b_v_h2_aa56ace79309efc4bb7d4359236611d48}{
+class {\bfseries BVH2BuilderSpatial}}
+\label{classembree_1_1_b_v_h2_aa56ace79309efc4bb7d4359236611d48}
+
+\item 
+\hypertarget{classembree_1_1_b_v_h2_abcee8cef5aed865bf7be323048aee100}{
+class {\bfseries BVH2ToBVH4}}
+\label{classembree_1_1_b_v_h2_abcee8cef5aed865bf7be323048aee100}
+
+\item 
+\hypertarget{classembree_1_1_b_v_h2_a2a95bc6547d596add19ef40beeb17733}{
+class {\bfseries BVH2Traverser}}
+\label{classembree_1_1_b_v_h2_a2a95bc6547d596add19ef40beeb17733}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class embree::BVH2$<$ T $>$}
+
+Binary BVH datastructure. Each node stores the bounding box of it's 2 children as well as a 32 bit child offset. If the topmost bit of this offset is 0, the child is an internal node and the remaining bits multiplied by offsetFactor determine its absolute byte offset of the child in the node array. If the topmost bit is 1, the child is a leaf node. The lower 5 bits then determine the number of primitives in the leaf, and the remaining bits the ID of the first primitive in the primitive array. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classembree_1_1_b_v_h2_af8815fd128a203409a0fe00c103c2710}{
+\index{embree::BVH2@{embree::BVH2}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{Triangle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ typedef T {\bf embree::BVH2}$<$ T $>$::{\bf Triangle}}}
+\label{classembree_1_1_b_v_h2_af8815fd128a203409a0fe00c103c2710}
+
+
+\hyperlink{classembree_1_1_triangle}{Triangle} stored in the BVH. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6}{
+\subsubsection[{"@5}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ anonymous enum}}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6}
+
+
+Configuration of the BVH. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{maxDepth@{maxDepth}!embree::BVH2@{embree::BVH2}}\index{embree::BVH2@{embree::BVH2}!maxDepth@{maxDepth}}\item[{\em 
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a9b4c00a0b7f9b78ec7c4d2b7acaf816f}{
+maxDepth}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a9b4c00a0b7f9b78ec7c4d2b7acaf816f}
+}]Maximal depth of the BVH. \index{maxLeafSize@{maxLeafSize}!embree::BVH2@{embree::BVH2}}\index{embree::BVH2@{embree::BVH2}!maxLeafSize@{maxLeafSize}}\item[{\em 
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a6d2e0b25a024c0f794bec3c21ee715a9}{
+maxLeafSize}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a6d2e0b25a024c0f794bec3c21ee715a9}
+}]Maximal possible size of a leaf. \index{travCost@{travCost}!embree::BVH2@{embree::BVH2}}\index{embree::BVH2@{embree::BVH2}!travCost@{travCost}}\item[{\em 
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6abc7a468da73de47cb3e79d527bb72381}{
+travCost}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6abc7a468da73de47cb3e79d527bb72381}
+}]Cost of one traversal step. \index{intCost@{intCost}!embree::BVH2@{embree::BVH2}}\index{embree::BVH2@{embree::BVH2}!intCost@{intCost}}\item[{\em 
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a75e3d2bc1e72635cb805bf1822b68630}{
+intCost}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a75e3d2bc1e72635cb805bf1822b68630}
+}]Cost of one primitive intersection. \index{offsetFactor@{offsetFactor}!embree::BVH2@{embree::BVH2}}\index{embree::BVH2@{embree::BVH2}!offsetFactor@{offsetFactor}}\item[{\em 
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6acd8990411f1dd72ce03c80cd8e55aeb9}{
+offsetFactor}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6acd8990411f1dd72ce03c80cd8e55aeb9}
+}]Factor to compute byte offset from offsets stored in nodes. \index{emptyNode@{emptyNode}!embree::BVH2@{embree::BVH2}}\index{embree::BVH2@{embree::BVH2}!emptyNode@{emptyNode}}\item[{\em 
+\hypertarget{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a0f23000cbf046f49a77214c37fc09713}{
+emptyNode}
+\label{classembree_1_1_b_v_h2_ad1f3bff28460ef5747a251ae58e103f6a0f23000cbf046f49a77214c37fc09713}
+}]ID of an empty node. \end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_b_v_h2_a3c00b1dd6bebcead8c2f0b5ffb3b4a2f}{
+\index{embree::BVH2@{embree::BVH2}!BVH2@{BVH2}}
+\index{BVH2@{BVH2}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{BVH2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf embree::BVH2}$<$ T $>$::{\bf BVH2} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a3c00b1dd6bebcead8c2f0b5ffb3b4a2f}
+
+
+\hyperlink{classembree_1_1_b_v_h2}{BVH2} default constructor. 
+
+\hypertarget{classembree_1_1_b_v_h2_a3636a02edac0e06152b199036dfdd4c7}{
+\index{embree::BVH2@{embree::BVH2}!$\sim$BVH2@{$\sim$BVH2}}
+\index{$\sim$BVH2@{$\sim$BVH2}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{$\sim$BVH2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf embree::BVH2}$<$ T $>$::$\sim${\bf BVH2} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a3636a02edac0e06152b199036dfdd4c7}
+
+
+\hyperlink{classembree_1_1_b_v_h2}{BVH2} destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_a0b602c268443e8e6ab743c95e2d5a291}{
+\index{embree::BVH2@{embree::BVH2}!getNumLeaves@{getNumLeaves}}
+\index{getNumLeaves@{getNumLeaves}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{getNumLeaves}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\_\-t {\bf embree::BVH2}$<$ T $>$::getNumLeaves (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a0b602c268443e8e6ab743c95e2d5a291}
+
+
+Compute number of leaves of the BVH. 
+
+\hypertarget{classembree_1_1_b_v_h2_a06658e48daaaac4975abb1dee5505a64}{
+\index{embree::BVH2@{embree::BVH2}!getNumNodes@{getNumNodes}}
+\index{getNumNodes@{getNumNodes}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{getNumNodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\_\-t {\bf embree::BVH2}$<$ T $>$::getNumNodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a06658e48daaaac4975abb1dee5505a64}
+
+
+Compute number of nodes of the BVH. 
+
+\hypertarget{classembree_1_1_b_v_h2_a7ba110cac4a00a722cb1ef1694cbc2bc}{
+\index{embree::BVH2@{embree::BVH2}!getNumPrimBlocks@{getNumPrimBlocks}}
+\index{getNumPrimBlocks@{getNumPrimBlocks}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{getNumPrimBlocks}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\_\-t {\bf embree::BVH2}$<$ T $>$::getNumPrimBlocks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a7ba110cac4a00a722cb1ef1694cbc2bc}
+
+
+Compute number of primitive blocks of the BVH. 
+
+\hypertarget{classembree_1_1_b_v_h2_a6d96a57fc74d7b00ceb185fe39a8f424}{
+\index{embree::BVH2@{embree::BVH2}!getNumPrims@{getNumPrims}}
+\index{getNumPrims@{getNumPrims}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{getNumPrims}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\_\-t {\bf embree::BVH2}$<$ T $>$::getNumPrims (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a6d96a57fc74d7b00ceb185fe39a8f424}
+
+
+Compute number of primitives of the BVH. 
+
+\hypertarget{classembree_1_1_b_v_h2_a960e1eed2f83e079720620d1b2a6635d}{
+\index{embree::BVH2@{embree::BVH2}!getSAH@{getSAH}}
+\index{getSAH@{getSAH}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{getSAH}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ float {\bf embree::BVH2}$<$ T $>$::getSAH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a960e1eed2f83e079720620d1b2a6635d}
+
+
+Compute the SAH cost of the BVH. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classembree_1_1_b_v_h2_a0be7246bdb347122c952d0184bdb54c1}{
+\index{embree::BVH2@{embree::BVH2}!BVH2Builder@{BVH2Builder}}
+\index{BVH2Builder@{BVH2Builder}!embree::BVH2@{embree::BVH2}}
+\subsubsection[{BVH2Builder}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ friend class {\bf BVH2Builder}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classembree_1_1_b_v_h2_a0be7246bdb347122c952d0184bdb54c1}
+
+
+Builders and traversers need direct access to the BVH structure. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+rtcore/bvh2/bvh2.h\item 
+rtcore/bvh2/bvh2.cpp\end{DoxyCompactItemize}

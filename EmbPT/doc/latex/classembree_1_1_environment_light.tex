@@ -1,0 +1,57 @@
+\hypertarget{classembree_1_1_environment_light}{
+\section{embree::EnvironmentLight Class Reference}
+\label{classembree_1_1_environment_light}\index{embree::EnvironmentLight@{embree::EnvironmentLight}}
+}
+
+
+Interface to an environment light.  
+
+
+
+
+{\ttfamily \#include $<$light.h$>$}
+
+Inheritance diagram for embree::EnvironmentLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classembree_1_1_environment_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Col3f \hyperlink{classembree_1_1_environment_light_a4cb3a8e11f5b737c714ceca203bddb8e}{Le} (const Vec3f \&wo) const =0
+\begin{DoxyCompactList}\small\item\em Returns the emitted radiance of the environment light. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to an environment light. In addition to a basic light, an environment light allows to query the emitted radiance for a direction. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_environment_light_a4cb3a8e11f5b737c714ceca203bddb8e}{
+\index{embree::EnvironmentLight@{embree::EnvironmentLight}!Le@{Le}}
+\index{Le@{Le}!embree::EnvironmentLight@{embree::EnvironmentLight}}
+\subsubsection[{Le}]{\setlength{\rightskip}{0pt plus 5cm}virtual Col3f embree::EnvironmentLight::Le (
+\begin{DoxyParamCaption}
+\item[{const Vec3f \&}]{wo}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classembree_1_1_environment_light_a4cb3a8e11f5b737c714ceca203bddb8e}
+
+
+Returns the emitted radiance of the environment light. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wo} & The direction the light comes from. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classembree_1_1_ambient_light_a5bddffd418bf303eeccc184477b8a9bf}{embree::AmbientLight}, \hyperlink{classembree_1_1_distant_light_a1a543f0e73d2d4066026b71feec02f02}{embree::DistantLight}, and \hyperlink{classembree_1_1_h_d_r_i_light_ae2b1f108f969a62ce73e1404705ecb45}{embree::HDRILight}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/light.h\end{DoxyCompactItemize}

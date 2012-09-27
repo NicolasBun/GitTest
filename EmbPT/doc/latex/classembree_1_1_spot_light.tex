@@ -1,0 +1,118 @@
+\hypertarget{classembree_1_1_spot_light}{
+\section{embree::SpotLight Class Reference}
+\label{classembree_1_1_spot_light}\index{embree::SpotLight@{embree::SpotLight}}
+}
+
+
+Implements a spot light source.  
+
+
+
+
+{\ttfamily \#include $<$spotlight.h$>$}
+
+Inheritance diagram for embree::SpotLight:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classembree_1_1_spot_light}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classembree_1_1_spot_light_a84873c7a565d2a9da1223508541a223c}{SpotLight} (const \hyperlink{classembree_1_1_parms}{Parms} \&parms)
+\begin{DoxyCompactList}\small\item\em Construction from parameter container. \item\end{DoxyCompactList}\item 
+Ref$<$ \hyperlink{classembree_1_1_light}{Light} $>$ \hyperlink{classembree_1_1_spot_light_a52ad1d555a37fbd62c4f8233d69bed74}{transform} (const AffineSpace \&xfm) const 
+\begin{DoxyCompactList}\small\item\em Instantiates a new light by transforming this light to a different location. \item\end{DoxyCompactList}\item 
+Col3f \hyperlink{classembree_1_1_spot_light_a322a13a8d47115593bbd244baff4e398}{sample} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, \hyperlink{structembree_1_1_sample}{Sample3f} \&wi, float \&tMax, const Vec2f \&s) const 
+\begin{DoxyCompactList}\small\item\em Samples the light for a point to shade. \item\end{DoxyCompactList}\item 
+float \hyperlink{classembree_1_1_spot_light_a80916ed69cf920d7fee8274eacb5f0d3}{pdf} (const \hyperlink{structembree_1_1_differential_geometry}{DifferentialGeometry} \&dg, const Vec3f \&wi) const 
+\begin{DoxyCompactList}\small\item\em Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements a spot light source. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classembree_1_1_spot_light_a84873c7a565d2a9da1223508541a223c}{
+\index{embree::SpotLight@{embree::SpotLight}!SpotLight@{SpotLight}}
+\index{SpotLight@{SpotLight}!embree::SpotLight@{embree::SpotLight}}
+\subsubsection[{SpotLight}]{\setlength{\rightskip}{0pt plus 5cm}embree::SpotLight::SpotLight (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parms} \&}]{parms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classembree_1_1_spot_light_a84873c7a565d2a9da1223508541a223c}
+
+
+Construction from parameter container. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classembree_1_1_spot_light_a80916ed69cf920d7fee8274eacb5f0d3}{
+\index{embree::SpotLight@{embree::SpotLight}!pdf@{pdf}}
+\index{pdf@{pdf}!embree::SpotLight@{embree::SpotLight}}
+\subsubsection[{pdf}]{\setlength{\rightskip}{0pt plus 5cm}float embree::SpotLight::pdf (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{const Vec3f \&}]{wi}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_spot_light_a80916ed69cf920d7fee8274eacb5f0d3}
+
+
+Evaluates the probability distribution function used by the sampling function of the light for a shade location and direction. 
+
+\begin{DoxyReturn}{Returns}
+the probability density 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_ad53daeeb3376083cb75c13e6b1be2c5e}{embree::Light}.
+
+\hypertarget{classembree_1_1_spot_light_a322a13a8d47115593bbd244baff4e398}{
+\index{embree::SpotLight@{embree::SpotLight}!sample@{sample}}
+\index{sample@{sample}!embree::SpotLight@{embree::SpotLight}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}Col3f embree::SpotLight::sample (
+\begin{DoxyParamCaption}
+\item[{const {\bf DifferentialGeometry} \&}]{dg, }
+\item[{{\bf Sample3f} \&}]{wi, }
+\item[{float \&}]{tMax, }
+\item[{const Vec2f \&}]{sample}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_spot_light_a322a13a8d47115593bbd244baff4e398}
+
+
+Samples the light for a point to shade. 
+
+\begin{DoxyReturn}{Returns}
+the radiance arriving from the sampled direction. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classembree_1_1_light_aaa63d3794340c4a82183b9b7481d51be}{embree::Light}.
+
+\hypertarget{classembree_1_1_spot_light_a52ad1d555a37fbd62c4f8233d69bed74}{
+\index{embree::SpotLight@{embree::SpotLight}!transform@{transform}}
+\index{transform@{transform}!embree::SpotLight@{embree::SpotLight}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}Ref$<${\bf Light}$>$ embree::SpotLight::transform (
+\begin{DoxyParamCaption}
+\item[{const AffineSpace \&}]{xfm}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classembree_1_1_spot_light_a52ad1d555a37fbd62c4f8233d69bed74}
+
+
+Instantiates a new light by transforming this light to a different location. 
+
+
+
+Implements \hyperlink{classembree_1_1_light_a6e5d5e7c2088ec4dad231c91d99c3a30}{embree::Light}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+renderer/lights/spotlight.h\end{DoxyCompactItemize}
